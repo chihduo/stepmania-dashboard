@@ -20,6 +20,7 @@ and offline.
 | `deploy.sh` | One-shot: copies `public/` to `/var/www/stepmania/` and adds the nginx `location` block. |
 | `server/` | Server-side daily-update pipeline (nginx WebDAV endpoint, systemd path/service units, processing script, installer). |
 | `wsl/` | Windows-side daily-update pipeline (WSL2 cron job that bundles + uploads). |
+| `ftp/` | Local drop folder + script for refreshing the dashboard from a single uploaded archive (`StepMania 5.zip` / `StepMania 5.rar`). Alternative to the WSL pipeline. |
 | `README.md` | This file. |
 
 ## Data sources (StepMania 5.1, Windows paths)

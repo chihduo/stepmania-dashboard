@@ -8,9 +8,6 @@ stepmania-dashboard.tar.gz
 __pycache__/
 *.pyc
 
-# Out-of-scope script kept on disk but not tracked in this repo
-force-ssl.sh
-
 # Editor swap/backup files
 *.swp
 *.swo
@@ -20,3 +17,8 @@ force-ssl.sh
 node_modules/
 package.json
 package-lock.json
+
+# FTP drop folder — archives are personal data, extracted/ is transient
+ftp/StepMania 5.rar
+ftp/StepMania 5.zip
+ftp/extracted/
