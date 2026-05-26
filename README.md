@@ -58,3 +58,6 @@ Visit: `https://example.com/stepmania/`
 - "Songs played" counts every stage (incl. retries); "Distinct songs" counts
   unique charts with ≥1 play.
 - Theme-internal placeholder `Themes/default/Other/` is excluded from the ranking.
+- **D/F filter:** songs whose *best* grade is D or F are hidden from the ranking
+  list and recent plays. KPI totals, timeline and breakdown charts still reflect
+  all plays. Tunable via `EXCLUDE_GRADES` in `build_dashboard.py`.

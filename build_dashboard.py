@@ -43,6 +43,10 @@ GRADE_MAP = {
 }
 DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 
+# Grades to hide from the ranking list and recent plays (D and below).
+# Only affects those two lists — KPIs, timeline and breakdown charts keep all plays.
+EXCLUDE_GRADES = {"Tier07", "Failed"}  # D, F
+
 
 def txt(node, tag, default=""):
     if node is None:
@@ -240,15 +244,18 @@ def parse_stats(stats_path, meta):
             pack_songs[pack] += 1
 
     songs.sort(key=lambda x: (-x["plays"], x["song"].lower()))
+    # Packs are computed from all songs above; only the ranking list drops D/F.
     packs = [{"pack": p, "plays": pack_plays[p], "songs": pack_songs[p]}
              for p in pack_plays]
     packs.sort(key=lambda x: -x["plays"])
+    all_song_count = len(songs)
+    songs = [s for s in songs if (s["bestGrade"] or "") not in EXCLUDE_GRADES]
 
     return {
         "profile": profile, "totals": totals,
         "byDifficulty": by_difficulty, "byGrade": by_grade, "byStyle": by_style,
         "calorieSeries": cal, "songs": songs, "packs": packs,
-        "distinctSongs": len(songs),
+        "distinctSongs": all_song_count,
     }
 
 
@@ -303,6 +310,7 @@ def parse_uploads(upload_dir, meta):
                 "combo": inum(txt(hs, "MaxCombo")),
             })
     recent.sort(key=lambda x: x["dt"], reverse=True)
+    recent = [r for r in recent if (r["grade"] or "") not in EXCLUDE_GRADES]
     return {
         "recordedPlays": total,
         "firstPlay": first.isoformat(sep=" ") if first else "",
