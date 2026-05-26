@@ -21,8 +21,13 @@ the Windows machine instead of using the WSL pipeline.
    bash update_from_archive.sh
    ```
 
-4. The script extracts, rebuilds, and cleans up.  When it finishes, push to
-   the live site:
+4. The script extracts, rebuilds, and cleans up. If `/var/www/stepmania/`
+   is user-writable (see the top-level README's
+   _"Deploying without sudo"_ section), the build also auto-deploys to
+   the live site — no further command needed. Ctrl+F5 in the browser to
+   defeat the `data.json` cache.
+
+   If you skipped that one-time setup, push manually instead:
 
    ```bash
    sudo bash ../deploy.sh
@@ -41,8 +46,10 @@ the Windows machine instead of using the WSL pipeline.
    `SM_BANNERS` env var.
 6. Deletes `./extracted/`.
 
-It does **not** deploy to `/var/www/stepmania/` (that needs sudo and is a
-separate decision). Run `../deploy.sh` after if you're happy with the result.
+Step 5 (the build) **auto-deploys to `/var/www/stepmania/`** if that dir is
+writable by the current user — i.e. you've done the one-time chown documented
+in the top-level README. Otherwise the build just writes to `../public/` and
+you need to push it with `sudo ../deploy.sh` separately.
 
 It does **not** touch the repo's `../../savedata/` or `../../cachedata/`
 directories — those remain the original-`Save.zip`/`Cache.zip` extractions.

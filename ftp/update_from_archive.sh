@@ -105,6 +105,10 @@ cat <<EOF
 
 $(grn "Done.")  Dashboard data written to:  $DASH_DIR/public/
 
-Next: push to the live site with sudo:
-    sudo bash $DASH_DIR/deploy.sh
+If /var/www/stepmania is user-writable, build_dashboard.py already auto-
+deployed (look for 'Auto-deployed to ...' above). Otherwise push manually:
+    bash      $DASH_DIR/deploy.sh    # after the one-time chown
+    sudo bash $DASH_DIR/deploy.sh    # otherwise
+
+Browser cache: Ctrl+F5 to defeat data.json caching.
 EOF
