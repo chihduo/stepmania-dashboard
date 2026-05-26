@@ -125,6 +125,7 @@
       <div class="card"><h3>Plays by difficulty</h3><p class="cap">All-time stage counts</p><div id="c-diff"></div></div>
       <div class="card"><h3>Stages passed by grade</h3><p class="cap">Grade letters are theme-approximate</p><div id="c-grade"></div></div>
       <div class="card"><h3>Top packs</h3><p class="cap">By total plays</p><div id="c-packs"></div></div>
+      <div class="card"><h3>Top artists</h3><p class="cap" id="cap-artists">By total plays · variants auto-merged (e.g. TWICE/Twice)</p><div id="c-artists"></div></div>
     </div>
   </section>
 
@@ -358,6 +359,18 @@ function render(d){
 
   // packs (top 12)
   hbars($("#c-packs"), d.packs.slice(0,12).map(p=>({label:p.pack,v:p.plays})), {color:"var(--accent)"});
+
+  // artists (top 12) — uses the configured dark gray-blue
+  const artists = d.artists || [];
+  if(artists.length) {
+    hbars($("#c-artists"),
+      artists.slice(0,12).map(a=>({label:a.artist, v:a.plays})),
+      {color: distinctCol});
+    const merged = artists.filter(a=>a.variants>1).length;
+    $("#cap-artists").innerHTML =
+      `By total plays · ${fmt(artists.length)} artists`+
+      (merged ? ` · ${fmt(merged)} have multiple name variants auto-merged` : '');
+  }
 
   buildTable(d);
   buildRecent(d);

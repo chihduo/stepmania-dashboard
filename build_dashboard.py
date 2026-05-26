@@ -59,7 +59,32 @@ DEFAULT_CONFIG = {
             "miss": "#ff6b6b",
         },
     },
+    "artistAliases": {},
 }
+
+
+# Artist normalization for de-duplication.
+# Step 1: lowercase, strip apostrophes/quotes, normalize feat./featuring/ft.
+# Step 2: strip everything that's not a "word character" (Python re's \w is
+#         Unicode-aware, so CJK/Hangul/etc. survive; only ASCII punctuation,
+#         spaces, hyphens, ☆, *, etc. are removed).
+# This merges TWICE/Twice, Girls' Generation/Girls Generation, T-ara/T ARA/
+# T-Ari, GFRIEND/G-Friend, 4Minute/4 Minute, BLACKPINK/Black Pink/BLack Pink,
+# Ryu☆/Ryu*/Ryu in feat. credits, etc.
+_APOS_QUOTES = re.compile(r'[‘’‚‛′ʼ\'“”„‟″"]')
+_FEAT = re.compile(r'\b(featuring|feat\.?|ft\.?)\b')
+_NONWORD = re.compile(r'\W+', re.UNICODE)
+
+
+def normalize_artist(name):
+    """Aggressive Unicode-aware artist key. '' if name is empty."""
+    if not name:
+        return ""
+    s = name.strip().lower()
+    s = _APOS_QUOTES.sub('', s)
+    s = _FEAT.sub('feat', s)
+    s = _NONWORD.sub('', s)
+    return s
 
 
 def deep_merge(base, override):
@@ -187,6 +212,55 @@ def make_meta_lookup(cache_songs_dir):
 # --------------------------------------------------------------------------
 # 1) Stats.xml : GeneralData aggregates + SongScores (authoritative play counts)
 # --------------------------------------------------------------------------
+def aggregate_artists(songs, aliases):
+    """Group songs by normalized artist; return top list sorted by plays.
+
+    `aliases` maps canonical-display-name -> [list of variant strings to
+    force into the same group]. Normalization is applied to both sides.
+    `songs` is the list of song dicts emitted by parse_stats (each has
+    'artist' and 'plays').
+
+    Returns: [{artist, plays, songs, variants}] sorted by plays desc.
+    """
+    # Build alias lookup: normalized variant -> canonical display
+    alias_lookup = {}
+    for canonical, variants in (aliases or {}).items():
+        if not canonical or canonical.startswith("_"):
+            continue  # skip _comment etc.
+        for v in [canonical] + list(variants or []):
+            k = normalize_artist(v)
+            if k:
+                alias_lookup[k] = canonical
+
+    # Bucket by normalized key
+    buckets = {}  # key -> {display, plays, songs, variants{raw:plays}}
+    for s in songs:
+        raw = (s.get("artist") or "").strip()
+        if not raw:
+            continue
+        key = normalize_artist(raw)
+        if not key:
+            continue
+        b = buckets.setdefault(key, {
+            "display": alias_lookup.get(key),  # None if no override
+            "plays": 0, "songs": 0, "variants": collections.Counter(),
+        })
+        b["plays"] += s["plays"]
+        b["songs"] += 1
+        b["variants"][raw] += s["plays"]
+
+    # Pick display name: alias override wins; else the most-played variant
+    out = []
+    for b in buckets.values():
+        display = b["display"] or b["variants"].most_common(1)[0][0]
+        out.append({
+            "artist": display, "plays": b["plays"], "songs": b["songs"],
+            "variants": len(b["variants"]),
+        })
+    out.sort(key=lambda x: -x["plays"])
+    return out
+
+
 def parse_stats(stats_path, meta, banner=lambda d: ""):
     root = load_xml(stats_path)
     gd = root.find("GeneralData")
@@ -590,6 +664,16 @@ def main():
     stats = parse_stats(stats_path, meta, banner)
     print(f"  songs with plays: {stats['distinctSongs']}, packs: {len(stats['packs'])}")
 
+    # Build the artist top-list with normalization + manual aliases.
+    # The unfiltered song list (before D/F drop) is what we want, since the
+    # D/F filter is for the *ranking table*, not for artist counts.
+    artists = aggregate_artists(stats["songs"], cfg.get("artistAliases", {}))
+    if artists:
+        raw_n = sum(1 for s in stats["songs"] if (s.get("artist") or "").strip())
+        print(f"  artists: {len(artists)} groups (from {raw_n} raw names, "
+              f"top: {artists[0]['artist']!r} = {artists[0]['plays']} plays "
+              f"across {artists[0]['variants']} variants)")
+
     up = {"recordedPlays": 0, "playsDaily": [], "playsMonthly": [],
           "hourOfDay": [0]*24, "dayOfWeek": [0]*7, "recent": [],
           "firstPlay": "", "lastPlay": ""}
@@ -643,6 +727,7 @@ def main():
         "recent": up["recent"],
         "songs": stats["songs"],
         "packs": stats["packs"],
+        "artists": artists,
     }
 
     os.makedirs(OUT_DIR, exist_ok=True)

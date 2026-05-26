@@ -2,13 +2,16 @@
   "comment": "Edit and rebuild: python3 build_dashboard.py. Any subset can be omitted to fall back to defaults in build_dashboard.py.",
   "colors": {
     "bars": {
-      "plays": "#a4b8d4",
-      "distinctSongs": "#5c7593"
+      "plays": "#a4b8ff",
+      "distinctSongs": "#5c75ff"
     },
     "lines": {
       "accuracy": "#37e0ff",
       "w1": "#ffcc55",
       "miss": "#ff6b6b"
     }
+  },
+  "artistAliases": {
+    "_comment": "Map canonical display name -> [variants to merge into this group]. Auto-normalization (lowercase, strip punctuation/spaces) already collapses TWICE/Twice, Girls' Generation/Girls Generation, T-ara/T ARA, etc. — use this only for cross-language or cross-romanization merges that no algorithm can catch."
   }
 }

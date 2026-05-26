@@ -129,6 +129,7 @@ Details, env-var overrides, and the WSL2 cron caveats are in
 | Want to… | Where |
 |---|---|
 | Change chart colors (bars + lines) | `config.json` — edit hex values, rebuild |
+| Force-merge artist name variants (e.g. `소녀시대` → `Girls' Generation`) | `config.json` `artistAliases: { "Canonical": ["variant1", "variant2"] }` — auto-norm already catches casing/punctuation; use this for cross-language merges only |
 | Hide more (or fewer) low grades | `EXCLUDE_GRADES = {"Tier07", "Failed"}` in `build_dashboard.py` |
 | Change banner thumbnail size | `max_w=160` in `convert_banner()` |
 | Add banners to the ranking table too | call `banner(s["dir"])` per song in `parse_stats` and render in the table |
