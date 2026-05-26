@@ -5,19 +5,21 @@ Build a StepMania play-activity dashboard from a StepMania 5.1 'Save' folder.
 Reads:
   <save>/MachineProfile/Stats.xml   -> authoritative aggregates + per-song play counts
   <save>/Upload/*.xml               -> per-play event log (exact timestamps)
-  <cache>/Songs/*                   -> (optional) #TITLE and #ARTIST per song
 
 Writes:
   <out>/data.json                   -> everything the dashboard needs
   <out>/index.html                  -> copy of the dashboard page (from this dir)
 
 Usage:
-  python3 build_dashboard.py [SAVE_DIR] [OUT_DIR] [CACHE_SONGS_DIR]
-  defaults: SAVE_DIR=../savedata/Save, OUT_DIR=./public
-            CACHE_SONGS_DIR auto-detected (../cachedata/Cache/Songs etc.)
+  python3 build_dashboard.py [SAVE_DIR] [OUT_DIR]
+  defaults: SAVE_DIR=./savedata/Save (relative to repo) , OUT_DIR=./dashboard/public
 """
-import sys, os, glob, json, collections, datetime, shutil, re
+import sys, os, glob, json, collections, datetime, shutil, re, struct, hashlib
 import xml.etree.ElementTree as ET
+try:
+    from PIL import Image
+except ImportError:
+    Image = None  # banner conversion will be skipped
 
 # StepMania occasionally writes invalid XML: raw '&' in song dirs and non-UTF-8
 # bytes from odd folder names. Sanitize before parsing.
@@ -262,10 +264,11 @@ def parse_stats(stats_path, meta):
 # --------------------------------------------------------------------------
 # 2) Upload/*.xml : per-play event log (exact timestamps)
 # --------------------------------------------------------------------------
-def parse_uploads(upload_dir, meta):
+def parse_uploads(upload_dir, meta, banner=lambda d: ""):
     files = sorted(glob.glob(os.path.join(upload_dir, "*.xml")))
     daily = collections.Counter()
     monthly = collections.Counter()
+    monthly_cal = collections.Counter()  # not in uploads; left for parity
     hour = [0] * 24
     dow = [0] * 7
     recent = []  # keep all, trim later
@@ -302,6 +305,7 @@ def parse_uploads(upload_dir, meta):
                 last = t
             m = meta(d)
             recent.append({
+                "_dir": d,
                 "dt": dt, "song": m["title"] or name, "artist": m["artist"],
                 "pack": pack, "diff": diff,
                 "pct": round(fnum(txt(hs, "PercentDP")), 4),
@@ -311,6 +315,11 @@ def parse_uploads(upload_dir, meta):
             })
     recent.sort(key=lambda x: x["dt"], reverse=True)
     recent = [r for r in recent if (r["grade"] or "") not in EXCLUDE_GRADES]
+    # Resolve banners only for the trimmed list — keeps conversion cost bounded.
+    for r in recent[:150]:
+        r["banner"] = banner(r.pop("_dir"))
+    for r in recent[150:]:
+        r.pop("_dir", None)
     return {
         "recordedPlays": total,
         "firstPlay": first.isoformat(sep=" ") if first else "",
@@ -323,6 +332,126 @@ def parse_uploads(upload_dir, meta):
     }
 
 
+# --- Banner cache (Cache/Banners) -------------------------------------------
+# Each file: 32-byte SurfaceHeader (8 LE uint32: w,h,pitch,Rmask,Gmask,Bmask,Amask,bpp)
+# then raw pixel bytes. All song banners in this user's cache are ARGB1555.
+# Filename: "<mangled-song-dir>_<original-banner-file>_B.<ext>" — the trailing
+# segment before extension is the song dir's mangled form plus the banner file
+# stem, joined by '_'.  We index by mangled-dir-prefix.
+BANNER_EXT_PATTERN = re.compile(r"\.(png|jpg|jpeg|bmp|gif)$", re.I)
+
+
+def build_banner_index(banners_dir):
+    """Map lowercased mangled-song-dir-prefix -> list of (banner_filename, size_bytes).
+       The prefix is 'Songs_<pack>_<song>_' — the song dir with a trailing '_'.
+       Multiple banners per song are kept; we pick the largest at lookup time.
+    """
+    idx = collections.defaultdict(list)
+    if not banners_dir or not os.path.isdir(banners_dir):
+        return idx
+    for fn in os.listdir(banners_dir):
+        if not BANNER_EXT_PATTERN.search(fn):
+            continue
+        # Strip extension, then a trailing "_B" version marker if present.
+        stem = BANNER_EXT_PATTERN.sub("", fn)
+        if stem.endswith("_B"):
+            stem = stem[:-2]
+        # stem = "Songs_<pack>_<song>_<orig>"; drop the last underscore-segment.
+        i = stem.rfind("_")
+        if i < 0:
+            continue
+        prefix = stem[:i].lower()  # "songs_<pack>_<song>"
+        try:
+            size = os.path.getsize(os.path.join(banners_dir, fn))
+        except OSError:
+            size = 0
+        idx[prefix].append((fn, size))
+    return idx
+
+
+def decode_argb1555(data, w, h, pitch):
+    """Pure-Python decode of ARGB1555 raw pixels -> RGB bytes (w*h*3)."""
+    out = bytearray(w * h * 3)
+    o = 0
+    for y in range(h):
+        words = struct.unpack_from(f"<{w}H", data, y * pitch)
+        for word in words:
+            # 5->8 bit expansion via (n * 527 + 23) >> 6
+            out[o]     = ((word >> 10) & 0x1F) * 527 + 23 >> 6
+            out[o + 1] = ((word >> 5)  & 0x1F) * 527 + 23 >> 6
+            out[o + 2] = (word         & 0x1F) * 527 + 23 >> 6
+            o += 3
+    return bytes(out)
+
+
+def convert_banner(src_path, dst_path, max_w=160):
+    """Decode a StepMania cache banner -> PNG.  Returns True on success."""
+    if Image is None:
+        return False
+    try:
+        with open(src_path, "rb") as f:
+            hdr = f.read(32)
+            data = f.read()
+        w, h, pitch, rm, gm, bm, am, bpp = struct.unpack("<8I", hdr)
+    except (struct.error, OSError):
+        return False
+    if bpp == 16 and rm == 0x7C00 and gm == 0x3E0 and bm == 0x1F:
+        try:
+            rgb = decode_argb1555(data, w, h, pitch)
+            img = Image.frombytes("RGB", (w, h), rgb)
+        except Exception:
+            return False
+    else:
+        # Other formats not seen in this user's cache; skip rather than risk garbage.
+        return False
+    if img.width > max_w:
+        img = img.resize((max_w, max(1, img.height * max_w // img.width)), Image.LANCZOS)
+    try:
+        img.save(dst_path, "PNG", optimize=True)
+        return True
+    except OSError:
+        return False
+
+
+def make_banner_lookup(cache_banners_dir, out_dir):
+    """Return get(song_dir)->'banners/<hash>.png' or '' if no banner found.
+       Memoized so each song is converted at most once.
+    """
+    index = build_banner_index(cache_banners_dir)
+    if not index:
+        return lambda d: ""
+    banners_out = os.path.join(out_dir, "banners")
+    os.makedirs(banners_out, exist_ok=True)
+    memo = {}
+    stats = {"hit": 0, "miss": 0, "decode_fail": 0}
+
+    def get(d):
+        if d in memo:
+            return memo[d]
+        key = cache_filename(d).lower()
+        candidates = index.get(key, [])
+        if not candidates:
+            memo[d] = ""
+            stats["miss"] += 1
+            return ""
+        # Largest file = likely the real banner (not a tiny duplicate)
+        best_fn = max(candidates, key=lambda c: c[1])[0]
+        h = hashlib.md5(d.encode("utf-8")).hexdigest()[:12]
+        out_name = f"{h}.png"
+        out_path = os.path.join(banners_out, out_name)
+        if not os.path.exists(out_path):
+            if not convert_banner(os.path.join(cache_banners_dir, best_fn), out_path):
+                memo[d] = ""
+                stats["decode_fail"] += 1
+                return ""
+        memo[d] = f"banners/{out_name}"
+        stats["hit"] += 1
+        return memo[d]
+
+    get.stats = stats
+    return get
+
+
 def resolve_cache_dir():
     """Locate the Cache/Songs dir (3rd arg, $SM_CACHE, or common spots)."""
     if len(sys.argv) > 3:
@@ -333,6 +462,17 @@ def resolve_cache_dir():
                  os.path.join(HERE, "..", "cachedata", "Cache", "Songs"),
                  os.path.join(HERE, "..", "cachedata", "Songs"),
                  os.path.join(HERE, "..", "savedata", "Cache", "Songs")):
+        if os.path.isdir(cand):
+            return cand
+    return ""
+
+
+def resolve_banners_dir(cache_songs_dir):
+    """Cache/Banners lives next to Cache/Songs."""
+    if os.environ.get("SM_BANNERS"):
+        return os.environ["SM_BANNERS"]
+    if cache_songs_dir:
+        cand = os.path.join(os.path.dirname(cache_songs_dir), "Banners")
         if os.path.isdir(cand):
             return cand
     return ""
@@ -353,6 +493,17 @@ def main():
         cache_dir = ""
     meta = make_meta_lookup(cache_dir)
 
+    banners_dir = resolve_banners_dir(cache_dir)
+    if banners_dir:
+        print(f"Banner cache: {banners_dir}")
+    else:
+        print("Banner cache: NONE — recent plays will use the placeholder.")
+    # Re-create the output banners/ each build so removed songs don't linger.
+    banners_out = os.path.join(OUT_DIR, "banners")
+    if os.path.isdir(banners_out):
+        shutil.rmtree(banners_out)
+    banner = make_banner_lookup(banners_dir, OUT_DIR)
+
     print(f"Parsing {stats_path} ...")
     stats = parse_stats(stats_path, meta)
     print(f"  songs with plays: {stats['distinctSongs']}, packs: {len(stats['packs'])}")
@@ -362,7 +513,7 @@ def main():
           "firstPlay": "", "lastPlay": ""}
     if os.path.isdir(upload_dir):
         print(f"Parsing per-play uploads in {upload_dir} ...")
-        up = parse_uploads(upload_dir, meta)
+        up = parse_uploads(upload_dir, meta, banner)
         print(f"  recorded plays: {up['recordedPlays']} "
               f"({up['firstPlay']} -> {up['lastPlay']})")
     if cache_dir:
@@ -370,6 +521,11 @@ def main():
         tot = s["hit"] + s["miss"]
         print(f"  artist/title matched for {s['hit']}/{tot} songs "
               f"({(100*s['hit']/tot if tot else 0):.0f}%)")
+    if banners_dir and hasattr(banner, "stats"):
+        b = banner.stats
+        tot = b["hit"] + b["miss"] + b["decode_fail"]
+        print(f"  banners converted for recent plays: {b['hit']}/{tot} "
+              f"(miss={b['miss']}, decode-fail={b['decode_fail']})")
 
     # Monthly calories (aggregate the daily series)
     mcal = collections.Counter()
@@ -409,11 +565,12 @@ def main():
     size = os.path.getsize(out_json)
     print(f"Wrote {out_json} ({size/1024:.0f} KB)")
 
-    # copy the dashboard page next to the data
-    src_html = os.path.join(HERE, "index.html")
-    if os.path.exists(src_html):
-        shutil.copy(src_html, os.path.join(OUT_DIR, "index.html"))
-        print(f"Copied index.html -> {OUT_DIR}")
+    # copy the dashboard page (+ placeholder) next to the data
+    for asset in ("index.html", "nobanner.svg"):
+        src = os.path.join(HERE, asset)
+        if os.path.exists(src):
+            shutil.copy(src, os.path.join(OUT_DIR, asset))
+    print(f"Copied page assets -> {OUT_DIR}")
 
 
 if __name__ == "__main__":

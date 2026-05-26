@@ -30,12 +30,15 @@ for f in index.html data.json; do
   [ -f "$SRC/$f" ] || { red "Missing $SRC/$f — run build_dashboard.py first."; exit 1; }
 done
 
-# --- 2. copy files ---------------------------------------------------------
+# --- 2. copy files (full mirror so banners/, nobanner.svg etc. come along) ---
 inf "Copying dashboard -> $DEST"
 mkdir -p "$DEST"
-cp "$SRC/index.html" "$SRC/data.json" "$DEST/"
+# Clear stale banners first, then rsync-style mirror of $SRC into $DEST.
+rm -rf "$DEST/banners"
+cp -r "$SRC"/. "$DEST/"
 chown -R www-data:www-data "$DEST" 2>/dev/null || true
-chmod 755 "$DEST"; chmod 644 "$DEST/index.html" "$DEST/data.json"
+find "$DEST" -type d -exec chmod 755 {} +
+find "$DEST" -type f -exec chmod 644 {} +
 grn "  in place: $(ls -1 "$DEST" | tr '\n' ' ')"
 
 # --- 3. nginx location block ----------------------------------------------
