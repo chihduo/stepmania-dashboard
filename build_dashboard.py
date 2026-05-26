@@ -145,7 +145,7 @@ def make_meta_lookup(cache_songs_dir):
 # --------------------------------------------------------------------------
 # 1) Stats.xml : GeneralData aggregates + SongScores (authoritative play counts)
 # --------------------------------------------------------------------------
-def parse_stats(stats_path, meta):
+def parse_stats(stats_path, meta, banner=lambda d: ""):
     root = load_xml(stats_path)
     gd = root.find("GeneralData")
 
@@ -237,6 +237,7 @@ def parse_stats(stats_path, meta):
             songs.append({
                 "song": m["title"] or name, "artist": m["artist"], "pack": pack,
                 "dir": d, "plays": plays,
+                "banner": banner(d),
                 "last": last,
                 "bestPct": round(best_pct, 4) if best_pct is not None else None,
                 "bestGrade": best_grade or "",
@@ -505,7 +506,7 @@ def main():
     banner = make_banner_lookup(banners_dir, OUT_DIR)
 
     print(f"Parsing {stats_path} ...")
-    stats = parse_stats(stats_path, meta)
+    stats = parse_stats(stats_path, meta, banner)
     print(f"  songs with plays: {stats['distinctSongs']}, packs: {len(stats['packs'])}")
 
     up = {"recordedPlays": 0, "playsDaily": [], "playsMonthly": [],
@@ -524,7 +525,7 @@ def main():
     if banners_dir and hasattr(banner, "stats"):
         b = banner.stats
         tot = b["hit"] + b["miss"] + b["decode_fail"]
-        print(f"  banners converted for recent plays: {b['hit']}/{tot} "
+        print(f"  banners converted: {b['hit']}/{tot} "
               f"(miss={b['miss']}, decode-fail={b['decode_fail']})")
 
     # Monthly calories (aggregate the daily series)

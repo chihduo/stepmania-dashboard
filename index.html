@@ -54,8 +54,13 @@
   th.asc.sorted::after{content:" ▴"}
   td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
   tr:hover td{background:#ffffff08}
-  .song{white-space:normal;max-width:320px}
-  .artist{white-space:normal;max-width:220px;color:#c2c8e6}
+  .song{white-space:normal;max-width:300px}
+  .artist{white-space:normal;max-width:200px;color:#c2c8e6}
+  .bannercol{width:80px;cursor:default}
+  .bannercol::after{content:none}
+  .banner-mini{width:72px;height:22px;object-fit:cover;border-radius:3px;
+       background:#0006;display:block}
+  td.banner-cell{padding:4px 4px 4px 10px;width:80px}
   .pill{display:inline-block;padding:1px 8px;border-radius:20px;font-size:11.5px;font-weight:600;background:#ffffff14}
   .g-AAAA,.g-AAA{color:#ffe27a;background:#ffe27a22}
   .g-AA{color:#9be15d;background:#9be15d22}
@@ -111,6 +116,11 @@
     </div>
   </section>
 
+  <section class="recent">
+    <h2>Recent plays</h2>
+    <ul id="recent"></ul>
+  </section>
+
   <section>
     <h2>Song ranking — by play frequency</h2>
     <div class="toolbar">
@@ -121,6 +131,7 @@
       <table id="tbl">
         <thead><tr>
           <th class="num" data-k="rank">#</th>
+          <th class="bannercol"></th>
           <th data-k="song">Song</th>
           <th data-k="artist">Artist</th>
           <th data-k="pack">Pack</th>
@@ -133,11 +144,6 @@
       </table>
     </div>
     <div class="pager" id="pager"></div>
-  </section>
-
-  <section class="recent">
-    <h2>Recent plays</h2>
-    <ul id="recent"></ul>
   </section>
 
   <footer id="footer"></footer>
@@ -271,7 +277,7 @@ function buildTable(d){
   d.songs.forEach((s,i)=>s.rank=i+1); // rank by default (plays desc)
   applyTable();
   $("#q").addEventListener("input", ()=>{page=0;applyTable();});
-  document.querySelectorAll("#tbl th").forEach(th=>{
+  document.querySelectorAll("#tbl th[data-k]").forEach(th=>{
     th.addEventListener("click",()=>{
       const k=th.dataset.k;
       if(sortK===k) sortAsc=!sortAsc;
@@ -306,8 +312,12 @@ function renderPage(){
     const gp=g?`<span class="pill g-${g}">${g}</span>`:'<span class="muted">—</span>';
     const pct=s.bestPct!=null?(s.bestPct*100).toFixed(2)+"%":'<span class="muted">—</span>';
     const artist = s.artist ? esc(s.artist) : '<span class="muted">—</span>';
+    const banner = `<img class="banner-mini" loading="lazy" decoding="async"
+       src="${s.banner||'nobanner.svg'}"
+       onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
     return `<tr>
       <td class="num muted">${s.rank}</td>
+      <td class="banner-cell">${banner}</td>
       <td class="song">${esc(s.song)}</td>
       <td class="artist">${artist}</td>
       <td class="muted">${esc(s.pack)}</td>
