@@ -49,6 +49,7 @@ DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 # this script; missing keys fall back to these defaults (deep-merge).
 DEFAULT_CONFIG = {
     "playerName": "",  # used in page title/header when non-empty
+    "liveDir": "/var/www/stepmania",  # auto-deploy target; skipped if not writable
     "colors": {
         "bars": {
             "plays": "#a4b8d4",          # light gray-blue
@@ -758,6 +759,26 @@ def main():
         if os.path.exists(src):
             shutil.copy(src, os.path.join(OUT_DIR, asset))
     print(f"Copied page assets -> {OUT_DIR}")
+
+    # Auto-deploy to the live web root if it's writable by this user.
+    # Skipped silently otherwise — fall back to running deploy.sh with sudo.
+    live = cfg.get("liveDir") or ""
+    if live and os.path.isdir(live) and os.access(live, os.W_OK):
+        live_banners = os.path.join(live, "banners")
+        if os.path.isdir(live_banners):
+            shutil.rmtree(live_banners)
+        for entry in os.listdir(OUT_DIR):
+            src = os.path.join(OUT_DIR, entry)
+            dst = os.path.join(live, entry)
+            if os.path.isdir(src):
+                shutil.copytree(src, dst, dirs_exist_ok=True)
+            else:
+                shutil.copy2(src, dst)
+        print(f"Auto-deployed to {live}")
+    elif live and os.path.isdir(live):
+        print(f"NOTE: {live} exists but is not writable; run deploy.sh with sudo "
+              "(or one-time: sudo chown -R $USER:www-data {0} && sudo chmod -R g+w {0} "
+              "&& sudo chmod g+s {0})".format(live))
 
 
 if __name__ == "__main__":

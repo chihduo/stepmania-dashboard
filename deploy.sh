@@ -1,15 +1,21 @@
 #!/usr/bin/env bash
 #
-# Deploy the StepMania dashboard to nginx.  Run with sudo:
-#     sudo bash deploy.sh
+# Deploy the StepMania dashboard to nginx.
 #
-# What it does (all idempotent + reversible):
-#   1. Copies index.html + data.json to /var/www/stepmania/
-#   2. Adds a 'location ^~ /stepmania/' block to the nginx site (with backup),
-#      tests the config, and reloads nginx. Rolls back if the test fails.
+# Two modes (auto-detected):
+#   1. If $DEST is writable by the current user → no sudo needed.
+#      Run with:   bash deploy.sh
+#      (After the one-time setup:
+#         sudo chown -R $USER:www-data /var/www/stepmania &&
+#         sudo chmod -R g+w /var/www/stepmania &&
+#         sudo chmod g+s /var/www/stepmania
+#       …the build script will also auto-deploy on every build.)
+#
+#   2. Otherwise → needs sudo for the first-time install (file ownership and
+#      the nginx location block). Run with:  sudo bash deploy.sh
 #
 # Override defaults with env vars, e.g.:
-#     sudo SRC=/path/to/public DEST=/var/www/sm bash deploy.sh
+#     SRC=/path/to/public DEST=/var/www/sm bash deploy.sh
 #
 set -euo pipefail
 
@@ -23,7 +29,19 @@ red(){ printf '\033[31m%s\033[0m\n' "$*"; }
 grn(){ printf '\033[32m%s\033[0m\n' "$*"; }
 inf(){ printf '\033[36m%s\033[0m\n' "$*"; }
 
-[ "$(id -u)" -eq 0 ] || { red "Please run with sudo:  sudo bash $0"; exit 1; }
+# Pick mode based on whether we can write $DEST without escalation.
+ROOT=0; [ "$(id -u)" -eq 0 ] && ROOT=1
+USER_DEPLOY=0
+if [ "$ROOT" -eq 0 ] && [ -d "$DEST" ] && [ -w "$DEST" ]; then
+    USER_DEPLOY=1
+fi
+if [ "$ROOT" -eq 0 ] && [ "$USER_DEPLOY" -eq 0 ]; then
+    red "Can't write $DEST as $(whoami)."
+    inf "Either run with sudo:  sudo bash $0"
+    inf "Or do this one-time fix so you never need sudo again:"
+    inf "  sudo chown -R \$USER:www-data $DEST && sudo chmod -R g+w $DEST && sudo chmod g+s $DEST"
+    exit 1
+fi
 
 # --- 1. check source files -------------------------------------------------
 for f in index.html data.json; do
@@ -31,15 +49,25 @@ for f in index.html data.json; do
 done
 
 # --- 2. copy files (full mirror so banners/, nobanner.svg etc. come along) ---
-inf "Copying dashboard -> $DEST"
+inf "Copying dashboard -> $DEST  (mode: $([ "$ROOT" -eq 1 ] && echo sudo || echo user))"
 mkdir -p "$DEST"
 # Clear stale banners first, then rsync-style mirror of $SRC into $DEST.
 rm -rf "$DEST/banners"
 cp -r "$SRC"/. "$DEST/"
-chown -R www-data:www-data "$DEST" 2>/dev/null || true
+if [ "$ROOT" -eq 1 ]; then
+    chown -R www-data:www-data "$DEST" 2>/dev/null || true
+fi
 find "$DEST" -type d -exec chmod 755 {} +
 find "$DEST" -type f -exec chmod 644 {} +
 grn "  in place: $(ls -1 "$DEST" | tr '\n' ' ')"
+
+# Steps 3 (nginx) only runs as root; in user-deploy mode we assume it's
+# already configured (otherwise the URL would be 404'ing, which the user
+# would have noticed).
+if [ "$USER_DEPLOY" -eq 1 ]; then
+    grn "Done.  Visit:  ${PUBLIC_URL}   (Ctrl+F5 to defeat data.json cache)"
+    exit 0
+fi
 
 # --- 3. nginx location block ----------------------------------------------
 if [ ! -f "$NGINX_SITE" ]; then

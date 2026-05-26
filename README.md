@@ -76,6 +76,31 @@ class-site rebuilds.
 sudo bash deploy.sh
 ```
 
+### Deploying without sudo (auto-deploy on every build)
+
+`/var/www/stepmania/` is owned by `www-data` by default, so the deploy needs
+sudo. Once, give yourself ownership while keeping group access for nginx:
+
+```bash
+sudo chown -R $USER:www-data /var/www/stepmania && \
+sudo chmod -R g+w /var/www/stepmania && \
+sudo chmod g+s /var/www/stepmania
+```
+
+After that:
+- `bash deploy.sh` (no sudo) works.
+- `python3 build_dashboard.py` **also auto-deploys** at the end whenever the
+  live dir (`liveDir` in `config.json`, default `/var/www/stepmania`) is
+  writable. So a typical change becomes a single command:
+  ```bash
+  python3 build_dashboard.py     # builds, then auto-deploys live
+  ```
+  (Browser still needs Ctrl+F5 to defeat the `data.json` cache.)
+
+The future `sm-update.service` (systemd, runs as www-data) still works: the
+setgid bit means files it creates inherit the www-data group, so nginx can
+read them and you can still delete/replace them.
+
 What `deploy.sh` does:
 1. Mirrors `public/` (incl. `banners/` + `nobanner.svg`) into
    `/var/www/stepmania/`, clearing stale banners first; sets `www-data` owner
