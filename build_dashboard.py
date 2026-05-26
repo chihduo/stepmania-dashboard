@@ -270,6 +270,15 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
     daily = collections.Counter()
     monthly = collections.Counter()
     monthly_cal = collections.Counter()  # not in uploads; left for parity
+    # Per-month skill aggregates for the combo chart.
+    # Accuracy = mean(PercentDP) per play (so each play weighted equally).
+    # W1% and Miss% = note-count-weighted (sum_w1 / sum_total_hits) so a long
+    # song doesn't get drowned out by ten short ones.
+    m_pct_sum = collections.Counter()
+    m_pct_n   = collections.Counter()
+    m_w1   = collections.Counter()
+    m_miss = collections.Counter()
+    m_taps = collections.Counter()
     hour = [0] * 24
     dow = [0] * 7
     recent = []  # keep all, trim later
@@ -296,14 +305,28 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
                 continue
             total += 1
             day = t.date().isoformat()
+            mo  = t.strftime("%Y-%m")
             daily[day] += 1
-            monthly[t.strftime("%Y-%m")] += 1
+            monthly[mo] += 1
             hour[t.hour] += 1
             dow[t.weekday()] += 1  # 0=Mon
             if first is None or t < first:
                 first = t
             if last is None or t > last:
                 last = t
+            # Skill aggregates for the combo chart
+            pct = fnum(txt(hs, "PercentDP"), -1)
+            if pct >= 0:
+                m_pct_sum[mo] += pct
+                m_pct_n[mo]   += 1
+            tn = hs.find("TapNoteScores")
+            if tn is not None:
+                counts = {c.tag: inum(c.text) for c in tn}
+                taps = sum(counts.get(k, 0) for k in ("W1","W2","W3","W4","W5","Miss"))
+                if taps > 0:
+                    m_w1[mo]   += counts.get("W1", 0)
+                    m_miss[mo] += counts.get("Miss", 0)
+                    m_taps[mo] += taps
             m = meta(d)
             recent.append({
                 "_dir": d,
@@ -321,12 +344,21 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
         r["banner"] = banner(r.pop("_dir"))
     for r in recent[150:]:
         r.pop("_dir", None)
+    # Build the monthly skill series aligned with playsMonthly months.
+    months_sorted = sorted(monthly)
+    accuracy_m = [(mo, round(100 * m_pct_sum[mo] / m_pct_n[mo], 2) if m_pct_n[mo] else None) for mo in months_sorted]
+    w1pct_m    = [(mo, round(100 * m_w1[mo]      / m_taps[mo],  2) if m_taps[mo]  else None) for mo in months_sorted]
+    misspct_m  = [(mo, round(100 * m_miss[mo]    / m_taps[mo],  2) if m_taps[mo]  else None) for mo in months_sorted]
+
     return {
         "recordedPlays": total,
         "firstPlay": first.isoformat(sep=" ") if first else "",
         "lastPlay": last.isoformat(sep=" ") if last else "",
         "playsDaily": sorted(daily.items()),
         "playsMonthly": sorted(monthly.items()),
+        "accuracyMonthly": accuracy_m,
+        "w1PctMonthly": w1pct_m,
+        "missPctMonthly": misspct_m,
         "hourOfDay": hour,
         "dayOfWeek": dow,
         "recent": recent[:150],
@@ -552,6 +584,9 @@ def main():
         "monthlyCalories": monthly_cal,
         "playsDaily": up["playsDaily"],
         "playsMonthly": up["playsMonthly"],
+        "accuracyMonthly": up.get("accuracyMonthly", []),
+        "w1PctMonthly": up.get("w1PctMonthly", []),
+        "missPctMonthly": up.get("missPctMonthly", []),
         "hourOfDay": up["hourOfDay"],
         "dayOfWeek": up["dayOfWeek"],
         "recent": up["recent"],

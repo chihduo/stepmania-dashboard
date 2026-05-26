@@ -78,6 +78,12 @@
   .recent .row{display:flex;justify-content:space-between;gap:12px;align-items:center;
        background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
   .recent .meta{color:var(--muted);font-size:12px}
+  .legend{margin-left:12px;font-size:11.5px}
+  .legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;
+       vertical-align:middle;margin:0 4px 0 10px}
+  .legend .sw.line{height:0;border-top:2px solid;width:14px;border-radius:0}
+  .dot{transition:opacity .15s}
+  .dot:hover{opacity:.6}
   .banner{width:96px;height:30px;object-fit:cover;border-radius:4px;
        background:#0006;flex-shrink:0;display:block}
   .recent .info{flex:1;min-width:0;display:flex;gap:10px;align-items:center}
@@ -100,7 +106,18 @@
   <section>
     <h2>Activity over time</h2>
     <div class="grid">
-      <div class="card full"><h3>Plays per month</h3><p class="cap">From the per-play upload log</p><div id="c-months"></div></div>
+      <div class="card full">
+        <h3>Plays per month, with skill trend</h3>
+        <p class="cap">Bars: plays · Lines: accuracy %, W1 (Marvelous) %, miss %
+          <span class="legend">
+            <span class="sw" style="background:var(--accent)"></span>plays
+            <span class="sw line" style="border-color:var(--accent2);color:var(--accent2)"></span>accuracy
+            <span class="sw line" style="border-color:var(--warn);color:var(--warn)"></span>W1
+            <span class="sw line" style="border-color:var(--bad);color:var(--bad)"></span>miss
+          </span>
+        </p>
+        <div id="c-months"></div>
+      </div>
       <div class="card"><h3>Calories per month</h3><p class="cap">kcal estimated by StepMania</p><div id="c-cal"></div></div>
       <div class="card"><h3>When you play — hour of day</h3><p class="cap">Local time recorded on each play</p><div id="c-hour"></div></div>
       <div class="card"><h3>When you play — day of week</h3><p class="cap" id="cap-dow"></p><div id="c-dow"></div></div>
@@ -194,6 +211,55 @@ function hbars(el, items, {color="var(--accent2)", fmtv=v=>fmt(v)}={}){
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${rows}</svg>`;
   wireBars(el);
 }
+// ---- combo chart: bars (left axis, count) + lines (right axis, %) ----
+function comboBarsLines(el, bars, lines, {every=1, fmtBar=v=>fmt(v)+" plays"}={}){
+  const W=600, H=240, pl=10, pr=34, pt=12, pb=28;
+  const innerW=W-pl-pr, innerH=H-pt-pb;
+  const n=bars.length, bw=innerW/n;
+  const maxBar=Math.max(1,...bars.map(d=>d.v));
+
+  let s='';
+  // Right-side % gridlines (0/25/50/75/100)
+  for(let p=0;p<=100;p+=25){
+    const y=pt+innerH-(p/100)*innerH;
+    s+=`<line x1="${pl}" y1="${y}" x2="${pl+innerW}" y2="${y}" stroke="#ffffff10" stroke-width="0.5"/>`;
+    s+=`<text class="axis" x="${pl+innerW+4}" y="${y+3}" text-anchor="start">${p}%</text>`;
+  }
+  // Bars
+  bars.forEach((d,i)=>{
+    const h=(d.v/maxBar)*innerH;
+    const x=pl+i*bw, y=pt+innerH-h;
+    s+=`<rect class="bar" x="${x+bw*0.12}" y="${y}" width="${bw*0.76}" height="${h}" rx="2"
+        fill="var(--accent)" data-t="${d.label}: <b>${fmtBar(d.v)}</b>"></rect>`;
+  });
+  // X labels
+  bars.forEach((d,i)=>{
+    if(i%every) return;
+    s+=`<text class="axis" x="${pl+i*bw+bw/2}" y="${H-9}" text-anchor="middle">${d.short??d.label}</text>`;
+  });
+  // Lines (paths with gaps for null values) + dots
+  lines.forEach(line=>{
+    let path='', open=false;
+    line.data.forEach((d,i)=>{
+      if(d==null||d.v==null){ open=false; return; }
+      const x=pl+i*bw+bw/2;
+      const y=pt+innerH-(d.v/100)*innerH;
+      path += (open?' L ':' M ')+x+' '+y;
+      open = true;
+    });
+    if(path) s+=`<path d="${path.trim()}" fill="none" stroke="${line.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    line.data.forEach((d,i)=>{
+      if(d==null||d.v==null) return;
+      const x=pl+i*bw+bw/2;
+      const y=pt+innerH-(d.v/100)*innerH;
+      s+=`<circle class="dot" cx="${x}" cy="${y}" r="2.5" fill="${line.color}"
+            data-t="${line.name} ${d.label}: <b>${d.v.toFixed(1)}%</b>"/>`;
+    });
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${s}</svg>`;
+  wireBars(el);
+}
+
 function trunc(s,n){return s.length>n? s.slice(0,n-1)+"…":s;}
 function wireBars(el){
   el.querySelectorAll("[data-t]").forEach(b=>{
@@ -228,9 +294,14 @@ function render(d){
   $("#kpis").innerHTML = kpi.map(([l,v,s])=>
     `<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div class="s">${s}</div></div>`).join("");
 
-  // plays per month
-  vbars($("#c-months"), d.playsMonthly.map(([m,n])=>({label:m,short:m.slice(2),v:n})),
-        {color:"var(--accent)", every: Math.ceil(d.playsMonthly.length/12)});
+  // plays per month + skill trend (bars + 3 lines on right %-axis)
+  const monthsBars = d.playsMonthly.map(([m,n])=>({label:m,short:m.slice(2),v:n}));
+  const asLine = arr => arr.map(([m,v])=>v==null?null:{label:m,v});
+  comboBarsLines($("#c-months"), monthsBars, [
+    {name:"accuracy", color:"var(--accent2)", data: asLine(d.accuracyMonthly||[])},
+    {name:"W1",       color:"var(--warn)",    data: asLine(d.w1PctMonthly  ||[])},
+    {name:"miss",     color:"var(--bad)",     data: asLine(d.missPctMonthly||[])},
+  ], { every: Math.ceil(d.playsMonthly.length/12) });
   // calories per month
   vbars($("#c-cal"), d.monthlyCalories.map(([m,c])=>({label:m,short:m.slice(2),v:Math.round(c)})),
         {color:"var(--warn)", every: Math.ceil(d.monthlyCalories.length/8), fmtv:v=>fmt(v)+" kcal"});
