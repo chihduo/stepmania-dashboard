@@ -62,6 +62,30 @@ This wakes WSL on schedule, runs once, lets it idle out. Doesn't need cron
 inside WSL — but the script is harmless to run either way, so you can keep
 the crontab line as a fallback.
 
+## Upgrading (after the dashboard code changes)
+
+**Re-run `wsl-install.sh`.** It's idempotent:
+
+```bash
+cd ~/sm-dashboard
+git pull                       # or however you sync the repo
+bash wsl/wsl-install.sh
+```
+
+It re-copies `wsl-update.sh` to `~/.local/bin/`, skips re-prompting for
+credentials if `~/.netrc` already has the host, and skips re-adding the
+crontab line if it's already there. **The cron schedule and credentials stay
+intact.**
+
+If you only changed `wsl-update.sh` (the daily script itself), you can shortcut
+that with one command — no install needed:
+```bash
+install -m 755 ~/sm-dashboard/wsl/wsl-update.sh ~/.local/bin/wsl-update.sh
+```
+
+The server-side build is independent of this script — any new stats or
+dashboard features land via re-running the server's `install.sh`, not this one.
+
 ## Overrides
 
 | Env var | Purpose | Default |

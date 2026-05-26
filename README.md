@@ -1,7 +1,7 @@
 # StepMania Play-Activity Dashboard
 
 > _Last updated: **2026-05-26** — bump this date whenever you edit this file._
-> _Pipeline doc: also see [`wsl/README.md`](wsl/README.md) and [`server/`](server/) for the daily WSL → server update path._
+> _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
 folder. No server-side code, no CDN — vanilla HTML/JS + hand-rolled SVG charts +
