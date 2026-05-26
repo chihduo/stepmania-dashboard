@@ -222,29 +222,43 @@ def aggregate_artists(songs, aliases):
 
     Returns: [{artist, plays, songs, variants}] sorted by plays desc.
     """
-    # Build alias lookup: normalized variant -> canonical display
+    # Build alias lookup: normalized variant -> (canonical_norm, canonical_display)
+    # Stored as a tuple so we can both redirect the bucket key (so variants merge
+    # into one group) AND remember the display name (so the canonical wins over
+    # the most-played raw variant).
     alias_lookup = {}
     for canonical, variants in (aliases or {}).items():
         if not canonical or canonical.startswith("_"):
             continue  # skip _comment etc.
+        canonical_norm = normalize_artist(canonical)
+        if not canonical_norm:
+            continue
         for v in [canonical] + list(variants or []):
             k = normalize_artist(v)
             if k:
-                alias_lookup[k] = canonical
+                alias_lookup[k] = (canonical_norm, canonical)
 
-    # Bucket by normalized key
+    # Bucket by normalized key (or aliased canonical key)
     buckets = {}  # key -> {display, plays, songs, variants{raw:plays}}
     for s in songs:
         raw = (s.get("artist") or "").strip()
         if not raw:
             continue
-        key = normalize_artist(raw)
-        if not key:
+        raw_key = normalize_artist(raw)
+        if not raw_key:
             continue
-        b = buckets.setdefault(key, {
-            "display": alias_lookup.get(key),  # None if no override
+        if raw_key in alias_lookup:
+            bucket_key, canonical_display = alias_lookup[raw_key]
+        else:
+            bucket_key, canonical_display = raw_key, None
+        b = buckets.setdefault(bucket_key, {
+            "display": canonical_display,
             "plays": 0, "songs": 0, "variants": collections.Counter(),
         })
+        # If this song's variant supplies a canonical display and an earlier
+        # song in the same bucket didn't, set it now.
+        if canonical_display and not b["display"]:
+            b["display"] = canonical_display
         b["plays"] += s["plays"]
         b["songs"] += 1
         b["variants"][raw] += s["plays"]

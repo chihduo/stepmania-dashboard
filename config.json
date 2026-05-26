@@ -12,6 +12,10 @@
     }
   },
   "artistAliases": {
-    "_comment": "Map canonical display name -> [variants to merge into this group]. Auto-normalization (lowercase, strip punctuation/spaces) already collapses TWICE/Twice, Girls' Generation/Girls Generation, T-ara/T ARA, etc. — use this only for cross-language or cross-romanization merges that no algorithm can catch."
+    "_comment": "Map canonical display name -> [variants to merge into this group]. Auto-normalization already collapses TWICE/Twice, T-ara/T ARA, GFRIEND/G-Friend, etc. — list cross-language/cross-romanization variants here. Sub-units (TTS, T-ara N4) and collabs (Super Junior & X) are intentionally NOT merged.",
+
+    "Mizuki Nana": ["Nana Mizuki", "水樹奈々", "水樹 奈々"],
+    "Girls' Generation": ["SNSD", "소녀시대", "少女時代", "Girls' Generation (SNSD)", "SNSD Girls Generation"],
+    "T-ara": ["티아라"]
   }
 }
