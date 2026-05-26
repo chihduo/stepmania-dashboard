@@ -1,0 +1,19 @@
+# Built output (regenerable; contains personal play data)
+public/
+
+# Packaged bundle (regenerable)
+stepmania-dashboard.tar.gz
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Editor swap/backup files
+*.swp
+*.swo
+*~
+
+# Node (transient during screenshot verification)
+node_modules/
+package.json
+package-lock.json

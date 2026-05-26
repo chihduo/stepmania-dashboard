@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StepMania — Play Activity Dashboard</title>
+<style>
+  :root{
+    --bg:#0d0f1a; --panel:#161a2b; --panel2:#1d2238; --line:#2a3050;
+    --text:#e8ebf7; --muted:#9aa3c4; --accent:#ff3ea5; --accent2:#37e0ff;
+    --good:#46e08a; --warn:#ffcc55; --bad:#ff6b6b;
+    --grad:linear-gradient(135deg,#ff3ea5,#37e0ff);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--accent2)}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 18px 64px}
+  header h1{margin:0;font-size:28px;letter-spacing:.5px}
+  header h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);margin-top:6px;font-size:13.5px}
+  .sub b{color:var(--text);font-weight:600}
+  section{margin-top:34px}
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);
+     margin:0 0 14px;font-weight:700}
+  /* KPI cards */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
+  .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad)}
+  .kpi .v{font-size:26px;font-weight:700;letter-spacing:.3px}
+  .kpi .l{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .kpi .s{color:var(--muted);font-size:11.5px;margin-top:6px;opacity:.85}
+  /* chart grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .card h3{margin:0 0 4px;font-size:14.5px}
+  .card .cap{color:var(--muted);font-size:12px;margin:0 0 12px}
+  svg{display:block;width:100%;height:auto;overflow:visible}
+  .bar{transition:opacity .15s}
+  .bar:hover{opacity:.75}
+  .axis{fill:var(--muted);font-size:11px}
+  .glabel{fill:var(--text);font-size:11.5px}
+  .val{fill:var(--muted);font-size:11px}
+  .tip{position:fixed;pointer-events:none;background:#000d;border:1px solid var(--line);
+       border-radius:8px;padding:6px 9px;font-size:12px;color:#fff;z-index:50;opacity:0;transition:opacity .1s;white-space:nowrap}
+  /* tables */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  input[type=search]{background:var(--panel2);border:1px solid var(--line);color:var(--text);
+       border-radius:9px;padding:9px 12px;font-size:14px;min-width:240px;flex:1}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.6px;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--panel)}
+  th.sorted::after{content:" ▾";color:var(--accent)}
+  th.asc.sorted::after{content:" ▴"}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  tr:hover td{background:#ffffff08}
+  .song{white-space:normal;max-width:360px}
+  .pill{display:inline-block;padding:1px 8px;border-radius:20px;font-size:11.5px;font-weight:600;background:#ffffff14}
+  .g-AAAA,.g-AAA{color:#ffe27a;background:#ffe27a22}
+  .g-AA{color:#9be15d;background:#9be15d22}
+  .g-A{color:#5dd6e1;background:#5dd6e122}
+  .g-B{color:#7aa8ff;background:#7aa8ff22}
+  .g-C{color:#c99bff;background:#c99bff22}
+  .g-D{color:#ffa45d;background:#ffa45d22}
+  .g-F{color:#ff7a7a;background:#ff7a7a22}
+  .muted{color:var(--muted)}
+  .pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:12px;color:var(--muted);font-size:13px}
+  .pager button{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 12px;cursor:pointer}
+  .pager button:disabled{opacity:.4;cursor:default}
+  .recent li{list-style:none}
+  .recent ul{margin:0;padding:0;display:grid;gap:8px}
+  .recent .row{display:flex;justify-content:space-between;gap:12px;align-items:center;
+       background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+  .recent .meta{color:var(--muted);font-size:12px}
+  footer{margin-top:46px;color:var(--muted);font-size:12px;line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
+  .full{grid-column:1/-1}
+  @media(max-width:560px){.song{max-width:180px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>StepMania <span class="g">Play Dashboard</span></h1>
+    <div class="sub" id="meta">Loading…</div>
+  </header>
+
+  <section><div class="kpis" id="kpis"></div></section>
+
+  <section>
+    <h2>Activity over time</h2>
+    <div class="grid">
+      <div class="card full"><h3>Plays per month</h3><p class="cap">From the per-play upload log</p><div id="c-months"></div></div>
+      <div class="card"><h3>Calories per month</h3><p class="cap">kcal estimated by StepMania</p><div id="c-cal"></div></div>
+      <div class="card"><h3>When you play — hour of day</h3><p class="cap">Local time recorded on each play</p><div id="c-hour"></div></div>
+      <div class="card"><h3>When you play — day of week</h3><p class="cap" id="cap-dow"></p><div id="c-dow"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Breakdowns</h2>
+    <div class="grid">
+      <div class="card"><h3>Plays by difficulty</h3><p class="cap">All-time stage counts</p><div id="c-diff"></div></div>
+      <div class="card"><h3>Stages passed by grade</h3><p class="cap">Grade letters are theme-approximate</p><div id="c-grade"></div></div>
+      <div class="card"><h3>Top packs</h3><p class="cap">By total plays</p><div id="c-packs"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Song ranking — by play frequency</h2>
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Search song or pack…">
+      <span class="muted" id="tblcount"></span>
+    </div>
+    <div style="overflow-x:auto">
+      <table id="tbl">
+        <thead><tr>
+          <th class="num" data-k="rank">#</th>
+          <th data-k="song">Song</th>
+          <th data-k="pack">Pack</th>
+          <th class="num" data-k="plays">Plays</th>
+          <th class="num" data-k="bestPct">Best %</th>
+          <th data-k="bestGrade">Grade</th>
+          <th data-k="last">Last played</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="pager" id="pager"></div>
+  </section>
+
+  <section class="recent">
+    <h2>Recent plays</h2>
+    <ul id="recent"></ul>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const tip = $("#tip");
+const fmt = n => n.toLocaleString();
+const DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+
+function showTip(html,e){tip.innerHTML=html;tip.style.opacity=1;moveTip(e);}
+function moveTip(e){tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY+12)+"px";}
+function hideTip(){tip.style.opacity=0;}
+
+// ---- vertical bar chart (SVG) ----
+function vbars(el, items, {color="var(--accent)", fmtv=v=>fmt(v), every=1}={}){
+  const W=600,H=210,pl=8,pr=8,pt=10,pb=28;
+  const max=Math.max(1,...items.map(d=>d.v));
+  const n=items.length, bw=(W-pl-pr)/n;
+  let bars="",labels="";
+  items.forEach((d,i)=>{
+    const h=(d.v/max)*(H-pt-pb);
+    const x=pl+i*bw, y=H-pb-h;
+    bars+=`<rect class="bar" x="${x+bw*0.12}" y="${y}" width="${bw*0.76}" height="${h}" rx="2" fill="${color}"
+       data-t="${d.label}: <b>${fmtv(d.v)}</b>"></rect>`;
+    if(i%every===0) labels+=`<text class="axis" x="${x+bw/2}" y="${H-9}" text-anchor="middle">${d.short??d.label}</text>`;
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${bars}${labels}</svg>`;
+  wireBars(el);
+}
+
+// ---- horizontal bar chart ----
+function hbars(el, items, {color="var(--accent2)", fmtv=v=>fmt(v)}={}){
+  const W=600, rowH=30, pad=6, lw=150, vw=64;
+  const H=pad*2+items.length*rowH;
+  const max=Math.max(1,...items.map(d=>d.v));
+  let rows="";
+  items.forEach((d,i)=>{
+    const y=pad+i*rowH;
+    const bw=(d.v/max)*(W-lw-vw);
+    rows+=`<text class="glabel" x="0" y="${y+rowH/2+4}">${trunc(d.label,22)}</text>`;
+    rows+=`<rect class="bar" x="${lw}" y="${y+5}" width="${Math.max(2,bw)}" height="${rowH-12}" rx="3" fill="${d.color||color}"
+        data-t="${d.label}: <b>${fmtv(d.v)}</b>"></rect>`;
+    rows+=`<text class="val" x="${lw+Math.max(2,bw)+8}" y="${y+rowH/2+4}">${fmtv(d.v)}</text>`;
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${rows}</svg>`;
+  wireBars(el);
+}
+function trunc(s,n){return s.length>n? s.slice(0,n-1)+"…":s;}
+function wireBars(el){
+  el.querySelectorAll("[data-t]").forEach(b=>{
+    b.addEventListener("mousemove",e=>showTip(b.dataset.t,e));
+    b.addEventListener("mouseleave",hideTip);
+  });
+}
+
+let DATA=null;
+fetch("./data.json").then(r=>r.json()).then(d=>{DATA=d;render(d);})
+  .catch(e=>{$("#meta").textContent="Failed to load data.json — "+e;});
+
+function gradeLetter(t){return (DATA.gradeMap&&DATA.gradeMap[t])||t||"";}
+
+function render(d){
+  const t=d.totals;
+  const hrs=(t.gameplaySeconds/3600);
+  // meta line
+  $("#meta").innerHTML =
+    `Recorded plays span <b>${d.firstPlay.slice(0,10)}</b> → <b>${d.lastPlay.slice(0,10)}</b> · `+
+    `last played <b>${d.profile.lastPlayed}</b> · generated ${d.generated.replace("T"," ").slice(0,16)}`;
+
+  // KPI cards
+  const kpi=[
+    ["Songs played", fmt(t.songsPlayed), "all-time stage count"],
+    ["Distinct songs", fmt(d.distinctSongs), `across ${d.packs.length} packs`],
+    ["Sessions", fmt(t.sessions), "times you booted in"],
+    ["Time on pad", hrs.toFixed(0)+" h", "active gameplay only"],
+    ["Calories", fmt(Math.round(t.calories)), "kcal, StepMania estimate"],
+    ["Steps hit", fmt(t.tapsAndHolds), `+ ${fmt(t.jumps)} jumps`],
+  ];
+  $("#kpis").innerHTML = kpi.map(([l,v,s])=>
+    `<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div class="s">${s}</div></div>`).join("");
+
+  // plays per month
+  vbars($("#c-months"), d.playsMonthly.map(([m,n])=>({label:m,short:m.slice(2),v:n})),
+        {color:"var(--accent)", every: Math.ceil(d.playsMonthly.length/12)});
+  // calories per month
+  vbars($("#c-cal"), d.monthlyCalories.map(([m,c])=>({label:m,short:m.slice(2),v:Math.round(c)})),
+        {color:"var(--warn)", every: Math.ceil(d.monthlyCalories.length/8), fmtv:v=>fmt(v)+" kcal"});
+  // hour of day
+  vbars($("#c-hour"), d.hourOfDay.map((n,i)=>({label:i+":00",short:String(i),v:n})),
+        {color:"var(--accent2)", every:3});
+  // day of week
+  const dowTot=d.dayOfWeek.reduce((a,b)=>a+b,0);
+  const peak=DOW[d.dayOfWeek.indexOf(Math.max(...d.dayOfWeek))];
+  $("#cap-dow").textContent=`Busiest day: ${peak}`;
+  hbars($("#c-dow"), d.dayOfWeek.map((n,i)=>({label:DOW[i],v:n})), {color:"var(--accent)"});
+
+  // difficulty (ordered)
+  const diffItems=d.diffOrder.filter(k=>d.byDifficulty[k]!=null)
+        .map(k=>({label:k,v:d.byDifficulty[k]}));
+  hbars($("#c-diff"), diffItems, {color:"var(--good)"});
+
+  // grade (ordered Tier01..07)
+  const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07"];
+  const gcolors={Tier01:"#ffe27a",Tier02:"#ffe27a",Tier03:"#9be15d",Tier04:"#5dd6e1",Tier05:"#7aa8ff",Tier06:"#c99bff",Tier07:"#ffa45d"};
+  const gItems=gOrder.filter(k=>d.byGrade[k]!=null)
+        .map(k=>({label:`${gradeLetter(k)} (${k.replace("Tier","T")})`,v:d.byGrade[k],color:gcolors[k]}));
+  hbars($("#c-grade"), gItems, {});
+
+  // packs (top 12)
+  hbars($("#c-packs"), d.packs.slice(0,12).map(p=>({label:p.pack,v:p.plays})), {color:"var(--accent)"});
+
+  buildTable(d);
+  buildRecent(d);
+
+  $("#footer").innerHTML =
+    `<b>Data sources:</b> aggregates &amp; play counts from <code>MachineProfile/Stats.xml</code>; `+
+    `timeline &amp; recent plays from ${fmt(d.recordedPlays)} per-play files in <code>Save/Upload/</code>.<br>`+
+    `Grade letters (AAAA…F) are an approximate mapping of StepMania's Tier01–Tier07 and depend on your theme. `+
+    `"Songs played" counts every stage incl. retries; "Distinct songs" counts unique charts with ≥1 play.<br>`+
+    `Rebuild after new sessions: <code>python3 build_dashboard.py</code>.`;
+}
+
+// ---------- song ranking table ----------
+let sortK="plays", sortAsc=false, page=0, filtered=[];
+const PER=50;
+function buildTable(d){
+  d.songs.forEach((s,i)=>s.rank=i+1); // rank by default (plays desc)
+  applyTable();
+  $("#q").addEventListener("input", ()=>{page=0;applyTable();});
+  document.querySelectorAll("#tbl th").forEach(th=>{
+    th.addEventListener("click",()=>{
+      const k=th.dataset.k;
+      if(sortK===k) sortAsc=!sortAsc;
+      else {sortK=k; sortAsc=(k==="song"||k==="pack");}
+      page=0; applyTable();
+    });
+  });
+}
+function applyTable(){
+  const q=$("#q").value.trim().toLowerCase();
+  filtered=DATA.songs.filter(s=> !q || s.song.toLowerCase().includes(q) || s.pack.toLowerCase().includes(q));
+  const dir=sortAsc?1:-1;
+  filtered.sort((a,b)=>{
+    let x=a[sortK], y=b[sortK];
+    if(sortK==="bestPct"){x=x??-1;y=y??-1;}
+    if(typeof x==="string"){x=x.toLowerCase();y=(y||"").toLowerCase();}
+    return x<y?-1*dir : x>y?1*dir : 0;
+  });
+  document.querySelectorAll("#tbl th").forEach(th=>{
+    th.classList.toggle("sorted",th.dataset.k===sortK);
+    th.classList.toggle("asc",th.dataset.k===sortK&&sortAsc);
+  });
+  $("#tblcount").textContent = `${fmt(filtered.length)} songs`;
+  renderPage();
+}
+function renderPage(){
+  const pages=Math.max(1,Math.ceil(filtered.length/PER));
+  page=Math.min(page,pages-1);
+  const rows=filtered.slice(page*PER,page*PER+PER).map(s=>{
+    const g=s.bestGrade?gradeLetter(s.bestGrade):"";
+    const gp=g?`<span class="pill g-${g}">${g}</span>`:'<span class="muted">—</span>';
+    const pct=s.bestPct!=null?(s.bestPct*100).toFixed(2)+"%":'<span class="muted">—</span>';
+    return `<tr>
+      <td class="num muted">${s.rank}</td>
+      <td class="song">${esc(s.song)}</td>
+      <td class="muted">${esc(s.pack)}</td>
+      <td class="num"><b>${fmt(s.plays)}</b></td>
+      <td class="num">${pct}</td>
+      <td>${gp}</td>
+      <td class="muted">${s.last||"—"}</td></tr>`;
+  }).join("");
+  $("#tbody").innerHTML=rows;
+  $("#pager").innerHTML =
+    `<button ${page<=0?"disabled":""} id="prev">‹ Prev</button>`+
+    `<span>Page ${page+1} / ${pages}</span>`+
+    `<button ${page>=pages-1?"disabled":""} id="next">Next ›</button>`;
+  const p=$("#prev"),n=$("#next");
+  if(p)p.onclick=()=>{page--;renderPage();window.scrollTo({top:$("#tbl").offsetTop-20});};
+  if(n)n.onclick=()=>{page++;renderPage();window.scrollTo({top:$("#tbl").offsetTop-20});};
+}
+function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+
+function buildRecent(d){
+  $("#recent").innerHTML = "<ul>"+d.recent.slice(0,30).map(r=>{
+    const g=gradeLetter(r.grade);
+    const gp=`<span class="pill g-${g}">${g}</span>`;
+    return `<li><div class="row">
+      <div><div>${esc(r.song)}</div><div class="meta">${esc(r.pack)} · ${r.diff}</div></div>
+      <div style="text-align:right">${gp} <b>${(r.pct*100).toFixed(1)}%</b>
+        <div class="meta">${r.dt}</div></div>
+    </div></li>`;
+  }).join("")+"</ul>";
+}
+document.addEventListener("mousemove",e=>{if(tip.style.opacity==1)moveTip(e);});
+</script>
+</body>
+</html>
