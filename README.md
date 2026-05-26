@@ -23,10 +23,25 @@ so it works behind your nginx COEP (`credentialless`) and offline.
    python3 build_dashboard.py /path/to/Save ./public
    ```
    (defaults: `../savedata/Save` → `./public`)
-3. Re-copy `public/` to the web root.
+3. Re-copy `public/` to the web root (see deploy below).
 
 The parser tolerates StepMania's occasionally-malformed XML (raw `&`,
 non-UTF-8 folder names).
+
+## Deploy to nginx
+The site root is `/var/www/html/example-site/` (→ `_example-site/_output`), behind basic auth.
+
+```bash
+sudo bash deploy.sh
+```
+
+`deploy.sh` copies the files to `/var/www/stepmania/`, then adds a
+`location ^~ /stepmania/` block to `/etc/nginx/sites-enabled/default`
+(with a timestamped backup), runs `nginx -t`, and reloads — rolling back the
+config if the test fails. It's idempotent (safe to re-run) and the `^~` makes
+the path win over the existing `index.html` regex location; basic auth is
+inherited so it stays private.
+Visit: `https://example.com/stepmania/`
 
 ## Notes
 - Grade letters (AAAA…F) are an approximate mapping of StepMania's `Tier01`–`Tier07`
