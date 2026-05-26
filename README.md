@@ -1,6 +1,7 @@
 # StepMania Play-Activity Dashboard
 
 > _Last updated: **2026-05-26** — bump this date whenever you edit this file._
+> _Pipeline doc: also see [`wsl/README.md`](wsl/README.md) and [`server/`](server/) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
 folder. No server-side code, no CDN — vanilla HTML/JS + hand-rolled SVG charts +
@@ -16,6 +17,8 @@ and offline.
 | `nobanner.svg` | Theme-matching placeholder for songs without a banner. |
 | `public/` | **The deployable folder** — `index.html`, `data.json`, `nobanner.svg`, `banners/`. (Gitignored — regenerable.) |
 | `deploy.sh` | One-shot: copies `public/` to `/var/www/stepmania/` and adds the nginx `location` block. |
+| `server/` | Server-side daily-update pipeline (nginx WebDAV endpoint, systemd path/service units, processing script, installer). |
+| `wsl/` | Windows-side daily-update pipeline (WSL2 cron job that bundles + uploads). |
 | `README.md` | This file. |
 
 ## Data sources (StepMania 5.1, Windows paths)
@@ -87,6 +90,38 @@ What `deploy.sh` does:
    reloads. Rolls back on any failure. Idempotent — safe to re-run.
 
 URL: `https://example.com/stepmania/`
+
+## Daily WSL → server update pipeline
+
+Once the manual setup above is in place, the dashboard refreshes itself
+automatically:
+
+```
+WSL2 cron @ 05:00 Taipei
+    │  zip /mnt/c/.../StepMania 5.1/{Save,Cache} → sm-bundle.zip
+    │  curl --netrc -T sm-bundle.zip https://…/stepmania-upload/sm-bundle.zip
+    ▼
+nginx (built-in dav_module)
+    │  writes /var/www/stepmania-incoming/sm-bundle.zip
+    ▼
+systemd sm-update.path  (PathChanged trigger)
+    │
+    ▼
+sm-update.service (User=www-data, flock'd)
+       extract → run build_dashboard.py → rsync deploy → cleanup
+       ~4 s end-to-end on this dataset
+```
+
+Zero new packages on the server (`dav_module` is already built in,
+`python3-pil` and `unzip` already installed). Install with:
+
+```bash
+sudo bash server/install.sh    # on the dashboard server (this machine)
+bash wsl/wsl-install.sh        # on the Windows WSL2 box
+```
+
+Details, env-var overrides, and the WSL2 cron caveats are in
+[`server/`](server/) and [`wsl/README.md`](wsl/README.md).
 
 ## Customizing
 

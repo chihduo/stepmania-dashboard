@@ -1,0 +1,24 @@
+[Unit]
+Description=StepMania dashboard update (extract + build + deploy)
+After=network.target
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+ExecStart=/usr/local/bin/sm-update.sh
+StandardOutput=journal
+StandardError=journal
+
+# Resource guardrails: build runs in ~5s on this dataset and uses tens of MB,
+# but be defensive against runaway / pathological inputs.
+MemoryMax=512M
+CPUQuota=200%
+TimeoutStartSec=600
+
+# Sandboxing
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/stepmania /var/www/stepmania-incoming /var/www/stepmania-work /run
