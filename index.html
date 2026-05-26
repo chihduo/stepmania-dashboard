@@ -91,13 +91,12 @@
   .recent .info .text>div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   footer{margin-top:46px;color:var(--muted);font-size:12px;line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
   .full{grid-column:1/-1}
-  .card.span2{grid-column:span 2}
-  /* Two-column split inside a single card (e.g. difficulty + grade). */
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;
-       border-bottom:0}
-  .split > div + div{padding-left:18px;border-left:1px solid var(--line)}
+  /* Two stacked charts inside one card (e.g. difficulty + grade) — same
+     width as other cards, with a horizontal divider between the halves. */
+  .split{display:grid;grid-template-rows:auto auto;gap:14px}
+  .split > div + div{padding-top:14px;border-top:1px solid var(--line)}
   .split h3{margin:0 0 4px;font-size:14.5px}
-  .split .cap{margin:0 0 12px}
+  .split .cap{margin:0 0 10px}
   @media(max-width:560px){.song{max-width:180px}}
 </style>
 </head>
@@ -129,7 +128,7 @@
   <section>
     <h2>Breakdowns</h2>
     <div class="grid">
-      <div class="card span2">
+      <div class="card">
         <div class="split">
           <div>
             <h3>Plays by difficulty</h3>
@@ -364,17 +363,17 @@ function render(d){
   $("#cap-dow").textContent=`Busiest day: ${peak}`;
   hbars($("#c-dow"), d.dayOfWeek.map((n,i)=>({label:DOW[i],v:n})), {color:"var(--accent)"});
 
-  // difficulty (ordered) — narrower label column to fit the split layout
+  // difficulty (ordered)
   const diffItems=d.diffOrder.filter(k=>d.byDifficulty[k]!=null)
         .map(k=>({label:k,v:d.byDifficulty[k]}));
-  hbars($("#c-diff"), diffItems, {color:"var(--good)", labelW:90});
+  hbars($("#c-diff"), diffItems, {color:"var(--good)"});
 
-  // grade (ordered Tier01..07) — same compact label column
+  // grade (ordered Tier01..07)
   const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07"];
   const gcolors={Tier01:"#ffe27a",Tier02:"#ffe27a",Tier03:"#9be15d",Tier04:"#5dd6e1",Tier05:"#7aa8ff",Tier06:"#c99bff",Tier07:"#ffa45d"};
   const gItems=gOrder.filter(k=>d.byGrade[k]!=null)
         .map(k=>({label:`${gradeLetter(k)} (${k.replace("Tier","T")})`,v:d.byGrade[k],color:gcolors[k]}));
-  hbars($("#c-grade"), gItems, {labelW:90});
+  hbars($("#c-grade"), gItems, {});
 
   // packs (top 12)
   hbars($("#c-packs"), d.packs.slice(0,12).map(p=>({label:p.pack,v:p.plays})), {color:"var(--accent)"});
