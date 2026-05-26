@@ -1,5 +1,6 @@
 {
   "comment": "Edit and rebuild: python3 build_dashboard.py. Any subset can be omitted to fall back to defaults in build_dashboard.py.",
+  "playerName": "",
   "colors": {
     "bars": {
       "plays": "#a4b8ff",
@@ -13,9 +14,20 @@
   },
   "artistAliases": {
     "_comment": "Map canonical display name -> [variants to merge into this group]. Auto-normalization already collapses TWICE/Twice, T-ara/T ARA, GFRIEND/G-Friend, etc. — list cross-language/cross-romanization variants here. Sub-units (TTS, T-ara N4) and collabs (Super Junior & X) are intentionally NOT merged.",
-
-    "Mizuki Nana": ["Nana Mizuki", "水樹奈々", "水樹 奈々"],
-    "Girls' Generation": ["SNSD", "소녀시대", "少女時代", "Girls' Generation (SNSD)", "SNSD Girls Generation"],
-    "T-ara": ["티아라"]
+    "Mizuki Nana": [
+      "Nana Mizuki",
+      "水樹奈々",
+      "水樹 奈々"
+    ],
+    "Girls' Generation": [
+      "SNSD",
+      "소녀시대",
+      "少女時代",
+      "Girls' Generation (SNSD)",
+      "SNSD Girls Generation"
+    ],
+    "T-ara": [
+      "티아라"
+    ]
   }
 }

@@ -38,9 +38,15 @@
   svg{display:block;width:100%;height:auto;overflow:visible}
   .bar{transition:opacity .15s}
   .bar:hover{opacity:.75}
-  .axis{fill:var(--muted);font-size:11px}
-  .glabel{fill:var(--text);font-size:11.5px}
-  .val{fill:var(--muted);font-size:11px}
+  /* SVG text sizes are in viewBox units; standard cards render ~62% of
+     viewBox width so these need to be ~1.6x the on-screen size you want.
+     The wide combo chart (.card.full) renders at ~1.9x — text overrides
+     below shrink the labels back to roughly the plot-title size on screen. */
+  .axis{fill:var(--muted);font-size:14px}
+  .glabel{fill:var(--text);font-size:16px}
+  .val{fill:var(--muted);font-size:14px}
+  .card.full .axis{font-size:8px}      /* ~15px on screen, matches h3 */
+  .card.full .val{font-size:8px}
   .tip{position:fixed;pointer-events:none;background:#000d;border:1px solid var(--line);
        border-radius:8px;padding:6px 9px;font-size:12px;color:#fff;z-index:50;opacity:0;transition:opacity .1s;white-space:nowrap}
   /* tables */
@@ -103,7 +109,7 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>StepMania <span class="g">Play Dashboard</span></h1>
+    <h1 id="h1">StepMania <span class="g">Play Dashboard</span></h1>
     <div class="sub" id="meta">Loading…</div>
   </header>
 
@@ -142,8 +148,8 @@
           </div>
         </div>
       </div>
-      <div class="card"><h3>Top packs</h3><p class="cap">By total plays</p><div id="c-packs"></div></div>
       <div class="card"><h3>Top artists</h3><p class="cap" id="cap-artists">By total plays · variants auto-merged (e.g. TWICE/Twice)</p><div id="c-artists"></div></div>
+      <div class="card"><h3>Top packs</h3><p class="cap">By total plays</p><div id="c-packs"></div></div>
     </div>
   </section>
 
@@ -210,17 +216,17 @@ function vbars(el, items, {color="var(--accent)", fmtv=v=>fmt(v), every=1}={}){
 
 // ---- horizontal bar chart ----
 function hbars(el, items, {color="var(--accent2)", fmtv=v=>fmt(v), labelW=150}={}){
-  const W=600, rowH=30, pad=6, lw=labelW, vw=64;
+  const W=600, rowH=36, pad=6, lw=labelW, vw=80;
   const H=pad*2+items.length*rowH;
   const max=Math.max(1,...items.map(d=>d.v));
   let rows="";
   items.forEach((d,i)=>{
     const y=pad+i*rowH;
     const bw=(d.v/max)*(W-lw-vw);
-    rows+=`<text class="glabel" x="0" y="${y+rowH/2+4}">${trunc(d.label,22)}</text>`;
-    rows+=`<rect class="bar" x="${lw}" y="${y+5}" width="${Math.max(2,bw)}" height="${rowH-12}" rx="3" fill="${d.color||color}"
+    rows+=`<text class="glabel" x="0" y="${y+rowH/2+5}">${trunc(d.label,22)}</text>`;
+    rows+=`<rect class="bar" x="${lw}" y="${y+7}" width="${Math.max(2,bw)}" height="${rowH-14}" rx="3" fill="${d.color||color}"
         data-t="${d.label}: <b>${fmtv(d.v)}</b>"></rect>`;
-    rows+=`<text class="val" x="${lw+Math.max(2,bw)+8}" y="${y+rowH/2+4}">${fmtv(d.v)}</text>`;
+    rows+=`<text class="val" x="${lw+Math.max(2,bw)+8}" y="${y+rowH/2+5}">${fmtv(d.v)}</text>`;
   });
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${rows}</svg>`;
   wireBars(el);
@@ -229,7 +235,7 @@ function hbars(el, items, {color="var(--accent2)", fmtv=v=>fmt(v), labelW=150}={
 // barSeries: [{name, color, data: [{label, short, v}, ...]}] — one or more series.
 // lines:     [{name, color, data: [{label, v}, ...]}]        — % values 0-100.
 function comboBarsLines(el, barSeries, lines, {every=1, fmtBar=v=>fmt(v)}={}){
-  const W=600, H=240, pl=10, pr=34, pt=12, pb=28;
+  const W=600, H=240, pl=10, pr=42, pt=12, pb=32;
   const innerW=W-pl-pr, innerH=H-pt-pb;
   const nSlots = barSeries[0]?.data.length || 0;
   const bw = innerW / Math.max(1, nSlots);
@@ -304,6 +310,11 @@ function gradeLetter(t){return (DATA.gradeMap&&DATA.gradeMap[t])||t||"";}
 function render(d){
   const t=d.totals;
   const hrs=(t.gameplaySeconds/3600);
+  // page title + h1 — prefix with the player name from config when set
+  const player = (d.theme && d.theme.playerName || "").trim();
+  const prefix = player ? `${esc(player)}'s ` : "";
+  document.title = (player ? `${player}'s ` : "") + "StepMania Play Dashboard";
+  $("#h1").innerHTML = `${prefix}StepMania <span class="g">Play Dashboard</span>`;
   // meta line
   $("#meta").innerHTML =
     `Recorded plays span <b>${d.firstPlay.slice(0,10)}</b> → <b>${d.lastPlay.slice(0,10)}</b> · `+
@@ -333,21 +344,21 @@ function render(d){
   const asBar  = arr => arr.map(([m,v],i)=>({...monthsSlots[i], v:v}));
   const asLine = arr => arr.map(([m,v])=>v==null?null:{label:m,v});
   comboBarsLines($("#c-months"), [
-    {name:"plays",    color: playsCol,    data: asBar(d.playsMonthly)},
-    {name:"distinct", color: distinctCol, data: asBar(d.distinctSongsMonthly||[])},
+    {name:"Plays",         color: playsCol,    data: asBar(d.playsMonthly)},
+    {name:"Distinct songs",color: distinctCol, data: asBar(d.distinctSongsMonthly||[])},
   ], [
-    {name:"accuracy", color: accCol,  data: asLine(d.accuracyMonthly||[])},
-    {name:"W1",       color: w1Col,   data: asLine(d.w1PctMonthly   ||[])},
-    {name:"miss",     color: missCol, data: asLine(d.missPctMonthly ||[])},
+    {name:"Accuracy",      color: accCol,  data: asLine(d.accuracyMonthly||[])},
+    {name:"Marvelous",     color: w1Col,   data: asLine(d.w1PctMonthly   ||[])},
+    {name:"Miss",          color: missCol, data: asLine(d.missPctMonthly ||[])},
   ], { every: Math.ceil(d.playsMonthly.length/12) });
 
   // Build the legend dynamically so it reflects the configured colors.
   $("#legend-months").innerHTML = [
-    ['sw',     playsCol,    'plays'],
-    ['sw',     distinctCol, 'distinct songs'],
-    ['sw line',accCol,      'accuracy'],
-    ['sw line',w1Col,       'W1'],
-    ['sw line',missCol,     'miss'],
+    ['sw',     playsCol,    'Plays'],
+    ['sw',     distinctCol, 'Distinct songs'],
+    ['sw line',accCol,      'Accuracy'],
+    ['sw line',w1Col,       'Marvelous'],
+    ['sw line',missCol,     'Miss'],
   ].map(([cls,col,name]) => cls === 'sw'
       ? `<span class="${cls}" style="background:${col}"></span>${name}`
       : `<span class="${cls}" style="border-color:${col}"></span>${name}`).join('');
@@ -384,10 +395,7 @@ function render(d){
     hbars($("#c-artists"),
       artists.slice(0,12).map(a=>({label:a.artist, v:a.plays})),
       {color: distinctCol});
-    const merged = artists.filter(a=>a.variants>1).length;
-    $("#cap-artists").innerHTML =
-      `By total plays · ${fmt(artists.length)} artists`+
-      (merged ? ` · ${fmt(merged)} have multiple name variants auto-merged` : '');
+    $("#cap-artists").textContent = `By total plays · ${fmt(artists.length)} artists`;
   }
 
   buildTable(d);

@@ -48,6 +48,7 @@ DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 # Visual config — colors for the combo chart. Loaded from config.json next to
 # this script; missing keys fall back to these defaults (deep-merge).
 DEFAULT_CONFIG = {
+    "playerName": "",  # used in page title/header when non-empty
     "colors": {
         "bars": {
             "plays": "#a4b8d4",          # light gray-blue
