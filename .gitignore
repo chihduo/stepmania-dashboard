@@ -8,6 +8,9 @@ stepmania-dashboard.tar.gz
 __pycache__/
 *.pyc
 
+# Out-of-scope script kept on disk but not tracked in this repo
+force-ssl.sh
+
 # Editor swap/backup files
 *.swp
 *.swo

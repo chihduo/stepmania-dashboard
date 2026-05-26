@@ -54,7 +54,8 @@
   th.asc.sorted::after{content:" ▴"}
   td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
   tr:hover td{background:#ffffff08}
-  .song{white-space:normal;max-width:360px}
+  .song{white-space:normal;max-width:320px}
+  .artist{white-space:normal;max-width:220px;color:#c2c8e6}
   .pill{display:inline-block;padding:1px 8px;border-radius:20px;font-size:11.5px;font-weight:600;background:#ffffff14}
   .g-AAAA,.g-AAA{color:#ffe27a;background:#ffe27a22}
   .g-AA{color:#9be15d;background:#9be15d22}
@@ -116,6 +117,7 @@
         <thead><tr>
           <th class="num" data-k="rank">#</th>
           <th data-k="song">Song</th>
+          <th data-k="artist">Artist</th>
           <th data-k="pack">Pack</th>
           <th class="num" data-k="plays">Plays</th>
           <th class="num" data-k="bestPct">Best %</th>
@@ -250,7 +252,8 @@ function render(d){
 
   $("#footer").innerHTML =
     `<b>Data sources:</b> aggregates &amp; play counts from <code>MachineProfile/Stats.xml</code>; `+
-    `timeline &amp; recent plays from ${fmt(d.recordedPlays)} per-play files in <code>Save/Upload/</code>.<br>`+
+    `timeline &amp; recent plays from ${fmt(d.recordedPlays)} per-play files in <code>Save/Upload/</code>; `+
+    `song titles &amp; artists from the <code>Cache/Songs</code> metadata cache.<br>`+
     `Grade letters (AAAA…F) are an approximate mapping of StepMania's Tier01–Tier07 and depend on your theme. `+
     `"Songs played" counts every stage incl. retries; "Distinct songs" counts unique charts with ≥1 play.<br>`+
     `Rebuild after new sessions: <code>python3 build_dashboard.py</code>.`;
@@ -274,7 +277,8 @@ function buildTable(d){
 }
 function applyTable(){
   const q=$("#q").value.trim().toLowerCase();
-  filtered=DATA.songs.filter(s=> !q || s.song.toLowerCase().includes(q) || s.pack.toLowerCase().includes(q));
+  filtered=DATA.songs.filter(s=> !q || s.song.toLowerCase().includes(q)
+        || s.pack.toLowerCase().includes(q) || (s.artist||"").toLowerCase().includes(q));
   const dir=sortAsc?1:-1;
   filtered.sort((a,b)=>{
     let x=a[sortK], y=b[sortK];
@@ -296,9 +300,11 @@ function renderPage(){
     const g=s.bestGrade?gradeLetter(s.bestGrade):"";
     const gp=g?`<span class="pill g-${g}">${g}</span>`:'<span class="muted">—</span>';
     const pct=s.bestPct!=null?(s.bestPct*100).toFixed(2)+"%":'<span class="muted">—</span>';
+    const artist = s.artist ? esc(s.artist) : '<span class="muted">—</span>';
     return `<tr>
       <td class="num muted">${s.rank}</td>
       <td class="song">${esc(s.song)}</td>
+      <td class="artist">${artist}</td>
       <td class="muted">${esc(s.pack)}</td>
       <td class="num"><b>${fmt(s.plays)}</b></td>
       <td class="num">${pct}</td>
@@ -320,8 +326,9 @@ function buildRecent(d){
   $("#recent").innerHTML = "<ul>"+d.recent.slice(0,30).map(r=>{
     const g=gradeLetter(r.grade);
     const gp=`<span class="pill g-${g}">${g}</span>`;
+    const art = r.artist ? esc(r.artist)+" · " : "";
     return `<li><div class="row">
-      <div><div>${esc(r.song)}</div><div class="meta">${esc(r.pack)} · ${r.diff}</div></div>
+      <div><div>${esc(r.song)}</div><div class="meta">${art}${esc(r.pack)} · ${r.diff}</div></div>
       <div style="text-align:right">${gp} <b>${(r.pct*100).toFixed(1)}%</b>
         <div class="meta">${r.dt}</div></div>
     </div></li>`;

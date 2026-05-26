@@ -14,15 +14,24 @@ so it works behind your nginx COEP (`credentialless`) and offline.
   (`NumTimesPlayed`), difficulty/grade/style breakdowns, per-day calories.
 - `Save/Upload/*.xml` → per-play event log (exact timestamps) → plays-over-time,
   hour-of-day, day-of-week, recent plays.
+- `Cache/Songs/*` (**optional, for real titles + Artist column**) → StepMania's
+  per-song SSC metadata cache. `Stats.xml`/`Upload` identify songs only by
+  folder path, so `#TITLE` and `#ARTIST` come from here. Copy
+  `%APPDATA%\StepMania 5.1\Cache\Songs` from Windows and pass it as the 3rd
+  arg or `$SM_CACHE`. Without it, song = folder name, artist = blank. Lookup
+  is case-insensitive — Windows ignores case but Linux doesn't (e.g. recorded
+  `DDR K-POP` resolves to on-disk `DDR K-Pop`).
 
 ## Rebuild after new play sessions
 1. Copy the fresh `Save` folder from Windows
    (`%APPDATA%\StepMania 5.1\Save`) onto this machine.
-2. Point the builder at it:
+2. Point the builder at it (3rd arg = Cache/Songs dir for artists):
    ```bash
-   python3 build_dashboard.py /path/to/Save ./public
+   python3 build_dashboard.py /path/to/Save ./public /path/to/Cache/Songs
+   # or: SM_CACHE=/path/to/Cache/Songs python3 build_dashboard.py /path/to/Save ./public
    ```
-   (defaults: `../savedata/Save` → `./public`)
+   (defaults: `../savedata/Save` → `./public`; cache auto-detected in
+   `../cachedata/Cache/Songs` if present)
 3. Re-copy `public/` to the web root (see deploy below).
 
 The parser tolerates StepMania's occasionally-malformed XML (raw `&`,
