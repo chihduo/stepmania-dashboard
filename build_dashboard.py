@@ -45,6 +45,48 @@ GRADE_MAP = {
 }
 DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 
+# Visual config — colors for the combo chart. Loaded from config.json next to
+# this script; missing keys fall back to these defaults (deep-merge).
+DEFAULT_CONFIG = {
+    "colors": {
+        "bars": {
+            "plays": "#a4b8d4",          # light gray-blue
+            "distinctSongs": "#5c7593",  # darker gray-blue
+        },
+        "lines": {
+            "accuracy": "#37e0ff",
+            "w1": "#ffcc55",
+            "miss": "#ff6b6b",
+        },
+    },
+}
+
+
+def deep_merge(base, override):
+    """Recursive dict merge — override wins on leaf keys."""
+    out = dict(base)
+    for k, v in (override or {}).items():
+        if isinstance(v, dict) and isinstance(out.get(k), dict):
+            out[k] = deep_merge(out[k], v)
+        else:
+            out[k] = v
+    return out
+
+
+def load_config():
+    path = os.path.join(HERE, "config.json")
+    cfg = DEFAULT_CONFIG
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                user = json.load(f)
+            user.pop("comment", None)  # ignore comment field if present
+            cfg = deep_merge(DEFAULT_CONFIG, user)
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"Warning: config.json unreadable ({e}); using defaults.")
+    return cfg
+
+
 # Grades to hide from the ranking list and recent plays (D and below).
 # Only affects those two lists — KPIs, timeline and breakdown charts keep all plays.
 EXCLUDE_GRADES = {"Tier07", "Failed"}  # D, F
@@ -279,6 +321,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
     m_w1   = collections.Counter()
     m_miss = collections.Counter()
     m_taps = collections.Counter()
+    m_dirs = collections.defaultdict(set)   # distinct song dirs per month
     hour = [0] * 24
     dow = [0] * 7
     recent = []  # keep all, trim later
@@ -308,6 +351,8 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
             mo  = t.strftime("%Y-%m")
             daily[day] += 1
             monthly[mo] += 1
+            if d:
+                m_dirs[mo].add(d)
             hour[t.hour] += 1
             dow[t.weekday()] += 1  # 0=Mon
             if first is None or t < first:
@@ -346,6 +391,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
         r.pop("_dir", None)
     # Build the monthly skill series aligned with playsMonthly months.
     months_sorted = sorted(monthly)
+    distinct_m = [(mo, len(m_dirs[mo])) for mo in months_sorted]
     accuracy_m = [(mo, round(100 * m_pct_sum[mo] / m_pct_n[mo], 2) if m_pct_n[mo] else None) for mo in months_sorted]
     w1pct_m    = [(mo, round(100 * m_w1[mo]      / m_taps[mo],  2) if m_taps[mo]  else None) for mo in months_sorted]
     misspct_m  = [(mo, round(100 * m_miss[mo]    / m_taps[mo],  2) if m_taps[mo]  else None) for mo in months_sorted]
@@ -356,6 +402,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
         "lastPlay": last.isoformat(sep=" ") if last else "",
         "playsDaily": sorted(daily.items()),
         "playsMonthly": sorted(monthly.items()),
+        "distinctSongsMonthly": distinct_m,
         "accuracyMonthly": accuracy_m,
         "w1PctMonthly": w1pct_m,
         "missPctMonthly": misspct_m,
@@ -517,6 +564,8 @@ def main():
     if not os.path.exists(stats_path):
         sys.exit(f"Stats.xml not found at {stats_path}")
 
+    cfg = load_config()
+
     cache_dir = resolve_cache_dir()
     if cache_dir and os.path.isdir(cache_dir):
         print(f"Song cache: {cache_dir}")
@@ -584,9 +633,11 @@ def main():
         "monthlyCalories": monthly_cal,
         "playsDaily": up["playsDaily"],
         "playsMonthly": up["playsMonthly"],
+        "distinctSongsMonthly": up.get("distinctSongsMonthly", []),
         "accuracyMonthly": up.get("accuracyMonthly", []),
         "w1PctMonthly": up.get("w1PctMonthly", []),
         "missPctMonthly": up.get("missPctMonthly", []),
+        "theme": cfg,
         "hourOfDay": up["hourOfDay"],
         "dayOfWeek": up["dayOfWeek"],
         "recent": up["recent"],

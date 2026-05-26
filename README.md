@@ -13,6 +13,7 @@ and offline.
 | File | Purpose |
 |---|---|
 | `build_dashboard.py` | Parses Save/Cache → writes `public/data.json` + copies page assets. |
+| `config.json` | Chart colors (bars + lines). Edit and rebuild to restyle without touching code. |
 | `index.html` | The dashboard page (source). |
 | `nobanner.svg` | Theme-matching placeholder for songs without a banner. |
 | `public/` | **The deployable folder** — `index.html`, `data.json`, `nobanner.svg`, `banners/`. (Gitignored — regenerable.) |
@@ -127,6 +128,7 @@ Details, env-var overrides, and the WSL2 cron caveats are in
 
 | Want to… | Where |
 |---|---|
+| Change chart colors (bars + lines) | `config.json` — edit hex values, rebuild |
 | Hide more (or fewer) low grades | `EXCLUDE_GRADES = {"Tier07", "Failed"}` in `build_dashboard.py` |
 | Change banner thumbnail size | `max_w=160` in `convert_banner()` |
 | Add banners to the ranking table too | call `banner(s["dir"])` per song in `parse_stats` and render in the table |

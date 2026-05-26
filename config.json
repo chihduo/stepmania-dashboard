@@ -1,0 +1,14 @@
+{
+  "comment": "Edit and rebuild: python3 build_dashboard.py. Any subset can be omitted to fall back to defaults in build_dashboard.py.",
+  "colors": {
+    "bars": {
+      "plays": "#a4b8d4",
+      "distinctSongs": "#5c7593"
+    },
+    "lines": {
+      "accuracy": "#37e0ff",
+      "w1": "#ffcc55",
+      "miss": "#ff6b6b"
+    }
+  }
+}

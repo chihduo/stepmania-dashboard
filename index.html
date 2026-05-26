@@ -108,13 +108,8 @@
     <div class="grid">
       <div class="card full">
         <h3>Plays per month, with skill trend</h3>
-        <p class="cap">Bars: plays · Lines: accuracy %, W1 (Marvelous) %, miss %
-          <span class="legend">
-            <span class="sw" style="background:var(--accent)"></span>plays
-            <span class="sw line" style="border-color:var(--accent2);color:var(--accent2)"></span>accuracy
-            <span class="sw line" style="border-color:var(--warn);color:var(--warn)"></span>W1
-            <span class="sw line" style="border-color:var(--bad);color:var(--bad)"></span>miss
-          </span>
+        <p class="cap">Bars: monthly volume · Lines: skill %
+          <span class="legend" id="legend-months"></span>
         </p>
         <div id="c-months"></div>
       </div>
@@ -211,32 +206,45 @@ function hbars(el, items, {color="var(--accent2)", fmtv=v=>fmt(v)}={}){
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${rows}</svg>`;
   wireBars(el);
 }
-// ---- combo chart: bars (left axis, count) + lines (right axis, %) ----
-function comboBarsLines(el, bars, lines, {every=1, fmtBar=v=>fmt(v)+" plays"}={}){
+// ---- combo chart: grouped bars (left axis, count) + lines (right axis, %) ----
+// barSeries: [{name, color, data: [{label, short, v}, ...]}] — one or more series.
+// lines:     [{name, color, data: [{label, v}, ...]}]        — % values 0-100.
+function comboBarsLines(el, barSeries, lines, {every=1, fmtBar=v=>fmt(v)}={}){
   const W=600, H=240, pl=10, pr=34, pt=12, pb=28;
   const innerW=W-pl-pr, innerH=H-pt-pb;
-  const n=bars.length, bw=innerW/n;
-  const maxBar=Math.max(1,...bars.map(d=>d.v));
+  const nSlots = barSeries[0]?.data.length || 0;
+  const bw = innerW / Math.max(1, nSlots);
+  // Y-scale = max across ALL bar series so they share the axis honestly.
+  const maxBar = Math.max(1, ...barSeries.flatMap(s => s.data.map(d => d?.v||0)));
+  // Group layout: outer padding 10% each side, gap 5% between sub-bars.
+  const groupPad = bw * 0.10, innerGap = bw * 0.05;
+  const nSeries = barSeries.length;
+  const subBarW = Math.max(1, (bw - groupPad*2 - innerGap*(nSeries-1)) / nSeries);
 
   let s='';
-  // Right-side % gridlines (0/25/50/75/100)
+  // Right-side % gridlines
   for(let p=0;p<=100;p+=25){
     const y=pt+innerH-(p/100)*innerH;
     s+=`<line x1="${pl}" y1="${y}" x2="${pl+innerW}" y2="${y}" stroke="#ffffff10" stroke-width="0.5"/>`;
     s+=`<text class="axis" x="${pl+innerW+4}" y="${y+3}" text-anchor="start">${p}%</text>`;
   }
-  // Bars
-  bars.forEach((d,i)=>{
-    const h=(d.v/maxBar)*innerH;
-    const x=pl+i*bw, y=pt+innerH-h;
-    s+=`<rect class="bar" x="${x+bw*0.12}" y="${y}" width="${bw*0.76}" height="${h}" rx="2"
-        fill="var(--accent)" data-t="${d.label}: <b>${fmtBar(d.v)}</b>"></rect>`;
-  });
-  // X labels
-  bars.forEach((d,i)=>{
-    if(i%every) return;
-    s+=`<text class="axis" x="${pl+i*bw+bw/2}" y="${H-9}" text-anchor="middle">${d.short??d.label}</text>`;
-  });
+  // Grouped bars
+  for(let i=0;i<nSlots;i++){
+    barSeries.forEach((series, sIdx) => {
+      const d = series.data[i]; if(!d) return;
+      const h = (d.v/maxBar)*innerH;
+      const x = pl + i*bw + groupPad + sIdx*(subBarW + innerGap);
+      const y = pt + innerH - h;
+      s += `<rect class="bar" x="${x}" y="${y}" width="${subBarW}" height="${h}" rx="2"
+           fill="${series.color}" data-t="${d.label} ${series.name}: <b>${fmtBar(d.v)}</b>"></rect>`;
+    });
+  }
+  // X labels (centered under each group)
+  for(let i=0;i<nSlots;i++){
+    if(i%every) continue;
+    const d = barSeries[0].data[i];
+    s += `<text class="axis" x="${pl+i*bw+bw/2}" y="${H-9}" text-anchor="middle">${d.short??d.label}</text>`;
+  }
   // Lines (paths with gaps for null values) + dots
   lines.forEach(line=>{
     let path='', open=false;
@@ -294,14 +302,36 @@ function render(d){
   $("#kpis").innerHTML = kpi.map(([l,v,s])=>
     `<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div class="s">${s}</div></div>`).join("");
 
-  // plays per month + skill trend (bars + 3 lines on right %-axis)
-  const monthsBars = d.playsMonthly.map(([m,n])=>({label:m,short:m.slice(2),v:n}));
+  // plays per month + skill trend (grouped bars + lines on right %-axis)
+  const c = (d.theme && d.theme.colors) || {};
+  const cBar = (c.bars || {}); const cLine = (c.lines || {});
+  const playsCol    = cBar.plays         || "#a4b8d4";
+  const distinctCol = cBar.distinctSongs || "#5c7593";
+  const accCol      = cLine.accuracy     || "var(--accent2)";
+  const w1Col       = cLine.w1           || "var(--warn)";
+  const missCol     = cLine.miss         || "var(--bad)";
+  const monthsSlots = d.playsMonthly.map(([m])=>({label:m,short:m.slice(2)}));
+  const asBar  = arr => arr.map(([m,v],i)=>({...monthsSlots[i], v:v}));
   const asLine = arr => arr.map(([m,v])=>v==null?null:{label:m,v});
-  comboBarsLines($("#c-months"), monthsBars, [
-    {name:"accuracy", color:"var(--accent2)", data: asLine(d.accuracyMonthly||[])},
-    {name:"W1",       color:"var(--warn)",    data: asLine(d.w1PctMonthly  ||[])},
-    {name:"miss",     color:"var(--bad)",     data: asLine(d.missPctMonthly||[])},
+  comboBarsLines($("#c-months"), [
+    {name:"plays",    color: playsCol,    data: asBar(d.playsMonthly)},
+    {name:"distinct", color: distinctCol, data: asBar(d.distinctSongsMonthly||[])},
+  ], [
+    {name:"accuracy", color: accCol,  data: asLine(d.accuracyMonthly||[])},
+    {name:"W1",       color: w1Col,   data: asLine(d.w1PctMonthly   ||[])},
+    {name:"miss",     color: missCol, data: asLine(d.missPctMonthly ||[])},
   ], { every: Math.ceil(d.playsMonthly.length/12) });
+
+  // Build the legend dynamically so it reflects the configured colors.
+  $("#legend-months").innerHTML = [
+    ['sw',     playsCol,    'plays'],
+    ['sw',     distinctCol, 'distinct songs'],
+    ['sw line',accCol,      'accuracy'],
+    ['sw line',w1Col,       'W1'],
+    ['sw line',missCol,     'miss'],
+  ].map(([cls,col,name]) => cls === 'sw'
+      ? `<span class="${cls}" style="background:${col}"></span>${name}`
+      : `<span class="${cls}" style="border-color:${col}"></span>${name}`).join('');
   // calories per month
   vbars($("#c-cal"), d.monthlyCalories.map(([m,c])=>({label:m,short:m.slice(2),v:Math.round(c)})),
         {color:"var(--warn)", every: Math.ceil(d.monthlyCalories.length/8), fmtv:v=>fmt(v)+" kcal"});
