@@ -494,14 +494,17 @@ function render(d){
         .map(k=>({label:`${gradeLetter(k)} (${k.replace("Tier","T")})`,v:d.byGrade[k],color:gcolors[k]}));
   hbars($("#c-grade"), gItems, {});
 
-  // packs (top 12)
-  hbars($("#c-packs"), d.packs.slice(0,12).map(p=>({label:p.pack,v:p.plays})), {color:"var(--accent)"});
-
-  // artists (top 12) — uses the configured dark gray-blue
+  // packs + artists — count comes from config.topN.{packs,artists} (defaults 15)
+  const topN = (d.theme && d.theme.topN) || {};
+  const nPacks   = Math.max(1, topN.packs   || 15);
+  const nArtists = Math.max(1, topN.artists || 15);
+  hbars($("#c-packs"),
+    d.packs.slice(0,nPacks).map(p=>({label:p.pack,v:p.plays})),
+    {color:"var(--accent)"});
   const artists = d.artists || [];
   if(artists.length) {
     hbars($("#c-artists"),
-      artists.slice(0,12).map(a=>({label:a.artist, v:a.plays})),
+      artists.slice(0,nArtists).map(a=>({label:a.artist, v:a.plays})),
       {color: distinctCol});
     $("#cap-artists").textContent = `By total plays · ${fmt(artists.length)} artists`;
   }

@@ -61,6 +61,11 @@ DEFAULT_CONFIG = {
             "miss": "#ff6b6b",
         },
     },
+    # How many rows to render in the Top Artists / Top Packs cards.
+    "topN": {
+        "artists": 15,
+        "packs": 15,
+    },
     "artistAliases": {},
 }
 

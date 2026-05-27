@@ -1,6 +1,6 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-05-27** — bump this date whenever you edit this file._
+> _Last updated: **2026-05-28** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
@@ -161,6 +161,7 @@ Details, env-var overrides, and the WSL2 cron caveats are in
 | Want to… | Where |
 |---|---|
 | Change chart colors (bars + lines) | `config.json` — edit hex values, rebuild |
+| Change how many rows the Top Artists / Top Packs cards show | `config.json` `topN: { artists: 15, packs: 15 }` — defaults to 15 each |
 | Force-merge artist name variants (e.g. `소녀시대` → `Girls' Generation`) | `config.json` `artistAliases: { "Canonical": ["variant1", "variant2"] }` — auto-norm already catches casing/punctuation; use this for cross-language merges only |
 | Hide more (or fewer) low grades | `EXCLUDE_GRADES = {"Tier07", "Failed"}` in `build_dashboard.py` |
 | Change banner thumbnail size | `max_w=160` in `convert_banner()` |

@@ -12,6 +12,10 @@
       "miss": "#ff6b6b"
     }
   },
+  "topN": {
+    "artists": 15,
+    "packs": 15
+  },
   "artistAliases": {
     "_comment": "Map canonical display name -> [variants to merge into this group]. Auto-normalization already collapses TWICE/Twice, T-ara/T ARA, GFRIEND/G-Friend, etc. — list cross-language/cross-romanization variants here. Sub-units (TTS, T-ara N4) and collabs (Super Junior & X) are intentionally NOT merged.",
     "Mizuki Nana": [
