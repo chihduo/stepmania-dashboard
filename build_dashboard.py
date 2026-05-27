@@ -172,12 +172,61 @@ def cache_filename(d):
     return "".join("_" if c in _INVALID_CACHE else c for c in s)
 
 
-def make_meta_lookup(cache_songs_dir):
-    """Return get(dir)->{'artist','title'}, memoized, reading the SSC cache.
+def _parse_chart_blocks(text):
+    """Parse #NOTEDATA blocks from an SSC cache file.
 
-    Lookup is case-insensitive: recorded song dirs sometimes differ in case from
-    the on-disk cache filename (e.g. 'DDR K-POP' vs 'DDR K-Pop'), and Linux is
-    case-sensitive while the original Windows filesystem was not.
+    Returns {(stepstype, difficulty): {'meter': int|None, 'radar': {...}}}.
+    Multiple charts with the same (stepstype, difficulty) — last one wins
+    (rare; only for Edit charts authored side-by-side).
+
+    `#RADARVALUES` has 14 numbers per chart (per player; doubles lists them twice):
+    stream, voltage, air, freeze, chaos, notes, tapsAndHolds, jumps, holds,
+    mines, hands, rolls, lifts, fakes.  The first 5 are 0–1 normalized
+    (chart difficulty profile); the rest are raw counts.
+    """
+    out = {}
+    # Each chart starts with '#NOTEDATA:;'.  First slice (before any #NOTEDATA)
+    # is the song-level header — skip it.
+    blocks = text.split("#NOTEDATA:;")[1:]
+    for blk in blocks:
+        st = re.search(r"#STEPSTYPE:([^;]*);", blk)
+        df = re.search(r"#DIFFICULTY:([^;]*);", blk)
+        if not (st and df):
+            continue
+        stepstype, difficulty = st.group(1).strip(), df.group(1).strip()
+        mt = re.search(r"#METER:([^;]*);", blk)
+        meter = inum(mt.group(1)) if mt else None
+        radar = {}
+        rv = re.search(r"#RADARVALUES:([^;]*);", blk)
+        if rv:
+            try:
+                nums = [float(x) for x in rv.group(1).split(",") if x.strip()]
+            except ValueError:
+                nums = []
+            if len(nums) >= 5:
+                radar = {
+                    "stream":  round(nums[0], 3),
+                    "voltage": round(nums[1], 3),
+                    "air":     round(nums[2], 3),
+                    "freeze":  round(nums[3], 3),
+                    "chaos":   round(nums[4], 3),
+                }
+                if len(nums) >= 9:
+                    radar["notes"] = int(nums[5])
+                    radar["jumps"] = int(nums[7])
+                    radar["holds"] = int(nums[8])
+        out[(stepstype, difficulty)] = {"meter": meter, "radar": radar}
+    return out
+
+
+def make_meta_lookup(cache_songs_dir):
+    """Return get(dir)->{'artist','title','charts'}, memoized.
+
+    'charts' maps (stepstype, difficulty) -> {'meter', 'radar'} extracted from
+    the SSC cache.  Lookup is case-insensitive: recorded song dirs sometimes
+    differ in case from the on-disk cache filename (e.g. 'DDR K-POP' vs
+    'DDR K-Pop'), and Linux is case-sensitive while the original Windows
+    filesystem was not.
     """
     memo = {}
     stats = {"hit": 0, "miss": 0}
@@ -194,13 +243,14 @@ def make_meta_lookup(cache_songs_dir):
     def get(d):
         if d in memo:
             return memo[d]
-        meta = {"artist": "", "title": ""}
+        meta = {"artist": "", "title": "", "charts": {}}
         if index:
             fn = index.get(cache_filename(d).lower())
             if fn:
                 text = open(os.path.join(cache_songs_dir, fn), "rb").read().decode("utf-8", errors="replace")
                 meta["artist"] = tag(text, "ARTIST") or tag(text, "ARTISTTRANSLIT")
                 meta["title"] = tag(text, "TITLE") or tag(text, "TITLETRANSLIT")
+                meta["charts"] = _parse_chart_blocks(text)
                 stats["hit"] += 1
             else:
                 stats["miss"] += 1
@@ -331,7 +381,7 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
             cal.append((c.get("Date", ""), round(fnum(c.text), 1)))
     cal.sort()
 
-    # SongScores -> per song aggregate
+    # SongScores -> per song aggregate (and per-chart score detail for the modal)
     songs = []
     pack_plays = collections.Counter()
     pack_songs = collections.Counter()
@@ -343,13 +393,16 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
             if not d.startswith("Songs/"):
                 continue
             pack, name = song_parts(d)
+            m = meta(d)
             plays = 0
             last = ""
             best_pct = None
             best_grade = None
             diffs = {}
+            charts = []  # per-chart detail for the modal
             for st in s.findall("Steps"):
                 diff = st.get("Difficulty", "?")
+                stepstype = st.get("StepsType", "")
                 hsl = st.find("HighScoreList")
                 n = inum(txt(hsl, "NumTimesPlayed"))
                 plays += n
@@ -357,15 +410,56 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
                 lp = txt(hsl, "LastPlayed")
                 if lp > last:
                     last = lp
-                # best score across this song's charts
+                # Per-score detail for the modal — compact field names since this
+                # array can run thousands of entries across all songs.
+                chart_scores = []
                 for hs in (hsl.findall("HighScore") if hsl is not None else []):
                     pct = fnum(txt(hs, "PercentDP"), -1)
                     if pct >= 0 and (best_pct is None or pct > best_pct):
                         best_pct = pct
                         best_grade = txt(hs, "Grade")
+                    tn = hs.find("TapNoteScores")
+                    hn = hs.find("HoldNoteScores")
+                    so = {
+                        "dt":    txt(hs, "DateTime"),
+                        "pct":   round(fnum(txt(hs, "PercentDP")), 4),
+                        "grade": txt(hs, "Grade"),
+                        "sc":    inum(txt(hs, "Score")),
+                        "co":    inum(txt(hs, "MaxCombo")),
+                        "sv":    round(fnum(txt(hs, "SurviveSeconds")), 1),
+                    }
+                    if tn is not None:
+                        so["j"] = [
+                            inum(txt(tn, "W1")), inum(txt(tn, "W2")),
+                            inum(txt(tn, "W3")), inum(txt(tn, "W4")),
+                            inum(txt(tn, "W5")), inum(txt(tn, "Miss")),
+                        ]
+                    if hn is not None:
+                        so["h"] = [
+                            inum(txt(hn, "Held")), inum(txt(hn, "LetGo")),
+                            inum(txt(hn, "MissedHold")),
+                        ]
+                    mods = txt(hs, "Modifiers")
+                    # Skip the user's near-universal default to keep JSON small.
+                    if mods and mods != "Overhead":
+                        so["m"] = mods
+                    chart_scores.append(so)
+                chart_scores.sort(key=lambda x: x["dt"], reverse=True)
+                cm = m["charts"].get((stepstype, diff), {})
+                charts.append({
+                    "diff": diff,
+                    "stepstype": stepstype,
+                    "meter": cm.get("meter"),
+                    "radar": cm.get("radar") or {},
+                    "plays": n,
+                    "lastPlayed": lp,
+                    "scores": chart_scores,
+                })
             if plays <= 0:
                 continue
-            m = meta(d)
+            # Sort charts by difficulty order; unknown diffs go last.
+            charts.sort(key=lambda c: (DIFF_ORDER.index(c["diff"])
+                                       if c["diff"] in DIFF_ORDER else 99))
             songs.append({
                 "song": m["title"] or name, "artist": m["artist"], "pack": pack,
                 "dir": d, "plays": plays,
@@ -374,17 +468,18 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
                 "bestPct": round(best_pct, 4) if best_pct is not None else None,
                 "bestGrade": best_grade or "",
                 "diffs": diffs,
+                "charts": charts,
             })
             pack_plays[pack] += plays
             pack_songs[pack] += 1
 
     songs.sort(key=lambda x: (-x["plays"], x["song"].lower()))
-    # Packs are computed from all songs above; only the ranking list drops D/F.
+    # Packs are computed from all songs above; the D/F filter for the ranking
+    # table now happens client-side so modal lookups by song dir still work.
     packs = [{"pack": p, "plays": pack_plays[p], "songs": pack_songs[p]}
              for p in pack_plays]
     packs.sort(key=lambda x: -x["plays"])
     all_song_count = len(songs)
-    songs = [s for s in songs if (s["bestGrade"] or "") not in EXCLUDE_GRADES]
 
     return {
         "profile": profile, "totals": totals,
@@ -475,7 +570,10 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
     recent.sort(key=lambda x: x["dt"], reverse=True)
     recent = [r for r in recent if (r["grade"] or "") not in EXCLUDE_GRADES]
     # Resolve banners only for the trimmed list — keeps conversion cost bounded.
+    # 'dir' is kept on each row so the modal click handler can find the
+    # matching song record in DATA.songs.
     for r in recent[:150]:
+        r["dir"] = r["_dir"]
         r["banner"] = banner(r.pop("_dir"))
     for r in recent[150:]:
         r.pop("_dir", None)

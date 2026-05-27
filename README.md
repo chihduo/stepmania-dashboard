@@ -1,12 +1,18 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-05-26** — bump this date whenever you edit this file._
+> _Last updated: **2026-05-27** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
 folder. No server-side code, no CDN — vanilla HTML/JS + hand-rolled SVG charts +
 locally-converted PNG banners. Works behind your nginx COEP (`credentialless`)
 and offline.
+
+Click any row in **Recent plays** or the **Song ranking** to open a per-song
+detail modal: chart difficulty tabs, accuracy progression sparkline, lifetime
+judgment breakdown, hold-note reliability, the song's chart-difficulty profile
+(stream/voltage/air/freeze/chaos from the cache), and a table of every recorded
+score on that chart. Esc / click outside to close.
 
 ## Files in this directory
 
@@ -29,7 +35,7 @@ and offline.
 |---|---|---|
 | `%APPDATA%\StepMania 5.1\Save\MachineProfile\Stats.xml` | Lifetime totals, per-song play counts (`NumTimesPlayed`), difficulty/grade/style breakdowns, per-day calories. | **Yes** |
 | `%APPDATA%\StepMania 5.1\Save\Upload\*.xml` | Per-play event log with exact timestamps → plays-over-time, hour-of-day, day-of-week, recent plays. | Recommended |
-| `%APPDATA%\StepMania 5.1\Cache\Songs\*` | Real song `#TITLE` and `#ARTIST` (SSC format). Without it, song = folder name, artist = blank. | Recommended |
+| `%APPDATA%\StepMania 5.1\Cache\Songs\*` | Real song `#TITLE`, `#ARTIST`, per-chart `#METER` + `#RADARVALUES` (used by the song-detail modal). Without it, song = folder name, artist = blank, no chart difficulty meters. | Recommended |
 | `%APPDATA%\StepMania 5.1\Cache\Banners\*` | Per-song banner thumbnails (StepMania-proprietary ARGB1555 format — converted to PNG by the build). | Optional (placeholder used otherwise) |
 
 The parser tolerates StepMania's occasionally-malformed XML (raw `&`, non-UTF-8
@@ -173,7 +179,14 @@ Details, env-var overrides, and the WSL2 cron caveats are in
   ranking (it's not a real song).
 - **D/F filter:** songs whose *best* grade is D or F are hidden from the
   ranking list and recent plays. KPI totals, timeline and breakdown charts
-  still reflect all plays.
+  still reflect all plays. (Note: the filter runs *client-side* now so the
+  modal can still open if a D/F song slips through somewhere — change the
+  `EXCLUDE_BEST_GRADES` set in `index.html` to adjust.)
+- **`charts` array per song in `data.json`:** each song carries a `charts`
+  list with per-difficulty meter, radar profile, and the full HighScore
+  records that StepMania kept (typically up to ~10-20 per chart, the best
+  ones). The modal renders from these; the ranking table only needs the
+  song-level aggregates.
 - **Banner cache is not actually PNG/JPG** despite the `.png` extension — it's
   a 32-byte StepMania `SurfaceHeader` (8 LE uint32s: w/h/pitch/RGBA-masks/bpp)
   followed by raw pixels. The current build handles 16-bit ARGB1555 (the only

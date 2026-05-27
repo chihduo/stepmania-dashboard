@@ -104,6 +104,101 @@
   .split h3{margin:0 0 4px;font-size:14.5px}
   .split .cap{margin:0 0 10px}
   @media(max-width:560px){.song{max-width:180px}}
+
+  /* ---- Per-song modal (opens on row click in ranking or recent plays) ---- */
+  .modal-bg{position:fixed;inset:0;background:#000c;backdrop-filter:blur(4px);
+       z-index:100;display:none;align-items:flex-start;justify-content:center;
+       padding:24px 12px;overflow-y:auto}
+  .modal-bg.show{display:flex}
+  .modal{background:var(--bg);border:1px solid var(--line);border-radius:14px;
+       width:min(900px,100%);color:var(--text);box-shadow:0 16px 64px #000a;
+       position:relative;animation:modalIn .18s ease-out;
+       max-height:calc(100vh - 48px);overflow-y:auto}
+  @keyframes modalIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  .modal .close{position:absolute;top:12px;right:12px;width:32px;height:32px;
+       border-radius:50%;background:var(--panel2);border:1px solid var(--line);
+       color:var(--text);font-size:18px;cursor:pointer;display:flex;
+       align-items:center;justify-content:center;line-height:1;z-index:2}
+  .modal .close:hover{background:var(--line)}
+  .modal .head{display:flex;gap:16px;padding:20px 56px 16px 22px;
+       border-bottom:1px solid var(--line);align-items:flex-start;flex-wrap:wrap}
+  .modal .head img.banner-lg{width:200px;height:62px;object-fit:cover;
+       border-radius:6px;background:#0006;flex-shrink:0}
+  .modal .head .htext{flex:1;min-width:240px}
+  .modal .head .htext h2{margin:0;font-size:18px;text-transform:none;
+       letter-spacing:0;color:var(--text);font-weight:700}
+  .modal .head .htext .who{color:var(--muted);font-size:13px;margin-top:3px}
+  .modal .head .htext .stats{margin-top:8px;color:var(--muted);font-size:13px}
+  .modal .head .htext .stats b{color:var(--text)}
+  .modal .head .htext .stats .pill{margin-left:6px}
+  .modal .tabs{display:flex;gap:6px;padding:10px 22px;
+       border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .modal .tab{background:transparent;border:1px solid transparent;color:var(--muted);
+       border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;
+       display:inline-flex;gap:8px;align-items:center;font-family:inherit}
+  .modal .tab:hover{color:var(--text)}
+  .modal .tab.active{background:var(--panel2);border-color:var(--line);color:var(--text)}
+  .modal .tab .mt{font-size:11px;background:var(--panel);border:1px solid var(--line);
+       border-radius:10px;padding:1px 7px;font-variant-numeric:tabular-nums}
+  .modal .tab .n{font-size:11.5px;color:var(--muted)}
+  .modal .body{padding:18px 22px 22px}
+  .modal .empty{color:var(--muted);font-size:13.5px;padding:20px;text-align:center}
+  .modal .panels{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .modal .panel{background:var(--panel);border:1px solid var(--line);
+       border-radius:10px;padding:14px 16px}
+  .modal .panel h4{margin:0 0 10px;font-size:11.5px;text-transform:uppercase;
+       letter-spacing:1px;color:var(--muted);font-weight:700}
+  .modal .panel.span2{grid-column:1/-1}
+  .pl-best .v{font-size:22px;font-weight:700}
+  .pl-best .when{color:var(--muted);font-size:12.5px;margin-top:3px}
+  .pl-best .badges{margin-top:8px}
+  .pl-best .badge{display:inline-block;background:#46e08a22;color:#46e08a;
+       border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-right:6px}
+  .pl-best .badge.mfc{background:#ffe27a22;color:#ffe27a}
+  .pl-best .jline{margin-top:10px;font-size:12.5px;color:var(--muted)}
+  .pl-best .jline b{color:var(--text);font-variant-numeric:tabular-nums}
+  .pl-best .jline span{margin-right:10px;display:inline-block}
+  .pl-judg .jrow{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:12.5px}
+  .pl-judg .jrow .lbl{width:38px;color:var(--muted);text-align:right;font-size:12px}
+  .pl-judg .jrow .barbox{flex:1;background:#0004;border-radius:3px;height:14px;
+       overflow:hidden;min-width:0}
+  .pl-judg .jrow .bar{height:100%;border-radius:3px}
+  .pl-judg .jrow .num{width:80px;text-align:right;font-variant-numeric:tabular-nums;
+       color:var(--text);font-size:12px}
+  .pl-judg .jrow .num span{color:var(--muted);margin-left:4px;font-size:11px}
+  .j-w1{background:#ffe27a} .j-w2{background:#9be15d} .j-w3{background:#5dd6e1}
+  .j-w4{background:#7aa8ff} .j-w5{background:#c99bff} .j-miss{background:#ff7a7a}
+  .pl-hold .ring-wrap{display:flex;gap:14px;align-items:center}
+  .pl-hold .v{font-size:24px;font-weight:700}
+  .pl-hold .meta{color:var(--muted);font-size:12.5px;margin-top:4px}
+  .pl-radar .rrow{display:flex;align-items:center;gap:10px;margin:4px 0;font-size:12px}
+  .pl-radar .rrow .lbl{width:64px;color:var(--muted)}
+  .pl-radar .dots{flex:1;display:flex;gap:3px}
+  .pl-radar .dot{width:10px;height:10px;border-radius:50%;background:#ffffff14}
+  .pl-radar .dot.on{background:var(--accent2)}
+  .pl-radar .num{width:46px;text-align:right;color:var(--text);font-size:12px;
+       font-variant-numeric:tabular-nums}
+  .pl-prog{position:relative}
+  .pl-prog .none{color:var(--muted);font-size:13px;padding:8px 0}
+  .all-plays{margin-top:16px}
+  .all-plays h4{margin:0 0 8px;font-size:11.5px;text-transform:uppercase;
+       letter-spacing:1px;color:var(--muted);font-weight:700}
+  .all-plays .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+  .all-plays table{font-size:12.5px;width:100%}
+  .all-plays th,.all-plays td{padding:7px 9px;border-bottom:1px solid var(--line)}
+  .all-plays tr:last-child td{border-bottom:none}
+  .all-plays tr.best td{background:#ffe27a08}
+  .all-plays .star{color:#ffe27a;margin-left:4px}
+  .all-plays .miss-bad{color:#ff7a7a}
+
+  tr.click,.recent .row.click{cursor:pointer}
+  tr.click:hover td{background:#ffffff14}
+  .recent .row.click:hover{background:var(--panel)}
+
+  @media (max-width:600px){
+    .modal .panels{grid-template-columns:1fr}
+    .modal .head{padding-right:48px}
+  }
 </style>
 </head>
 <body>
@@ -186,6 +281,14 @@
   <footer id="footer"></footer>
 </div>
 <div class="tip" id="tip"></div>
+
+<!-- Per-song detail modal — populated by openSongModal(dir) on row click -->
+<div class="modal-bg" id="modalBg" aria-hidden="true">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
 
 <script>
 const $ = s => document.querySelector(s);
@@ -302,12 +405,17 @@ function wireBars(el){
 }
 
 let DATA=null;
+let SONGS_BY_DIR={};        // dir -> song record (lookup for modal click)
+const EXCLUDE_BEST_GRADES = new Set(["Tier07","Failed"]); // D/F hidden from ranking
 fetch("./data.json").then(r=>r.json()).then(d=>{DATA=d;render(d);})
   .catch(e=>{$("#meta").textContent="Failed to load data.json — "+e;});
 
 function gradeLetter(t){return (DATA.gradeMap&&DATA.gradeMap[t])||t||"";}
 
 function render(d){
+  // Index every song (incl. D/F-only ones) so modal clicks always resolve.
+  SONGS_BY_DIR = {};
+  d.songs.forEach(s => { SONGS_BY_DIR[s.dir] = s; });
   const t=d.totals;
   const hrs=(t.gameplaySeconds/3600);
   // page title + h1 — prefix with the player name from config when set
@@ -414,7 +522,9 @@ function render(d){
 let sortK="plays", sortAsc=false, page=0, filtered=[];
 const PER=50;
 function buildTable(d){
-  d.songs.forEach((s,i)=>s.rank=i+1); // rank by default (plays desc)
+  // Rank by visible (non-D/F) ordering so #1 is the most-played eligible song.
+  d.songs.filter(s=>!EXCLUDE_BEST_GRADES.has(s.bestGrade||""))
+         .forEach((s,i)=>s.rank=i+1);
   applyTable();
   $("#q").addEventListener("input", ()=>{page=0;applyTable();});
   document.querySelectorAll("#tbl th[data-k]").forEach(th=>{
@@ -428,8 +538,11 @@ function buildTable(d){
 }
 function applyTable(){
   const q=$("#q").value.trim().toLowerCase();
-  filtered=DATA.songs.filter(s=> !q || s.song.toLowerCase().includes(q)
-        || s.pack.toLowerCase().includes(q) || (s.artist||"").toLowerCase().includes(q));
+  // D/F filter happens here (previously in Python) so the full song list
+  // stays reachable by the modal click handler via SONGS_BY_DIR.
+  filtered=DATA.songs.filter(s=> !EXCLUDE_BEST_GRADES.has(s.bestGrade||"")
+        && (!q || s.song.toLowerCase().includes(q)
+            || s.pack.toLowerCase().includes(q) || (s.artist||"").toLowerCase().includes(q)));
   const dir=sortAsc?1:-1;
   filtered.sort((a,b)=>{
     let x=a[sortK], y=b[sortK];
@@ -455,7 +568,7 @@ function renderPage(){
     const banner = `<img class="banner-mini" loading="lazy" decoding="async"
        src="${s.banner||'nobanner.svg'}"
        onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
-    return `<tr>
+    return `<tr class="click" data-dir="${escAttr(s.dir)}">
       <td class="num muted">${s.rank}</td>
       <td class="banner-cell">${banner}</td>
       <td class="song">${esc(s.song)}</td>
@@ -467,6 +580,9 @@ function renderPage(){
       <td class="muted">${s.last||"—"}</td></tr>`;
   }).join("");
   $("#tbody").innerHTML=rows;
+  $("#tbody").querySelectorAll("tr.click").forEach(tr=>{
+    tr.addEventListener("click", ()=> openSongModal(tr.dataset.dir));
+  });
   $("#pager").innerHTML =
     `<button ${page<=0?"disabled":""} id="prev">‹ Prev</button>`+
     `<span>Page ${page+1} / ${pages}</span>`+
@@ -475,7 +591,8 @@ function renderPage(){
   if(p)p.onclick=()=>{page--;renderPage();window.scrollTo({top:$("#tbl").offsetTop-20});};
   if(n)n.onclick=()=>{page++;renderPage();window.scrollTo({top:$("#tbl").offsetTop-20});};
 }
-function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function escAttr(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
 
 function buildRecent(d){
   $("#recent").innerHTML = "<ul>"+d.recent.slice(0,30).map(r=>{
@@ -485,14 +602,280 @@ function buildRecent(d){
     const banner = `<img class="banner" loading="lazy" decoding="async"
        src="${r.banner||'nobanner.svg'}"
        onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
-    return `<li><div class="row">
+    const clickable = SONGS_BY_DIR[r.dir]
+      ? `class="row click" data-dir="${escAttr(r.dir)}" data-diff="${escAttr(r.diff)}"`
+      : 'class="row"';
+    return `<li><div ${clickable}>
       <div class="info">${banner}<div class="text"><div>${esc(r.song)}</div><div class="meta">${art}${esc(r.pack)} · ${r.diff}</div></div></div>
       <div style="text-align:right">${gp} <b>${(r.pct*100).toFixed(1)}%</b>
         <div class="meta">${r.dt}</div></div>
     </div></li>`;
   }).join("")+"</ul>";
+  $("#recent").querySelectorAll(".row.click").forEach(row=>{
+    row.addEventListener("click", ()=> openSongModal(row.dataset.dir, row.dataset.diff));
+  });
 }
 document.addEventListener("mousemove",e=>{if(tip.style.opacity==1)moveTip(e);});
+
+// ---------- Per-song modal ----------
+const modalBg = $("#modalBg");
+const modalContent = $("#modalContent");
+$("#modalClose").addEventListener("click", closeModal);
+modalBg.addEventListener("click", e=>{ if(e.target===modalBg) closeModal(); });
+document.addEventListener("keydown", e=>{
+  if(e.key==="Escape" && modalBg.classList.contains("show")) closeModal();
+});
+
+function closeModal(){
+  modalBg.classList.remove("show");
+  modalBg.setAttribute("aria-hidden","true");
+  modalContent.innerHTML = "";
+}
+
+function openSongModal(dir, preferredDiff){
+  const song = SONGS_BY_DIR[dir];
+  if(!song){ console.warn("No song record for", dir); return; }
+  // Pick initial tab: caller's preferred diff if it exists, else most-played
+  // chart, else first chart.
+  let idx = 0;
+  if(song.charts && song.charts.length){
+    if(preferredDiff){
+      const i = song.charts.findIndex(c=>c.diff===preferredDiff);
+      if(i>=0) idx = i;
+    } else {
+      let bestN = -1;
+      song.charts.forEach((c,i)=>{ if(c.plays>bestN){bestN=c.plays;idx=i;} });
+    }
+  }
+  renderSongModal(song, idx);
+  modalBg.classList.add("show");
+  modalBg.setAttribute("aria-hidden","false");
+  modalBg.scrollTop = 0;
+}
+
+function renderSongModal(song, chartIdx){
+  const charts = song.charts || [];
+  const chart = charts[chartIdx] || null;
+  const grade = song.bestGrade ? gradeLetter(song.bestGrade) : "";
+  const gp = grade ? `<span class="pill g-${grade}">${grade}</span>` : '';
+  const banner = `<img class="banner-lg" loading="lazy" decoding="async"
+       src="${song.banner||'nobanner.svg'}"
+       onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
+  // Header lifetime stats
+  const playedDates = [];
+  charts.forEach(c => { if(c.lastPlayed) playedDates.push(c.lastPlayed);
+                        (c.scores||[]).forEach(s=>{ if(s.dt) playedDates.push(s.dt.slice(0,10)); }); });
+  const first = playedDates.length ? playedDates.reduce((a,b)=>a<b?a:b) : "";
+  const last = song.last || (playedDates.length ? playedDates.reduce((a,b)=>a>b?a:b) : "");
+  const bestPct = song.bestPct!=null ? (song.bestPct*100).toFixed(2)+"%" : "—";
+  const tabs = charts.map((c,i)=>{
+    const mt = c.meter ? `<span class="mt">${c.meter}</span>` : "";
+    return `<button class="tab ${i===chartIdx?'active':''}" data-i="${i}">${esc(c.diff)} ${mt} <span class="n">${fmt(c.plays)} plays</span></button>`;
+  }).join("");
+  modalContent.innerHTML = `
+    <div class="head">
+      ${banner}
+      <div class="htext">
+        <h2 id="modalTitle">${esc(song.song)}</h2>
+        <div class="who">${song.artist?esc(song.artist)+' · ':''}${esc(song.pack)}</div>
+        <div class="stats">
+          <b>${fmt(song.plays)}</b> total plays · best <b>${bestPct}</b> ${gp}
+          ${first ? `<br>first played <b>${first}</b> · last <b>${last}</b>` : ''}
+        </div>
+      </div>
+    </div>
+    <div class="tabs">${tabs || '<span class="empty">No chart records</span>'}</div>
+    <div class="body" id="modalBody"></div>`;
+  modalContent.querySelectorAll(".tab").forEach(btn=>{
+    btn.addEventListener("click", ()=> renderSongModal(song, +btn.dataset.i));
+  });
+  renderChartPanels($("#modalBody"), chart);
+}
+
+function renderChartPanels(host, chart){
+  if(!chart){ host.innerHTML = '<div class="empty">No chart selected.</div>'; return; }
+  const scores = chart.scores || [];
+  if(!scores.length){
+    host.innerHTML =
+      `<div class="empty">${fmt(chart.plays)} plays recorded on this chart, `+
+      `but StepMania didn't keep detailed score records for it.</div>`+
+      chartRadarPanelHtml(chart);
+    return;
+  }
+  // Best play: highest pct
+  const best = scores.reduce((a,b)=> (b.pct||0) > (a.pct||0) ? b : a);
+  // Aggregate judgments across all scores on this chart
+  const jSum = [0,0,0,0,0,0]; // W1 W2 W3 W4 W5 Miss
+  const hSum = [0,0,0];       // Held LetGo MissedHold
+  scores.forEach(s=>{
+    if(s.j) s.j.forEach((v,i)=>jSum[i]+=v);
+    if(s.h) s.h.forEach((v,i)=>hSum[i]+=v);
+  });
+  const jTot = jSum.reduce((a,b)=>a+b,0);
+  const hTot = hSum.reduce((a,b)=>a+b,0);
+  const bestJ = best.j || [0,0,0,0,0,0];
+  const bestH = best.h || [0,0,0];
+  const isFC = (best.j ? best.j[5]===0 : false) && (best.h ? best.h[1]===0 && best.h[2]===0 : true);
+  const isMFC = isFC && bestJ.slice(1).every(v=>v===0);
+  const fcBadge = isMFC ? '<span class="badge mfc">Marvelous FC</span>'
+                 : isFC ? '<span class="badge">Full Combo</span>' : '';
+  const bestGrade = best.grade ? gradeLetter(best.grade) : "";
+  const bestGP = bestGrade ? `<span class="pill g-${bestGrade}">${bestGrade}</span>` : '';
+
+  host.innerHTML = `
+    <div class="panels">
+      ${renderProgressionPanel(scores)}
+      <div class="panel pl-best">
+        <h4>Best play</h4>
+        <div class="v">${(best.pct*100).toFixed(2)}% ${bestGP}</div>
+        <div class="when">${best.dt} · max combo <b>${fmt(best.co)}</b></div>
+        <div class="badges">${fcBadge}</div>
+        <div class="jline">
+          <span>W1 <b>${fmt(bestJ[0])}</b></span>
+          <span>W2 <b>${fmt(bestJ[1])}</b></span>
+          <span>W3 <b>${fmt(bestJ[2])}</b></span>
+          <span>W4 <b>${fmt(bestJ[3])}</b></span>
+          <span>W5 <b>${fmt(bestJ[4])}</b></span>
+          <span>Miss <b>${fmt(bestJ[5])}</b></span>
+        </div>
+      </div>
+      <div class="panel pl-judg">
+        <h4>Lifetime judgments on this chart</h4>
+        ${renderJudgBars(jSum, jTot)}
+      </div>
+      <div class="panel pl-hold">
+        <h4>Hold reliability</h4>
+        ${renderHold(hSum, hTot)}
+      </div>
+      ${chartRadarPanelHtml(chart, true)}
+    </div>
+    <div class="all-plays">
+      <h4>All ${scores.length} recorded score${scores.length===1?'':'s'} (newest first)</h4>
+      <div class="tbl-wrap"><table>
+        <thead><tr>
+          <th>When</th><th class="num">%</th><th>Grade</th>
+          <th class="num">Combo</th><th class="num">W1</th><th class="num">Miss</th>
+          <th class="num">Held</th><th>Mods</th>
+        </tr></thead>
+        <tbody>${scores.map(s=>renderScoreRow(s, best)).join("")}</tbody>
+      </table></div>
+    </div>`;
+}
+
+function renderJudgBars(sums, tot){
+  const labels = ["W1","W2","W3","W4","W5","Miss"];
+  const classes = ["j-w1","j-w2","j-w3","j-w4","j-w5","j-miss"];
+  if(!tot) return '<div class="empty">No tap counts recorded.</div>';
+  return sums.map((v,i)=>{
+    const pct = (v/tot)*100;
+    const w = Math.max(0.5, pct);
+    return `<div class="jrow">
+      <div class="lbl">${labels[i]}</div>
+      <div class="barbox"><div class="bar ${classes[i]}" style="width:${w}%"></div></div>
+      <div class="num">${fmt(v)} <span>${pct.toFixed(1)}%</span></div>
+    </div>`;
+  }).join("");
+}
+
+function renderHold(sums, tot){
+  if(!tot) return '<div class="empty">No hold notes on this chart.</div>';
+  const heldPct = (sums[0]/tot)*100;
+  return `<div class="ring-wrap">
+    <div>
+      <div class="v">${heldPct.toFixed(1)}%</div>
+      <div class="meta">${fmt(sums[0])} held · ${fmt(sums[1])} let go · ${fmt(sums[2])} missed
+        <br>(across ${fmt(tot)} hold notes attempted)</div>
+    </div>
+  </div>`;
+}
+
+function chartRadarPanelHtml(chart, asPanel){
+  const r = chart && chart.radar || {};
+  const keys = [["stream","Stream"],["voltage","Voltage"],["air","Air"],
+                ["freeze","Freeze"],["chaos","Chaos"]];
+  const have = keys.some(([k])=>r[k]!=null);
+  if(!have) return '';
+  const rows = keys.map(([k,name])=>{
+    const v = r[k]||0;
+    const on = Math.round(v*10);
+    let dots = '';
+    for(let i=0;i<10;i++) dots+=`<div class="dot ${i<on?'on':''}"></div>`;
+    return `<div class="rrow"><div class="lbl">${name}</div>
+      <div class="dots">${dots}</div>
+      <div class="num">${v.toFixed(2)}</div></div>`;
+  }).join("");
+  const extras = [];
+  if(r.notes) extras.push(`<b>${fmt(r.notes)}</b> notes`);
+  if(r.jumps) extras.push(`<b>${fmt(r.jumps)}</b> jumps`);
+  if(r.holds) extras.push(`<b>${fmt(r.holds)}</b> holds`);
+  const extra = extras.length
+    ? `<div class="meta" style="color:var(--muted);font-size:12px;margin-top:8px">${extras.join(' · ')}</div>`
+    : '';
+  const inner = `<h4>Chart profile</h4>${rows}${extra}`;
+  return asPanel ? `<div class="panel pl-radar">${inner}</div>` : `<div class="panels"><div class="panel pl-radar">${inner}</div></div>`;
+}
+
+function renderProgressionPanel(scores){
+  // Sort oldest -> newest for plotting; show only if >=2 datapoints with timestamps.
+  const pts = scores.filter(s=>s.dt && s.pct!=null).slice().sort((a,b)=>a.dt<b.dt?-1:1);
+  if(pts.length < 2){
+    return ''; // not enough data to draw a line
+  }
+  const W=640, H=110, pl=8, pr=8, pt=14, pb=24;
+  const innerW = W-pl-pr, innerH = H-pt-pb;
+  const minP = Math.min(...pts.map(p=>p.pct)), maxP = Math.max(...pts.map(p=>p.pct));
+  const span = Math.max(0.01, maxP - minP);
+  // X by time (linear); fall back to index if all timestamps equal.
+  const toTime = s => Date.parse(s.dt.replace(' ','T'));
+  const t0 = toTime(pts[0]), tN = toTime(pts[pts.length-1]);
+  const tSpan = Math.max(1, tN - t0);
+  const x = i => pl + ((toTime(pts[i]) - t0) / tSpan) * innerW;
+  const y = p => pt + (1 - (p.pct - minP)/span) * innerH;
+  let path = '', dots = '';
+  pts.forEach((p,i)=>{
+    const px = x(i), py = y(p);
+    path += (i===0?'M ':' L ') + px.toFixed(1) + ' ' + py.toFixed(1);
+    dots += `<circle class="dot" cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="2.5"
+              fill="var(--accent2)" data-t="${p.dt}: <b>${(p.pct*100).toFixed(2)}%</b>"/>`;
+  });
+  const yLabels = `
+    <text class="axis" x="${pl}" y="${pt+8}">${(maxP*100).toFixed(1)}%</text>
+    <text class="axis" x="${pl}" y="${pt+innerH+4}">${(minP*100).toFixed(1)}%</text>`;
+  const xLabels = `
+    <text class="axis" x="${pl}" y="${H-6}">${pts[0].dt.slice(0,10)}</text>
+    <text class="axis" x="${pl+innerW}" y="${H-6}" text-anchor="end">${pts[pts.length-1].dt.slice(0,10)}</text>`;
+  const svg = `<svg viewBox="0 0 ${W} ${H}" style="overflow:visible">
+    <path d="${path}" fill="none" stroke="var(--accent2)" stroke-width="1.8"
+          stroke-linejoin="round" stroke-linecap="round"/>
+    ${dots}
+    ${yLabels}${xLabels}
+  </svg>`;
+  setTimeout(()=>wireBars(modalContent), 0);  // bind tooltips on newly-rendered dots
+  return `<div class="panel pl-prog span2">
+    <h4>Accuracy over time (${pts.length} plays)</h4>
+    ${svg}
+  </div>`;
+}
+
+function renderScoreRow(s, best){
+  const star = s===best ? '<span class="star" title="Best">★</span>' : '';
+  const grade = s.grade ? gradeLetter(s.grade) : '';
+  const gp = grade ? `<span class="pill g-${grade}">${grade}</span>` : '';
+  const w1 = s.j ? s.j[0] : '—';
+  const miss = s.j ? s.j[5] : '—';
+  const missCls = (s.j && s.j[5]>0) ? 'miss-bad' : '';
+  const held = s.h ? `${s.h[0]}/${s.h[0]+s.h[1]+s.h[2]}` : '—';
+  return `<tr class="${s===best?'best':''}">
+    <td>${s.dt||'—'}${star}</td>
+    <td class="num">${(s.pct*100).toFixed(2)}%</td>
+    <td>${gp}</td>
+    <td class="num">${fmt(s.co)}</td>
+    <td class="num">${fmt(w1)}</td>
+    <td class="num ${missCls}">${fmt(miss)}</td>
+    <td>${esc(held)}</td>
+    <td class="muted">${esc(s.m||'')}</td>
+  </tr>`;
+}
 </script>
 </body>
 </html>
