@@ -1,6 +1,6 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-05-28** — bump this date whenever you edit this file._
+> _Last updated: **2026-05-31** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
@@ -9,10 +9,27 @@ locally-converted PNG banners. Works behind your nginx COEP (`credentialless`)
 and offline.
 
 Click any row in **Recent plays** or the **Song ranking** to open a per-song
-detail modal: chart difficulty tabs, accuracy progression sparkline, lifetime
-judgment breakdown, hold-note reliability, the song's chart-difficulty profile
+detail modal: chart difficulty tabs, accuracy + W1% progression with max-combo
+bars, lifetime judgment breakdown, hold-note reliability, the song's chart-difficulty profile
 (stream/voltage/air/freeze/chaos from the cache), and a table of every recorded
-score on that chart. Esc / click outside to close.
+score on that chart. Esc / click outside to close. Use **← / →** (or the
+chevrons in the header, or a horizontal swipe on touch) to step to the next /
+previous song in the list you opened from (the filtered ranking, or recent
+plays — your sort and search are preserved).
+
+### Section anchors
+
+Each major section has a stable `id` so the URL can deep-link straight to it
+(e.g. share `…/stepmania/#ranking` to land on the song table). Smooth-scroll
+fires on initial load *and* on subsequent in-page hash changes.
+
+| Anchor | Section |
+|---|---|
+| `#overview` | KPI tiles at the top (totals, streaks, etc.) |
+| `#activity` | Activity over time (monthly plays + skill trend, calories, hour-of-day, day-of-week) |
+| `#breakdowns` | Plays by difficulty, grades, top artists, top packs |
+| `#recent-plays` | Recent plays list |
+| `#ranking` | Song ranking table (with search + sort) |
 
 ## Files in this directory
 

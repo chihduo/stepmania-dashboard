@@ -48,7 +48,7 @@
   .card.full .axis{font-size:8px}      /* ~15px on screen, matches h3 */
   .card.full .val{font-size:8px}
   .tip{position:fixed;pointer-events:none;background:#000d;border:1px solid var(--line);
-       border-radius:8px;padding:6px 9px;font-size:12px;color:#fff;z-index:50;opacity:0;transition:opacity .1s;white-space:nowrap}
+       border-radius:8px;padding:6px 9px;font-size:12px;color:#fff;z-index:200;opacity:0;transition:opacity .1s;white-space:nowrap}
   /* tables */
   .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
   input[type=search]{background:var(--panel2);border:1px solid var(--line);color:var(--text);
@@ -120,7 +120,20 @@
        color:var(--text);font-size:18px;cursor:pointer;display:flex;
        align-items:center;justify-content:center;line-height:1;z-index:2}
   .modal .close:hover{background:var(--line)}
-  .modal .head{display:flex;gap:16px;padding:20px 56px 16px 22px;
+  /* prev/next song navigation in the modal header — keyboard ←/→ also works,
+     and a horizontal swipe on the modal card navigates on touch devices */
+  .modal-nav{position:absolute;top:13px;right:54px;display:flex;align-items:center;
+       gap:6px;z-index:2}
+  .modal-nav.hidden{display:none}
+  .nav-btn{width:30px;height:30px;border-radius:50%;background:var(--panel2);
+       border:1px solid var(--line);color:var(--text);font-size:17px;cursor:pointer;
+       display:flex;align-items:center;justify-content:center;line-height:1;
+       padding:0;font-family:inherit;font-weight:600}
+  .nav-btn:hover:not(:disabled){background:var(--line);color:var(--accent2)}
+  .nav-btn:disabled{opacity:.3;cursor:default}
+  .nav-count{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;
+       min-width:52px;text-align:center;padding:0 2px;user-select:none}
+  .modal .head{display:flex;gap:16px;padding:20px 144px 16px 22px;
        border-bottom:1px solid var(--line);align-items:flex-start;flex-wrap:wrap}
   .modal .head img.banner-lg{width:200px;height:62px;object-fit:cover;
        border-radius:6px;background:#0006;flex-shrink:0}
@@ -197,7 +210,11 @@
 
   @media (max-width:600px){
     .modal .panels{grid-template-columns:1fr}
-    .modal .head{padding-right:48px}
+    .modal .head{padding-right:120px}
+  }
+  @media (max-width:480px){
+    .nav-count{display:none}
+    .modal .head{padding-right:108px}
   }
 </style>
 </head>
@@ -208,9 +225,9 @@
     <div class="sub" id="meta">Loading…</div>
   </header>
 
-  <section><div class="kpis" id="kpis"></div></section>
+  <section id="overview"><div class="kpis" id="kpis"></div></section>
 
-  <section>
+  <section id="activity">
     <h2>Activity over time</h2>
     <div class="grid">
       <div class="card full">
@@ -226,7 +243,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="breakdowns">
     <h2>Breakdowns</h2>
     <div class="grid">
       <div class="card">
@@ -248,12 +265,12 @@
     </div>
   </section>
 
-  <section class="recent">
+  <section id="recent-plays" class="recent">
     <h2>Recent plays</h2>
     <ul id="recent"></ul>
   </section>
 
-  <section>
+  <section id="ranking">
     <h2>Song ranking — by play frequency</h2>
     <div class="toolbar">
       <input type="search" id="q" placeholder="Search song or pack…">
@@ -285,7 +302,12 @@
 <!-- Per-song detail modal — populated by openSongModal(dir) on row click -->
 <div class="modal-bg" id="modalBg" aria-hidden="true">
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="close" id="modalClose" aria-label="Close">✕</button>
+    <div class="modal-nav hidden" id="modalNav">
+      <button class="nav-btn" id="navPrev" aria-label="Previous song" title="Previous song (←)">‹</button>
+      <span class="nav-count" id="navCount"></span>
+      <button class="nav-btn" id="navNext" aria-label="Next song" title="Next song (→)">›</button>
+    </div>
+    <button class="close" id="modalClose" aria-label="Close (Esc)">✕</button>
     <div id="modalContent"></div>
   </div>
 </div>
@@ -407,8 +429,19 @@ function wireBars(el){
 let DATA=null;
 let SONGS_BY_DIR={};        // dir -> song record (lookup for modal click)
 const EXCLUDE_BEST_GRADES = new Set(["Tier07","Failed"]); // D/F hidden from ranking
-fetch("./data.json").then(r=>r.json()).then(d=>{DATA=d;render(d);})
+fetch("./data.json").then(r=>r.json()).then(d=>{DATA=d;render(d);scrollToHash();})
   .catch(e=>{$("#meta").textContent="Failed to load data.json — "+e;});
+
+// Section anchors (#overview, #activity, #breakdowns, #recent-plays, #ranking)
+// scroll on load and on in-page hash changes. The native browser anchor scroll
+// fires before data.json finishes loading, by which point the target section
+// hasn't grown to its final height yet, so we re-scroll once data renders.
+function scrollToHash(){
+  if(!location.hash) return;
+  const el = document.querySelector(location.hash);
+  if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+}
+window.addEventListener("hashchange", scrollToHash);
 
 function gradeLetter(t){return (DATA.gradeMap&&DATA.gradeMap[t])||t||"";}
 
@@ -584,7 +617,14 @@ function renderPage(){
   }).join("");
   $("#tbody").innerHTML=rows;
   $("#tbody").querySelectorAll("tr.click").forEach(tr=>{
-    tr.addEventListener("click", ()=> openSongModal(tr.dataset.dir));
+    tr.addEventListener("click", ()=> {
+      const dir = tr.dataset.dir;
+      // Nav list spans the whole filtered list (across all pages), not just
+      // the current page, so ←/→ keeps going beyond page boundaries.
+      const list = filtered.map(s => ({dir: s.dir}));
+      const idx = filtered.findIndex(s => s.dir === dir);
+      openSongModal(dir, null, {list, idx});
+    });
   });
   $("#pager").innerHTML =
     `<button ${page<=0?"disabled":""} id="prev">‹ Prev</button>`+
@@ -614,46 +654,111 @@ function buildRecent(d){
         <div class="meta">${r.dt}</div></div>
     </div></li>`;
   }).join("")+"</ul>";
-  $("#recent").querySelectorAll(".row.click").forEach(row=>{
-    row.addEventListener("click", ()=> openSongModal(row.dataset.dir, row.dataset.diff));
+  // Build the nav list from the visible clickable recent rows (skips any
+  // recent play whose song dir isn't in SONGS_BY_DIR).
+  const recentRows = [...$("#recent").querySelectorAll(".row.click")];
+  const recentNavList = recentRows.map(r => ({dir: r.dataset.dir, diff: r.dataset.diff}));
+  recentRows.forEach((row, i)=>{
+    row.addEventListener("click", ()=>
+      openSongModal(row.dataset.dir, row.dataset.diff, {list: recentNavList, idx: i}));
   });
 }
 document.addEventListener("mousemove",e=>{if(tip.style.opacity==1)moveTip(e);});
 
 // ---------- Per-song modal ----------
 const modalBg = $("#modalBg");
+const modalEl = $("#modal");
 const modalContent = $("#modalContent");
+const modalNavEl = $("#modalNav");
+// Navigation context: which list the modal was opened from, and where in it.
+// {list: [{dir, diff?}, ...], idx: number}  — null when there's nothing to navigate.
+let modalNav = null;
+
 $("#modalClose").addEventListener("click", closeModal);
 modalBg.addEventListener("click", e=>{ if(e.target===modalBg) closeModal(); });
+$("#navPrev").addEventListener("click", e=>{ e.stopPropagation(); navStep(-1); });
+$("#navNext").addEventListener("click", e=>{ e.stopPropagation(); navStep(+1); });
 document.addEventListener("keydown", e=>{
-  if(e.key==="Escape" && modalBg.classList.contains("show")) closeModal();
+  if(!modalBg.classList.contains("show")) return;
+  if(e.key==="Escape") closeModal();
+  else if(e.key==="ArrowLeft")  { e.preventDefault(); navStep(-1); }
+  else if(e.key==="ArrowRight") { e.preventDefault(); navStep(+1); }
 });
+
+// Touch swipe on the modal card → prev/next.  Skip swipes that start inside
+// the horizontally-scrollable all-plays table so it can still pan.
+let touchStartX=null, touchStartY=null;
+modalEl.addEventListener("touchstart", e=>{
+  if(e.touches.length!==1) return;
+  if(e.target.closest(".tbl-wrap")) return;
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, {passive:true});
+modalEl.addEventListener("touchend", e=>{
+  if(touchStartX===null) return;
+  const t = e.changedTouches[0];
+  const dx = t.clientX - touchStartX, dy = t.clientY - touchStartY;
+  touchStartX = touchStartY = null;
+  // Require a clearly horizontal swipe of >= 60px.
+  if(Math.abs(dx) >= 60 && Math.abs(dx) > Math.abs(dy)*1.5) navStep(dx>0 ? -1 : +1);
+}, {passive:true});
 
 function closeModal(){
   modalBg.classList.remove("show");
   modalBg.setAttribute("aria-hidden","true");
   modalContent.innerHTML = "";
+  modalNav = null;
+  updateNavControls();
 }
 
-function openSongModal(dir, preferredDiff){
+function updateNavControls(){
+  if(!modalNav || modalNav.list.length <= 1){
+    modalNavEl.classList.add("hidden");
+    return;
+  }
+  modalNavEl.classList.remove("hidden");
+  $("#navPrev").disabled = (modalNav.idx <= 0);
+  $("#navNext").disabled = (modalNav.idx >= modalNav.list.length - 1);
+  $("#navCount").textContent = `${modalNav.idx + 1} / ${modalNav.list.length}`;
+}
+
+// Pick the modal's initial chart tab based on caller's preferred difficulty,
+// else the song's most-played chart, else the first chart.
+function pickChartIdx(song, preferredDiff){
+  const charts = song.charts || [];
+  if(!charts.length) return 0;
+  if(preferredDiff){
+    const i = charts.findIndex(c=>c.diff===preferredDiff);
+    if(i>=0) return i;
+  }
+  let bestN = -1, best = 0;
+  charts.forEach((c,i)=>{ if(c.plays>bestN){bestN=c.plays;best=i;} });
+  return best;
+}
+
+function openSongModal(dir, preferredDiff, nav){
   const song = SONGS_BY_DIR[dir];
   if(!song){ console.warn("No song record for", dir); return; }
-  // Pick initial tab: caller's preferred diff if it exists, else most-played
-  // chart, else first chart.
-  let idx = 0;
-  if(song.charts && song.charts.length){
-    if(preferredDiff){
-      const i = song.charts.findIndex(c=>c.diff===preferredDiff);
-      if(i>=0) idx = i;
-    } else {
-      let bestN = -1;
-      song.charts.forEach((c,i)=>{ if(c.plays>bestN){bestN=c.plays;idx=i;} });
-    }
-  }
-  renderSongModal(song, idx);
+  modalNav = nav || null;
+  renderSongModal(song, pickChartIdx(song, preferredDiff));
+  updateNavControls();
   modalBg.classList.add("show");
   modalBg.setAttribute("aria-hidden","false");
   modalBg.scrollTop = 0;
+}
+
+function navStep(delta){
+  if(!modalNav) return;
+  const newIdx = modalNav.idx + delta;
+  if(newIdx < 0 || newIdx >= modalNav.list.length) return;
+  const item = modalNav.list[newIdx];
+  const song = SONGS_BY_DIR[item.dir];
+  if(!song) return;  // shouldn't happen — nav lists are built from clickable rows
+  modalNav.idx = newIdx;
+  renderSongModal(song, pickChartIdx(song, item.diff));
+  updateNavControls();
+  // Reset internal scroll so the new song's header is visible
+  modalEl.scrollTop = 0;
 }
 
 function renderSongModal(song, chartIdx){
@@ -824,38 +929,120 @@ function renderProgressionPanel(scores){
   if(pts.length < 2){
     return ''; // not enough data to draw a line
   }
-  const W=640, H=110, pl=8, pr=8, pt=14, pb=24;
+  // Per-play W1% (= W1 / total taps) — only available when judgment counts are recorded.
+  const w1Of = s => {
+    if(!s.j) return null;
+    const tot = s.j.reduce((a,b)=>a+b,0);
+    return tot > 0 ? s.j[0]/tot : null;
+  };
+  const ptsW = pts.map(p=>({p, w1: w1Of(p)})).filter(x=>x.w1!=null);
+  const ptsC = pts.filter(p=>p.co!=null && p.co>0);
+
+  const W=640, H=150, pl=32, pr=32, pt=22, pb=24;
   const innerW = W-pl-pr, innerH = H-pt-pb;
-  const minP = Math.min(...pts.map(p=>p.pct)), maxP = Math.max(...pts.map(p=>p.pct));
-  const span = Math.max(0.01, maxP - minP);
-  // X by time (linear); fall back to index if all timestamps equal.
+
+  // X by time (linear); fall back to a flat range if all timestamps equal.
   const toTime = s => Date.parse(s.dt.replace(' ','T'));
   const t0 = toTime(pts[0]), tN = toTime(pts[pts.length-1]);
   const tSpan = Math.max(1, tN - t0);
-  const x = i => pl + ((toTime(pts[i]) - t0) / tSpan) * innerW;
-  const y = p => pt + (1 - (p.pct - minP)/span) * innerH;
-  let path = '', dots = '';
-  pts.forEach((p,i)=>{
-    const px = x(i), py = y(p);
-    path += (i===0?'M ':' L ') + px.toFixed(1) + ' ' + py.toFixed(1);
-    dots += `<circle class="dot" cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="2.5"
-              fill="var(--accent2)" data-t="${p.dt}: <b>${(p.pct*100).toFixed(2)}%</b>"/>`;
+  const xOf = s => pl + ((toTime(s) - t0) / tSpan) * innerW;
+
+  // Accuracy scale (left axis), auto-zoomed.
+  const minA = Math.min(...pts.map(p=>p.pct));
+  const maxA = Math.max(...pts.map(p=>p.pct));
+  const spanA = Math.max(0.0001, maxA - minA);
+  const yA = v => pt + (1 - (v - minA)/spanA) * innerH;
+
+  // W1% scale (right axis), auto-zoomed; only drawn when we have >=2 W1 points.
+  const hasW1 = ptsW.length >= 2;
+  const minW1 = hasW1 ? Math.min(...ptsW.map(x=>x.w1)) : 0;
+  const maxW1 = hasW1 ? Math.max(...ptsW.map(x=>x.w1)) : 0;
+  const spanW1 = Math.max(0.0001, maxW1 - minW1);
+  const yW = v => pt + (1 - (v - minW1)/spanW1) * innerH;
+
+  // Combo bars — linear 0..maxCombo, scaled to the full inner height.
+  const maxC = ptsC.length ? Math.max(...ptsC.map(p=>p.co)) : 0;
+  const barW = Math.max(2, Math.min(10, (innerW / pts.length) * 0.6));
+
+  // Bars first so the lines and dots sit on top.
+  let bars = '';
+  ptsC.forEach(p=>{
+    const bh = maxC > 0 ? (p.co / maxC) * innerH : 0;
+    const bx = xOf(p) - barW/2;
+    const by = pt + innerH - bh;
+    bars += `<rect class="dot" x="${bx.toFixed(1)}" y="${by.toFixed(1)}" `+
+      `width="${barW.toFixed(1)}" height="${bh.toFixed(1)}" `+
+      `fill="var(--muted)" opacity="0.28" `+
+      `data-t="${p.dt}: combo <b>${fmt(p.co)}</b>"/>`;
   });
-  const yLabels = `
-    <text class="axis" x="${pl}" y="${pt+8}">${(maxP*100).toFixed(1)}%</text>
-    <text class="axis" x="${pl}" y="${pt+innerH+4}">${(minP*100).toFixed(1)}%</text>`;
-  const xLabels = `
-    <text class="axis" x="${pl}" y="${H-6}">${pts[0].dt.slice(0,10)}</text>
-    <text class="axis" x="${pl+innerW}" y="${H-6}" text-anchor="end">${pts[pts.length-1].dt.slice(0,10)}</text>`;
+
+  // Accuracy line + dots — dot tooltip shows all three values when present.
+  let pathA = '', dotsA = '';
+  pts.forEach((p,i)=>{
+    const px = xOf(p), py = yA(p.pct);
+    pathA += (i===0?'M ':' L ') + px.toFixed(1) + ' ' + py.toFixed(1);
+    const w1 = w1Of(p);
+    const w1str = w1!=null ? `<br>W1 <b>${(w1*100).toFixed(2)}%</b>` : '';
+    const coStr = (p.co!=null && p.co>0) ? `<br>combo <b>${fmt(p.co)}</b>` : '';
+    dotsA += `<circle class="dot" cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="2.5" `+
+      `fill="var(--accent2)" `+
+      `data-t="${p.dt}: <b>${(p.pct*100).toFixed(2)}%</b>${w1str}${coStr}"/>`;
+  });
+
+  // W1% line + dots (omitted when fewer than 2 plays have judgment data).
+  let pathW = '', dotsW = '';
+  if(hasW1){
+    ptsW.forEach((x,i)=>{
+      const px = xOf(x.p), py = yW(x.w1);
+      pathW += (i===0?'M ':' L ') + px.toFixed(1) + ' ' + py.toFixed(1);
+      dotsW += `<circle class="dot" cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="2.5" `+
+        `fill="var(--warn)" `+
+        `data-t="${x.p.dt}: W1 <b>${(x.w1*100).toFixed(2)}%</b>"/>`;
+    });
+  }
+
+  const yLabels =
+    `<text class="axis" x="${pl-4}" y="${pt+8}" text-anchor="end" fill="var(--accent2)">${(maxA*100).toFixed(1)}%</text>`+
+    `<text class="axis" x="${pl-4}" y="${pt+innerH+4}" text-anchor="end" fill="var(--accent2)">${(minA*100).toFixed(1)}%</text>`+
+    (hasW1
+      ? `<text class="axis" x="${pl+innerW+4}" y="${pt+8}" fill="var(--warn)">${(maxW1*100).toFixed(1)}%</text>`+
+        `<text class="axis" x="${pl+innerW+4}" y="${pt+innerH+4}" fill="var(--warn)">${(minW1*100).toFixed(1)}%</text>`
+      : '');
+  const xLabels =
+    `<text class="axis" x="${pl}" y="${H-6}">${pts[0].dt.slice(0,10)}</text>`+
+    `<text class="axis" x="${pl+innerW}" y="${H-6}" text-anchor="end">${pts[pts.length-1].dt.slice(0,10)}</text>`;
+
+  // Inline legend along the top of the plot area.
+  const legend =
+    `<g transform="translate(${pl},${pt-8})">`+
+      `<line x1="0" y1="-3" x2="12" y2="-3" stroke="var(--accent2)" stroke-width="2"/>`+
+      `<text class="axis" x="16" y="0">Acc%</text>`+
+      (hasW1
+        ? `<line x1="60" y1="-3" x2="72" y2="-3" stroke="var(--warn)" stroke-width="2"/>`+
+          `<text class="axis" x="76" y="0">W1%</text>`
+        : '')+
+      (maxC > 0
+        ? `<rect x="${hasW1?116:60}" y="-7" width="8" height="7" fill="var(--muted)" opacity="0.45"/>`+
+          `<text class="axis" x="${hasW1?128:72}" y="0">combo (max ${fmt(maxC)})</text>`
+        : '')+
+    `</g>`;
+
+  const w1Path = hasW1
+    ? `<path d="${pathW}" fill="none" stroke="var(--warn)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`
+    : '';
   const svg = `<svg viewBox="0 0 ${W} ${H}" style="overflow:visible">
-    <path d="${path}" fill="none" stroke="var(--accent2)" stroke-width="1.8"
+    ${bars}
+    <path d="${pathA}" fill="none" stroke="var(--accent2)" stroke-width="1.8"
           stroke-linejoin="round" stroke-linecap="round"/>
-    ${dots}
+    ${w1Path}
+    ${dotsA}
+    ${dotsW}
+    ${legend}
     ${yLabels}${xLabels}
   </svg>`;
-  setTimeout(()=>wireBars(modalContent), 0);  // bind tooltips on newly-rendered dots
+  setTimeout(()=>wireBars(modalContent), 0);  // bind tooltips on newly-rendered dots/bars
   return `<div class="panel pl-prog span2">
-    <h4>Accuracy over time (${pts.length} plays)</h4>
+    <h4>Accuracy, W1% &amp; combo over time (${pts.length} plays)</h4>
     ${svg}
   </div>`;
 }
