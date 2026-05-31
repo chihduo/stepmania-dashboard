@@ -49,7 +49,7 @@ DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 # this script; missing keys fall back to these defaults (deep-merge).
 DEFAULT_CONFIG = {
     "playerName": "",  # used in page title/header when non-empty
-    "liveDir": "/var/www/stepmania",  # auto-deploy target; skipped if not writable
+    "liveDir": "",     # auto-deploy target; set in config.json. Empty = no auto-deploy.
     "colors": {
         "bars": {
             "plays": "#a4b8d4",          # light gray-blue

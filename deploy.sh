@@ -14,20 +14,44 @@
 #   2. Otherwise → needs sudo for the first-time install (file ownership and
 #      the nginx location block). Run with:  sudo bash deploy.sh
 #
-# Override defaults with env vars, e.g.:
+# Paths:
+#   SRC   defaults to ./public next to this script (auto-located, no need to
+#         edit when the checkout moves).
+#   DEST  is taken from the "liveDir" key in ./config.json (the same value
+#         build_dashboard.py uses for auto-deploy). There is no built-in
+#         fallback — if liveDir is missing and $DEST isn't set, this script
+#         refuses to run.
+# Override either with env vars, e.g.:
 #     SRC=/path/to/public DEST=/var/www/sm bash deploy.sh
 #
 set -euo pipefail
 
-SRC="${SRC:-/home/claude/stepmania/dashboard/public}"
-DEST="${DEST:-/var/www/stepmania}"
-NGINX_SITE="${NGINX_SITE:-/etc/nginx/sites-enabled/default}"
-URL_PATH="/stepmania/"
-PUBLIC_URL="https://example.com${URL_PATH}"
-
 red(){ printf '\033[31m%s\033[0m\n' "$*"; }
 grn(){ printf '\033[32m%s\033[0m\n' "$*"; }
 inf(){ printf '\033[36m%s\033[0m\n' "$*"; }
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_JSON="${SCRIPT_DIR}/config.json"
+CONFIG_DEST=$(python3 - "$CONFIG_JSON" <<'PY' 2>/dev/null
+import json, sys
+try:
+    with open(sys.argv[1]) as fh:
+        print(json.load(fh).get("liveDir", "") or "")
+except Exception:
+    pass
+PY
+)
+
+SRC="${SRC:-${SCRIPT_DIR}/public}"
+DEST="${DEST:-${CONFIG_DEST}}"
+if [ -z "$DEST" ]; then
+    red "No deploy target. Set \"liveDir\" in $CONFIG_JSON, or pass DEST=… on the command line."
+    inf "Example:   DEST=/var/www/stepmania bash $0"
+    exit 1
+fi
+NGINX_SITE="${NGINX_SITE:-/etc/nginx/sites-enabled/default}"
+URL_PATH="/stepmania/"
+PUBLIC_URL="https://example.com${URL_PATH}"
 
 # Pick mode based on whether we can write $DEST without escalation.
 ROOT=0; [ "$(id -u)" -eq 0 ] && ROOT=1

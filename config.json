@@ -1,6 +1,7 @@
 {
   "comment": "Edit and rebuild: python3 build_dashboard.py. Any subset can be omitted to fall back to defaults in build_dashboard.py.",
   "playerName": "",
+  "liveDir": "/var/www/stepmania",
   "colors": {
     "bars": {
       "plays": "#a4b8ff",
