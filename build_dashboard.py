@@ -267,6 +267,80 @@ def make_meta_lookup(cache_songs_dir):
     return get
 
 
+def score_dict(hs):
+    """Convert a <HighScore> element (from Stats.xml or an Upload file — the
+    node shape is identical) into the compact per-score dict the modal uses."""
+    tn = hs.find("TapNoteScores")
+    hn = hs.find("HoldNoteScores")
+    so = {
+        "dt":    txt(hs, "DateTime"),
+        "pct":   round(fnum(txt(hs, "PercentDP")), 4),
+        "grade": txt(hs, "Grade"),
+        "sc":    inum(txt(hs, "Score")),
+        "co":    inum(txt(hs, "MaxCombo")),
+        "sv":    round(fnum(txt(hs, "SurviveSeconds")), 1),
+    }
+    if tn is not None:
+        so["j"] = [
+            inum(txt(tn, "W1")), inum(txt(tn, "W2")),
+            inum(txt(tn, "W3")), inum(txt(tn, "W4")),
+            inum(txt(tn, "W5")), inum(txt(tn, "Miss")),
+        ]
+    if hn is not None:
+        so["h"] = [
+            inum(txt(hn, "Held")), inum(txt(hn, "LetGo")),
+            inum(txt(hn, "MissedHold")),
+        ]
+    mods = txt(hs, "Modifiers")
+    # Skip the user's near-universal default to keep JSON small.
+    if mods and mods != "Overhead":
+        so["m"] = mods
+    return so
+
+
+def merge_upload_scores(songs, upload_scores):
+    """Union per-play Upload scores into the per-chart score lists from
+    Stats.xml.
+
+    StepMania writes Upload/*.xml immediately after every play but only
+    flushes the machine profile (Stats.xml) periodically / on exit, so a
+    bundle exported mid-session has plays in the upload log that Stats.xml
+    doesn't know yet. Without this merge those plays show in 'Recent plays'
+    but are missing from the song modal's score table. Dedupe key: DateTime.
+    Returns the number of merged plays."""
+    merged = 0
+    for s in songs:
+        touched = False
+        for c in s["charts"]:
+            extra = upload_scores.get((s["dir"], c["stepstype"], c["diff"]))
+            if not extra:
+                continue
+            have = {sc["dt"] for sc in c["scores"]}
+            new = [sc for sc in extra if sc["dt"] and sc["dt"] not in have]
+            if not new:
+                continue
+            c["scores"].extend(new)
+            c["scores"].sort(key=lambda x: x["dt"], reverse=True)
+            c["plays"] = max(c["plays"], len(c["scores"]))
+            lp = max(sc["dt"][:10] for sc in new)
+            if lp > (c["lastPlayed"] or ""):
+                c["lastPlayed"] = lp
+            merged += len(new)
+            touched = True
+        if touched:
+            # Roll the merged plays up into the song-level summary fields.
+            s["last"] = max(s["last"], max(c["lastPlayed"] or "" for c in s["charts"]))
+            best = max((sc["pct"], sc["grade"]) for c in s["charts"] for sc in c["scores"]
+                       if c["scores"]) if any(c["scores"] for c in s["charts"]) else None
+            if best and (s["bestPct"] is None or best[0] > s["bestPct"]):
+                s["bestPct"], s["bestGrade"] = best
+            s["plays"] = max(s["plays"], sum(c["plays"] for c in s["charts"]))
+            s["diffs"] = {}
+            for c in s["charts"]:
+                s["diffs"][c["diff"]] = s["diffs"].get(c["diff"], 0) + c["plays"]
+    return merged
+
+
 # --------------------------------------------------------------------------
 # 1) Stats.xml : GeneralData aggregates + SongScores (authoritative play counts)
 # --------------------------------------------------------------------------
@@ -424,32 +498,7 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
                     if pct >= 0 and (best_pct is None or pct > best_pct):
                         best_pct = pct
                         best_grade = txt(hs, "Grade")
-                    tn = hs.find("TapNoteScores")
-                    hn = hs.find("HoldNoteScores")
-                    so = {
-                        "dt":    txt(hs, "DateTime"),
-                        "pct":   round(fnum(txt(hs, "PercentDP")), 4),
-                        "grade": txt(hs, "Grade"),
-                        "sc":    inum(txt(hs, "Score")),
-                        "co":    inum(txt(hs, "MaxCombo")),
-                        "sv":    round(fnum(txt(hs, "SurviveSeconds")), 1),
-                    }
-                    if tn is not None:
-                        so["j"] = [
-                            inum(txt(tn, "W1")), inum(txt(tn, "W2")),
-                            inum(txt(tn, "W3")), inum(txt(tn, "W4")),
-                            inum(txt(tn, "W5")), inum(txt(tn, "Miss")),
-                        ]
-                    if hn is not None:
-                        so["h"] = [
-                            inum(txt(hn, "Held")), inum(txt(hn, "LetGo")),
-                            inum(txt(hn, "MissedHold")),
-                        ]
-                    mods = txt(hs, "Modifiers")
-                    # Skip the user's near-universal default to keep JSON small.
-                    if mods and mods != "Overhead":
-                        so["m"] = mods
-                    chart_scores.append(so)
+                    chart_scores.append(score_dict(hs))
                 chart_scores.sort(key=lambda x: x["dt"], reverse=True)
                 cm = m["charts"].get((stepstype, diff), {})
                 charts.append({
@@ -523,6 +572,9 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
     hour = [0] * 24
     dow = [0] * 7
     recent = []  # keep all, trim later
+    # Every play's full score, keyed per chart — merged into the Stats.xml
+    # score lists later (Stats.xml lags the upload log mid-session).
+    by_chart = collections.defaultdict(list)
     total = 0
     first = last = None
     for f in files:
@@ -536,6 +588,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
             pack, name = song_parts(d)
             steps_node = h.find("Steps")
             diff = steps_node.get("Difficulty", "?") if steps_node is not None else "?"
+            stepstype = steps_node.get("StepsType", "") if steps_node is not None else ""
             hs = h.find("HighScore")
             dt = txt(hs, "DateTime")
             if not dt:
@@ -571,6 +624,8 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
                     m_w1[mo]   += counts.get("W1", 0)
                     m_miss[mo] += counts.get("Miss", 0)
                     m_taps[mo] += taps
+            if d:
+                by_chart[(d, stepstype, diff)].append(score_dict(hs))
             m = meta(d)
             recent.append({
                 "_dir": d,
@@ -613,6 +668,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
         "hourOfDay": hour,
         "dayOfWeek": dow,
         "recent": recent[:150],
+        "uploadScores": by_chart,   # consumed by merge_upload_scores, not emitted
     }
 
 
@@ -937,6 +993,12 @@ def main():
         up = parse_uploads(upload_dir, meta, banner)
         print(f"  recorded plays: {up['recordedPlays']} "
               f"({up['firstPlay']} -> {up['lastPlay']})")
+        # Stats.xml is flushed periodically / on exit, so a bundle exported
+        # mid-session is missing the last plays there — pull them in from the
+        # per-play upload log so the modal score lists match 'Recent plays'.
+        n_merged = merge_upload_scores(stats["songs"], up.get("uploadScores") or {})
+        if n_merged:
+            print(f"  merged {n_merged} upload-only plays missing from Stats.xml")
     if cache_dir:
         s = meta.stats
         tot = s["hit"] + s["miss"]
