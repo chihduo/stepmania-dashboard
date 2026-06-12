@@ -14,7 +14,7 @@ Usage:
   python3 build_dashboard.py [SAVE_DIR] [OUT_DIR]
   defaults: SAVE_DIR=./savedata/Save (relative to repo) , OUT_DIR=./dashboard/public
 """
-import sys, os, glob, json, collections, datetime, shutil, re, struct, hashlib
+import sys, os, glob, json, collections, datetime, shutil, re, struct, hashlib, subprocess
 import xml.etree.ElementTree as ET
 try:
     from PIL import Image
@@ -248,13 +248,14 @@ def make_meta_lookup(cache_songs_dir):
     def get(d):
         if d in memo:
             return memo[d]
-        meta = {"artist": "", "title": "", "charts": {}}
+        meta = {"artist": "", "title": "", "charts": {}, "banner_file": ""}
         if index:
             fn = index.get(cache_filename(d).lower())
             if fn:
                 text = open(os.path.join(cache_songs_dir, fn), "rb").read().decode("utf-8", errors="replace")
                 meta["artist"] = tag(text, "ARTIST") or tag(text, "ARTISTTRANSLIT")
                 meta["title"] = tag(text, "TITLE") or tag(text, "TITLETRANSLIT")
+                meta["banner_file"] = tag(text, "BANNER")
                 meta["charts"] = _parse_chart_blocks(text)
                 stats["hit"] += 1
             else:
@@ -512,6 +513,13 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
     m_miss = collections.Counter()
     m_taps = collections.Counter()
     m_dirs = collections.defaultdict(set)   # distinct song dirs per month
+    # Per-month play counts bucketed by difficulty. The dashboard renders these
+    # as the colored segments of each month's Plays bar. Edit and any unknown /
+    # missing difficulty silently merge into Medium so the visible palette stays
+    # to the five "normal" tiers.
+    DIFF_BUCKETS = ("Beginner", "Easy", "Medium", "Hard", "Challenge")
+    BUCKET_FOR = {d: d for d in DIFF_BUCKETS}
+    m_by_diff = collections.defaultdict(lambda: collections.Counter())
     hour = [0] * 24
     dow = [0] * 7
     recent = []  # keep all, trim later
@@ -541,6 +549,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
             mo  = t.strftime("%Y-%m")
             daily[day] += 1
             monthly[mo] += 1
+            m_by_diff[mo][BUCKET_FOR.get(diff, "Medium")] += 1
             if d:
                 m_dirs[mo].add(d)
             hour[t.hour] += 1
@@ -585,6 +594,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
     # Build the monthly skill series aligned with playsMonthly months.
     months_sorted = sorted(monthly)
     distinct_m = [(mo, len(m_dirs[mo])) for mo in months_sorted]
+    plays_by_diff_m = [(mo, {b: m_by_diff[mo][b] for b in DIFF_BUCKETS}) for mo in months_sorted]
     accuracy_m = [(mo, round(100 * m_pct_sum[mo] / m_pct_n[mo], 2) if m_pct_n[mo] else None) for mo in months_sorted]
     w1pct_m    = [(mo, round(100 * m_w1[mo]      / m_taps[mo],  2) if m_taps[mo]  else None) for mo in months_sorted]
     misspct_m  = [(mo, round(100 * m_miss[mo]    / m_taps[mo],  2) if m_taps[mo]  else None) for mo in months_sorted]
@@ -595,6 +605,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
         "lastPlay": last.isoformat(sep=" ") if last else "",
         "playsDaily": sorted(daily.items()),
         "playsMonthly": sorted(monthly.items()),
+        "playsMonthlyByDifficulty": plays_by_diff_m,
         "distinctSongsMonthly": distinct_m,
         "accuracyMonthly": accuracy_m,
         "w1PctMonthly": w1pct_m,
@@ -612,6 +623,10 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
 # segment before extension is the song dir's mangled form plus the banner file
 # stem, joined by '_'.  We index by mangled-dir-prefix.
 BANNER_EXT_PATTERN = re.compile(r"\.(png|jpg|jpeg|bmp|gif)$", re.I)
+# Some packs use a looping video as the banner (#BANNER:foo.avi;). StepMania
+# does NOT pre-render those into Cache/Banners, so the source videos must be
+# staged separately (see wsl/collect-video-banners.sh) and we grab one frame.
+VIDEO_EXT_PATTERN = re.compile(r"\.(avi|mp4|mpg|mpeg|mkv|wmv|flv|webm)$", re.I)
 
 
 def build_banner_index(banners_dir):
@@ -686,37 +701,158 @@ def convert_banner(src_path, dst_path, max_w=160):
         return False
 
 
-def make_banner_lookup(cache_banners_dir, out_dir):
+def convert_image_banner(src_path, dst_path, max_w=160):
+    """Copy/normalize a plain image (e.g. a frame pre-extracted in WSL by
+    collect-video-banners.sh) -> PNG. Returns True on success."""
+    if Image is None:
+        return False
+    try:
+        img = Image.open(src_path).convert("RGB")
+    except Exception:
+        return False
+    if img.width > max_w:
+        img = img.resize((max_w, max(1, img.height * max_w // img.width)), Image.LANCZOS)
+    try:
+        img.save(dst_path, "PNG", optimize=True)
+        return True
+    except OSError:
+        return False
+
+
+FFMPEG = shutil.which("ffmpeg")
+
+
+def convert_video_banner(src_path, dst_path, max_w=160):
+    """Grab one frame from a video banner -> PNG. Returns True on success.
+
+    Seeks to 1s first (frame 0 of looping banner videos is often black),
+    falling back to the very first frame for clips shorter than that.
+    """
+    if not FFMPEG:
+        return False
+    for seek in ("1", "0"):
+        try:
+            r = subprocess.run(
+                [FFMPEG, "-y", "-loglevel", "error", "-ss", seek, "-i", src_path,
+                 "-frames:v", "1", "-vf", f"scale='min({max_w},iw)':-1", dst_path],
+                capture_output=True, timeout=30)
+            if r.returncode == 0 and os.path.exists(dst_path) and os.path.getsize(dst_path) > 0:
+                return True
+        except (subprocess.TimeoutExpired, OSError):
+            return False
+    return False
+
+
+def make_banner_lookup(cache_banners_dir, out_dir, meta=None, persist_dir=None,
+                       video_dir=None):
     """Return get(song_dir)->'banners/<hash>.png' or '' if no banner found.
        Memoized so each song is converted at most once.
+
+       Lookup strategies, in order:
+         1) Exact: if the song's cache file recorded its banner filename
+            (#BANNER:foo.png) we know the cache banner is named
+            "<mangled-song-dir>_<banner-file>" — look it up case-insensitively.
+         2) Video: if #BANNER names a video (StepMania never pre-renders those
+            into Cache/Banners), look in `video_dir` (default: video-banners/
+            next to this script, override with $SM_VIDEO_BANNERS; populate with
+            wsl/collect-video-banners.sh). A pre-extracted frame
+            ("<name>.<video-ext>.png", made in WSL — only KBs to transfer) is
+            preferred; a staged raw video also works (frame extracted here
+            with ffmpeg).
+         3) Prefix scan: legacy fallback for songs whose cache lacks a #BANNER
+            tag or whose banner stem contains no underscores. Works whenever
+            rfind('_') correctly splits dir from stem.
+
+       Conversions are cached in `persist_dir` (default: .banner-cache/ next to
+       this script, override with $SM_BANNER_CACHE) so each banner is decoded
+       once ever, not once per build: public/banners/ is wiped every build, but
+       repopulating it from the cache is a plain file copy. Cache entries are
+       keyed by song dir + source name + mtime + size, so a touched source
+       re-converts automatically and the stale entry is simply never read again.
     """
-    index = build_banner_index(cache_banners_dir)
-    if not index:
+    if not cache_banners_dir or not os.path.isdir(cache_banners_dir):
+        return lambda d: ""
+    exact_index = {}        # lowercased filename -> actual filename
+    for fn in os.listdir(cache_banners_dir):
+        if BANNER_EXT_PATTERN.search(fn):
+            exact_index[fn.lower()] = fn
+    prefix_index = build_banner_index(cache_banners_dir)
+    if video_dir is None:
+        video_dir = os.environ.get("SM_VIDEO_BANNERS") or os.path.join(HERE, "video-banners")
+    # lowercased "<mangled-dir>_<banner-file>[.png]" -> actual filename.
+    # Holds both raw staged videos and pre-extracted .png frames.
+    video_index = {}
+    if os.path.isdir(video_dir):
+        for fn in os.listdir(video_dir):
+            video_index[fn.lower()] = fn
+    if not exact_index and not prefix_index and not video_index:
         return lambda d: ""
     banners_out = os.path.join(out_dir, "banners")
     os.makedirs(banners_out, exist_ok=True)
+    if persist_dir is None:
+        persist_dir = os.environ.get("SM_BANNER_CACHE") or os.path.join(HERE, ".banner-cache")
+    try:
+        os.makedirs(persist_dir, exist_ok=True)
+        persist_ok = os.access(persist_dir, os.W_OK)
+    except OSError:
+        persist_ok = False  # read-only checkout etc. — fall back to converting each build
     memo = {}
-    stats = {"hit": 0, "miss": 0, "decode_fail": 0}
+    stats = {"hit": 0, "miss": 0, "decode_fail": 0, "cached": 0}
+
+    def find_source(d):
+        """Return (full_source_path, converter) or (None, None)."""
+        if meta is not None:
+            banner_file = (meta(d) or {}).get("banner_file") or ""
+            if banner_file:
+                expected = f"{cache_filename(d)}_{banner_file}".lower()
+                actual = exact_index.get(expected)
+                if actual:
+                    return os.path.join(cache_banners_dir, actual), convert_banner
+                if VIDEO_EXT_PATTERN.search(banner_file):
+                    # Pre-extracted frame (preferred — no ffmpeg needed here)
+                    pre = video_index.get(expected + ".png")
+                    if pre:
+                        return os.path.join(video_dir, pre), convert_image_banner
+                    actual = video_index.get(expected)
+                    if actual:
+                        return os.path.join(video_dir, actual), convert_video_banner
+        candidates = prefix_index.get(cache_filename(d).lower(), [])
+        if candidates:
+            best = max(candidates, key=lambda c: c[1])[0]
+            return os.path.join(cache_banners_dir, best), convert_banner
+        return None, None
 
     def get(d):
         if d in memo:
             return memo[d]
-        key = cache_filename(d).lower()
-        candidates = index.get(key, [])
-        if not candidates:
+        src_path, converter = find_source(d)
+        if not src_path:
             memo[d] = ""
             stats["miss"] += 1
             return ""
-        # Largest file = likely the real banner (not a tiny duplicate)
-        best_fn = max(candidates, key=lambda c: c[1])[0]
         h = hashlib.md5(d.encode("utf-8")).hexdigest()[:12]
         out_name = f"{h}.png"
         out_path = os.path.join(banners_out, out_name)
         if not os.path.exists(out_path):
-            if not convert_banner(os.path.join(cache_banners_dir, best_fn), out_path):
-                memo[d] = ""
-                stats["decode_fail"] += 1
-                return ""
+            cached_path = None
+            if persist_ok:
+                try:
+                    st = os.stat(src_path)
+                    ck = hashlib.md5(f"{d}|{os.path.basename(src_path)}|{st.st_mtime_ns}|{st.st_size}"
+                                     .encode("utf-8")).hexdigest()[:16]
+                    cached_path = os.path.join(persist_dir, f"{ck}.png")
+                except OSError:
+                    pass
+            if cached_path and os.path.exists(cached_path):
+                shutil.copy2(cached_path, out_path)
+                stats["cached"] += 1
+            else:
+                if not converter(src_path, out_path):
+                    memo[d] = ""
+                    stats["decode_fail"] += 1
+                    return ""
+                if cached_path:
+                    shutil.copy2(out_path, cached_path)
         memo[d] = f"banners/{out_name}"
         stats["hit"] += 1
         return memo[d]
@@ -777,7 +913,7 @@ def main():
     banners_out = os.path.join(OUT_DIR, "banners")
     if os.path.isdir(banners_out):
         shutil.rmtree(banners_out)
-    banner = make_banner_lookup(banners_dir, OUT_DIR)
+    banner = make_banner_lookup(banners_dir, OUT_DIR, meta=meta)
 
     print(f"Parsing {stats_path} ...")
     stats = parse_stats(stats_path, meta, banner)
@@ -809,8 +945,9 @@ def main():
     if banners_dir and hasattr(banner, "stats"):
         b = banner.stats
         tot = b["hit"] + b["miss"] + b["decode_fail"]
-        print(f"  banners converted: {b['hit']}/{tot} "
-              f"(miss={b['miss']}, decode-fail={b['decode_fail']})")
+        print(f"  banners resolved: {b['hit']}/{tot} "
+              f"({b['cached']} from cache, {b['hit']-b['cached']} converted, "
+              f"miss={b['miss']}, decode-fail={b['decode_fail']})")
 
     # Monthly calories (aggregate the daily series)
     mcal = collections.Counter()
@@ -836,6 +973,7 @@ def main():
         "monthlyCalories": monthly_cal,
         "playsDaily": up["playsDaily"],
         "playsMonthly": up["playsMonthly"],
+        "playsMonthlyByDifficulty": up.get("playsMonthlyByDifficulty", []),
         "distinctSongsMonthly": up.get("distinctSongsMonthly", []),
         "accuracyMonthly": up.get("accuracyMonthly", []),
         "w1PctMonthly": up.get("w1PctMonthly", []),

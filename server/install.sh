@@ -49,6 +49,10 @@ inf "Creating work dirs owned by www-data"
 install -d -m 755 -o www-data -g www-data /var/www/stepmania-incoming
 install -d -m 755 -o www-data -g www-data /var/www/stepmania-incoming/.tmp
 install -d -m 755 -o www-data -g www-data /var/www/stepmania-work
+# Persistent banner-conversion cache — survives across runs (stepmania-work is
+# wiped per run), so each banner is decoded once ever. sm-update.sh points
+# build_dashboard.py at it via $SM_BANNER_CACHE.
+install -d -m 755 -o www-data -g www-data /var/www/stepmania-banner-cache
 
 # 5. nginx upload location --------------------------------------------------
 if [ ! -f "$NGINX_SITE" ]; then

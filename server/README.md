@@ -19,6 +19,7 @@ version, so re-running it after a repo change re-deploys the updated files.
 | _(created empty)_ | `/var/www/stepmania-incoming/` | nginx writes uploads here (www-data:www-data 755) |
 | _(created empty)_ | `/var/www/stepmania-incoming/.tmp/` | nginx body temp on same FS for atomic rename |
 | _(created empty)_ | `/var/www/stepmania-work/` | Build scratch (wiped per run) |
+| _(created empty)_ | `/var/www/stepmania-banner-cache/` | Persistent banner-conversion cache (each banner decoded once ever; `$SM_BANNER_CACHE`) |
 | `nginx-snippet.conf` | inline-edited into `/etc/nginx/sites-enabled/default` | Auto-inserted right after the existing `/stepmania/` location |
 
 ## Prerequisites
@@ -104,7 +105,7 @@ journalctl -u sm-update.service -n 40 --no-pager
 sudo systemctl disable --now sm-update.path
 sudo rm -f /etc/systemd/system/sm-update.{path,service}
 sudo rm -rf /usr/local/share/sm-dashboard /usr/local/bin/sm-update.sh
-sudo rm -rf /var/www/stepmania-incoming /var/www/stepmania-work
+sudo rm -rf /var/www/stepmania-incoming /var/www/stepmania-work /var/www/stepmania-banner-cache
 sudo systemctl daemon-reload
 # Then remove the /stepmania-upload/ location from /etc/nginx/sites-enabled/default
 # (the .bak.* from install.sh has the pre-install copy)

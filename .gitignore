@@ -1,6 +1,15 @@
 # Built output (regenerable; contains personal play data)
 public/
 
+# Persistent banner-conversion cache (regenerable; see make_banner_lookup)
+.banner-cache/
+
+# Staged video-banner sources (personal data; from wsl/collect-video-banners.sh)
+video-banners/
+
+# Example song pack for MV-background experiments (personal media)
+Songs/
+
 # Packaged bundle (regenerable)
 stepmania-dashboard.tar.gz
 
@@ -21,4 +30,5 @@ package-lock.json
 # FTP drop folder — archives are personal data, extracted/ is transient
 ftp/StepMania 5.rar
 ftp/StepMania 5.zip
+ftp/*.applied-*
 ftp/extracted/

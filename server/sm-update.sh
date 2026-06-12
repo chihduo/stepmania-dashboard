@@ -64,6 +64,9 @@ log "Cache/Banners: ${CACHE_BANNERS:-(none)}"
 mkdir -p "$WORK/build"
 log "building..."
 if [ -n "$CACHE_BANNERS" ]; then export SM_BANNERS="$CACHE_BANNERS"; fi
+# Persistent banner cache: $WORK is wiped per run and $SHARE isn't writable by
+# www-data, so conversions are cached in a dedicated dir (set up by install.sh).
+export SM_BANNER_CACHE=/var/www/stepmania-banner-cache
 python3 "$SHARE/build_dashboard.py" "$SAVE" "$WORK/build" "${CACHE_SONGS:-}"
 
 # 4. Atomic-ish deploy ------------------------------------------------------
