@@ -1,5 +1,7 @@
 # Server — daily update pipeline
 
+> _Last updated: **2026-06-12** — bump this date whenever you edit this file._
+
 Receives a bundle from the Windows WSL2 client over HTTPS WebDAV, then a
 systemd path unit fires the build + deploy. No SSH, no new packages.
 

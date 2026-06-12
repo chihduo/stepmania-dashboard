@@ -1,5 +1,7 @@
 # WSL2 — daily upload pipeline & song-library tools
 
+> _Last updated: **2026-06-13** — bump this date whenever you edit this file._
+
 The Windows StepMania machine runs WSL2 Ubuntu. Once per day, a cron job
 inside WSL zips `%APPDATA%\StepMania 5.1\{Save,Cache}` (read via `/mnt/c`) and
 PUTs the bundle to the dashboard server's WebDAV endpoint. The server (see

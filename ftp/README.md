@@ -1,5 +1,7 @@
 # ftp/ — local archive drop zone
 
+> _Last updated: **2026-06-12** — bump this date whenever you edit this file._
+
 A workflow for refreshing the dashboard from a single archive uploaded to this
 folder. Useful if you're shuttling `Save/` + `Cache/` over FTP/SFTP/SMB from
 the Windows machine instead of using the WSL pipeline.
