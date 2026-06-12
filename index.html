@@ -88,8 +88,39 @@
   .legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;
        vertical-align:middle;margin:0 4px 0 10px}
   .legend .sw.line{height:0;border-top:2px solid;width:14px;border-radius:0}
+  /* Wider multi-colour swatch for the Plays bar — holds 5 difficulty tiers */
+  .legend .sw.multi{width:55px;padding:0;display:inline-flex;overflow:hidden;
+       border:1px solid var(--line)}
+  .legend .sw.multi span{flex:1;height:100%;display:block;border-radius:0;
+       width:auto;margin:0}
   .dot{transition:opacity .15s}
   .dot:hover{opacity:.6}
+  /* Achievement cards (Hardest cleared, Most-improved, Trophy case) */
+  .ach-list{display:flex;flex-direction:column;gap:3px}
+  .ach-row{display:flex;align-items:center;gap:8px;padding:5px 6px;
+       border-radius:4px;cursor:pointer;color:var(--text);
+       text-decoration:none;font-size:12.5px;line-height:1.3}
+  .ach-row:hover{background:var(--panel2)}
+  .ach-row .ach-meta{color:var(--muted);font-size:11.5px;
+       min-width:30px;text-align:center;font-variant-numeric:tabular-nums}
+  .ach-row .ach-name{flex:1;min-width:0;overflow:hidden;
+       text-overflow:ellipsis;white-space:nowrap}
+  .ach-row .ach-name .ach-sub{display:block;color:var(--muted);
+       font-size:11px;margin-top:1px}
+  .ach-row .ach-bar{flex:0 0 70px;height:5px;background:var(--line);
+       border-radius:3px;overflow:hidden}
+  .ach-row .ach-bar .fill{display:block;height:100%;background:#7aa8ff}
+  .ach-row .ach-val{flex:0 0 auto;text-align:right;
+       font-variant-numeric:tabular-nums;color:var(--muted);
+       white-space:nowrap;display:flex;align-items:center;gap:6px;
+       justify-content:flex-end}
+  .ach-row .ach-val .ach-date{color:var(--muted);font-size:11px}
+  .ach-row .ach-tier{flex:0 0 auto;font-size:11px;font-weight:600;
+       padding:1px 6px;border-radius:3px;white-space:nowrap;
+       letter-spacing:.3px}
+  .ach-row .ach-tier.tier-mfc{background:#ffe27a22;color:#ffe27a}
+  .ach-row .ach-tier.tier-fc{background:#9be15d22;color:#9be15d}
+  .ach-empty{color:var(--muted);font-size:12px;padding:8px 0}
   .banner{width:96px;height:30px;object-fit:cover;border-radius:4px;
        background:#0006;flex-shrink:0;display:block}
   .recent .info{flex:1;min-width:0;display:flex;gap:10px;align-items:center}
@@ -232,13 +263,13 @@
     <div class="grid">
       <div class="card full">
         <h3>Plays per month, with skill trend</h3>
-        <p class="cap">Bars: monthly volume · Lines: skill %
+        <p class="cap">Bars: monthly volume · Lines: skill %<span id="cap-months"></span>
           <span class="legend" id="legend-months"></span>
         </p>
         <div id="c-months"></div>
       </div>
-      <div class="card"><h3>Calories per month</h3><p class="cap">kcal estimated by StepMania</p><div id="c-cal"></div></div>
-      <div class="card"><h3>When you play — hour of day</h3><p class="cap">Local time recorded on each play</p><div id="c-hour"></div></div>
+      <div class="card"><h3>Calories per month</h3><p class="cap" id="cap-cal">kcal estimated by StepMania</p><div id="c-cal"></div></div>
+      <div class="card"><h3>When you play — hour of day</h3><p class="cap" id="cap-hour">Local time recorded on each play</p><div id="c-hour"></div></div>
       <div class="card"><h3>When you play — day of week</h3><p class="cap" id="cap-dow"></p><div id="c-dow"></div></div>
     </div>
   </section>
@@ -250,18 +281,33 @@
         <div class="split">
           <div>
             <h3>Plays by difficulty</h3>
-            <p class="cap">All-time stage counts</p>
+            <p class="cap" id="cap-diff">All-time stage counts</p>
             <div id="c-diff"></div>
           </div>
           <div>
             <h3>Stages passed by grade</h3>
-            <p class="cap">Grade letters are theme-approximate</p>
+            <p class="cap" id="cap-grade">Grade letters are theme-approximate</p>
             <div id="c-grade"></div>
           </div>
         </div>
       </div>
       <div class="card"><h3>Top artists</h3><p class="cap" id="cap-artists">By total plays · variants auto-merged (e.g. TWICE/Twice)</p><div id="c-artists"></div></div>
-      <div class="card"><h3>Top packs</h3><p class="cap">By total plays</p><div id="c-packs"></div></div>
+      <div class="card"><h3>Top packs</h3><p class="cap" id="cap-packs">By total plays</p><div id="c-packs"></div></div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="grid">
+      <div class="card"><h3>Hardest charts cleared</h3>
+        <p class="cap" id="cap-hardest">By chart meter</p>
+        <div class="ach-list" id="c-hardest"></div></div>
+      <div class="card"><h3>Most-improved songs</h3>
+        <p class="cap" id="cap-improved">By accuracy gain (first → best play)</p>
+        <div class="ach-list" id="c-improved"></div></div>
+      <div class="card"><h3>Trophy case</h3>
+        <p class="cap" id="cap-trophies">Full combos &amp; Marvelous FCs</p>
+        <div class="ach-list" id="c-trophies"></div></div>
     </div>
   </section>
 
@@ -378,15 +424,30 @@ function comboBarsLines(el, barSeries, lines, {every=1, fmtBar=v=>fmt(v)}={}){
     s+=`<line x1="${pl}" y1="${y}" x2="${pl+innerW}" y2="${y}" stroke="#ffffff10" stroke-width="0.5"/>`;
     s+=`<text class="axis" x="${pl+innerW+4}" y="${y+3}" text-anchor="start">${p}%</text>`;
   }
-  // Grouped bars
+  // Grouped bars (each datum may optionally carry `segments:[{color,name,v}]`,
+  // in which case it renders as a vertical stack of colored sub-rects bottom-up
+  // — used by the Plays bar to show difficulty distribution).
   for(let i=0;i<nSlots;i++){
     barSeries.forEach((series, sIdx) => {
       const d = series.data[i]; if(!d) return;
       const h = (d.v/maxBar)*innerH;
       const x = pl + i*bw + groupPad + sIdx*(subBarW + innerGap);
-      const y = pt + innerH - h;
-      s += `<rect class="bar" x="${x}" y="${y}" width="${subBarW}" height="${h}" rx="2"
-           fill="${series.color}" data-t="${d.label} ${series.name}: <b>${fmtBar(d.v)}</b>"></rect>`;
+      if(d.segments && d.segments.length && d.v > 0){
+        let yCursor = pt + innerH;
+        d.segments.forEach(seg => {
+          if(!seg || !(seg.v > 0)) return;
+          const segH = (seg.v/maxBar)*innerH;
+          const yTop = yCursor - segH;
+          const pct  = (seg.v/d.v)*100;
+          s += `<rect class="bar" x="${x}" y="${yTop}" width="${subBarW}" height="${segH}"
+               fill="${seg.color}" data-t="${d.label} ${seg.name}: <b>${fmtBar(seg.v)}</b> (${pct.toFixed(0)}% of ${fmtBar(d.v)})"></rect>`;
+          yCursor = yTop;
+        });
+      } else {
+        const y = pt + innerH - h;
+        s += `<rect class="bar" x="${x}" y="${y}" width="${subBarW}" height="${h}" rx="2"
+             fill="${series.color}" data-t="${d.label} ${series.name}: <b>${fmtBar(d.v)}</b>"></rect>`;
+      }
     });
   }
   // X labels (centered under each group)
@@ -443,6 +504,14 @@ function scrollToHash(){
 }
 window.addEventListener("hashchange", scrollToHash);
 
+// Shared difficulty palette — used by the "Plays by difficulty" card AND by
+// the colored segments inside each Plays-per-month bar. Edit + unknown plays
+// are folded into Medium upstream (in build_dashboard.py), so only these five
+// tiers ever appear in the per-month stacks.
+const DIFF_COLORS = {Beginner:"#7aa8ff", Easy:"#9be15d", Medium:"#ffe27a",
+                     Hard:"#ffa45d", Challenge:"#ff7a7a", Edit:"#c99bff"};
+const DIFF_STACK_ORDER = ["Beginner","Easy","Medium","Hard","Challenge"];
+
 function gradeLetter(t){return (DATA.gradeMap&&DATA.gradeMap[t])||t||"";}
 
 function render(d){
@@ -480,51 +549,74 @@ function render(d){
   const distinctCol = cBar.distinctSongs || "#5c7593";
   const accCol      = cLine.accuracy     || "var(--accent2)";
   const w1Col       = cLine.w1           || "var(--warn)";
-  const missCol     = cLine.miss         || "var(--bad)";
   const monthsSlots = d.playsMonthly.map(([m])=>({label:m,short:m.slice(2)}));
   const asBar  = arr => arr.map(([m,v],i)=>({...monthsSlots[i], v:v}));
   const asLine = arr => arr.map(([m,v])=>v==null?null:{label:m,v});
+  // Decorate the Plays bars with difficulty segments (bottom-up: Beginner →
+  // Challenge). The segment counts are emitted by build_dashboard.py — Edit
+  // and any unknown difficulty fold into Medium upstream, so no leakage here.
+  const byDiff = d.playsMonthlyByDifficulty || [];
+  const playsBars = asBar(d.playsMonthly).map((row, i) => {
+    const buckets = (byDiff[i] && byDiff[i][1]) || {};
+    return {...row, segments: DIFF_STACK_ORDER.map(name => ({name, color: DIFF_COLORS[name], v: buckets[name]||0}))};
+  });
   comboBarsLines($("#c-months"), [
-    {name:"Plays",         color: playsCol,    data: asBar(d.playsMonthly)},
+    {name:"Plays",         color: playsCol,    data: playsBars},
     {name:"Distinct songs",color: distinctCol, data: asBar(d.distinctSongsMonthly||[])},
   ], [
     {name:"Accuracy",      color: accCol,  data: asLine(d.accuracyMonthly||[])},
     {name:"Marvelous",     color: w1Col,   data: asLine(d.w1PctMonthly   ||[])},
-    {name:"Miss",          color: missCol, data: asLine(d.missPctMonthly ||[])},
   ], { every: Math.ceil(d.playsMonthly.length/12) });
 
-  // Build the legend dynamically so it reflects the configured colors.
-  $("#legend-months").innerHTML = [
-    ['sw',     playsCol,    'Plays'],
+  // Build the legend dynamically. The Plays swatch is a wider multi-color
+  // strip showing the 5 difficulty tiers (Beginner→Challenge) that make up
+  // each month's stacked bar; everything else stays a 10px square / line stub.
+  const playsSw = `<span class="sw multi" title="Beginner → Challenge">`
+    + DIFF_STACK_ORDER.map(n => `<span style="background:${DIFF_COLORS[n]}" title="${n}"></span>`).join('')
+    + `</span>Plays`;
+  const rest = [
     ['sw',     distinctCol, 'Distinct songs'],
     ['sw line',accCol,      'Accuracy'],
     ['sw line',w1Col,       'Marvelous'],
-    ['sw line',missCol,     'Miss'],
   ].map(([cls,col,name]) => cls === 'sw'
       ? `<span class="${cls}" style="background:${col}"></span>${name}`
       : `<span class="${cls}" style="border-color:${col}"></span>${name}`).join('');
+  $("#legend-months").innerHTML = playsSw + rest;
+  // months tracked (subtitle aggregate for #c-months)
+  $("#cap-months").textContent =
+    ` · ${fmt(d.playsMonthly.length)} months tracked`;
   // calories per month
+  const calTot = d.monthlyCalories.reduce((a,[,c])=>a+c,0);
+  $("#cap-cal").textContent =
+    `kcal estimated by StepMania · ${fmt(Math.round(calTot))} kcal total`;
   vbars($("#c-cal"), d.monthlyCalories.map(([m,c])=>({label:m,short:m.slice(2),v:Math.round(c)})),
         {color:"var(--warn)", every: Math.ceil(d.monthlyCalories.length/8), fmtv:v=>fmt(v)+" kcal"});
   // hour of day
+  const peakHr = d.hourOfDay.indexOf(Math.max(...d.hourOfDay));
+  $("#cap-hour").textContent =
+    `Local time recorded on each play · Peak: ${String(peakHr).padStart(2,'0')}:00`;
   vbars($("#c-hour"), d.hourOfDay.map((n,i)=>({label:i+":00",short:String(i),v:n})),
-        {color:"var(--accent2)", every:3});
+        {color:"#7aa8ff", every:3});
   // day of week
   const dowTot=d.dayOfWeek.reduce((a,b)=>a+b,0);
   const peak=DOW[d.dayOfWeek.indexOf(Math.max(...d.dayOfWeek))];
-  $("#cap-dow").textContent=`Busiest day: ${peak}`;
-  hbars($("#c-dow"), d.dayOfWeek.map((n,i)=>({label:DOW[i],v:n})), {color:"var(--accent)"});
+  $("#cap-dow").textContent=`Busiest day: ${peak} · ${fmt(dowTot)} plays total`;
+  hbars($("#c-dow"), d.dayOfWeek.map((n,i)=>({label:DOW[i],v:n})), {color:"#7aa8ff"});
 
-  // difficulty (ordered)
+  // difficulty (ordered) — color ramp follows the grade palette
   const diffItems=d.diffOrder.filter(k=>d.byDifficulty[k]!=null)
-        .map(k=>({label:k,v:d.byDifficulty[k]}));
-  hbars($("#c-diff"), diffItems, {color:"var(--good)"});
+        .map(k=>({label:k,v:d.byDifficulty[k],color:DIFF_COLORS[k]}));
+  const diffTot = diffItems.reduce((a,b)=>a+b.v,0);
+  $("#cap-diff").textContent = `All-time stage counts · ${fmt(diffTot)} total`;
+  hbars($("#c-diff"), diffItems, {});
 
   // grade (ordered Tier01..07)
   const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07"];
   const gcolors={Tier01:"#ffe27a",Tier02:"#ffe27a",Tier03:"#9be15d",Tier04:"#5dd6e1",Tier05:"#7aa8ff",Tier06:"#c99bff",Tier07:"#ffa45d"};
   const gItems=gOrder.filter(k=>d.byGrade[k]!=null)
         .map(k=>({label:`${gradeLetter(k)} (${k.replace("Tier","T")})`,v:d.byGrade[k],color:gcolors[k]}));
+  const gradeTot = gItems.reduce((a,b)=>a+b.v,0);
+  $("#cap-grade").textContent = `Grade letters are theme-approximate · ${fmt(gradeTot)} stages passed`;
   hbars($("#c-grade"), gItems, {});
 
   // packs + artists — count comes from config.topN.{packs,artists} (defaults 15)
@@ -533,7 +625,8 @@ function render(d){
   const nArtists = Math.max(1, topN.artists || 15);
   hbars($("#c-packs"),
     d.packs.slice(0,nPacks).map(p=>({label:p.pack,v:p.plays})),
-    {color:"var(--accent)"});
+    {color:"#5dd6e1", labelW:230});
+  $("#cap-packs").textContent = `By total plays · ${fmt(d.packs.length)} packs`;
   const artists = d.artists || [];
   if(artists.length) {
     hbars($("#c-artists"),
@@ -542,6 +635,7 @@ function render(d){
     $("#cap-artists").textContent = `By total plays · ${fmt(artists.length)} artists`;
   }
 
+  renderAchievements(d);
   buildTable(d);
   buildRecent(d);
 
@@ -637,6 +731,160 @@ function renderPage(){
 function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 function escAttr(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
 
+// ---------- Achievements section: Hardest cleared / Most-improved / Trophy case ----------
+function renderAchievements(d){
+  const N = 15;
+  const chartRecs = [];
+  d.songs.forEach(song => (song.charts || []).forEach(chart => chartRecs.push({song, chart})));
+
+  // 1. Hardest cleared — needs scored plays so we can confirm a non-Failed grade
+  const cleared = chartRecs
+    .filter(r => isValidMeter(r.chart.meter) && hasClearedScore(r.chart))
+    .map(r => ({...r, bestPct: bestPctOf(r.chart), bestGrade: bestGradeOf(r.chart)}));
+  cleared.sort((a,b) => (b.chart.meter - a.chart.meter) || (b.bestPct - a.bestPct));
+  renderHardestList($("#c-hardest"), cleared.slice(0, N));
+  if (cleared.length){
+    const peak = cleared[0].chart.meter;
+    const threshold = Math.max(1, peak - 2);
+    const above = cleared.filter(r => r.chart.meter >= threshold).length;
+    $("#cap-hardest").textContent =
+      `By chart meter · highest cleared ${peak} · ${fmt(above)} ${above===1?'chart':'charts'} at meter ${threshold}+`;
+  } else {
+    $("#cap-hardest").textContent = `By chart meter · no cleared charts with meter recorded`;
+  }
+
+  // 2. Most-improved — first → best delta over per-play history
+  const MIN_PP = 0.005, MEANINGFUL_PP = 0.05;
+  const improvements = [];
+  chartRecs.forEach(r => {
+    const ts = (r.chart.scores || []).filter(s => s.dt && s.pct != null);
+    if (ts.length < 2) return;
+    ts.sort((a,b) => a.dt < b.dt ? -1 : 1);
+    const first = ts[0].pct;
+    const best = Math.max(...ts.map(s => s.pct));
+    const delta = best - first;
+    if (delta > MIN_PP) improvements.push({...r, first, best, delta, plays: ts.length});
+  });
+  improvements.sort((a,b) => b.delta - a.delta);
+  renderImprovedList($("#c-improved"), improvements.slice(0, N));
+  const meaningful = improvements.filter(x => x.delta >= MEANINGFUL_PP).length;
+  $("#cap-improved").textContent =
+    `By accuracy gain (first → best play) · ${fmt(meaningful)} ${meaningful===1?'chart':'charts'} improved ≥+5pp`;
+
+  // 3. Trophy case — any FC or MFC in the chart's score history
+  const trophies = [];
+  chartRecs.forEach(r => {
+    let tier = null, when = null;
+    (r.chart.scores || []).forEach(s => {
+      if (!s.j || !s.h) return;
+      const isFC = s.j[5] === 0 && s.h[1] === 0 && s.h[2] === 0;
+      if (!isFC) return;
+      const isMFC = s.j.slice(1).every(v => v === 0);
+      const t = isMFC ? 'MFC' : 'FC';
+      // Upgrade to MFC if found; otherwise track latest date in current tier
+      if (!tier || (t === 'MFC' && tier === 'FC')) { tier = t; when = s.dt || null; }
+      else if (t === tier && s.dt && (!when || s.dt > when)) when = s.dt;
+    });
+    if (tier) trophies.push({...r, tier, when});
+  });
+  trophies.sort((a,b) => {
+    if (a.tier !== b.tier) return a.tier === 'MFC' ? -1 : 1;
+    return (b.when || '').localeCompare(a.when || '');
+  });
+  renderTrophyList($("#c-trophies"), trophies.slice(0, N));
+  const nMFC = trophies.filter(t => t.tier === 'MFC').length;
+  const nFC  = trophies.filter(t => t.tier === 'FC').length;
+  $("#cap-trophies").textContent = trophies.length
+    ? `${fmt(nMFC)} ${nMFC===1?'MFC':'MFCs'} · ${fmt(nFC)} ${nFC===1?'FC':'FCs'} · ${fmt(nMFC+nFC)} ${(nMFC+nFC)===1?'chart':'charts'} cleared without breaking combo`
+    : `Full combos & Marvelous FCs · none yet`;
+}
+
+// StepMania meter values that go past ~30 are bad parses from the cache, not
+// real boss charts — guard against them so a single corrupt row doesn't break
+// the "Hardest cleared" sort.
+function isValidMeter(m){ return typeof m === 'number' && m >= 1 && m <= 30; }
+function hasClearedScore(chart){
+  return (chart.scores || []).some(s => s.grade && s.grade !== 'Failed');
+}
+function bestPctOf(chart){
+  const ss = chart.scores || [];
+  return ss.length ? Math.max(...ss.map(s => s.pct || 0)) : 0;
+}
+function bestGradeOf(chart){
+  const ss = chart.scores || [];
+  if (!ss.length) return null;
+  return ss.reduce((best, s) => (s.pct || 0) > (best.pct || 0) ? s : best, ss[0]).grade;
+}
+function songNameHtml(song){
+  return `${song.artist ? esc(song.artist)+' — ' : ''}${esc(song.song)}`;
+}
+
+function renderHardestList(host, items){
+  if (!items.length){
+    host.innerHTML = '<div class="ach-empty">No cleared charts with meter recorded.</div>'; return;
+  }
+  const maxMeter = items[0].chart.meter;
+  host.innerHTML = items.map(r => {
+    const w = (r.chart.meter / maxMeter) * 100;
+    const pct = (r.bestPct * 100).toFixed(2);
+    const letter = r.bestGrade ? gradeLetter(r.bestGrade) : '';
+    const pill = letter ? `<span class="pill g-${letter}">${letter}</span>` : '';
+    return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
+      <span class="ach-meta">[${r.chart.meter}]</span>
+      <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} · ${esc(r.song.pack||'')}</span></span>
+      <span class="ach-bar"><span class="fill" style="width:${w.toFixed(0)}%"></span></span>
+      <span class="ach-val">${pct}% ${pill}</span></a>`;
+  }).join('');
+  wireAchRows(host);
+}
+
+function renderImprovedList(host, items){
+  if (!items.length){
+    host.innerHTML = '<div class="ach-empty">Need ≥2 timestamped plays on the same chart to compute improvement.</div>'; return;
+  }
+  const maxDelta = items[0].delta;
+  host.innerHTML = items.map(r => {
+    const w = (r.delta / maxDelta) * 100;
+    const delta = '+' + (r.delta * 100).toFixed(1) + ' pp';
+    const ride = `${(r.first*100).toFixed(1)}% → ${(r.best*100).toFixed(1)}% over ${r.plays} plays`;
+    return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
+      <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} · ${ride}</span></span>
+      <span class="ach-bar"><span class="fill" style="width:${w.toFixed(0)}%"></span></span>
+      <span class="ach-val">${delta}</span></a>`;
+  }).join('');
+  wireAchRows(host);
+}
+
+function renderTrophyList(host, items){
+  if (!items.length){
+    host.innerHTML = '<div class="ach-empty">No full combos recorded yet.</div>'; return;
+  }
+  host.innerHTML = items.map(r => {
+    const icon = r.tier === 'MFC' ? '✨' : '⭐';
+    const cls = r.tier === 'MFC' ? 'tier-mfc' : 'tier-fc';
+    const meter = isValidMeter(r.chart.meter) ? `[${r.chart.meter}]` : '';
+    const date = r.when ? r.when.slice(0,10) : '';
+    const grade = bestGradeOf(r.chart);
+    const letter = grade ? gradeLetter(grade) : '';
+    const pill = letter ? `<span class="pill g-${letter}">${letter}</span>` : '';
+    return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
+      <span class="ach-tier ${cls}">${icon} ${r.tier}</span>
+      <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} ${meter}</span></span>
+      <span class="ach-val">${pill}<span class="ach-date">${esc(date)}</span></span></a>`;
+  }).join('');
+  wireAchRows(host);
+}
+
+function wireAchRows(host){
+  host.querySelectorAll('.ach-row').forEach(row => {
+    row.addEventListener('click', e => {
+      e.preventDefault();
+      const dir = row.dataset.dir;
+      if (SONGS_BY_DIR[dir]) openSongModal(dir, row.dataset.diff);
+    });
+  });
+}
+
 function buildRecent(d){
   $("#recent").innerHTML = "<ul>"+d.recent.slice(0,30).map(r=>{
     const g=gradeLetter(r.grade);
@@ -645,11 +893,14 @@ function buildRecent(d){
     const banner = `<img class="banner" loading="lazy" decoding="async"
        src="${r.banner||'nobanner.svg'}"
        onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
-    const clickable = SONGS_BY_DIR[r.dir]
+    const song = SONGS_BY_DIR[r.dir];
+    const chart = song && (song.charts || []).find(c => c.diff === r.diff);
+    const meter = (chart && isValidMeter(chart.meter)) ? ` [${chart.meter}]` : '';
+    const clickable = song
       ? `class="row click" data-dir="${escAttr(r.dir)}" data-diff="${escAttr(r.diff)}"`
       : 'class="row"';
     return `<li><div ${clickable}>
-      <div class="info">${banner}<div class="text"><div>${esc(r.song)}</div><div class="meta">${art}${esc(r.pack)} · ${r.diff}</div></div></div>
+      <div class="info">${banner}<div class="text"><div>${esc(r.song)}</div><div class="meta">${art}${esc(r.pack)} · ${r.diff}${meter}</div></div></div>
       <div style="text-align:right">${gp} <b>${(r.pct*100).toFixed(1)}%</b>
         <div class="meta">${r.dt}</div></div>
     </div></li>`;

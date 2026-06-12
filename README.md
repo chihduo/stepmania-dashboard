@@ -1,6 +1,6 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-05-31** — bump this date whenever you edit this file._
+> _Last updated: **2026-06-12** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
@@ -28,6 +28,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 | `#overview` | KPI tiles at the top (totals, streaks, etc.) |
 | `#activity` | Activity over time (monthly plays + skill trend, calories, hour-of-day, day-of-week) |
 | `#breakdowns` | Plays by difficulty, grades, top artists, top packs |
+| `#achievements` | Hardest charts cleared, most-improved songs, trophy case (FCs & MFCs) |
 | `#recent-plays` | Recent plays list |
 | `#ranking` | Song ranking table (with search + sort) |
 
@@ -41,6 +42,8 @@ fires on initial load *and* on subsequent in-page hash changes.
 | `nobanner.svg` | Theme-matching placeholder for songs without a banner. |
 | `public/` | **The deployable folder** — `index.html`, `data.json`, `nobanner.svg`, `banners/`. (Gitignored — regenerable.) |
 | `deploy.sh` | One-shot: copies `public/` to `/var/www/stepmania/` and adds the nginx `location` block. |
+| `.banner-cache/` | Persistent banner-conversion cache — each banner decoded once ever, builds repopulate `public/banners/` by copy. (Gitignored.) |
+| `video-banners/` | Banner frames for songs whose `#BANNER` is a video (StepMania never pre-renders those). `wsl/collect-video-banners.sh` extracts PNG frames directly in WSL (ffmpeg) — copy just the PNGs here and rebuild. Staging the raw videos also works as a fallback. (Gitignored.) |
 | `server/` | Server-side daily-update pipeline (nginx WebDAV endpoint, systemd path/service units, processing script, installer). |
 | `wsl/` | Windows-side daily-update pipeline (WSL2 cron job that bundles + uploads). |
 | `ftp/` | Local drop folder + script for refreshing the dashboard from a single uploaded archive (`StepMania 5.zip` / `StepMania 5.rar`). Alternative to the WSL pipeline. |
