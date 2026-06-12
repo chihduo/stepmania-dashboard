@@ -1,6 +1,6 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-06-12** — bump this date whenever you edit this file._
+> _Last updated: **2026-06-13** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
@@ -45,7 +45,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 | `.banner-cache/` | Persistent banner-conversion cache — each banner decoded once ever, builds repopulate `public/banners/` by copy. (Gitignored.) |
 | `video-banners/` | Banner frames for songs whose `#BANNER` is a video (StepMania never pre-renders those). `wsl/collect-video-banners.sh` extracts PNG frames directly in WSL (ffmpeg) — copy just the PNGs here and rebuild. Staging the raw videos also works as a fallback. (Gitignored.) |
 | `server/` | Server-side daily-update pipeline (nginx WebDAV endpoint, systemd path/service units, processing script, installer). |
-| `wsl/` | Windows-side daily-update pipeline (WSL2 cron job that bundles + uploads). |
+| `wsl/` | Windows-side tools: daily-update pipeline (WSL2 cron job that bundles + uploads), `collect-video-banners.sh` (extract banner frames from video banners), `add-mv-backgrounds.sh` (generate MV video backgrounds for songs without one). |
 | `ftp/` | Local drop folder + script for refreshing the dashboard from a single uploaded archive (`StepMania 5.zip` / `StepMania 5.rar`). Alternative to the WSL pipeline. |
 | `README.md` | This file. |
 
@@ -54,7 +54,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 | Source | What it gives us | Required? |
 |---|---|---|
 | `%APPDATA%\StepMania 5.1\Save\MachineProfile\Stats.xml` | Lifetime totals, per-song play counts (`NumTimesPlayed`), difficulty/grade/style breakdowns, per-day calories. | **Yes** |
-| `%APPDATA%\StepMania 5.1\Save\Upload\*.xml` | Per-play event log with exact timestamps → plays-over-time, hour-of-day, day-of-week, recent plays. | Recommended |
+| `%APPDATA%\StepMania 5.1\Save\Upload\*.xml` | Per-play event log with exact timestamps → plays-over-time, hour-of-day, day-of-week, recent plays. Also merged into each chart's score list, since Stats.xml is only flushed periodically and caps its per-chart high-score lists. | Recommended |
 | `%APPDATA%\StepMania 5.1\Cache\Songs\*` | Real song `#TITLE`, `#ARTIST`, per-chart `#METER` + `#RADARVALUES` (used by the song-detail modal). Without it, song = folder name, artist = blank, no chart difficulty meters. | Recommended |
 | `%APPDATA%\StepMania 5.1\Cache\Banners\*` | Per-song banner thumbnails (StepMania-proprietary ARGB1555 format — converted to PNG by the build). | Optional (placeholder used otherwise) |
 
@@ -116,8 +116,10 @@ sudo chmod g+s /var/www/stepmania
 After that:
 - `bash deploy.sh` (no sudo) works.
 - `python3 build_dashboard.py` **also auto-deploys** at the end whenever the
-  live dir (`liveDir` in `config.json`, default `/var/www/stepmania`) is
-  writable. So a typical change becomes a single command:
+  live dir (`liveDir` in `config.json`) is set and writable. There is no
+  built-in default: omit `liveDir` and the build skips deploying, and
+  `deploy.sh` refuses to run unless `DEST=…` is passed explicitly. So a
+  typical change becomes a single command:
   ```bash
   python3 build_dashboard.py     # builds, then auto-deploys live
   ```
@@ -128,9 +130,10 @@ setgid bit means files it creates inherit the www-data group, so nginx can
 read them and you can still delete/replace them.
 
 What `deploy.sh` does:
-1. Mirrors `public/` (incl. `banners/` + `nobanner.svg`) into
-   `/var/www/stepmania/`, clearing stale banners first; sets `www-data` owner
-   and 644/755 perms.
+1. Mirrors `public/` (auto-located next to the script; incl. `banners/` +
+   `nobanner.svg`) into the `liveDir` from `config.json`, clearing stale
+   banners first; sets `www-data` owner and 644/755 perms. Override either
+   side with `SRC=…` / `DEST=…` env vars.
 2. If absent, adds this block to `/etc/nginx/sites-enabled/default` (basic auth
    is inherited from the surrounding `server` block):
    ```nginx

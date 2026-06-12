@@ -1,9 +1,20 @@
-# WSL2 — daily upload pipeline
+# WSL2 — daily upload pipeline & song-library tools
 
 The Windows StepMania machine runs WSL2 Ubuntu. Once per day, a cron job
 inside WSL zips `%APPDATA%\StepMania 5.1\{Save,Cache}` (read via `/mnt/c`) and
 PUTs the bundle to the dashboard server's WebDAV endpoint. The server (see
 `../server/`) does all the heavy lifting (extract, build, deploy).
+
+This folder also holds two **one-shot song-library tools** (run manually in
+WSL where the `Songs/` library lives — not part of the daily pipeline):
+
+| Script | Purpose |
+|---|---|
+| `collect-video-banners.sh` | For songs whose `#BANNER` is a video (StepMania never pre-renders those into `Cache/Banners`): extracts one PNG frame per video with ffmpeg. Copy the PNGs to the server's `dashboard/video-banners/` and rebuild — those songs then get real banners on the dashboard. |
+| `add-mv-backgrounds.sh` | For songs with no gameplay background video: searches YouTube for the song's MV (yt-dlp), trims to chart length with a 2s fade-out, encodes to SM5-compatible H.264, and wires it into the `.sm` (`#BGCHANGES`; original backed up to `.sm.mvbak`). Rejects too-short or static-image candidates, retries without the artist name after 3 rejections; supports `--dry-run`, `--limit N`, and `--fix` (resume / upgrade videos from older script versions). Needs `ffmpeg` + `yt-dlp` in WSL. |
+
+Both script headers document full usage and the env-var knobs
+(`MAX_H`, `N_CAND`, `MAX_SCAN`, `MIN_MOTION`).
 
 ## One-time setup
 
