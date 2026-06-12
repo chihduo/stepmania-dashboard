@@ -42,19 +42,21 @@ the Windows machine instead of using the WSL pipeline.
 4. Finds `Save/` and (optionally) `Cache/Songs/`, `Cache/Banners/` regardless
    of how deeply they're nested — top-level, inside `StepMania 5/`, or up to
    five directory levels in.
-5. Runs `../build_dashboard.py` with those paths. Banners auto-detected via
-   `SM_BANNERS` env var.
-6. Deletes `./extracted/`.
+5. **Syncs them into the repo's canonical data dirs** (`../../savedata/Save/`,
+   `../../cachedata/Cache/{Songs,Banners}/`) with `rsync --delete`. These dirs
+   are the single source of truth: every build reads them, whether triggered
+   here or by running `python3 ../build_dashboard.py` directly. Parts missing
+   from the archive (e.g. no `Cache/Banners/`) leave the existing dir untouched.
+6. Runs `../build_dashboard.py` (no arguments — defaults resolve to the
+   canonical dirs just synced).
+7. Deletes `./extracted/` and renames the archive to
+   `<name>.applied-<timestamp>` so a later re-run can't silently regress the
+   canonical data to a stale snapshot. Drop a fresh archive to update again.
 
-Step 5 (the build) **auto-deploys to `/var/www/stepmania/`** if that dir is
+Step 6 (the build) **auto-deploys to `/var/www/stepmania/`** if that dir is
 writable by the current user — i.e. you've done the one-time chown documented
 in the top-level README. Otherwise the build just writes to `../public/` and
 you need to push it with `sudo ../deploy.sh` separately.
-
-It does **not** touch the repo's `../../savedata/` or `../../cachedata/`
-directories — those remain the original-`Save.zip`/`Cache.zip` extractions.
-The new archive is processed in isolation and only the build output
-(`../public/`) is updated.
 
 ## Prerequisites
 
@@ -102,4 +104,5 @@ of the archive so you can see what went wrong.
 | `update_from_archive.sh` | yes |
 | `README.md` | yes |
 | `StepMania 5.rar` / `StepMania 5.zip` | **no** (gitignored — personal data) |
+| `*.applied-<timestamp>` | **no** (gitignored — consumed archives, safe to delete) |
 | `extracted/` | **no** (gitignored — transient build scratch) |

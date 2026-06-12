@@ -12,16 +12,19 @@
 #   1. Locates the archive
 #   2. Extracts it to ./extracted/  (this folder, transient)
 #   3. Finds Save/ and Cache/{Songs,Banners} inside (handles nested layouts)
-#   4. Runs ../build_dashboard.py against those paths
-#   5. Cleans up the extracted dir on success
-#
-# This does NOT deploy to /var/www/stepmania/. Run ../deploy.sh after, when
-# you're happy with the result.
+#   4. Syncs them into the repo's canonical data dirs (../../savedata/Save and
+#      ../../cachedata/Cache/) — the single source of truth every build reads,
+#      whether triggered here or by running ../build_dashboard.py directly
+#   5. Runs ../build_dashboard.py (no args — it reads the canonical dirs)
+#   6. Cleans up the extracted dir on success
 #
 set -euo pipefail
 
 FTP_DIR="$(cd "$(dirname "$0")" && pwd)"
 DASH_DIR="$(cd "$FTP_DIR/.." && pwd)"
+REPO_DIR="$(cd "$DASH_DIR/.." && pwd)"
+SAVEDATA="$REPO_DIR/savedata"
+CACHEDATA="$REPO_DIR/cachedata"
 EXTRACT="$FTP_DIR/extracted"
 
 red(){ printf '\033[31m%s\033[0m\n' "$*"; }
@@ -87,23 +90,44 @@ grn "  Save:          $SAVE"
 grn "  Cache/Songs:   ${CACHE_SONGS:-(none — artist/title will be blank)}"
 grn "  Cache/Banners: ${CACHE_BANNERS:-(none — banners will use placeholder)}"
 
-# 5. Build ------------------------------------------------------------------
-inf "Building dashboard..."
-if [ -n "$CACHE_BANNERS" ]; then
-    export SM_BANNERS="$CACHE_BANNERS"
+# 5. Sync into the canonical data dirs ---------------------------------------
+# All builds — this script or a direct `python3 build_dashboard.py` — read
+# from savedata/ + cachedata/, so the archive becomes the new single source.
+inf "Syncing Save -> $SAVEDATA/Save/"
+mkdir -p "$SAVEDATA"
+rsync -a --delete "$SAVE/" "$SAVEDATA/Save/"
+if [ -n "$CACHE_SONGS" ]; then
+    inf "Syncing Cache/Songs -> $CACHEDATA/Cache/Songs/"
+    mkdir -p "$CACHEDATA/Cache"
+    rsync -a --delete "$CACHE_SONGS/" "$CACHEDATA/Cache/Songs/"
+else
+    inf "Archive has no Cache/Songs — keeping the existing $CACHEDATA/Cache/Songs/"
 fi
-python3 "$DASH_DIR/build_dashboard.py" \
-    "$SAVE" \
-    "$DASH_DIR/public" \
-    "${CACHE_SONGS:-}"
+if [ -n "$CACHE_BANNERS" ]; then
+    inf "Syncing Cache/Banners -> $CACHEDATA/Cache/Banners/"
+    mkdir -p "$CACHEDATA/Cache"
+    rsync -a --delete "$CACHE_BANNERS/" "$CACHEDATA/Cache/Banners/"
+else
+    inf "Archive has no Cache/Banners — keeping the existing $CACHEDATA/Cache/Banners/"
+fi
 
-# 6. Cleanup ----------------------------------------------------------------
+# 6. Build (defaults resolve to the canonical dirs synced above) -------------
+inf "Building dashboard..."
+python3 "$DASH_DIR/build_dashboard.py"
+
+# 7. Cleanup ----------------------------------------------------------------
 inf "Cleaning up $EXTRACT/"
 rm -rf "$EXTRACT"
+# Mark the archive as applied so a re-run can't silently regress the canonical
+# data dirs to this (by-then stale) snapshot. Drop a new archive to update again.
+APPLIED="$ARCHIVE.applied-$(date +%Y%m%d%H%M%S)"
+mv "$ARCHIVE" "$APPLIED"
+inf "Archive marked applied: $(basename "$APPLIED")"
 
 cat <<EOF
 
-$(grn "Done.")  Dashboard data written to:  $DASH_DIR/public/
+$(grn "Done.")  Canonical data updated ($SAVEDATA, $CACHEDATA);
+dashboard written to $DASH_DIR/public/
 
 If /var/www/stepmania is user-writable, build_dashboard.py already auto-
 deployed (look for 'Auto-deployed to ...' above). Otherwise push manually:
