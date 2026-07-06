@@ -16,7 +16,7 @@
 #
 # Usage (from WSL; needs ffmpeg: sudo apt-get install ffmpeg):
 #   bash collect-video-banners.sh [SONGS_DIR] [OUT_DIR]
-#     SONGS_DIR  default: auto-detected (see cand list below)
+#     SONGS_DIR  default: SM_SONGS_DIR from site.env (see site.env.example)
 #     OUT_DIR    default: ./video-banners
 #
 # Then copy OUT_DIR to the server, into the repo's dashboard/video-banners/
@@ -26,7 +26,12 @@
 #
 set -euo pipefail
 
-SONGS_DIR="${1:-}"
+# Per-machine settings (SM_SONGS_DIR) — see site.env.example. Env wins over file.
+REPO=$(cd "$(dirname "$0")/.." 2>/dev/null && pwd || true)
+SITE_ENV="${SITE_ENV:-${REPO:-}/site.env}"
+[ -n "$SITE_ENV" ] && [ -f "$SITE_ENV" ] && { set -a; . "$SITE_ENV"; set +a; }
+
+SONGS_DIR="${1:-${SM_SONGS_DIR:-}}"
 OUT_DIR="${2:-./video-banners}"
 MAX_W=160
 
@@ -35,11 +40,6 @@ command -v ffmpeg >/dev/null 2>&1 || {
     exit 1
 }
 
-if [ -z "$SONGS_DIR" ]; then
-    for cand in "/mnt/d/Games/Stepmania/Songs"; do
-        [ -d "$cand" ] && { SONGS_DIR="$cand"; break; }
-    done
-fi
 if [ -z "$SONGS_DIR" ] || [ ! -d "$SONGS_DIR" ]; then
     echo "ERROR: Songs dir not found — pass it as the first argument." >&2
     echo "  bash $0 '/mnt/c/path/to/StepMania 5.1/Songs'" >&2

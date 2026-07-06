@@ -45,11 +45,13 @@ GRADE_MAP = {
 }
 DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 
-# Visual config — colors for the combo chart. Loaded from config.json next to
-# this script; missing keys fall back to these defaults (deep-merge).
+# App config. Portable settings (colors, topN, artistAliases) load from
+# config.json next to this script; missing keys fall back to these defaults
+# (deep-merge). Per-machine settings (playerName, liveDir) come from site.env
+# or the environment instead — see load_site_env() and site.env.example.
 DEFAULT_CONFIG = {
-    "playerName": "",  # used in page title/header when non-empty
-    "liveDir": "",     # auto-deploy target; set in config.json. Empty = no auto-deploy.
+    "playerName": "",  # page title/header prefix; from site.env SM_PLAYER_NAME
+    "liveDir": "",     # auto-deploy target; from site.env SM_LIVE_DIR. Empty = no auto-deploy.
     "colors": {
         "bars": {
             "plays": "#a4b8d4",          # light gray-blue
@@ -105,6 +107,28 @@ def deep_merge(base, override):
     return out
 
 
+def load_site_env():
+    """Parse site.env (KEY="value" lines) next to this script into a dict.
+
+    Holds this machine's settings (see site.env.example); the shell scripts
+    source the same file. Comments
+    (# ...) and blank lines are ignored. Returns {} if absent/unreadable.
+    """
+    path = os.path.join(HERE, "site.env")
+    vals = {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, val = line.split("=", 1)
+                vals[key.strip()] = val.strip().strip('"').strip("'")
+    except OSError:
+        pass
+    return vals
+
+
 def load_config():
     path = os.path.join(HERE, "config.json")
     cfg = DEFAULT_CONFIG
@@ -116,6 +140,17 @@ def load_config():
             cfg = deep_merge(DEFAULT_CONFIG, user)
         except (json.JSONDecodeError, OSError) as e:
             print(f"Warning: config.json unreadable ({e}); using defaults.")
+    # Overlay per-machine settings: environment wins, then site.env, then
+    # whatever config.json/defaults gave (so an old config.json that still
+    # carries these keys keeps working).
+    site = load_site_env()
+    cfg = dict(cfg)
+    cfg["playerName"] = (os.environ.get("SM_PLAYER_NAME")
+                         or site.get("SM_PLAYER_NAME")
+                         or cfg.get("playerName") or "")
+    cfg["liveDir"] = (os.environ.get("SM_LIVE_DIR")
+                      or site.get("SM_LIVE_DIR")
+                      or cfg.get("liveDir") or "")
     return cfg
 
 

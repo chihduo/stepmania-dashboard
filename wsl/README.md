@@ -1,6 +1,6 @@
 # WSL2 — daily upload pipeline & song-library tools
 
-> _Last updated: **2026-06-13** — bump this date whenever you edit this file._
+> _Last updated: **2026-07-06** — bump this date whenever you edit this file._
 
 The Windows StepMania machine runs WSL2 Ubuntu. Once per day, a cron job
 inside WSL zips `%APPDATA%\StepMania 5.1\{Save,Cache}` (read via `/mnt/c`) and
@@ -23,13 +23,14 @@ Both script headers document full usage and the env-var knobs
 ```bash
 git clone <this-repo> ~/sm-dashboard       # or however you got the repo here
 cd ~/sm-dashboard
+cp site.env.example site.env                # then set SM_HOST (see the file)
 bash wsl/wsl-install.sh
 ```
 
 The installer:
 1. apt-installs `zip curl cron`
-2. Copies `wsl-update.sh` to `~/.local/bin/`
-3. Prompts for the class basic-auth creds and writes them to `~/.netrc`
+2. Copies `wsl-update.sh` to `~/.local/bin/` and `site.env` to `~/.config/sm-dashboard/`
+3. Prompts for your dashboard server's basic-auth login and writes it to `~/.netrc`
    (chmod 600 — required by curl, never logged)
 4. Adds a `0 5 * * * ~/.local/bin/wsl-update.sh` crontab line (with confirmation)
 5. Starts the cron service in the current session
@@ -39,7 +40,7 @@ The installer:
 `wsl-update.sh` does:
 1. Auto-detects `/mnt/c/Users/<you>/AppData/Roaming/StepMania 5.1/`
 2. `zip -qr sm-bundle.zip Save Cache` (~70 MB Save + ~250 MB Cache → ~300 MB)
-3. `curl --netrc -T sm-bundle.zip https://example.com/stepmania-upload/sm-bundle.zip`
+3. `curl --netrc -T sm-bundle.zip https://<SM_HOST>/stepmania-upload/sm-bundle.zip`
 4. Waits 30 s, HEADs `/stepmania/data.json`, logs `Last-Modified` + size
 5. Cleans up its temp dir
 
@@ -101,11 +102,15 @@ dashboard features land via re-running the server's `install.sh`, not this one.
 
 ## Overrides
 
+Defaults come from `site.env` (see [`../site.env.example`](../site.env.example));
+an env var of the same name overrides the file for a one-off run.
+
 | Env var | Purpose | Default |
 |---|---|---|
-| `APPDATA` | Path to `StepMania 5.1` dir | Auto-detected under `/mnt/c/Users/*/AppData/Roaming/` |
-| `URL` | Upload endpoint | `https://example.com/stepmania-upload/sm-bundle.zip` |
-| `VERIFY_URL` | URL to HEAD after upload | `https://example.com/stepmania/data.json` |
+| `SM_HOST` | Dashboard server host (drives the URLs below) | From `site.env` |
+| `SM_APPDATA` / `APPDATA` | Path to `StepMania 5.1` dir | `SM_APPDATA` from `site.env`, else auto-detected under `/mnt/c/Users/*/AppData/Roaming/` |
+| `URL` | Upload endpoint | `https://$SM_HOST/stepmania-upload/sm-bundle.zip` |
+| `VERIFY_URL` | URL to HEAD after upload | `https://$SM_HOST/stepmania/data.json` |
 
 ## Troubleshooting
 

@@ -1,7 +1,5 @@
 {
-  "comment": "Edit and rebuild: python3 build_dashboard.py. Any subset can be omitted to fall back to defaults in build_dashboard.py.",
-  "playerName": "",
-  "liveDir": "/var/www/stepmania",
+  "comment": "Portable app config (colors, top-N, artist aliases) — safe to commit and share; no personal or machine-specific values. Per-machine settings (player name, live dir, server host) live in site.env; see site.env.example. Edit and rebuild: python3 build_dashboard.py.",
   "colors": {
     "bars": {
       "plays": "#a4b8ff",

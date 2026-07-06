@@ -12,9 +12,13 @@ set -euo pipefail
 
 INCOMING=/var/www/stepmania-incoming/sm-bundle.zip
 WORK=/var/www/stepmania-work
-DEST=/var/www/stepmania
 SHARE=/usr/local/share/sm-dashboard
 LOCK=/run/sm-update.lock
+
+# Per-machine settings (SM_LIVE_DIR) installed alongside the build script by
+# install.sh — see site.env.example. Env wins over file.
+[ -f "$SHARE/site.env" ] && { set -a; . "$SHARE/site.env"; set +a; }
+DEST="${SM_LIVE_DIR:-/var/www/stepmania}"
 
 log() { printf '[%s] %s\n' "$(date -Is)" "$*"; }
 

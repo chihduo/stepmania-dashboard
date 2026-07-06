@@ -17,10 +17,10 @@
 # Paths:
 #   SRC   defaults to ./public next to this script (auto-located, no need to
 #         edit when the checkout moves).
-#   DEST  is taken from the "liveDir" key in ./config.json (the same value
+#   DEST  is taken from SM_LIVE_DIR in ./site.env (the same value
 #         build_dashboard.py uses for auto-deploy). There is no built-in
-#         fallback — if liveDir is missing and $DEST isn't set, this script
-#         refuses to run.
+#         fallback — if SM_LIVE_DIR is missing and $DEST isn't set, this
+#         script refuses to run.
 # Override either with env vars, e.g.:
 #     SRC=/path/to/public DEST=/var/www/sm bash deploy.sh
 #
@@ -31,27 +31,22 @@ grn(){ printf '\033[32m%s\033[0m\n' "$*"; }
 inf(){ printf '\033[36m%s\033[0m\n' "$*"; }
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CONFIG_JSON="${SCRIPT_DIR}/config.json"
-CONFIG_DEST=$(python3 - "$CONFIG_JSON" <<'PY' 2>/dev/null
-import json, sys
-try:
-    with open(sys.argv[1]) as fh:
-        print(json.load(fh).get("liveDir", "") or "")
-except Exception:
-    pass
-PY
-)
+
+# Per-machine settings (SM_LIVE_DIR, SM_HOST, …) — see site.env.example.
+# Anything already in the environment wins over the file (handled below).
+SITE_ENV="${SITE_ENV:-${SCRIPT_DIR}/site.env}"
+[ -f "$SITE_ENV" ] && { set -a; . "$SITE_ENV"; set +a; }
 
 SRC="${SRC:-${SCRIPT_DIR}/public}"
-DEST="${DEST:-${CONFIG_DEST}}"
+DEST="${DEST:-${SM_LIVE_DIR:-}}"
 if [ -z "$DEST" ]; then
-    red "No deploy target. Set \"liveDir\" in $CONFIG_JSON, or pass DEST=… on the command line."
+    red "No deploy target. Set SM_LIVE_DIR in $SITE_ENV, or pass DEST=… on the command line."
     inf "Example:   DEST=/var/www/stepmania bash $0"
     exit 1
 fi
 NGINX_SITE="${NGINX_SITE:-/etc/nginx/sites-enabled/default}"
 URL_PATH="/stepmania/"
-PUBLIC_URL="https://example.com${URL_PATH}"
+PUBLIC_URL="https://${SM_HOST:-your-host}${URL_PATH}"
 
 # Pick mode based on whether we can write $DEST without escalation.
 ROOT=0; [ "$(id -u)" -eq 0 ] && ROOT=1
@@ -137,4 +132,4 @@ else
   fi
 fi
 
-grn "Done.  Visit:  ${PUBLIC_URL}   (enter your class login)"
+grn "Done.  Visit:  ${PUBLIC_URL}   (enter your dashboard login)"

@@ -5,7 +5,7 @@
 #
 # What it does (all idempotent):
 #   1. Installs build_dashboard.py + page assets to /usr/local/share/sm-dashboard/
-#      (so www-data can read them without needing access to /home/claude/...).
+#      (so www-data can read them without needing access to your home dir).
 #   2. Installs sm-update.sh to /usr/local/bin/.
 #   3. Installs sm-update.{path,service} systemd units, enables the .path watcher.
 #   4. Creates working dirs owned by www-data:
@@ -23,6 +23,10 @@ set -euo pipefail
 REPO=$(cd "$(dirname "$0")/.." && pwd)
 NGINX_SITE="${NGINX_SITE:-/etc/nginx/sites-enabled/default}"
 
+# Per-machine settings (SM_HOST, …) — see site.env.example. Env wins over file.
+SITE_ENV="${SITE_ENV:-$REPO/site.env}"
+[ -f "$SITE_ENV" ] && { set -a; . "$SITE_ENV"; set +a; }
+
 red(){ printf '\033[31m%s\033[0m\n' "$*"; }
 grn(){ printf '\033[32m%s\033[0m\n' "$*"; }
 inf(){ printf '\033[36m%s\033[0m\n' "$*"; }
@@ -33,6 +37,10 @@ install -d -m 755 /usr/local/share/sm-dashboard
 install -m 644 "$REPO/build_dashboard.py" /usr/local/share/sm-dashboard/
 install -m 644 "$REPO/index.html"         /usr/local/share/sm-dashboard/
 install -m 644 "$REPO/nobanner.svg"       /usr/local/share/sm-dashboard/
+install -m 644 "$REPO/config.json"        /usr/local/share/sm-dashboard/
+# Per-machine settings (player name, live dir) that the build reads — see
+# site.env.example. Skipped if you haven't created site.env yet.
+[ -f "$SITE_ENV" ] && install -m 644 "$SITE_ENV" /usr/local/share/sm-dashboard/site.env
 
 # 2. Processing script ------------------------------------------------------
 inf "Installing /usr/local/bin/sm-update.sh"
@@ -126,7 +134,7 @@ were a bundle (sanity check):
 Real upload from a client (with basic auth in ~/.netrc):
 
   curl -fsS --netrc -T sm-bundle.zip \\
-       https://example.com/stepmania-upload/sm-bundle.zip
+       https://${SM_HOST:-<your-host>}/stepmania-upload/sm-bundle.zip
 
 ============================================================================
 EOF

@@ -1,6 +1,6 @@
 # Server — daily update pipeline
 
-> _Last updated: **2026-06-12** — bump this date whenever you edit this file._
+> _Last updated: **2026-07-06** — bump this date whenever you edit this file._
 
 Receives a bundle from the Windows WSL2 client over HTTPS WebDAV, then a
 systemd path unit fires the build + deploy. No SSH, no new packages.
@@ -15,6 +15,8 @@ version, so re-running it after a repo change re-deploys the updated files.
 | `../build_dashboard.py` | `/usr/local/share/sm-dashboard/build_dashboard.py` | Run by sm-update.sh; needs to live where www-data can read |
 | `../index.html` | `/usr/local/share/sm-dashboard/index.html` | Copied into the build by `build_dashboard.py` |
 | `../nobanner.svg` | `/usr/local/share/sm-dashboard/nobanner.svg` | Same |
+| `../config.json` | `/usr/local/share/sm-dashboard/config.json` | Portable app config (colors, top-N, artist aliases) read by the build |
+| `../site.env` | `/usr/local/share/sm-dashboard/site.env` | Per-machine settings (player name, live dir); copied only if present |
 | `sm-update.sh` | `/usr/local/bin/sm-update.sh` | systemd ExecStart |
 | `sm-update.path` | `/etc/systemd/system/sm-update.path` | PathChanged watcher |
 | `sm-update.service` | `/etc/systemd/system/sm-update.service` | Oneshot worker (User=www-data) |
@@ -44,13 +46,13 @@ Then test (in another shell, with basic-auth creds in `~/.netrc`):
 ```bash
 # from anywhere with auth — use any zip with Save/ + Cache/ inside
 curl -fsS --netrc -T sm-bundle.zip \
-    https://example.com/stepmania-upload/sm-bundle.zip
+    https://<your-host>/stepmania-upload/sm-bundle.zip
 journalctl -fu sm-update.service
 ```
 
 Within seconds you should see the extract → build → deploy lines, ending with
 `=== update complete ===` and an updated `data.json` size at
-`https://example.com/stepmania/data.json`.
+`https://<your-host>/stepmania/data.json`.
 
 ## Upgrading (after the dashboard code changes)
 

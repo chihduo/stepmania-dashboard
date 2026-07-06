@@ -8,10 +8,23 @@
 # Reads Windows StepMania data through /mnt/c (no Python/PIL needed on this side
 # — the server does the build). Credentials come from ~/.netrc (chmod 600).
 #
-# Override defaults with env vars, e.g.:
-#   APPDATA=/mnt/c/Users/Foo/AppData/Roaming/StepMania5 wsl-update.sh
+# Per-machine settings (SM_HOST, SM_APPDATA) are read from site.env — installed
+# to ~/.config/sm-dashboard/site.env by wsl-install.sh, or found next to the
+# repo checkout. Any can also be overridden by an env var of the same name:
+#   SM_APPDATA="/mnt/c/Users/Foo/AppData/Roaming/StepMania 5.1" wsl-update.sh
 #
 set -euo pipefail
+
+# Per-machine settings: installed location first, then a repo checkout next to
+# this script. Env vars already set before running still win over the file.
+REPO=$(cd "$(dirname "$0")/.." 2>/dev/null && pwd || true)
+SITE_ENV="${SM_SITE_ENV:-}"
+if [ -z "$SITE_ENV" ]; then
+    for cand in "$HOME/.config/sm-dashboard/site.env" "${REPO:-}/site.env"; do
+        [ -n "$cand" ] && [ -f "$cand" ] && { SITE_ENV="$cand"; break; }
+    done
+fi
+[ -n "$SITE_ENV" ] && [ -f "$SITE_ENV" ] && { set -a; . "$SITE_ENV"; set +a; }
 
 LOG_DIR="$HOME/.local/share/sm-update"
 mkdir -p "$LOG_DIR"
@@ -22,7 +35,8 @@ log() { printf '[%s] %s\n' "$(date -Is)" "$*"; }
 log "=== wsl-update start ==="
 
 # 1. Locate Windows StepMania 5.1 ------------------------------------------
-if [ -z "${APPDATA:-}" ]; then
+APPDATA="${APPDATA:-${SM_APPDATA:-}}"
+if [ -z "$APPDATA" ]; then
     APPDATA=$(ls -d /mnt/c/Users/*/AppData/Roaming/"StepMania 5.1" 2>/dev/null | head -1 || true)
 fi
 if [ -z "$APPDATA" ] || [ ! -d "$APPDATA" ]; then
@@ -34,8 +48,9 @@ log "APPDATA: $APPDATA"
 [ -d "$APPDATA/Cache" ] || { log "ERROR: $APPDATA/Cache missing"; exit 1; }
 
 # 2. Bundle ----------------------------------------------------------------
-URL="${URL:-https://example.com/stepmania-upload/sm-bundle.zip}"
-VERIFY_URL="${VERIFY_URL:-https://example.com/stepmania/data.json}"
+HOST="${SM_HOST:-your-host}"
+URL="${URL:-https://${HOST}/stepmania-upload/sm-bundle.zip}"
+VERIFY_URL="${VERIFY_URL:-https://${HOST}/stepmania/data.json}"
 
 WORK=$(mktemp -d -t sm-update-XXXXXX)
 trap 'rm -rf "$WORK"' EXIT

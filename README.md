@@ -37,7 +37,8 @@ fires on initial load *and* on subsequent in-page hash changes.
 | File | Purpose |
 |---|---|
 | `build_dashboard.py` | Parses Save/Cache → writes `public/data.json` + copies page assets. |
-| `config.json` | Chart colors (bars + lines). Edit and rebuild to restyle without touching code. |
+| `config.json` | Portable app config — chart colors, top-N counts, artist aliases. Committed and shareable; no personal data. |
+| `site.env` | Per-machine settings (player name, live dir, server host, local paths). Copy `site.env.example` and edit. |
 | `index.html` | The dashboard page (source). |
 | `nobanner.svg` | Theme-matching placeholder for songs without a banner. |
 | `public/` | **The deployable folder** — `index.html`, `data.json`, `nobanner.svg`, `banners/`. (Gitignored — regenerable.) |
@@ -92,11 +93,34 @@ artist/title matched for 2016/2018 songs (100%)
 banners converted for recent plays: 112/127 (miss=15, decode-fail=0)
 ```
 
+## Configuration
+
+All personal / machine-specific settings live in one file, `site.env`. Set up a
+new machine (or someone else's copy) by copying the template and editing it —
+that's the only file you touch:
+
+```bash
+cp site.env.example site.env
+```
+
+| Key | Used for |
+|---|---|
+| `SM_PLAYER_NAME` | Name shown in the dashboard header (blank = plain title). |
+| `SM_LIVE_DIR` | nginx web root the build deploys into (blank = no auto-deploy). |
+| `SM_HOST` | Public host of your dashboard server — drives the upload/verify URLs, `~/.netrc` machine, and links. |
+| `SM_APPDATA` | (WSL client) Windows `StepMania 5.1` dir; auto-detected if unset. |
+| `SM_SONGS_DIR` | (video-banner tools) local `Songs/` folder to scan. |
+
+`config.json` keeps only portable app config (colors, top-N, artist aliases) —
+safe to commit and share. Any `site.env` key can also be overridden by an
+environment variable of the same name at runtime.
+
 ## Deploy to nginx
 
-Site root: `/var/www/html/example-site/` (→ `_example-site/_output`), behind basic auth.
-The dashboard lives at a dedicated path (`/stepmania/`) so it survives
-class-site rebuilds.
+The dashboard is served from its own path (`/stepmania/`) under your site,
+behind whatever auth the surrounding nginx `server` block already provides.
+Point `SM_HOST` (public host) and `SM_LIVE_DIR` (web root) in `site.env` at
+your server.
 
 ```bash
 sudo bash deploy.sh
@@ -116,8 +140,8 @@ sudo chmod g+s /var/www/stepmania
 After that:
 - `bash deploy.sh` (no sudo) works.
 - `python3 build_dashboard.py` **also auto-deploys** at the end whenever the
-  live dir (`liveDir` in `config.json`) is set and writable. There is no
-  built-in default: omit `liveDir` and the build skips deploying, and
+  live dir (`SM_LIVE_DIR` in `site.env`) is set and writable. There is no
+  built-in default: leave `SM_LIVE_DIR` empty and the build skips deploying, and
   `deploy.sh` refuses to run unless `DEST=…` is passed explicitly. So a
   typical change becomes a single command:
   ```bash
@@ -131,7 +155,7 @@ read them and you can still delete/replace them.
 
 What `deploy.sh` does:
 1. Mirrors `public/` (auto-located next to the script; incl. `banners/` +
-   `nobanner.svg`) into the `liveDir` from `config.json`, clearing stale
+   `nobanner.svg`) into `SM_LIVE_DIR` from `site.env`, clearing stale
    banners first; sets `www-data` owner and 644/755 perms. Override either
    side with `SRC=…` / `DEST=…` env vars.
 2. If absent, adds this block to `/etc/nginx/sites-enabled/default` (basic auth
@@ -145,7 +169,7 @@ What `deploy.sh` does:
 3. Backs up the nginx config with a timestamped `.bak.*`, runs `nginx -t`,
    reloads. Rolls back on any failure. Idempotent — safe to re-run.
 
-URL: `https://example.com/stepmania/`
+URL: `https://<SM_HOST>/stepmania/` (from `site.env`).
 
 ## Daily WSL → server update pipeline
 
@@ -153,9 +177,9 @@ Once the manual setup above is in place, the dashboard refreshes itself
 automatically:
 
 ```
-WSL2 cron @ 05:00 Taipei
+WSL2 cron @ 05:00 local time
     │  zip /mnt/c/.../StepMania 5.1/{Save,Cache} → sm-bundle.zip
-    │  curl --netrc -T sm-bundle.zip https://…/stepmania-upload/sm-bundle.zip
+    │  curl --netrc -T sm-bundle.zip https://<SM_HOST>/stepmania-upload/sm-bundle.zip
     ▼
 nginx (built-in dav_module)
     │  writes /var/www/stepmania-incoming/sm-bundle.zip

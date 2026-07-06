@@ -6,11 +6,14 @@
 #
 # What it does:
 #   1. apt-installs dependencies: zip, curl, cron (sudo prompt)
-#   2. Installs wsl-update.sh -> ~/.local/bin/
+#   2. Installs wsl-update.sh -> ~/.local/bin/ and site.env -> ~/.config/sm-dashboard/
 #   3. Writes basic-auth creds to ~/.netrc (chmod 600) — prompts for creds
 #   4. Adds a daily 05:00 crontab line (with confirmation)
 #   5. Starts the cron service in this WSL session
 #   6. Prints WSL-specific caveats about cron + idle shutdown
+#
+# Per-machine values (server host, etc.) come from site.env — see
+# site.env.example. Copy it to site.env before running this.
 #
 set -euo pipefail
 
@@ -23,6 +26,10 @@ red(){ printf '\033[31m%s\033[0m\n' "$*"; }
 grn(){ printf '\033[32m%s\033[0m\n' "$*"; }
 inf(){ printf '\033[36m%s\033[0m\n' "$*"; }
 
+# Per-machine settings (SM_HOST, …) — see site.env.example. Env wins over file.
+SITE_ENV="${SITE_ENV:-$REPO/site.env}"
+[ -f "$SITE_ENV" ] && { set -a; . "$SITE_ENV"; set +a; }
+
 # 1. Dependencies ----------------------------------------------------------
 inf "Installing apt deps (zip curl cron) — sudo prompt incoming"
 sudo apt-get update -qq
@@ -33,14 +40,25 @@ inf "Installing wsl-update.sh -> ~/.local/bin/"
 install -d "$HOME/.local/bin"
 install -m 755 "$REPO/wsl/wsl-update.sh" "$HOME/.local/bin/wsl-update.sh"
 
+# 2b. Per-machine settings for the installed script -----------------------
+# wsl-update.sh runs detached from the repo (cron / Task Scheduler), so give it
+# a stable copy of site.env to read SM_HOST / SM_APPDATA from.
+if [ -f "$SITE_ENV" ]; then
+    inf "Installing site.env -> ~/.config/sm-dashboard/"
+    install -d "$HOME/.config/sm-dashboard"
+    install -m 600 "$SITE_ENV" "$HOME/.config/sm-dashboard/site.env"
+else
+    inf "No site.env found (copy site.env.example) — wsl-update.sh falls back to env vars."
+fi
+
 # 3. ~/.netrc credentials -------------------------------------------------
-HOST="example.com"
+HOST="${SM_HOST:-your-host}"
 NETRC="$HOME/.netrc"
 if [ -f "$NETRC" ] && grep -q "machine $HOST" "$NETRC"; then
     grn "~/.netrc already has an entry for $HOST — skipping credential setup."
 else
     echo
-    echo "Basic-auth credentials for $HOST (the class login):"
+    echo "Basic-auth credentials for $HOST (your dashboard server login):"
     read -rp "  username: " AUTH_USER
     read -rsp "  password: " AUTH_PASS; echo
     {
