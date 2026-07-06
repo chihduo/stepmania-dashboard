@@ -402,26 +402,39 @@ function hbars(el, items, {color="var(--accent2)", fmtv=v=>fmt(v), labelW=150}={
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${rows}</svg>`;
   wireBars(el);
 }
+// Round `max` up so it divides into `ticks` even bands of "nice" size
+// (1/2/2.5/5 × 10^n). Used for the left count axis of the combo chart.
+function niceAxisMax(max, ticks){
+  const rawStep = max / ticks;
+  const base = Math.pow(10, Math.floor(Math.log10(rawStep)));
+  const f = rawStep / base;
+  const nf = f<=1?1 : f<=2?2 : f<=2.5?2.5 : f<=5?5 : 10;
+  return nf * base * ticks;
+}
 // ---- combo chart: grouped bars (left axis, count) + lines (right axis, %) ----
 // barSeries: [{name, color, data: [{label, short, v}, ...]}] — one or more series.
 // lines:     [{name, color, data: [{label, v}, ...]}]        — % values 0-100.
 function comboBarsLines(el, barSeries, lines, {every=1, fmtBar=v=>fmt(v)}={}){
-  const W=600, H=240, pl=10, pr=42, pt=12, pb=32;
+  const W=600, H=240, pl=40, pr=42, pt=12, pb=32;
   const innerW=W-pl-pr, innerH=H-pt-pb;
   const nSlots = barSeries[0]?.data.length || 0;
   const bw = innerW / Math.max(1, nSlots);
-  // Y-scale = max across ALL bar series so they share the axis honestly.
-  const maxBar = Math.max(1, ...barSeries.flatMap(s => s.data.map(d => d?.v||0)));
+  // Left count axis: round the raw bar max up to a "nice" value so the four
+  // gridlines (shared with the right % axis) land on round play counts. Bars
+  // scale to this nice max so the top tick aligns with the tallest bar's band.
+  const rawMax = Math.max(1, ...barSeries.flatMap(s => s.data.map(d => d?.v||0)));
+  const axisMax = niceAxisMax(rawMax, 4);
   // Group layout: outer padding 10% each side, gap 5% between sub-bars.
   const groupPad = bw * 0.10, innerGap = bw * 0.05;
   const nSeries = barSeries.length;
   const subBarW = Math.max(1, (bw - groupPad*2 - innerGap*(nSeries-1)) / nSeries);
 
   let s='';
-  // Right-side % gridlines
+  // Gridlines shared by both axes: left = play count (0..axisMax), right = %.
   for(let p=0;p<=100;p+=25){
     const y=pt+innerH-(p/100)*innerH;
     s+=`<line x1="${pl}" y1="${y}" x2="${pl+innerW}" y2="${y}" stroke="#ffffff10" stroke-width="0.5"/>`;
+    s+=`<text class="axis" x="${pl-4}" y="${y+3}" text-anchor="end">${fmt(Math.round((p/100)*axisMax))}</text>`;
     s+=`<text class="axis" x="${pl+innerW+4}" y="${y+3}" text-anchor="start">${p}%</text>`;
   }
   // Grouped bars (each datum may optionally carry `segments:[{color,name,v}]`,
@@ -430,13 +443,13 @@ function comboBarsLines(el, barSeries, lines, {every=1, fmtBar=v=>fmt(v)}={}){
   for(let i=0;i<nSlots;i++){
     barSeries.forEach((series, sIdx) => {
       const d = series.data[i]; if(!d) return;
-      const h = (d.v/maxBar)*innerH;
+      const h = (d.v/axisMax)*innerH;
       const x = pl + i*bw + groupPad + sIdx*(subBarW + innerGap);
       if(d.segments && d.segments.length && d.v > 0){
         let yCursor = pt + innerH;
         d.segments.forEach(seg => {
           if(!seg || !(seg.v > 0)) return;
-          const segH = (seg.v/maxBar)*innerH;
+          const segH = (seg.v/axisMax)*innerH;
           const yTop = yCursor - segH;
           const pct  = (seg.v/d.v)*100;
           s += `<rect class="bar" x="${x}" y="${yTop}" width="${subBarW}" height="${segH}"
