@@ -1,6 +1,6 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-07-06** — bump this date whenever you edit this file._
+> _Last updated: **2026-07-16** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
@@ -54,7 +54,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 
 | Source | What it gives us | Required? |
 |---|---|---|
-| `%APPDATA%\StepMania 5.1\Save\MachineProfile\Stats.xml` | Lifetime totals, per-song play counts (`NumTimesPlayed`), difficulty/grade/style breakdowns, per-day calories. | **Yes** |
+| `…\Save\LocalProfiles\<id>\Stats.xml` **or** `…\Save\MachineProfile\Stats.xml` | Lifetime totals, per-song play counts (`NumTimesPlayed`), difficulty/grade/style breakdowns, per-day calories. A non-empty player profile under `LocalProfiles\` is preferred (the most recently played one wins); the machine profile is the fallback. | **Yes** (one of the two) |
 | `%APPDATA%\StepMania 5.1\Save\Upload\*.xml` | Per-play event log with exact timestamps → plays-over-time, hour-of-day, day-of-week, recent plays. Also merged into each chart's score list, since Stats.xml is only flushed periodically and caps its per-chart high-score lists. | Recommended |
 | `%APPDATA%\StepMania 5.1\Cache\Songs\*` | Real song `#TITLE`, `#ARTIST`, per-chart `#METER` + `#RADARVALUES` (used by the song-detail modal). Without it, song = folder name, artist = blank, no chart difficulty meters. | Recommended |
 | `%APPDATA%\StepMania 5.1\Cache\Banners\*` | Per-song banner thumbnails (StepMania-proprietary ARGB1555 format — converted to PNG by the build). | Optional (placeholder used otherwise) |

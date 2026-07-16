@@ -3,7 +3,10 @@
 Build a StepMania play-activity dashboard from a StepMania 5.1 'Save' folder.
 
 Reads:
-  <save>/MachineProfile/Stats.xml   -> authoritative aggregates + per-song play counts
+  <save>/LocalProfiles/<id>/Stats.xml -> preferred when present (most recently
+                                         played, non-empty profile wins)
+  <save>/MachineProfile/Stats.xml   -> fallback source; authoritative aggregates
+                                       + per-song play counts
   <save>/Upload/*.xml               -> per-play event log (exact timestamps)
 
 Writes:
@@ -978,11 +981,59 @@ def resolve_banners_dir(cache_songs_dir):
     return ""
 
 
+def _profile_probe(stats_path):
+    """Light read of a Stats.xml: (last_played_str, songs_played_int).
+
+    Returns None if the file can't be parsed. songs_played is 0 for an empty
+    profile; NumTotalSongsPlayed can be absent even when scores exist, so fall
+    back to the presence of a SongScores/Song entry.
+    """
+    try:
+        root = load_xml(stats_path)
+    except Exception:
+        return None
+    gd = root.find("GeneralData")
+    last = txt(gd, "LastPlayedDate") if gd is not None else ""
+    played = inum(txt(gd, "NumTotalSongsPlayed")) if gd is not None else 0
+    if played <= 0:
+        ss = root.find("SongScores")
+        if ss is not None and ss.find("Song") is not None:
+            played = 1
+    return (last, played)
+
+
+def select_stats_path(save_dir):
+    """Choose which Stats.xml to build from.
+
+    A named player profile (Save/LocalProfiles/<id>/Stats.xml) takes priority
+    over the machine profile: among the non-empty LocalProfiles the most
+    recently played one wins (LastPlayedDate as 'YYYY-MM-DD HH:MM:SS' sorts
+    lexically; path breaks ties). If no LocalProfile has any plays, fall back to
+    MachineProfile/Stats.xml (the historical default). Returns the chosen path,
+    or None if nothing usable exists.
+    """
+    candidates = []  # (last_played, path) for non-empty LocalProfiles
+    for p in sorted(glob.glob(os.path.join(save_dir, "LocalProfiles", "*", "Stats.xml"))):
+        probe = _profile_probe(p)
+        if probe and probe[1] > 0:
+            candidates.append((probe[0], p))
+    if candidates:
+        candidates.sort(key=lambda t: (t[0], t[1]))
+        return candidates[-1][1]
+
+    machine = os.path.join(save_dir, "MachineProfile", "Stats.xml")
+    if os.path.exists(machine):
+        return machine
+    return None
+
+
 def main():
-    stats_path = os.path.join(SAVE_DIR, "MachineProfile", "Stats.xml")
+    stats_path = select_stats_path(SAVE_DIR)
+    if not stats_path:
+        sys.exit(f"No Stats.xml found under {SAVE_DIR} "
+                 f"(looked in LocalProfiles/*/ and MachineProfile/)")
+    print(f"Profile: {os.path.relpath(stats_path, SAVE_DIR)}")
     upload_dir = os.path.join(SAVE_DIR, "Upload")
-    if not os.path.exists(stats_path):
-        sys.exit(f"Stats.xml not found at {stats_path}")
 
     cfg = load_config()
 
