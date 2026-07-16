@@ -87,8 +87,26 @@ if [ -z "$SAVE" ]; then
     exit 1
 fi
 grn "  Save:          $SAVE"
-grn "  Cache/Songs:   ${CACHE_SONGS:-(none — artist/title will be blank)}"
-grn "  Cache/Banners: ${CACHE_BANNERS:-(none — banners will use placeholder)}"
+# Cache/ supplies song titles/artists and ~90% of banners, and it CANNOT be
+# reconstructed from Save/ alone. If the bundle omitted it, warn loudly: the
+# sync step below keeps the previous (now-stale) Cache rather than failing, so
+# without this the problem is silent — the dashboard just shows old metadata.
+if [ -z "$CACHE_SONGS" ] && [ -z "$CACHE_BANNERS" ]; then
+    red "  Cache/Songs:   (MISSING)"
+    red "  Cache/Banners: (MISSING)"
+    echo
+    red "WARNING: this bundle contains no ./Cache folder."
+    red "  Titles, artists, and most banners come from Cache/. This build will"
+    red "  reuse the PREVIOUS Cache if one exists (dashboard may be stale), or"
+    red "  else fall back to folder names and placeholder banners."
+    red "  Fix: re-export the bundle including BOTH the 'Save' and 'Cache' folders."
+    echo
+else
+    [ -n "$CACHE_SONGS" ]   && grn "  Cache/Songs:   $CACHE_SONGS" \
+                            || red "  Cache/Songs:   (MISSING — titles/artists will be stale or blank)"
+    [ -n "$CACHE_BANNERS" ] && grn "  Cache/Banners: $CACHE_BANNERS" \
+                            || red "  Cache/Banners: (MISSING — banners will be stale or placeholder)"
+fi
 
 # 5. Sync into the canonical data dirs ---------------------------------------
 # All builds — this script or a direct `python3 build_dashboard.py` — read

@@ -63,6 +63,13 @@ fi
 log "Save:          $SAVE"
 log "Cache/Songs:   ${CACHE_SONGS:-(none)}"
 log "Cache/Banners: ${CACHE_BANNERS:-(none)}"
+# Cache/ supplies song titles/artists and ~90% of banners and can't be rebuilt
+# from Save/ alone. Warn if the bundle omitted it — the build still runs, but
+# the dashboard will show folder names and placeholder banners.
+if [ -z "$CACHE_SONGS" ] && [ -z "$CACHE_BANNERS" ]; then
+    log "WARNING: bundle contains no ./Cache — titles, artists and most banners"
+    log "         will be missing. Re-export the bundle with Save/ AND Cache/."
+fi
 
 # 3. Build -------------------------------------------------------------------
 mkdir -p "$WORK/build"
