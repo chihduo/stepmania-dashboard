@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StepMania — Play Activity Dashboard</title>
+<style>
+  :root{
+    --bg:#0d0f1a; --panel:#161a2b; --panel2:#1d2238; --line:#2a3050;
+    --text:#e8ebf7; --muted:#9aa3c4; --accent:#ff3ea5; --accent2:#37e0ff;
+    --good:#46e08a; --warn:#ffcc55; --bad:#ff6b6b;
+    --grad:linear-gradient(135deg,#ff3ea5,#37e0ff);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--accent2)}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 18px 64px}
+  header h1{margin:0;font-size:28px;letter-spacing:.5px}
+  header h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);margin-top:6px;font-size:13.5px}
+  .sub b{color:var(--text);font-weight:600}
+  section{margin-top:34px}
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);
+     margin:0 0 14px;font-weight:700}
+  /* KPI cards */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
+  .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad)}
+  .kpi .v{font-size:26px;font-weight:700;letter-spacing:.3px}
+  .kpi .l{color:var(--muted);font-size:12.5px;margin-top:2px}
+  .kpi .s{color:var(--muted);font-size:11.5px;margin-top:6px;opacity:.85}
+  /* chart grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .card h3{margin:0 0 4px;font-size:14.5px}
+  .card .cap{color:var(--muted);font-size:12px;margin:0 0 12px}
+  svg{display:block;width:100%;height:auto;overflow:visible}
+  .bar{transition:opacity .15s}
+  .bar:hover{opacity:.75}
+  /* SVG text sizes are in viewBox units; standard cards render ~62% of
+     viewBox width so these need to be ~1.6x the on-screen size you want.
+     The wide combo chart (.card.full) renders at ~1.9x — text overrides
+     below shrink the labels back to roughly the plot-title size on screen. */
+  .axis{fill:var(--muted);font-size:14px}
+  .glabel{fill:var(--text);font-size:16px}
+  .val{fill:var(--muted);font-size:14px}
+  .card.full .axis{font-size:8px}      /* ~15px on screen, matches h3 */
+  .card.full .val{font-size:8px}
+  .tip{position:fixed;pointer-events:none;background:#000d;border:1px solid var(--line);
+       border-radius:8px;padding:6px 9px;font-size:12px;color:#fff;z-index:200;opacity:0;transition:opacity .1s;white-space:nowrap}
+  /* tables */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  .win-tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .win-tabs button{background:var(--panel2);border:1px solid var(--line);color:var(--muted);
+    border-radius:20px;padding:5px 12px;cursor:pointer;font-size:12.5px}
+  .win-tabs button.active{color:var(--text);border-color:#a4b8ff;background:#a4b8ff22}
+  input[type=search]{background:var(--panel2);border:1px solid var(--line);color:var(--text);
+       border-radius:9px;padding:9px 12px;font-size:14px;min-width:240px;flex:1}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.6px;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--panel)}
+  th.sorted::after{content:" ▾";color:var(--accent)}
+  th.asc.sorted::after{content:" ▴"}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  tr:hover td{background:#ffffff08}
+  .song{white-space:normal;max-width:300px}
+  .artist{white-space:normal;max-width:200px;color:#c2c8e6}
+  .bannercol{width:80px;cursor:default}
+  .bannercol::after{content:none}
+  .banner-mini{width:72px;height:22px;object-fit:cover;border-radius:3px;
+       background:#0006;display:block}
+  td.banner-cell{padding:4px 4px 4px 10px;width:80px}
+  .pill{display:inline-block;padding:1px 8px;border-radius:20px;font-size:11.5px;font-weight:600;background:#ffffff14}
+  .g-AAAA,.g-AAA{color:#ffe27a;background:#ffe27a22}
+  .g-AA{color:#9be15d;background:#9be15d22}
+  .g-A{color:#5dd6e1;background:#5dd6e122}
+  .g-B{color:#7aa8ff;background:#7aa8ff22}
+  .g-C{color:#c99bff;background:#c99bff22}
+  .g-D{color:#ffa45d;background:#ffa45d22}
+  .g-F{color:#ff7a7a;background:#ff7a7a22}
+  .muted{color:var(--muted)}
+  .pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:12px;color:var(--muted);font-size:13px}
+  .pager button{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 12px;cursor:pointer}
+  .pager button:disabled{opacity:.4;cursor:default}
+  .recent li{list-style:none}
+  .recent ul{margin:0;padding:0;display:grid;gap:8px}
+  .recent .row{display:flex;justify-content:space-between;gap:12px;align-items:center;
+       background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+  .recent .meta{color:var(--muted);font-size:12px}
+  .legend{margin-left:12px;font-size:11.5px}
+  .legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;
+       vertical-align:middle;margin:0 4px 0 10px}
+  .legend .sw.line{height:0;border-top:2px solid;width:14px;border-radius:0}
+  /* Wider multi-colour swatch for the Plays bar — holds 5 difficulty tiers */
+  .legend .sw.multi{width:55px;padding:0;display:inline-flex;overflow:hidden;
+       border:1px solid var(--line)}
+  .legend .sw.multi span{flex:1;height:100%;display:block;border-radius:0;
+       width:auto;margin:0}
+  .dot{transition:opacity .15s}
+  .dot:hover{opacity:.6}
+  /* Achievement cards (Hardest cleared, Most-improved, Trophy case) */
+  .ach-list{display:flex;flex-direction:column;gap:3px}
+  .ach-row{display:flex;align-items:center;gap:8px;padding:5px 6px;
+       border-radius:4px;cursor:pointer;color:var(--text);
+       text-decoration:none;font-size:12.5px;line-height:1.3}
+  .ach-row:hover{background:var(--panel2)}
+  .ach-row .ach-meta{color:var(--muted);font-size:11.5px;
+       min-width:30px;text-align:center;font-variant-numeric:tabular-nums}
+  .ach-row .ach-name{flex:1;min-width:0;overflow:hidden;
+       text-overflow:ellipsis;white-space:nowrap}
+  .ach-row .ach-name .ach-sub{display:block;color:var(--muted);
+       font-size:11px;margin-top:1px}
+  .ach-row .ach-bar{flex:0 0 70px;height:5px;background:var(--line);
+       border-radius:3px;overflow:hidden}
+  .ach-row .ach-bar .fill{display:block;height:100%;background:#7aa8ff}
+  .ach-row .ach-val{flex:0 0 auto;text-align:right;
+       font-variant-numeric:tabular-nums;color:var(--muted);
+       white-space:nowrap;display:flex;align-items:center;gap:6px;
+       justify-content:flex-end}
+  .ach-row .ach-val .ach-date{color:var(--muted);font-size:11px}
+  .ach-row .ach-tier{flex:0 0 auto;font-size:11px;font-weight:600;
+       padding:1px 6px;border-radius:3px;white-space:nowrap;
+       letter-spacing:.3px}
+  .ach-row .ach-tier.tier-mfc{background:#ffe27a22;color:#ffe27a}
+  .ach-row .ach-tier.tier-fc{background:#9be15d22;color:#9be15d}
+  .ach-empty{color:var(--muted);font-size:12px;padding:8px 0}
+  .banner{width:96px;height:30px;object-fit:cover;border-radius:4px;
+       background:#0006;flex-shrink:0;display:block}
+  .recent .info{flex:1;min-width:0;display:flex;gap:10px;align-items:center}
+  .recent .info .text{min-width:0;flex:1}
+  .recent .info .text>div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  footer{margin-top:46px;color:var(--muted);font-size:12px;line-height:1.7;border-top:1px solid var(--line);padding-top:16px}
+  .full{grid-column:1/-1}
+  /* Two stacked charts inside one card (e.g. difficulty + grade) — same
+     width as other cards, with a horizontal divider between the halves. */
+  .split{display:grid;grid-template-rows:auto auto;gap:14px}
+  .split > div + div{padding-top:14px;border-top:1px solid var(--line)}
+  .split h3{margin:0 0 4px;font-size:14.5px}
+  .split .cap{margin:0 0 10px}
+  @media(max-width:560px){.song{max-width:180px}}
+
+  /* ---- Per-song modal (opens on row click in ranking or recent plays) ---- */
+  .modal-bg{position:fixed;inset:0;background:#000c;backdrop-filter:blur(4px);
+       z-index:100;display:none;align-items:flex-start;justify-content:center;
+       padding:24px 12px;overflow-y:auto}
+  .modal-bg.show{display:flex}
+  .modal{background:var(--bg);border:1px solid var(--line);border-radius:14px;
+       width:min(900px,100%);color:var(--text);box-shadow:0 16px 64px #000a;
+       position:relative;animation:modalIn .18s ease-out;
+       max-height:calc(100vh - 48px);overflow-y:auto}
+  @keyframes modalIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  .modal .close{position:absolute;top:12px;right:12px;width:32px;height:32px;
+       border-radius:50%;background:var(--panel2);border:1px solid var(--line);
+       color:var(--text);font-size:18px;cursor:pointer;display:flex;
+       align-items:center;justify-content:center;line-height:1;z-index:2}
+  .modal .close:hover{background:var(--line)}
+  /* prev/next song navigation in the modal header — keyboard ←/→ also works,
+     and a horizontal swipe on the modal card navigates on touch devices */
+  .modal-nav{position:absolute;top:13px;right:54px;display:flex;align-items:center;
+       gap:6px;z-index:2}
+  .modal-nav.hidden{display:none}
+  .nav-btn{width:30px;height:30px;border-radius:50%;background:var(--panel2);
+       border:1px solid var(--line);color:var(--text);font-size:17px;cursor:pointer;
+       display:flex;align-items:center;justify-content:center;line-height:1;
+       padding:0;font-family:inherit;font-weight:600}
+  .nav-btn:hover:not(:disabled){background:var(--line);color:var(--accent2)}
+  .nav-btn:disabled{opacity:.3;cursor:default}
+  .nav-count{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;
+       min-width:52px;text-align:center;padding:0 2px;user-select:none}
+  .modal .head{display:flex;gap:16px;padding:20px 144px 16px 22px;
+       border-bottom:1px solid var(--line);align-items:flex-start;flex-wrap:wrap}
+  .modal .head img.banner-lg{width:200px;height:62px;object-fit:cover;
+       border-radius:6px;background:#0006;flex-shrink:0}
+  .modal .head .htext{flex:1;min-width:240px}
+  .modal .head .htext h2{margin:0;font-size:18px;text-transform:none;
+       letter-spacing:0;color:var(--text);font-weight:700}
+  .modal .head .htext .who{color:var(--muted);font-size:13px;margin-top:3px}
+  .modal .head .htext .stats{margin-top:8px;color:var(--muted);font-size:13px}
+  .modal .head .htext .stats b{color:var(--text)}
+  .modal .head .htext .stats .pill{margin-left:6px}
+  .modal .tabs{display:flex;gap:6px;padding:10px 22px;
+       border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .modal .tab{background:transparent;border:1px solid transparent;color:var(--muted);
+       border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;
+       display:inline-flex;gap:8px;align-items:center;font-family:inherit}
+  .modal .tab:hover{color:var(--text)}
+  .modal .tab.active{background:var(--panel2);border-color:var(--line);color:var(--text)}
+  .modal .tab .mt{font-size:11px;background:var(--panel);border:1px solid var(--line);
+       border-radius:10px;padding:1px 7px;font-variant-numeric:tabular-nums}
+  .modal .tab .n{font-size:11.5px;color:var(--muted)}
+  .modal .body{padding:18px 22px 22px}
+  .modal .empty{color:var(--muted);font-size:13.5px;padding:20px;text-align:center}
+  .modal .panels{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .modal .panel{background:var(--panel);border:1px solid var(--line);
+       border-radius:10px;padding:14px 16px}
+  .modal .panel h4{margin:0 0 10px;font-size:11.5px;text-transform:uppercase;
+       letter-spacing:1px;color:var(--muted);font-weight:700}
+  .modal .panel.span2{grid-column:1/-1}
+  .pl-best .v{font-size:22px;font-weight:700}
+  .pl-best .when{color:var(--muted);font-size:12.5px;margin-top:3px}
+  .pl-best .badges{margin-top:8px}
+  .pl-best .badge{display:inline-block;background:#46e08a22;color:#46e08a;
+       border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-right:6px}
+  .pl-best .badge.mfc{background:#ffe27a22;color:#ffe27a}
+  .pl-best .jline{margin-top:10px;font-size:12.5px;color:var(--muted)}
+  .pl-best .jline b{color:var(--text);font-variant-numeric:tabular-nums}
+  .pl-best .jline span{margin-right:10px;display:inline-block}
+  .pl-judg .jrow{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:12.5px}
+  .pl-judg .jrow .lbl{width:38px;color:var(--muted);text-align:right;font-size:12px}
+  .pl-judg .jrow .barbox{flex:1;background:#0004;border-radius:3px;height:14px;
+       overflow:hidden;min-width:0}
+  .pl-judg .jrow .bar{height:100%;border-radius:3px}
+  .pl-judg .jrow .num{width:80px;text-align:right;font-variant-numeric:tabular-nums;
+       color:var(--text);font-size:12px}
+  .pl-judg .jrow .num span{color:var(--muted);margin-left:4px;font-size:11px}
+  .j-w1{background:#ffe27a} .j-w2{background:#9be15d} .j-w3{background:#5dd6e1}
+  .j-w4{background:#7aa8ff} .j-w5{background:#c99bff} .j-miss{background:#ff7a7a}
+  .pl-hold .ring-wrap{display:flex;gap:14px;align-items:center}
+  .pl-hold .v{font-size:24px;font-weight:700}
+  .pl-hold .meta{color:var(--muted);font-size:12.5px;margin-top:4px}
+  .pl-radar .rrow{display:flex;align-items:center;gap:10px;margin:4px 0;font-size:12px}
+  .pl-radar .rrow .lbl{width:64px;color:var(--muted)}
+  .pl-radar .dots{flex:1;display:flex;gap:3px}
+  .pl-radar .dot{width:10px;height:10px;border-radius:50%;background:#ffffff14}
+  .pl-radar .dot.on{background:var(--accent2)}
+  .pl-radar .num{width:46px;text-align:right;color:var(--text);font-size:12px;
+       font-variant-numeric:tabular-nums}
+  .pl-prog{position:relative}
+  .pl-prog .none{color:var(--muted);font-size:13px;padding:8px 0}
+  .all-plays{margin-top:16px}
+  .all-plays h4{margin:0 0 8px;font-size:11.5px;text-transform:uppercase;
+       letter-spacing:1px;color:var(--muted);font-weight:700}
+  .all-plays .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+  .all-plays table{font-size:12.5px;width:100%}
+  .all-plays th,.all-plays td{padding:7px 9px;border-bottom:1px solid var(--line)}
+  .all-plays tr:last-child td{border-bottom:none}
+  .all-plays tr.best td{background:#ffe27a08}
+  .all-plays .star{color:#ffe27a;margin-left:4px}
+  .all-plays .miss-bad{color:#ff7a7a}
+
+  tr.click,.recent .row.click{cursor:pointer}
+  tr.click:hover td{background:#ffffff14}
+  .recent .row.click:hover{background:var(--panel)}
+
+  @media (max-width:600px){
+    .modal .panels{grid-template-columns:1fr}
+    .modal .head{padding-right:120px}
+  }
+  @media (max-width:480px){
+    .nav-count{display:none}
+    .modal .head{padding-right:108px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="h1">StepMania <span class="g">Play Dashboard</span></h1>
+    <div class="sub" id="meta">Loading…</div>
+  </header>
+
+  <section id="overview"><div class="kpis" id="kpis"></div></section>
+
+  <section id="activity">
+    <h2>Activity over time</h2>
+    <div class="grid">
+      <div class="card full">
+        <h3>Plays per month, with skill trend</h3>
+        <p class="cap">Bars: monthly volume · Lines: skill %<span id="cap-months"></span>
+          <span class="legend" id="legend-months"></span>
+        </p>
+        <div id="c-months"></div>
+      </div>
+      <div class="card"><h3>Calories per month</h3><p class="cap" id="cap-cal">kcal estimated by StepMania</p><div id="c-cal"></div></div>
+      <div class="card"><h3>When you play — hour of day</h3><p class="cap" id="cap-hour">Local time recorded on each play</p><div id="c-hour"></div></div>
+      <div class="card"><h3>When you play — day of week</h3><p class="cap" id="cap-dow"></p><div id="c-dow"></div></div>
+    </div>
+  </section>
+
+  <section id="breakdowns">
+    <h2>Breakdowns</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="split">
+          <div>
+            <h3>Plays by difficulty</h3>
+            <p class="cap" id="cap-diff">All-time stage counts</p>
+            <div id="c-diff"></div>
+          </div>
+          <div>
+            <h3>Stages passed by grade</h3>
+            <p class="cap" id="cap-grade">Grade letters are theme-approximate</p>
+            <div id="c-grade"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card"><h3>Top artists</h3><p class="cap" id="cap-artists">By total plays · variants auto-merged (e.g. TWICE/Twice)</p><div id="c-artists"></div></div>
+      <div class="card"><h3>Top packs</h3><p class="cap" id="cap-packs">By total plays</p><div id="c-packs"></div></div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="grid">
+      <div class="card"><h3>Hardest charts cleared</h3>
+        <p class="cap" id="cap-hardest">By chart meter</p>
+        <div class="ach-list" id="c-hardest"></div></div>
+      <div class="card"><h3>Most-improved songs</h3>
+        <p class="cap" id="cap-improved">By accuracy gain (first → best play)</p>
+        <div class="ach-list" id="c-improved"></div></div>
+      <div class="card"><h3>Trophy case</h3>
+        <p class="cap" id="cap-trophies">Full combos &amp; Marvelous FCs</p>
+        <div class="ach-list" id="c-trophies"></div></div>
+    </div>
+  </section>
+
+  <section id="recent-plays" class="recent">
+    <h2>Recent plays</h2>
+    <ul id="recent"></ul>
+  </section>
+
+  <section id="ranking">
+    <h2>Song ranking — by play frequency</h2>
+    <div class="toolbar">
+      <div class="win-tabs" id="winTabs"></div>
+      <input type="search" id="q" placeholder="Search song or pack…">
+      <span class="muted" id="tblcount"></span>
+    </div>
+    <div style="overflow-x:auto">
+      <table id="tbl">
+        <thead><tr>
+          <th class="num" data-k="rank">#</th>
+          <th class="bannercol"></th>
+          <th data-k="song">Song</th>
+          <th data-k="artist">Artist</th>
+          <th data-k="pack">Pack</th>
+          <th class="num" data-k="plays">Plays</th>
+          <th class="num" data-k="bestPct">Best %</th>
+          <th data-k="bestGrade">Grade</th>
+          <th data-k="last">Last played</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="pager" id="pager"></div>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<!-- Per-song detail modal — populated by openSongModal(dir) on row click -->
+<div class="modal-bg" id="modalBg" aria-hidden="true">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-nav hidden" id="modalNav">
+      <button class="nav-btn" id="navPrev" aria-label="Previous song" title="Previous song (←)">‹</button>
+      <span class="nav-count" id="navCount"></span>
+      <button class="nav-btn" id="navNext" aria-label="Next song" title="Next song (→)">›</button>
+    </div>
+    <button class="close" id="modalClose" aria-label="Close (Esc)">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const tip = $("#tip");
+const fmt = n => n.toLocaleString();
+const DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+
+function showTip(html,e){tip.innerHTML=html;tip.style.opacity=1;moveTip(e);}
+function moveTip(e){tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY+12)+"px";}
+function hideTip(){tip.style.opacity=0;}
+
+// ---- vertical bar chart (SVG) ----
+function vbars(el, items, {color="var(--accent)", fmtv=v=>fmt(v), every=1}={}){
+  const W=600,H=210,pl=8,pr=8,pt=10,pb=28;
+  const max=Math.max(1,...items.map(d=>d.v));
+  const n=items.length, bw=(W-pl-pr)/n;
+  let bars="",labels="";
+  items.forEach((d,i)=>{
+    const h=(d.v/max)*(H-pt-pb);
+    const x=pl+i*bw, y=H-pb-h;
+    bars+=`<rect class="bar" x="${x+bw*0.12}" y="${y}" width="${bw*0.76}" height="${h}" rx="2" fill="${color}"
+       data-t="${d.label}: <b>${fmtv(d.v)}</b>"></rect>`;
+    if(i%every===0) labels+=`<text class="axis" x="${x+bw/2}" y="${H-9}" text-anchor="middle">${d.short??d.label}</text>`;
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${bars}${labels}</svg>`;
+  wireBars(el);
+}
+
+// ---- horizontal bar chart ----
+function hbars(el, items, {color="var(--accent2)", fmtv=v=>fmt(v), labelW=150}={}){
+  const W=600, rowH=36, pad=6, lw=labelW, vw=80;
+  const H=pad*2+items.length*rowH;
+  const max=Math.max(1,...items.map(d=>d.v));
+  let rows="";
+  items.forEach((d,i)=>{
+    const y=pad+i*rowH;
+    const bw=(d.v/max)*(W-lw-vw);
+    rows+=`<text class="glabel" x="0" y="${y+rowH/2+5}">${trunc(d.label,22)}</text>`;
+    rows+=`<rect class="bar" x="${lw}" y="${y+7}" width="${Math.max(2,bw)}" height="${rowH-14}" rx="3" fill="${d.color||color}"
+        data-t="${d.label}: <b>${fmtv(d.v)}</b>"></rect>`;
+    rows+=`<text class="val" x="${lw+Math.max(2,bw)+8}" y="${y+rowH/2+5}">${fmtv(d.v)}</text>`;
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${rows}</svg>`;
+  wireBars(el);
+}
+// Round `max` up so it divides into `ticks` even bands of "nice" size
+// (1/2/2.5/5 × 10^n). Used for the left count axis of the combo chart.
+function niceAxisMax(max, ticks){
+  const rawStep = max / ticks;
+  const base = Math.pow(10, Math.floor(Math.log10(rawStep)));
+  const f = rawStep / base;
+  const nf = f<=1?1 : f<=2?2 : f<=2.5?2.5 : f<=5?5 : 10;
+  return nf * base * ticks;
+}
+// ---- combo chart: grouped bars (left axis, count) + lines (right axis, %) ----
+// barSeries: [{name, color, data: [{label, short, v}, ...]}] — one or more series.
+// lines:     [{name, color, data: [{label, v}, ...]}]        — % values 0-100.
+function comboBarsLines(el, barSeries, lines, {every=1, fmtBar=v=>fmt(v)}={}){
+  const W=600, H=240, pl=40, pr=42, pt=12, pb=32;
+  const innerW=W-pl-pr, innerH=H-pt-pb;
+  const nSlots = barSeries[0]?.data.length || 0;
+  const bw = innerW / Math.max(1, nSlots);
+  // Left count axis: round the raw bar max up to a "nice" value so the four
+  // gridlines (shared with the right % axis) land on round play counts. Bars
+  // scale to this nice max so the top tick aligns with the tallest bar's band.
+  const rawMax = Math.max(1, ...barSeries.flatMap(s => s.data.map(d => d?.v||0)));
+  const axisMax = niceAxisMax(rawMax, 4);
+  // Group layout: outer padding 10% each side, gap 5% between sub-bars.
+  const groupPad = bw * 0.10, innerGap = bw * 0.05;
+  const nSeries = barSeries.length;
+  const subBarW = Math.max(1, (bw - groupPad*2 - innerGap*(nSeries-1)) / nSeries);
+
+  let s='';
+  // Gridlines shared by both axes: left = play count (0..axisMax), right = %.
+  for(let p=0;p<=100;p+=25){
+    const y=pt+innerH-(p/100)*innerH;
+    s+=`<line x1="${pl}" y1="${y}" x2="${pl+innerW}" y2="${y}" stroke="#ffffff10" stroke-width="0.5"/>`;
+    s+=`<text class="axis" x="${pl-4}" y="${y+3}" text-anchor="end">${fmt(Math.round((p/100)*axisMax))}</text>`;
+    s+=`<text class="axis" x="${pl+innerW+4}" y="${y+3}" text-anchor="start">${p}%</text>`;
+  }
+  // Grouped bars (each datum may optionally carry `segments:[{color,name,v}]`,
+  // in which case it renders as a vertical stack of colored sub-rects bottom-up
+  // — used by the Plays bar to show difficulty distribution).
+  for(let i=0;i<nSlots;i++){
+    barSeries.forEach((series, sIdx) => {
+      const d = series.data[i]; if(!d) return;
+      const h = (d.v/axisMax)*innerH;
+      const x = pl + i*bw + groupPad + sIdx*(subBarW + innerGap);
+      if(d.segments && d.segments.length && d.v > 0){
+        let yCursor = pt + innerH;
+        d.segments.forEach(seg => {
+          if(!seg || !(seg.v > 0)) return;
+          const segH = (seg.v/axisMax)*innerH;
+          const yTop = yCursor - segH;
+          const pct  = (seg.v/d.v)*100;
+          s += `<rect class="bar" x="${x}" y="${yTop}" width="${subBarW}" height="${segH}"
+               fill="${seg.color}" data-t="${d.label} ${seg.name}: <b>${fmtBar(seg.v)}</b> (${pct.toFixed(0)}% of ${fmtBar(d.v)})"></rect>`;
+          yCursor = yTop;
+        });
+      } else {
+        const y = pt + innerH - h;
+        s += `<rect class="bar" x="${x}" y="${y}" width="${subBarW}" height="${h}" rx="2"
+             fill="${series.color}" data-t="${d.label} ${series.name}: <b>${fmtBar(d.v)}</b>"></rect>`;
+      }
+    });
+  }
+  // X labels (centered under each group)
+  for(let i=0;i<nSlots;i++){
+    if(i%every) continue;
+    const d = barSeries[0].data[i];
+    s += `<text class="axis" x="${pl+i*bw+bw/2}" y="${H-9}" text-anchor="middle">${d.short??d.label}</text>`;
+  }
+  // Lines (paths with gaps for null values) + dots
+  lines.forEach(line=>{
+    let path='', open=false;
+    line.data.forEach((d,i)=>{
+      if(d==null||d.v==null){ open=false; return; }
+      const x=pl+i*bw+bw/2;
+      const y=pt+innerH-(d.v/100)*innerH;
+      path += (open?' L ':' M ')+x+' '+y;
+      open = true;
+    });
+    if(path) s+=`<path d="${path.trim()}" fill="none" stroke="${line.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    line.data.forEach((d,i)=>{
+      if(d==null||d.v==null) return;
+      const x=pl+i*bw+bw/2;
+      const y=pt+innerH-(d.v/100)*innerH;
+      s+=`<circle class="dot" cx="${x}" cy="${y}" r="2.5" fill="${line.color}"
+            data-t="${line.name} ${d.label}: <b>${d.v.toFixed(1)}%</b>"/>`;
+    });
+  });
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${s}</svg>`;
+  wireBars(el);
+}
+
+function trunc(s,n){return s.length>n? s.slice(0,n-1)+"…":s;}
+function wireBars(el){
+  el.querySelectorAll("[data-t]").forEach(b=>{
+    b.addEventListener("mousemove",e=>showTip(b.dataset.t,e));
+    b.addEventListener("mouseleave",hideTip);
+  });
+}
+
+let DATA=null;
+let SONGS_BY_DIR={};        // dir -> song record (lookup for modal click)
+// Ranking-list grade hiding is letter-based (D-and-below + F) — see gradeHidden().
+fetch("./data.json").then(r=>r.json()).then(d=>{DATA=d;render(d);scrollToHash();})
+  .catch(e=>{$("#meta").textContent="Failed to load data.json — "+e;});
+
+// Section anchors (#overview, #activity, #breakdowns, #recent-plays, #ranking)
+// scroll on load and on in-page hash changes. The native browser anchor scroll
+// fires before data.json finishes loading, by which point the target section
+// hasn't grown to its final height yet, so we re-scroll once data renders.
+function scrollToHash(){
+  if(!location.hash) return;
+  const el = document.querySelector(location.hash);
+  if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
+}
+window.addEventListener("hashchange", scrollToHash);
+
+// Shared difficulty palette — used by the "Plays by difficulty" card AND by
+// the colored segments inside each Plays-per-month bar. Edit + unknown plays
+// are folded into Medium upstream (in build_dashboard.py), so only these five
+// tiers ever appear in the per-month stacks.
+const DIFF_COLORS = {Beginner:"#7aa8ff", Easy:"#9be15d", Medium:"#ffe27a",
+                     Hard:"#ffa45d", Challenge:"#ff7a7a", Edit:"#c99bff"};
+const DIFF_STACK_ORDER = ["Beginner","Easy","Medium","Hard","Challenge"];
+
+function gradeLetter(t){return (DATA.gradeMap&&DATA.gradeMap[t])||t||"";}
+// Derive a letter from accuracy when config.json defines gradeThresholds, else
+// fall back to StepMania's recorded tier via gradeMap. Failed/NoData always
+// F/-. Mirrors grade_letter() in build_dashboard.py.
+function gradeFromPct(pct){
+  const t = DATA.theme && DATA.theme.gradeThresholds;
+  if(!t || !t.length || pct==null) return null;
+  for(const g of t){ if(pct >= g.min) return g.letter; }
+  return t[t.length-1].letter;
+}
+function displayGrade(tier, pct){
+  if(tier==='Failed') return 'F';
+  if(tier==='NoData') return '-';
+  const byPct = gradeFromPct(pct);
+  return byPct!=null ? byPct : gradeLetter(tier);
+}
+// D-and-below + F are hidden from the ranking list — letter-based so it matches
+// whichever display mode is active.
+function gradeHidden(letter){ return letter==='F' || (!!letter && letter[0]==='D'); }
+// Grade-pill CSS class uses the base letter (strip +/-/★) so g-AA covers AA/AA+/AA-.
+function gcls(letter){ return (letter||'').replace(/[^A-Za-z].*$/,'') || (letter||''); }
+
+function render(d){
+  // Index every song (incl. D/F-only ones) so modal clicks always resolve.
+  SONGS_BY_DIR = {};
+  d.songs.forEach(s => { SONGS_BY_DIR[s.dir] = s; });
+  const t=d.totals;
+  const hrs=(t.gameplaySeconds/3600);
+  // page title + h1 — prefix with the player name from config when set
+  const player = (d.theme && d.theme.playerName || "").trim();
+  const prefix = player ? `${esc(player)}'s ` : "";
+  document.title = (player ? `${player}'s ` : "") + "StepMania Play Dashboard";
+  $("#h1").innerHTML = `${prefix}StepMania <span class="g">Play Dashboard</span>`;
+  // meta line
+  $("#meta").innerHTML =
+    `Recorded plays span <b>${d.firstPlay.slice(0,10)}</b> → <b>${d.lastPlay.slice(0,10)}</b> · `+
+    `last played <b>${d.profile.lastPlayed}</b> · generated ${d.generated.replace("T"," ").slice(0,16)}`;
+
+  // KPI cards
+  const kpi=[
+    ["Songs played", fmt(t.songsPlayed), "all-time stage count"],
+    ["Distinct songs", fmt(d.distinctSongs), `across ${d.packs.length} packs`],
+    ["Sessions", fmt(t.sessions), "times you booted in"],
+    ["Time on pad", hrs.toFixed(0)+" h", "active gameplay only"],
+    ["Calories", fmt(Math.round(t.calories)), "kcal, StepMania estimate"],
+    ["Steps hit", fmt(t.tapsAndHolds), `+ ${fmt(t.jumps)} jumps`],
+  ];
+  $("#kpis").innerHTML = kpi.map(([l,v,s])=>
+    `<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div><div class="s">${s}</div></div>`).join("");
+
+  // plays per month + skill trend (grouped bars + lines on right %-axis)
+  const c = (d.theme && d.theme.colors) || {};
+  const cBar = (c.bars || {}); const cLine = (c.lines || {});
+  const playsCol    = cBar.plays         || "#a4b8d4";
+  const distinctCol = cBar.distinctSongs || "#5c7593";
+  const accCol      = cLine.accuracy     || "var(--accent2)";
+  const w1Col       = cLine.w1           || "var(--warn)";
+  const monthsSlots = d.playsMonthly.map(([m])=>({label:m,short:m.slice(2)}));
+  const asBar  = arr => arr.map(([m,v],i)=>({...monthsSlots[i], v:v}));
+  const asLine = arr => arr.map(([m,v])=>v==null?null:{label:m,v});
+  // Decorate the Plays bars with difficulty segments (bottom-up: Beginner →
+  // Challenge). The segment counts are emitted by build_dashboard.py — Edit
+  // and any unknown difficulty fold into Medium upstream, so no leakage here.
+  const byDiff = d.playsMonthlyByDifficulty || [];
+  const playsBars = asBar(d.playsMonthly).map((row, i) => {
+    const buckets = (byDiff[i] && byDiff[i][1]) || {};
+    return {...row, segments: DIFF_STACK_ORDER.map(name => ({name, color: DIFF_COLORS[name], v: buckets[name]||0}))};
+  });
+  comboBarsLines($("#c-months"), [
+    {name:"Plays",         color: playsCol,    data: playsBars},
+    {name:"Distinct songs",color: distinctCol, data: asBar(d.distinctSongsMonthly||[])},
+  ], [
+    {name:"Accuracy",      color: accCol,  data: asLine(d.accuracyMonthly||[])},
+    {name:"Marvelous",     color: w1Col,   data: asLine(d.w1PctMonthly   ||[])},
+  ], { every: Math.ceil(d.playsMonthly.length/12) });
+
+  // Build the legend dynamically. The Plays swatch is a wider multi-color
+  // strip showing the 5 difficulty tiers (Beginner→Challenge) that make up
+  // each month's stacked bar; everything else stays a 10px square / line stub.
+  const playsSw = `<span class="sw multi" title="Beginner → Challenge">`
+    + DIFF_STACK_ORDER.map(n => `<span style="background:${DIFF_COLORS[n]}" title="${n}"></span>`).join('')
+    + `</span>Plays`;
+  const rest = [
+    ['sw',     distinctCol, 'Distinct songs'],
+    ['sw line',accCol,      'Accuracy'],
+    ['sw line',w1Col,       'Marvelous'],
+  ].map(([cls,col,name]) => cls === 'sw'
+      ? `<span class="${cls}" style="background:${col}"></span>${name}`
+      : `<span class="${cls}" style="border-color:${col}"></span>${name}`).join('');
+  $("#legend-months").innerHTML = playsSw + rest;
+  // months tracked (subtitle aggregate for #c-months)
+  $("#cap-months").textContent =
+    ` · ${fmt(d.playsMonthly.length)} months tracked`;
+  // calories per month
+  const calTot = d.monthlyCalories.reduce((a,[,c])=>a+c,0);
+  $("#cap-cal").textContent =
+    `kcal estimated by StepMania · ${fmt(Math.round(calTot))} kcal total`;
+  vbars($("#c-cal"), d.monthlyCalories.map(([m,c])=>({label:m,short:m.slice(2),v:Math.round(c)})),
+        {color:"var(--warn)", every: Math.ceil(d.monthlyCalories.length/8), fmtv:v=>fmt(v)+" kcal"});
+  // hour of day
+  const peakHr = d.hourOfDay.indexOf(Math.max(...d.hourOfDay));
+  $("#cap-hour").textContent =
+    `Local time recorded on each play · Peak: ${String(peakHr).padStart(2,'0')}:00`;
+  vbars($("#c-hour"), d.hourOfDay.map((n,i)=>({label:i+":00",short:String(i),v:n})),
+        {color:"#7aa8ff", every:3});
+  // day of week
+  const dowTot=d.dayOfWeek.reduce((a,b)=>a+b,0);
+  const peak=DOW[d.dayOfWeek.indexOf(Math.max(...d.dayOfWeek))];
+  $("#cap-dow").textContent=`Busiest day: ${peak} · ${fmt(dowTot)} plays total`;
+  hbars($("#c-dow"), d.dayOfWeek.map((n,i)=>({label:DOW[i],v:n})), {color:"#7aa8ff"});
+
+  // difficulty (ordered) — color ramp follows the grade palette
+  const diffItems=d.diffOrder.filter(k=>d.byDifficulty[k]!=null)
+        .map(k=>({label:k,v:d.byDifficulty[k],color:DIFF_COLORS[k]}));
+  const diffTot = diffItems.reduce((a,b)=>a+b.v,0);
+  $("#cap-diff").textContent = `All-time stage counts · ${fmt(diffTot)} total`;
+  hbars($("#c-diff"), diffItems, {});
+
+  // grade distribution — StepMania's per-tier stage tally (aggregate, so it
+  // stays on the tier map even when gradeThresholds is set). Individual bars
+  // for Tier01-07 ("A" and above on the current default theme's ladder); the
+  // fine-grained lower tiers (Tier08+) are folded into one residual bar so a
+  // handful of low-grade stages doesn't grow a long tail of tiny bars.
+  const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07"];
+  const gcolors={Tier01:"#ffe27a",Tier02:"#ffe27a",Tier03:"#9be15d",Tier04:"#9be15d",Tier05:"#9be15d",
+                 Tier06:"#5dd6e1",Tier07:"#5dd6e1"};
+  const gItems=gOrder.filter(k=>d.byGrade[k]!=null)
+        .map(k=>({label:`${gradeLetter(k)} (${k.replace("Tier","T")})`,v:d.byGrade[k],color:gcolors[k]}));
+  const gRest=Object.entries(d.byGrade)
+        .filter(([k,v])=>/^Tier(0[89]|1\d|20)$/.test(k)&&v>0)
+        .reduce((a,[,v])=>a+v,0);
+  if(gRest>0) gItems.push({label:`below ${gradeLetter("Tier07")}`,v:gRest,color:"#8b93a7"});
+  const gradeTot = gItems.reduce((a,b)=>a+b.v,0);
+  $("#cap-grade").textContent = `Grade letters are theme-approximate · ${fmt(gradeTot)} stages passed`;
+  hbars($("#c-grade"), gItems, {});
+
+  // packs + artists — count comes from config.topN.{packs,artists} (defaults 15)
+  const topN = (d.theme && d.theme.topN) || {};
+  const nPacks   = Math.max(1, topN.packs   || 15);
+  const nArtists = Math.max(1, topN.artists || 15);
+  hbars($("#c-packs"),
+    d.packs.slice(0,nPacks).map(p=>({label:p.pack,v:p.plays})),
+    {color:"#5dd6e1", labelW:230});
+  $("#cap-packs").textContent = `By total plays · ${fmt(d.packs.length)} packs`;
+  const artists = d.artists || [];
+  if(artists.length) {
+    hbars($("#c-artists"),
+      artists.slice(0,nArtists).map(a=>({label:a.artist, v:a.plays})),
+      {color: distinctCol});
+    $("#cap-artists").textContent = `By total plays · ${fmt(artists.length)} artists`;
+  }
+
+  renderAchievements(d);
+  buildTable(d);
+  buildRecent(d);
+
+  $("#footer").innerHTML =
+    `<b>Data sources:</b> aggregates &amp; play counts from <code>MachineProfile/Stats.xml</code>; `+
+    `timeline &amp; recent plays from ${fmt(d.recordedPlays)} per-play files in <code>Save/Upload/</code>; `+
+    `song titles &amp; artists from the <code>Cache/Songs</code> metadata cache.<br>`+
+    `Grade letters (AAAA…F) are an approximate mapping of StepMania's Tier01–Tier07 and depend on your theme. `+
+    `"Songs played" counts every stage incl. retries; "Distinct songs" counts unique charts with ≥1 play.<br>`+
+    `Rebuild after new sessions: <code>python3 build_dashboard.py</code>.`;
+}
+
+// ---------- song ranking table ----------
+let sortK="plays", sortAsc=false, page=0, filtered=[];
+const PER=50;
+// Ranking window tabs — winSpan is a span in days (as a string key into each
+// song's "pw" counts) or null for all-time. Windows are anchored at the LAST
+// recorded play (see build_dashboard.py WINDOW_SPANS), so a play break never
+// empties a tab.
+let winSpan=null;
+const WIN_LABELS={"7":"7 days","30":"30 days","90":"90 days","180":"180 days","365":"12 months"};
+function winPlays(s){ return winSpan==null ? s.plays : ((s.pw&&s.pw[winSpan])||0); }
+function winRange(){ // "YYYY-MM-DD → YYYY-MM-DD" for the active window
+  const pwMeta=DATA.playWindows; if(!pwMeta||winSpan==null) return "";
+  const end=pwMeta.anchor.slice(0,10);
+  const d=new Date(end+"T00:00:00"); d.setDate(d.getDate()-Number(winSpan));
+  return `${d.toISOString().slice(0,10)} → ${end}`;
+}
+function rerank(){
+  // Rank the eligible (non-D/F, played-in-window) songs by the active window's
+  // play count so #1 is the most-played song of that era.
+  DATA.songs.filter(s=>!gradeHidden(displayGrade(s.bestGrade||"", s.bestPct)) && winPlays(s)>0)
+    .sort((a,b)=> winPlays(b)-winPlays(a) || a.song.toLowerCase().localeCompare(b.song.toLowerCase()))
+    .forEach((s,i)=>s.rank=i+1);
+}
+function buildWinTabs(d){
+  const host=$("#winTabs");
+  const spans=(d.playWindows&&d.playWindows.spans)||[];
+  if(!spans.length){ host.style.display="none"; return; }  // no Upload log in bundle
+  winSpan=String(spans[0]);  // default tab = shortest window (7 days)
+  host.innerHTML = spans.map((sp,i)=>`<button data-w="${sp}"${i===0?' class="active"':''}>${WIN_LABELS[sp]||sp+" days"}</button>`).join("")
+                 + `<button data-w="">All time</button>`;
+  host.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    winSpan=b.dataset.w||null;
+    host.querySelectorAll("button").forEach(x=>x.classList.toggle("active",x===b));
+    page=0; rerank(); applyTable();
+  }));
+}
+function buildTable(d){
+  buildWinTabs(d);
+  rerank();
+  applyTable();
+  $("#q").addEventListener("input", ()=>{page=0;applyTable();});
+  document.querySelectorAll("#tbl th[data-k]").forEach(th=>{
+    th.addEventListener("click",()=>{
+      const k=th.dataset.k;
+      if(sortK===k) sortAsc=!sortAsc;
+      else {sortK=k; sortAsc=(k==="song"||k==="pack");}
+      page=0; applyTable();
+    });
+  });
+}
+function applyTable(){
+  const q=$("#q").value.trim().toLowerCase();
+  // D/F filter happens here (previously in Python) so the full song list
+  // stays reachable by the modal click handler via SONGS_BY_DIR.
+  filtered=DATA.songs.filter(s=> !gradeHidden(displayGrade(s.bestGrade||"", s.bestPct))
+        && winPlays(s)>0
+        && (!q || s.song.toLowerCase().includes(q)
+            || s.pack.toLowerCase().includes(q) || (s.artist||"").toLowerCase().includes(q)));
+  const dir=sortAsc?1:-1;
+  filtered.sort((a,b)=>{
+    let x=a[sortK], y=b[sortK];
+    if(sortK==="plays"){x=winPlays(a);y=winPlays(b);}
+    if(sortK==="bestPct"){x=x??-1;y=y??-1;}
+    if(typeof x==="string"){x=x.toLowerCase();y=(y||"").toLowerCase();}
+    return x<y?-1*dir : x>y?1*dir : 0;
+  });
+  document.querySelectorAll("#tbl th").forEach(th=>{
+    th.classList.toggle("sorted",th.dataset.k===sortK);
+    th.classList.toggle("asc",th.dataset.k===sortK&&sortAsc);
+  });
+  const range=winRange();
+  $("#tblcount").textContent = `${fmt(filtered.length)} songs${range?` · ${range}`:""}`;
+  renderPage();
+}
+function renderPage(){
+  const pages=Math.max(1,Math.ceil(filtered.length/PER));
+  page=Math.min(page,pages-1);
+  const rows=filtered.slice(page*PER,page*PER+PER).map(s=>{
+    const g=s.bestGrade?displayGrade(s.bestGrade,s.bestPct):"";
+    const gp=g?`<span class="pill g-${gcls(g)}">${g}</span>`:'<span class="muted">—</span>';
+    const pct=s.bestPct!=null?(s.bestPct*100).toFixed(2)+"%":'<span class="muted">—</span>';
+    const artist = s.artist ? esc(s.artist) : '<span class="muted">—</span>';
+    const banner = `<img class="banner-mini" loading="lazy" decoding="async"
+       src="${s.banner||'nobanner.svg'}"
+       onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
+    return `<tr class="click" data-dir="${escAttr(s.dir)}">
+      <td class="num muted">${s.rank}</td>
+      <td class="banner-cell">${banner}</td>
+      <td class="song">${esc(s.song)}</td>
+      <td class="artist">${artist}</td>
+      <td class="muted">${esc(s.pack)}</td>
+      <td class="num"><b>${fmt(winPlays(s))}</b>${winSpan?`<span class="muted"> / ${fmt(s.plays)}</span>`:""}</td>
+      <td class="num">${pct}</td>
+      <td>${gp}</td>
+      <td class="muted">${s.last||"—"}</td></tr>`;
+  }).join("");
+  $("#tbody").innerHTML=rows;
+  $("#tbody").querySelectorAll("tr.click").forEach(tr=>{
+    tr.addEventListener("click", ()=> {
+      const dir = tr.dataset.dir;
+      // Nav list spans the whole filtered list (across all pages), not just
+      // the current page, so ←/→ keeps going beyond page boundaries.
+      const list = filtered.map(s => ({dir: s.dir}));
+      const idx = filtered.findIndex(s => s.dir === dir);
+      openSongModal(dir, null, {list, idx});
+    });
+  });
+  $("#pager").innerHTML =
+    `<button ${page<=0?"disabled":""} id="prev">‹ Prev</button>`+
+    `<span>Page ${page+1} / ${pages}</span>`+
+    `<button ${page>=pages-1?"disabled":""} id="next">Next ›</button>`;
+  const p=$("#prev"),n=$("#next");
+  if(p)p.onclick=()=>{page--;renderPage();window.scrollTo({top:$("#tbl").offsetTop-20});};
+  if(n)n.onclick=()=>{page++;renderPage();window.scrollTo({top:$("#tbl").offsetTop-20});};
+}
+function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function escAttr(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+// ---------- Achievements section: Hardest cleared / Most-improved / Trophy case ----------
+function renderAchievements(d){
+  const N = 15;
+  const chartRecs = [];
+  d.songs.forEach(song => (song.charts || []).forEach(chart => chartRecs.push({song, chart})));
+
+  // 1. Hardest cleared — needs scored plays so we can confirm a non-Failed grade
+  const cleared = chartRecs
+    .filter(r => isValidMeter(r.chart.meter) && hasClearedScore(r.chart))
+    .map(r => ({...r, bestPct: bestPctOf(r.chart), bestGrade: bestGradeOf(r.chart)}));
+  cleared.sort((a,b) => (b.chart.meter - a.chart.meter) || (b.bestPct - a.bestPct));
+  renderHardestList($("#c-hardest"), cleared.slice(0, N));
+  if (cleared.length){
+    const peak = cleared[0].chart.meter;
+    const threshold = Math.max(1, peak - 2);
+    const above = cleared.filter(r => r.chart.meter >= threshold).length;
+    $("#cap-hardest").textContent =
+      `By chart meter · highest cleared ${peak} · ${fmt(above)} ${above===1?'chart':'charts'} at meter ${threshold}+`;
+  } else {
+    $("#cap-hardest").textContent = `By chart meter · no cleared charts with meter recorded`;
+  }
+
+  // 2. Most-improved — first → best delta over per-play history
+  const MIN_PP = 0.005, MEANINGFUL_PP = 0.05;
+  const improvements = [];
+  chartRecs.forEach(r => {
+    const ts = (r.chart.scores || []).filter(s => s.dt && s.pct != null);
+    if (ts.length < 2) return;
+    ts.sort((a,b) => a.dt < b.dt ? -1 : 1);
+    const first = ts[0].pct;
+    const best = Math.max(...ts.map(s => s.pct));
+    const delta = best - first;
+    if (delta > MIN_PP) improvements.push({...r, first, best, delta, plays: ts.length});
+  });
+  improvements.sort((a,b) => b.delta - a.delta);
+  renderImprovedList($("#c-improved"), improvements.slice(0, N));
+  const meaningful = improvements.filter(x => x.delta >= MEANINGFUL_PP).length;
+  $("#cap-improved").textContent =
+    `By accuracy gain (first → best play) · ${fmt(meaningful)} ${meaningful===1?'chart':'charts'} improved ≥+5pp`;
+
+  // 3. Trophy case — any FC or MFC in the chart's score history
+  const trophies = [];
+  chartRecs.forEach(r => {
+    let tier = null, when = null;
+    (r.chart.scores || []).forEach(s => {
+      if (!s.j || !s.h) return;
+      const isFC = s.j[5] === 0 && s.h[1] === 0 && s.h[2] === 0;
+      if (!isFC) return;
+      const isMFC = s.j.slice(1).every(v => v === 0);
+      const t = isMFC ? 'MFC' : 'FC';
+      // Upgrade to MFC if found; otherwise track latest date in current tier
+      if (!tier || (t === 'MFC' && tier === 'FC')) { tier = t; when = s.dt || null; }
+      else if (t === tier && s.dt && (!when || s.dt > when)) when = s.dt;
+    });
+    if (tier) trophies.push({...r, tier, when});
+  });
+  trophies.sort((a,b) => {
+    if (a.tier !== b.tier) return a.tier === 'MFC' ? -1 : 1;
+    return (b.when || '').localeCompare(a.when || '');
+  });
+  renderTrophyList($("#c-trophies"), trophies.slice(0, N));
+  const nMFC = trophies.filter(t => t.tier === 'MFC').length;
+  const nFC  = trophies.filter(t => t.tier === 'FC').length;
+  $("#cap-trophies").textContent = trophies.length
+    ? `${fmt(nMFC)} ${nMFC===1?'MFC':'MFCs'} · ${fmt(nFC)} ${nFC===1?'FC':'FCs'} · ${fmt(nMFC+nFC)} ${(nMFC+nFC)===1?'chart':'charts'} cleared without breaking combo`
+    : `Full combos & Marvelous FCs · none yet`;
+}
+
+// StepMania meter values that go past ~30 are bad parses from the cache, not
+// real boss charts — guard against them so a single corrupt row doesn't break
+// the "Hardest cleared" sort.
+function isValidMeter(m){ return typeof m === 'number' && m >= 1 && m <= 30; }
+function hasClearedScore(chart){
+  return (chart.scores || []).some(s => s.grade && s.grade !== 'Failed');
+}
+function bestPctOf(chart){
+  const ss = chart.scores || [];
+  return ss.length ? Math.max(...ss.map(s => s.pct || 0)) : 0;
+}
+function bestGradeOf(chart){
+  const ss = chart.scores || [];
+  if (!ss.length) return null;
+  return ss.reduce((best, s) => (s.pct || 0) > (best.pct || 0) ? s : best, ss[0]).grade;
+}
+function songNameHtml(song){
+  return `${song.artist ? esc(song.artist)+' — ' : ''}${esc(song.song)}`;
+}
+
+function renderHardestList(host, items){
+  if (!items.length){
+    host.innerHTML = '<div class="ach-empty">No cleared charts with meter recorded.</div>'; return;
+  }
+  const maxMeter = items[0].chart.meter;
+  host.innerHTML = items.map(r => {
+    const w = (r.chart.meter / maxMeter) * 100;
+    const pct = (r.bestPct * 100).toFixed(2);
+    const letter = r.bestGrade ? displayGrade(r.bestGrade, r.bestPct) : '';
+    const pill = letter ? `<span class="pill g-${gcls(letter)}">${letter}</span>` : '';
+    return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
+      <span class="ach-meta">[${r.chart.meter}]</span>
+      <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} · ${esc(r.song.pack||'')}</span></span>
+      <span class="ach-bar"><span class="fill" style="width:${w.toFixed(0)}%"></span></span>
+      <span class="ach-val">${pct}% ${pill}</span></a>`;
+  }).join('');
+  wireAchRows(host);
+}
+
+function renderImprovedList(host, items){
+  if (!items.length){
+    host.innerHTML = '<div class="ach-empty">Need ≥2 timestamped plays on the same chart to compute improvement.</div>'; return;
+  }
+  const maxDelta = items[0].delta;
+  host.innerHTML = items.map(r => {
+    const w = (r.delta / maxDelta) * 100;
+    const delta = '+' + (r.delta * 100).toFixed(1) + ' pp';
+    const ride = `${(r.first*100).toFixed(1)}% → ${(r.best*100).toFixed(1)}% over ${r.plays} plays`;
+    return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
+      <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} · ${ride}</span></span>
+      <span class="ach-bar"><span class="fill" style="width:${w.toFixed(0)}%"></span></span>
+      <span class="ach-val">${delta}</span></a>`;
+  }).join('');
+  wireAchRows(host);
+}
+
+function renderTrophyList(host, items){
+  if (!items.length){
+    host.innerHTML = '<div class="ach-empty">No full combos recorded yet.</div>'; return;
+  }
+  host.innerHTML = items.map(r => {
+    const icon = r.tier === 'MFC' ? '✨' : '⭐';
+    const cls = r.tier === 'MFC' ? 'tier-mfc' : 'tier-fc';
+    const meter = isValidMeter(r.chart.meter) ? `[${r.chart.meter}]` : '';
+    const date = r.when ? r.when.slice(0,10) : '';
+    const grade = bestGradeOf(r.chart);
+    const letter = grade ? displayGrade(grade, bestPctOf(r.chart)) : '';
+    const pill = letter ? `<span class="pill g-${gcls(letter)}">${letter}</span>` : '';
+    return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
+      <span class="ach-tier ${cls}">${icon} ${r.tier}</span>
+      <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} ${meter}</span></span>
+      <span class="ach-val">${pill}<span class="ach-date">${esc(date)}</span></span></a>`;
+  }).join('');
+  wireAchRows(host);
+}
+
+function wireAchRows(host){
+  host.querySelectorAll('.ach-row').forEach(row => {
+    row.addEventListener('click', e => {
+      e.preventDefault();
+      const dir = row.dataset.dir;
+      if (SONGS_BY_DIR[dir]) openSongModal(dir, row.dataset.diff);
+    });
+  });
+}
+
+function buildRecent(d){
+  $("#recent").innerHTML = "<ul>"+d.recent.slice(0,30).map(r=>{
+    const g=displayGrade(r.grade, r.pct);
+    const gp=`<span class="pill g-${gcls(g)}">${g}</span>`;
+    const art = r.artist ? esc(r.artist)+" · " : "";
+    const banner = `<img class="banner" loading="lazy" decoding="async"
+       src="${r.banner||'nobanner.svg'}"
+       onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
+    const song = SONGS_BY_DIR[r.dir];
+    const chart = song && (song.charts || []).find(c => c.diff === r.diff);
+    const meter = (chart && isValidMeter(chart.meter)) ? ` [${chart.meter}]` : '';
+    const clickable = song
+      ? `class="row click" data-dir="${escAttr(r.dir)}" data-diff="${escAttr(r.diff)}"`
+      : 'class="row"';
+    return `<li><div ${clickable}>
+      <div class="info">${banner}<div class="text"><div>${esc(r.song)}</div><div class="meta">${art}${esc(r.pack)} · ${r.diff}${meter}</div></div></div>
+      <div style="text-align:right">${gp} <b>${(r.pct*100).toFixed(1)}%</b>
+        <div class="meta">${r.dt}</div></div>
+    </div></li>`;
+  }).join("")+"</ul>";
+  // Build the nav list from the visible clickable recent rows (skips any
+  // recent play whose song dir isn't in SONGS_BY_DIR).
+  const recentRows = [...$("#recent").querySelectorAll(".row.click")];
+  const recentNavList = recentRows.map(r => ({dir: r.dataset.dir, diff: r.dataset.diff}));
+  recentRows.forEach((row, i)=>{
+    row.addEventListener("click", ()=>
+      openSongModal(row.dataset.dir, row.dataset.diff, {list: recentNavList, idx: i}));
+  });
+}
+document.addEventListener("mousemove",e=>{if(tip.style.opacity==1)moveTip(e);});
+
+// ---------- Per-song modal ----------
+const modalBg = $("#modalBg");
+const modalEl = $("#modal");
+const modalContent = $("#modalContent");
+const modalNavEl = $("#modalNav");
+// Navigation context: which list the modal was opened from, and where in it.
+// {list: [{dir, diff?}, ...], idx: number}  — null when there's nothing to navigate.
+let modalNav = null;
+
+$("#modalClose").addEventListener("click", closeModal);
+modalBg.addEventListener("click", e=>{ if(e.target===modalBg) closeModal(); });
+$("#navPrev").addEventListener("click", e=>{ e.stopPropagation(); navStep(-1); });
+$("#navNext").addEventListener("click", e=>{ e.stopPropagation(); navStep(+1); });
+document.addEventListener("keydown", e=>{
+  if(!modalBg.classList.contains("show")) return;
+  if(e.key==="Escape") closeModal();
+  else if(e.key==="ArrowLeft")  { e.preventDefault(); navStep(-1); }
+  else if(e.key==="ArrowRight") { e.preventDefault(); navStep(+1); }
+});
+
+// Touch swipe on the modal card → prev/next.  Skip swipes that start inside
+// the horizontally-scrollable all-plays table so it can still pan.
+let touchStartX=null, touchStartY=null;
+modalEl.addEventListener("touchstart", e=>{
+  if(e.touches.length!==1) return;
+  if(e.target.closest(".tbl-wrap")) return;
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, {passive:true});
+modalEl.addEventListener("touchend", e=>{
+  if(touchStartX===null) return;
+  const t = e.changedTouches[0];
+  const dx = t.clientX - touchStartX, dy = t.clientY - touchStartY;
+  touchStartX = touchStartY = null;
+  // Require a clearly horizontal swipe of >= 60px.
+  if(Math.abs(dx) >= 60 && Math.abs(dx) > Math.abs(dy)*1.5) navStep(dx>0 ? -1 : +1);
+}, {passive:true});
+
+function closeModal(){
+  modalBg.classList.remove("show");
+  modalBg.setAttribute("aria-hidden","true");
+  modalContent.innerHTML = "";
+  modalNav = null;
+  updateNavControls();
+}
+
+function updateNavControls(){
+  if(!modalNav || modalNav.list.length <= 1){
+    modalNavEl.classList.add("hidden");
+    return;
+  }
+  modalNavEl.classList.remove("hidden");
+  $("#navPrev").disabled = (modalNav.idx <= 0);
+  $("#navNext").disabled = (modalNav.idx >= modalNav.list.length - 1);
+  $("#navCount").textContent = `${modalNav.idx + 1} / ${modalNav.list.length}`;
+}
+
+// Pick the modal's initial chart tab based on caller's preferred difficulty,
+// else the song's most-played chart, else the first chart.
+function pickChartIdx(song, preferredDiff){
+  const charts = song.charts || [];
+  if(!charts.length) return 0;
+  if(preferredDiff){
+    const i = charts.findIndex(c=>c.diff===preferredDiff);
+    if(i>=0) return i;
+  }
+  let bestN = -1, best = 0;
+  charts.forEach((c,i)=>{ if(c.plays>bestN){bestN=c.plays;best=i;} });
+  return best;
+}
+
+function openSongModal(dir, preferredDiff, nav){
+  const song = SONGS_BY_DIR[dir];
+  if(!song){ console.warn("No song record for", dir); return; }
+  modalNav = nav || null;
+  renderSongModal(song, pickChartIdx(song, preferredDiff));
+  updateNavControls();
+  modalBg.classList.add("show");
+  modalBg.setAttribute("aria-hidden","false");
+  modalBg.scrollTop = 0;
+}
+
+function navStep(delta){
+  if(!modalNav) return;
+  const newIdx = modalNav.idx + delta;
+  if(newIdx < 0 || newIdx >= modalNav.list.length) return;
+  const item = modalNav.list[newIdx];
+  const song = SONGS_BY_DIR[item.dir];
+  if(!song) return;  // shouldn't happen — nav lists are built from clickable rows
+  modalNav.idx = newIdx;
+  renderSongModal(song, pickChartIdx(song, item.diff));
+  updateNavControls();
+  // Reset internal scroll so the new song's header is visible
+  modalEl.scrollTop = 0;
+}
+
+function renderSongModal(song, chartIdx){
+  const charts = song.charts || [];
+  const chart = charts[chartIdx] || null;
+  const grade = song.bestGrade ? displayGrade(song.bestGrade, song.bestPct) : "";
+  const gp = grade ? `<span class="pill g-${gcls(grade)}">${grade}</span>` : '';
+  const banner = `<img class="banner-lg" loading="lazy" decoding="async"
+       src="${song.banner||'nobanner.svg'}"
+       onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
+  // Header lifetime stats
+  const playedDates = [];
+  charts.forEach(c => { if(c.lastPlayed) playedDates.push(c.lastPlayed);
+                        (c.scores||[]).forEach(s=>{ if(s.dt) playedDates.push(s.dt.slice(0,10)); }); });
+  const first = playedDates.length ? playedDates.reduce((a,b)=>a<b?a:b) : "";
+  const last = song.last || (playedDates.length ? playedDates.reduce((a,b)=>a>b?a:b) : "");
+  const bestPct = song.bestPct!=null ? (song.bestPct*100).toFixed(2)+"%" : "—";
+  const tabs = charts.map((c,i)=>{
+    const mt = c.meter ? `<span class="mt">${c.meter}</span>` : "";
+    return `<button class="tab ${i===chartIdx?'active':''}" data-i="${i}">${esc(c.diff)} ${mt} <span class="n">${fmt(c.plays)} plays</span></button>`;
+  }).join("");
+  modalContent.innerHTML = `
+    <div class="head">
+      ${banner}
+      <div class="htext">
+        <h2 id="modalTitle">${esc(song.song)}</h2>
+        <div class="who">${song.artist?esc(song.artist)+' · ':''}${esc(song.pack)}</div>
+        <div class="stats">
+          <b>${fmt(song.plays)}</b> total plays · best <b>${bestPct}</b> ${gp}
+          ${first ? `<br>first played <b>${first}</b> · last <b>${last}</b>` : ''}
+        </div>
+      </div>
+    </div>
+    <div class="tabs">${tabs || '<span class="empty">No chart records</span>'}</div>
+    <div class="body" id="modalBody"></div>`;
+  modalContent.querySelectorAll(".tab").forEach(btn=>{
+    btn.addEventListener("click", ()=> renderSongModal(song, +btn.dataset.i));
+  });
+  renderChartPanels($("#modalBody"), chart);
+}
+
+function renderChartPanels(host, chart){
+  if(!chart){ host.innerHTML = '<div class="empty">No chart selected.</div>'; return; }
+  const scores = chart.scores || [];
+  if(!scores.length){
+    host.innerHTML =
+      `<div class="empty">${fmt(chart.plays)} plays recorded on this chart, `+
+      `but StepMania didn't keep detailed score records for it.</div>`+
+      chartRadarPanelHtml(chart);
+    return;
+  }
+  // Best play: highest pct
+  const best = scores.reduce((a,b)=> (b.pct||0) > (a.pct||0) ? b : a);
+  // Aggregate judgments across all scores on this chart
+  const jSum = [0,0,0,0,0,0]; // W1 W2 W3 W4 W5 Miss
+  const hSum = [0,0,0];       // Held LetGo MissedHold
+  scores.forEach(s=>{
+    if(s.j) s.j.forEach((v,i)=>jSum[i]+=v);
+    if(s.h) s.h.forEach((v,i)=>hSum[i]+=v);
+  });
+  const jTot = jSum.reduce((a,b)=>a+b,0);
+  const hTot = hSum.reduce((a,b)=>a+b,0);
+  const bestJ = best.j || [0,0,0,0,0,0];
+  const bestH = best.h || [0,0,0];
+  const isFC = (best.j ? best.j[5]===0 : false) && (best.h ? best.h[1]===0 && best.h[2]===0 : true);
+  const isMFC = isFC && bestJ.slice(1).every(v=>v===0);
+  const fcBadge = isMFC ? '<span class="badge mfc">Marvelous FC</span>'
+                 : isFC ? '<span class="badge">Full Combo</span>' : '';
+  const bestGrade = best.grade ? displayGrade(best.grade, best.pct) : "";
+  const bestGP = bestGrade ? `<span class="pill g-${gcls(bestGrade)}">${bestGrade}</span>` : '';
+
+  host.innerHTML = `
+    <div class="panels">
+      ${renderProgressionPanel(scores)}
+      <div class="panel pl-best">
+        <h4>Best play</h4>
+        <div class="v">${(best.pct*100).toFixed(2)}% ${bestGP}</div>
+        <div class="when">${best.dt} · max combo <b>${fmt(best.co)}</b></div>
+        <div class="badges">${fcBadge}</div>
+        <div class="jline">
+          <span>W1 <b>${fmt(bestJ[0])}</b></span>
+          <span>W2 <b>${fmt(bestJ[1])}</b></span>
+          <span>W3 <b>${fmt(bestJ[2])}</b></span>
+          <span>W4 <b>${fmt(bestJ[3])}</b></span>
+          <span>W5 <b>${fmt(bestJ[4])}</b></span>
+          <span>Miss <b>${fmt(bestJ[5])}</b></span>
+        </div>
+      </div>
+      <div class="panel pl-judg">
+        <h4>Lifetime judgments on this chart</h4>
+        ${renderJudgBars(jSum, jTot)}
+      </div>
+      <div class="panel pl-hold">
+        <h4>Hold reliability</h4>
+        ${renderHold(hSum, hTot)}
+      </div>
+      ${chartRadarPanelHtml(chart, true)}
+    </div>
+    <div class="all-plays">
+      <h4>All ${scores.length} recorded score${scores.length===1?'':'s'} (newest first)</h4>
+      <div class="tbl-wrap"><table>
+        <thead><tr>
+          <th>When</th><th class="num">%</th><th>Grade</th>
+          <th class="num">Combo</th><th class="num">W1</th><th class="num">Miss</th>
+          <th class="num">Held</th><th>Mods</th>
+        </tr></thead>
+        <tbody>${scores.map(s=>renderScoreRow(s, best)).join("")}</tbody>
+      </table></div>
+    </div>`;
+}
+
+function renderJudgBars(sums, tot){
+  const labels = ["W1","W2","W3","W4","W5","Miss"];
+  const classes = ["j-w1","j-w2","j-w3","j-w4","j-w5","j-miss"];
+  if(!tot) return '<div class="empty">No tap counts recorded.</div>';
+  return sums.map((v,i)=>{
+    const pct = (v/tot)*100;
+    const w = Math.max(0.5, pct);
+    return `<div class="jrow">
+      <div class="lbl">${labels[i]}</div>
+      <div class="barbox"><div class="bar ${classes[i]}" style="width:${w}%"></div></div>
+      <div class="num">${fmt(v)} <span>${pct.toFixed(1)}%</span></div>
+    </div>`;
+  }).join("");
+}
+
+function renderHold(sums, tot){
+  if(!tot) return '<div class="empty">No hold notes on this chart.</div>';
+  const heldPct = (sums[0]/tot)*100;
+  return `<div class="ring-wrap">
+    <div>
+      <div class="v">${heldPct.toFixed(1)}%</div>
+      <div class="meta">${fmt(sums[0])} held · ${fmt(sums[1])} let go · ${fmt(sums[2])} missed
+        <br>(across ${fmt(tot)} hold notes attempted)</div>
+    </div>
+  </div>`;
+}
+
+function chartRadarPanelHtml(chart, asPanel){
+  const r = chart && chart.radar || {};
+  const keys = [["stream","Stream"],["voltage","Voltage"],["air","Air"],
+                ["freeze","Freeze"],["chaos","Chaos"]];
+  const have = keys.some(([k])=>r[k]!=null);
+  if(!have) return '';
+  const rows = keys.map(([k,name])=>{
+    const v = r[k]||0;
+    const on = Math.round(v*10);
+    let dots = '';
+    for(let i=0;i<10;i++) dots+=`<div class="dot ${i<on?'on':''}"></div>`;
+    return `<div class="rrow"><div class="lbl">${name}</div>
+      <div class="dots">${dots}</div>
+      <div class="num">${v.toFixed(2)}</div></div>`;
+  }).join("");
+  const extras = [];
+  if(r.notes) extras.push(`<b>${fmt(r.notes)}</b> notes`);
+  if(r.jumps) extras.push(`<b>${fmt(r.jumps)}</b> jumps`);
+  if(r.holds) extras.push(`<b>${fmt(r.holds)}</b> holds`);
+  const extra = extras.length
+    ? `<div class="meta" style="color:var(--muted);font-size:12px;margin-top:8px">${extras.join(' · ')}</div>`
+    : '';
+  const inner = `<h4>Chart profile</h4>${rows}${extra}`;
+  return asPanel ? `<div class="panel pl-radar">${inner}</div>` : `<div class="panels"><div class="panel pl-radar">${inner}</div></div>`;
+}
+
+function renderProgressionPanel(scores){
+  // Sort oldest -> newest for plotting; show only if >=2 datapoints with timestamps.
+  const pts = scores.filter(s=>s.dt && s.pct!=null).slice().sort((a,b)=>a.dt<b.dt?-1:1);
+  if(pts.length < 2){
+    return ''; // not enough data to draw a line
+  }
+  // Per-play W1% (= W1 / total taps) — only available when judgment counts are recorded.
+  const w1Of = s => {
+    if(!s.j) return null;
+    const tot = s.j.reduce((a,b)=>a+b,0);
+    return tot > 0 ? s.j[0]/tot : null;
+  };
+  const ptsW = pts.map(p=>({p, w1: w1Of(p)})).filter(x=>x.w1!=null);
+  const ptsC = pts.filter(p=>p.co!=null && p.co>0);
+
+  const W=640, H=150, pl=32, pr=32, pt=22, pb=24;
+  const innerW = W-pl-pr, innerH = H-pt-pb;
+
+  // X by time (linear); fall back to a flat range if all timestamps equal.
+  const toTime = s => Date.parse(s.dt.replace(' ','T'));
+  const t0 = toTime(pts[0]), tN = toTime(pts[pts.length-1]);
+  const tSpan = Math.max(1, tN - t0);
+  const xOf = s => pl + ((toTime(s) - t0) / tSpan) * innerW;
+
+  // Accuracy scale (left axis), auto-zoomed.
+  const minA = Math.min(...pts.map(p=>p.pct));
+  const maxA = Math.max(...pts.map(p=>p.pct));
+  const spanA = Math.max(0.0001, maxA - minA);
+  const yA = v => pt + (1 - (v - minA)/spanA) * innerH;
+
+  // W1% scale (right axis), auto-zoomed; only drawn when we have >=2 W1 points.
+  const hasW1 = ptsW.length >= 2;
+  const minW1 = hasW1 ? Math.min(...ptsW.map(x=>x.w1)) : 0;
+  const maxW1 = hasW1 ? Math.max(...ptsW.map(x=>x.w1)) : 0;
+  const spanW1 = Math.max(0.0001, maxW1 - minW1);
+  const yW = v => pt + (1 - (v - minW1)/spanW1) * innerH;
+
+  // Combo bars — linear 0..maxCombo, scaled to the full inner height.
+  const maxC = ptsC.length ? Math.max(...ptsC.map(p=>p.co)) : 0;
+  const barW = Math.max(2, Math.min(10, (innerW / pts.length) * 0.6));
+
+  // Bars first so the lines and dots sit on top.
+  let bars = '';
+  ptsC.forEach(p=>{
+    const bh = maxC > 0 ? (p.co / maxC) * innerH : 0;
+    const bx = xOf(p) - barW/2;
+    const by = pt + innerH - bh;
+    bars += `<rect class="dot" x="${bx.toFixed(1)}" y="${by.toFixed(1)}" `+
+      `width="${barW.toFixed(1)}" height="${bh.toFixed(1)}" `+
+      `fill="var(--muted)" opacity="0.28" `+
+      `data-t="${p.dt}: combo <b>${fmt(p.co)}</b>"/>`;
+  });
+
+  // Accuracy line + dots — dot tooltip shows all three values when present.
+  let pathA = '', dotsA = '';
+  pts.forEach((p,i)=>{
+    const px = xOf(p), py = yA(p.pct);
+    pathA += (i===0?'M ':' L ') + px.toFixed(1) + ' ' + py.toFixed(1);
+    const w1 = w1Of(p);
+    const w1str = w1!=null ? `<br>W1 <b>${(w1*100).toFixed(2)}%</b>` : '';
+    const coStr = (p.co!=null && p.co>0) ? `<br>combo <b>${fmt(p.co)}</b>` : '';
+    dotsA += `<circle class="dot" cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="2.5" `+
+      `fill="var(--accent2)" `+
+      `data-t="${p.dt}: <b>${(p.pct*100).toFixed(2)}%</b>${w1str}${coStr}"/>`;
+  });
+
+  // W1% line + dots (omitted when fewer than 2 plays have judgment data).
+  let pathW = '', dotsW = '';
+  if(hasW1){
+    ptsW.forEach((x,i)=>{
+      const px = xOf(x.p), py = yW(x.w1);
+      pathW += (i===0?'M ':' L ') + px.toFixed(1) + ' ' + py.toFixed(1);
+      dotsW += `<circle class="dot" cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="2.5" `+
+        `fill="var(--warn)" `+
+        `data-t="${x.p.dt}: W1 <b>${(x.w1*100).toFixed(2)}%</b>"/>`;
+    });
+  }
+
+  const yLabels =
+    `<text class="axis" x="${pl-4}" y="${pt+8}" text-anchor="end" fill="var(--accent2)">${(maxA*100).toFixed(1)}%</text>`+
+    `<text class="axis" x="${pl-4}" y="${pt+innerH+4}" text-anchor="end" fill="var(--accent2)">${(minA*100).toFixed(1)}%</text>`+
+    (hasW1
+      ? `<text class="axis" x="${pl+innerW+4}" y="${pt+8}" fill="var(--warn)">${(maxW1*100).toFixed(1)}%</text>`+
+        `<text class="axis" x="${pl+innerW+4}" y="${pt+innerH+4}" fill="var(--warn)">${(minW1*100).toFixed(1)}%</text>`
+      : '');
+  const xLabels =
+    `<text class="axis" x="${pl}" y="${H-6}">${pts[0].dt.slice(0,10)}</text>`+
+    `<text class="axis" x="${pl+innerW}" y="${H-6}" text-anchor="end">${pts[pts.length-1].dt.slice(0,10)}</text>`;
+
+  // Inline legend along the top of the plot area.
+  const legend =
+    `<g transform="translate(${pl},${pt-8})">`+
+      `<line x1="0" y1="-3" x2="12" y2="-3" stroke="var(--accent2)" stroke-width="2"/>`+
+      `<text class="axis" x="16" y="0">Acc%</text>`+
+      (hasW1
+        ? `<line x1="60" y1="-3" x2="72" y2="-3" stroke="var(--warn)" stroke-width="2"/>`+
+          `<text class="axis" x="76" y="0">W1%</text>`
+        : '')+
+      (maxC > 0
+        ? `<rect x="${hasW1?116:60}" y="-7" width="8" height="7" fill="var(--muted)" opacity="0.45"/>`+
+          `<text class="axis" x="${hasW1?128:72}" y="0">combo (max ${fmt(maxC)})</text>`
+        : '')+
+    `</g>`;
+
+  const w1Path = hasW1
+    ? `<path d="${pathW}" fill="none" stroke="var(--warn)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`
+    : '';
+  const svg = `<svg viewBox="0 0 ${W} ${H}" style="overflow:visible">
+    ${bars}
+    <path d="${pathA}" fill="none" stroke="var(--accent2)" stroke-width="1.8"
+          stroke-linejoin="round" stroke-linecap="round"/>
+    ${w1Path}
+    ${dotsA}
+    ${dotsW}
+    ${legend}
+    ${yLabels}${xLabels}
+  </svg>`;
+  setTimeout(()=>wireBars(modalContent), 0);  // bind tooltips on newly-rendered dots/bars
+  return `<div class="panel pl-prog span2">
+    <h4>Accuracy, W1% &amp; combo over time (${pts.length} plays)</h4>
+    ${svg}
+  </div>`;
+}
+
+function renderScoreRow(s, best){
+  const star = s===best ? '<span class="star" title="Best">★</span>' : '';
+  const grade = s.grade ? displayGrade(s.grade, s.pct) : '';
+  const gp = grade ? `<span class="pill g-${gcls(grade)}">${grade}</span>` : '';
+  const w1 = s.j ? s.j[0] : '—';
+  const miss = s.j ? s.j[5] : '—';
+  const missCls = (s.j && s.j[5]>0) ? 'miss-bad' : '';
+  const held = s.h ? `${s.h[0]}/${s.h[0]+s.h[1]+s.h[2]}` : '—';
+  return `<tr class="${s===best?'best':''}">
+    <td>${s.dt||'—'}${star}</td>
+    <td class="num">${(s.pct*100).toFixed(2)}%</td>
+    <td>${gp}</td>
+    <td class="num">${fmt(s.co)}</td>
+    <td class="num">${fmt(w1)}</td>
+    <td class="num ${missCls}">${fmt(miss)}</td>
+    <td>${esc(held)}</td>
+    <td class="muted">${esc(s.m||'')}</td>
+  </tr>`;
+}
+</script>
+</body>
+</html>
