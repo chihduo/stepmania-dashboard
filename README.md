@@ -30,7 +30,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 | `#breakdowns` | Plays by difficulty, grades, top artists, top packs |
 | `#achievements` | Hardest charts cleared, most-improved songs, trophy case (FCs & MFCs) |
 | `#recent-plays` | Recent plays list |
-| `#ranking` | Song ranking table (with search + sort) |
+| `#ranking` | Song ranking table (with search, sort + time-window tabs) |
 
 ## Files in this directory
 
@@ -241,6 +241,7 @@ Details, env-var overrides, and the WSL2 cron caveats are in
 | Add banners to the ranking table too | call `banner(s["dir"])` per song in `parse_stats` and render in the table |
 | Prefer romanized titles | swap `tag(text, "TITLE")` and `tag(text, "TITLETRANSLIT")` order in `make_meta_lookup` |
 | Adjust recent-plays count | `recent[:150]` in `parse_uploads` (also bump the renderer's `slice(0,30)` cap in `index.html`) |
+| Change the ranking window tabs | `WINDOW_SPANS = (7, 30, 90, 180, 365)` (days) in `build_dashboard.py`; tab labels in `WIN_LABELS` in `index.html` |
 
 ## Notes / gotchas
 
@@ -253,6 +254,16 @@ Details, env-var overrides, and the WSL2 cron caveats are in
   counts unique charts with ≥1 play.
 - Theme-internal placeholder `Themes/default/Other/` is excluded from the
   ranking (it's not a real song).
+- **Ranking window tabs:** the song ranking has tabs for the last
+  7/30/90/180 days and 12 months (plus All time); **7 days** is the default
+  tab (All time when the bundle has no Upload log). Windows are computed from the
+  per-play Upload log and are **anchored at the last recorded play**, not at
+  "today" — so a break from the game never empties a tab; you're always looking
+  at your most recent N days *of activity* (the caption shows the exact date
+  range). In a window tab the Plays column reads `window / lifetime` and songs
+  with no plays in the window are omitted. Bundles without an Upload log get no
+  tabs (All time only, from Stats.xml aggregates). Best % / Grade / Last played
+  stay lifetime values in every tab.
 - **D/F filter:** songs whose *best* displayed grade is D-and-below or F are
   hidden from the ranking list and recent plays. KPI totals, timeline and
   breakdown charts still reflect all plays. The test is letter-based (so it

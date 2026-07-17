@@ -56,6 +56,12 @@ GRADE_MAP = {
 }
 DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 
+# Ranking-table time windows (days), anchored at the LAST recorded play — "your
+# most recent N days of activity" — so a break from the game never empties a
+# tab. 365 renders as "12 months" in the UI (labels: WIN_LABELS in index.html).
+# Computed from the per-play Upload log; tabs are hidden when no log exists.
+WINDOW_SPANS = (7, 30, 90, 180, 365)
+
 # App config. Portable settings (colors, topN, artistAliases) load from
 # config.json next to this script; missing keys fall back to these defaults
 # (deep-merge). Per-machine settings (playerName, liveDir) come from site.env
@@ -644,6 +650,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
     # Every play's full score, keyed per chart — merged into the Stats.xml
     # score lists later (Stats.xml lags the upload log mid-session).
     by_chart = collections.defaultdict(list)
+    all_plays = []  # (datetime, song dir) — feeds the ranking window counts
     total = 0
     first = last = None
     for f in files:
@@ -695,6 +702,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
                     m_taps[mo] += taps
             if d:
                 by_chart[(d, stepstype, diff)].append(score_dict(hs))
+                all_plays.append((t, d))
             m = meta(d)
             recent.append({
                 "_dir": d,
@@ -716,6 +724,18 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
         r["banner"] = banner(r.pop("_dir"))
     for r in recent[150:]:
         r.pop("_dir", None)
+    # Per-song play counts for each ranking window, anchored at the last play
+    # (see WINDOW_SPANS). Empty when the log has no plays.
+    win_counts = {}
+    if last is not None:
+        for span in WINDOW_SPANS:
+            cut = last - datetime.timedelta(days=span)
+            c = collections.Counter()
+            for t, d in all_plays:
+                if t > cut:
+                    c[d] += 1
+            win_counts[span] = c
+
     # Build the monthly skill series aligned with playsMonthly months.
     months_sorted = sorted(monthly)
     distinct_m = [(mo, len(m_dirs[mo])) for mo in months_sorted]
@@ -739,6 +759,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
         "dayOfWeek": dow,
         "recent": recent[:150],
         "uploadScores": by_chart,   # consumed by merge_upload_scores, not emitted
+        "windowCounts": win_counts,  # consumed in main() (per-song "pw"), not emitted
     }
 
 
@@ -1117,6 +1138,19 @@ def main():
         n_merged = merge_upload_scores(stats["songs"], up.get("uploadScores") or {})
         if n_merged:
             print(f"  merged {n_merged} upload-only plays missing from Stats.xml")
+        # Per-song play counts for the ranking-table window tabs ("pw"), only
+        # non-zero entries so data.json stays compact.
+        wc = up.get("windowCounts") or {}
+        if wc:
+            tagged = 0
+            for s in stats["songs"]:
+                pw = {str(span): wc[span][s["dir"]]
+                      for span in WINDOW_SPANS if wc.get(span, {}).get(s["dir"])}
+                if pw:
+                    s["pw"] = pw
+                    tagged += 1
+            print(f"  ranking windows: {len(wc)} spans, {tagged} songs with recent plays "
+                  f"(anchor {up['lastPlay'][:10]})")
     if cache_dir:
         s = meta.stats
         tot = s["hit"] + s["miss"]
@@ -1162,6 +1196,10 @@ def main():
         "hourOfDay": up["hourOfDay"],
         "dayOfWeek": up["dayOfWeek"],
         "recent": up["recent"],
+        # Ranking-window tabs: spans in days, anchored at the last recorded
+        # play. None (tabs hidden) when the bundle has no Upload log.
+        "playWindows": ({"anchor": up["lastPlay"], "spans": list(WINDOW_SPANS)}
+                        if up.get("windowCounts") else None),
         "songs": stats["songs"],
         "packs": stats["packs"],
         "artists": artists,

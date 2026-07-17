@@ -51,6 +51,10 @@
        border-radius:8px;padding:6px 9px;font-size:12px;color:#fff;z-index:200;opacity:0;transition:opacity .1s;white-space:nowrap}
   /* tables */
   .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  .win-tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .win-tabs button{background:var(--panel2);border:1px solid var(--line);color:var(--muted);
+    border-radius:20px;padding:5px 12px;cursor:pointer;font-size:12.5px}
+  .win-tabs button.active{color:var(--text);border-color:#a4b8ff;background:#a4b8ff22}
   input[type=search]{background:var(--panel2);border:1px solid var(--line);color:var(--text);
        border-radius:9px;padding:9px 12px;font-size:14px;min-width:240px;flex:1}
   table{width:100%;border-collapse:collapse;font-size:13.5px}
@@ -319,6 +323,7 @@
   <section id="ranking">
     <h2>Song ranking — by play frequency</h2>
     <div class="toolbar">
+      <div class="win-tabs" id="winTabs"></div>
       <input type="search" id="q" placeholder="Search song or pack…">
       <span class="muted" id="tblcount"></span>
     </div>
@@ -690,10 +695,42 @@ function render(d){
 // ---------- song ranking table ----------
 let sortK="plays", sortAsc=false, page=0, filtered=[];
 const PER=50;
+// Ranking window tabs — winSpan is a span in days (as a string key into each
+// song's "pw" counts) or null for all-time. Windows are anchored at the LAST
+// recorded play (see build_dashboard.py WINDOW_SPANS), so a play break never
+// empties a tab.
+let winSpan=null;
+const WIN_LABELS={"7":"7 days","30":"30 days","90":"90 days","180":"180 days","365":"12 months"};
+function winPlays(s){ return winSpan==null ? s.plays : ((s.pw&&s.pw[winSpan])||0); }
+function winRange(){ // "YYYY-MM-DD → YYYY-MM-DD" for the active window
+  const pwMeta=DATA.playWindows; if(!pwMeta||winSpan==null) return "";
+  const end=pwMeta.anchor.slice(0,10);
+  const d=new Date(end+"T00:00:00"); d.setDate(d.getDate()-Number(winSpan));
+  return `${d.toISOString().slice(0,10)} → ${end}`;
+}
+function rerank(){
+  // Rank the eligible (non-D/F, played-in-window) songs by the active window's
+  // play count so #1 is the most-played song of that era.
+  DATA.songs.filter(s=>!gradeHidden(displayGrade(s.bestGrade||"", s.bestPct)) && winPlays(s)>0)
+    .sort((a,b)=> winPlays(b)-winPlays(a) || a.song.toLowerCase().localeCompare(b.song.toLowerCase()))
+    .forEach((s,i)=>s.rank=i+1);
+}
+function buildWinTabs(d){
+  const host=$("#winTabs");
+  const spans=(d.playWindows&&d.playWindows.spans)||[];
+  if(!spans.length){ host.style.display="none"; return; }  // no Upload log in bundle
+  winSpan=String(spans[0]);  // default tab = shortest window (7 days)
+  host.innerHTML = spans.map((sp,i)=>`<button data-w="${sp}"${i===0?' class="active"':''}>${WIN_LABELS[sp]||sp+" days"}</button>`).join("")
+                 + `<button data-w="">All time</button>`;
+  host.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    winSpan=b.dataset.w||null;
+    host.querySelectorAll("button").forEach(x=>x.classList.toggle("active",x===b));
+    page=0; rerank(); applyTable();
+  }));
+}
 function buildTable(d){
-  // Rank by visible (non-D/F) ordering so #1 is the most-played eligible song.
-  d.songs.filter(s=>!gradeHidden(displayGrade(s.bestGrade||"", s.bestPct)))
-         .forEach((s,i)=>s.rank=i+1);
+  buildWinTabs(d);
+  rerank();
   applyTable();
   $("#q").addEventListener("input", ()=>{page=0;applyTable();});
   document.querySelectorAll("#tbl th[data-k]").forEach(th=>{
@@ -710,11 +747,13 @@ function applyTable(){
   // D/F filter happens here (previously in Python) so the full song list
   // stays reachable by the modal click handler via SONGS_BY_DIR.
   filtered=DATA.songs.filter(s=> !gradeHidden(displayGrade(s.bestGrade||"", s.bestPct))
+        && winPlays(s)>0
         && (!q || s.song.toLowerCase().includes(q)
             || s.pack.toLowerCase().includes(q) || (s.artist||"").toLowerCase().includes(q)));
   const dir=sortAsc?1:-1;
   filtered.sort((a,b)=>{
     let x=a[sortK], y=b[sortK];
+    if(sortK==="plays"){x=winPlays(a);y=winPlays(b);}
     if(sortK==="bestPct"){x=x??-1;y=y??-1;}
     if(typeof x==="string"){x=x.toLowerCase();y=(y||"").toLowerCase();}
     return x<y?-1*dir : x>y?1*dir : 0;
@@ -723,7 +762,8 @@ function applyTable(){
     th.classList.toggle("sorted",th.dataset.k===sortK);
     th.classList.toggle("asc",th.dataset.k===sortK&&sortAsc);
   });
-  $("#tblcount").textContent = `${fmt(filtered.length)} songs`;
+  const range=winRange();
+  $("#tblcount").textContent = `${fmt(filtered.length)} songs${range?` · ${range}`:""}`;
   renderPage();
 }
 function renderPage(){
@@ -743,7 +783,7 @@ function renderPage(){
       <td class="song">${esc(s.song)}</td>
       <td class="artist">${artist}</td>
       <td class="muted">${esc(s.pack)}</td>
-      <td class="num"><b>${fmt(s.plays)}</b></td>
+      <td class="num"><b>${fmt(winPlays(s))}</b>${winSpan?`<span class="muted"> / ${fmt(s.plays)}</span>`:""}</td>
       <td class="num">${pct}</td>
       <td>${gp}</td>
       <td class="muted">${s.last||"—"}</td></tr>`;
