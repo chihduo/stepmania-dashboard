@@ -109,7 +109,6 @@ cp site.env.example site.env
 | `SM_LIVE_DIR` | nginx web root the build deploys into (blank = no auto-deploy). |
 | `SM_HOST` | Public host of your dashboard server — drives the upload/verify URLs, `~/.netrc` machine, and links. |
 | `SM_APPDATA` | (WSL client) Windows `StepMania 5.1` dir; auto-detected if unset. |
-| `SM_SONGS_DIR` | (video-banner tools) local `Songs/` folder to scan. |
 
 `config.json` keeps only portable app config (colors, top-N, artist aliases,
 grade thresholds) — safe to commit and share. Any `site.env` key can also be

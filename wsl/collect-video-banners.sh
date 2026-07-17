@@ -15,8 +15,9 @@
 # pre-extracted PNGs are preferred.
 #
 # Usage (from WSL; needs ffmpeg: sudo apt-get install ffmpeg):
-#   bash collect-video-banners.sh [SONGS_DIR] [OUT_DIR]
-#     SONGS_DIR  default: SM_SONGS_DIR from site.env (see site.env.example)
+#   bash collect-video-banners.sh SONGS_DIR [OUT_DIR]
+#     SONGS_DIR  your local Songs folder (required), e.g.
+#                '/mnt/c/Users/You/AppData/Roaming/StepMania 5.1/Songs'
 #     OUT_DIR    default: ./video-banners
 #
 # Then copy OUT_DIR to the server, into the repo's dashboard/video-banners/
@@ -26,12 +27,7 @@
 #
 set -euo pipefail
 
-# Per-machine settings (SM_SONGS_DIR) — see site.env.example. Env wins over file.
-REPO=$(cd "$(dirname "$0")/.." 2>/dev/null && pwd || true)
-SITE_ENV="${SITE_ENV:-${REPO:-}/site.env}"
-[ -n "$SITE_ENV" ] && [ -f "$SITE_ENV" ] && { set -a; . "$SITE_ENV"; set +a; }
-
-SONGS_DIR="${1:-${SM_SONGS_DIR:-}}"
+SONGS_DIR="${1:-}"
 OUT_DIR="${2:-./video-banners}"
 MAX_W=160
 

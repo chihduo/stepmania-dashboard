@@ -1,3 +1,7 @@
+# Per-machine / personal settings — only the site.env.example template is
+# tracked; your real values stay local
+site.env
+
 # Built output (regenerable; contains personal play data)
 public/
 
