@@ -2,6 +2,10 @@
 
 > _Last updated: **2026-07-17** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
+>
+> ▶ **[Live demo](https://chihduo.github.io/stepmania-dashboard/)** — static
+> snapshot of a real four-year play history (2,200+ songs, 5,200+ logged plays),
+> served from the `gh-pages` branch.
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
 folder. No server-side code, no CDN — vanilla HTML/JS + hand-rolled SVG charts +
@@ -194,6 +198,23 @@ What `deploy.sh` does:
    reloads. Rolls back on any failure. Idempotent — safe to re-run.
 
 URL: `https://<SM_HOST>/stepmania/` (from `site.env`).
+
+## Demo snapshot (GitHub Pages)
+
+The `gh-pages` branch holds a static snapshot of `public/` (plus a `.nojekyll`),
+served by GitHub Pages as the live demo linked at the top. The site is fully
+static, so the snapshot is the real dashboard, not a mock. To refresh it after
+a rebuild:
+
+```bash
+git worktree add --detach /tmp/ghp HEAD
+cd /tmp/ghp && git switch --orphan gh-pages-new
+cp -r "$OLDPWD/public/." . && touch .nojekyll
+git add -A && git commit -m "demo: refresh snapshot ($(date +%F))"
+git branch -M gh-pages-new gh-pages
+cd "$OLDPWD" && git worktree remove --force /tmp/ghp
+git push -f origin gh-pages
+```
 
 ## Daily WSL → server update pipeline
 
