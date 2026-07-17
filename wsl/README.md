@@ -1,22 +1,27 @@
 # WSL2 — daily upload pipeline & song-library tools
 
-> _Last updated: **2026-07-06** — bump this date whenever you edit this file._
+> _Last updated: **2026-07-17** — bump this date whenever you edit this file._
 
 The Windows StepMania machine runs WSL2 Ubuntu. Once per day, a cron job
 inside WSL zips `%APPDATA%\StepMania 5.1\{Save,Cache}` (read via `/mnt/c`) and
 PUTs the bundle to the dashboard server's WebDAV endpoint. The server (see
 `../server/`) does all the heavy lifting (extract, build, deploy).
 
+> No server? There's a serverless alternative to this whole pipeline: build
+> locally and host on GitHub Pages with `../pages-update.sh` — see
+> ["Hosting on GitHub Pages"](../README.md#hosting-on-github-pages) in the
+> root README.
+
 This folder also holds two **one-shot song-library tools** (run manually in
 WSL where the `Songs/` library lives — not part of the daily pipeline):
 
 | Script | Purpose |
 |---|---|
-| `collect-video-banners.sh` | For songs whose `#BANNER` is a video (StepMania never pre-renders those into `Cache/Banners`): extracts one PNG frame per video with ffmpeg. Copy the PNGs to the server's `dashboard/video-banners/` and rebuild — those songs then get real banners on the dashboard. |
+| `collect-video-banners.sh` | For songs whose `#BANNER` is a video (StepMania never pre-renders those into `Cache/Banners`): extracts one PNG frame per video with ffmpeg. Takes your `Songs/` folder as a **required** first argument. Copy the PNGs to the server's `dashboard/video-banners/` and rebuild — those songs then get real banners on the dashboard. |
 | `add-mv-backgrounds.sh` | For songs with no gameplay background video: searches YouTube for the song's MV (yt-dlp), trims to chart length with a 2s fade-out, encodes to SM5-compatible H.264, and wires it into the `.sm` (`#BGCHANGES`; original backed up to `.sm.mvbak`). Rejects too-short or static-image candidates, retries without the artist name after 3 rejections; supports `--dry-run`, `--limit N`, and `--fix` (resume / upgrade videos from older script versions). Needs `ffmpeg` + `yt-dlp` in WSL. |
 
-Both script headers document full usage and the env-var knobs
-(`MAX_H`, `N_CAND`, `MAX_SCAN`, `MIN_MOTION`).
+Both script headers document full usage; `add-mv-backgrounds.sh` additionally
+has env-var knobs (`MAX_H`, `N_CAND`, `MAX_SCAN`, `MIN_MOTION`).
 
 ## One-time setup
 
@@ -108,7 +113,7 @@ an env var of the same name overrides the file for a one-off run.
 | Env var | Purpose | Default |
 |---|---|---|
 | `SM_HOST` | Dashboard server host (drives the URLs below) | From `site.env` |
-| `SM_APPDATA` / `APPDATA` | Path to `StepMania 5.1` dir | `SM_APPDATA` from `site.env`, else auto-detected under `/mnt/c/Users/*/AppData/Roaming/` |
+| `SM_APPDATA` / `APPDATA` | Folder holding `Save/` + `Cache/` (for a portable install: the StepMania program folder) | `SM_APPDATA` from `site.env`, else auto-detected under `/mnt/c/Users/*/AppData/Roaming/` |
 | `URL` | Upload endpoint | `https://$SM_HOST/stepmania-upload/sm-bundle.zip` |
 | `VERIFY_URL` | URL to HEAD after upload | `https://$SM_HOST/stepmania/data.json` |
 
