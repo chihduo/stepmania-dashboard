@@ -649,16 +649,19 @@ function render(d){
   hbars($("#c-diff"), diffItems, {});
 
   // grade distribution — StepMania's per-tier stage tally (aggregate, so it
-  // stays on the tier map even when gradeThresholds is set). Covers up to the
-  // current default theme's 17 tiers; colored by grade family (AAA→D).
-  const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07","Tier08",
-                "Tier09","Tier10","Tier11","Tier12","Tier13","Tier14","Tier15","Tier16","Tier17"];
+  // stays on the tier map even when gradeThresholds is set). Individual bars
+  // for Tier01-07 ("A" and above on the current default theme's ladder); the
+  // fine-grained lower tiers (Tier08+) are folded into one residual bar so a
+  // handful of low-grade stages doesn't grow a long tail of tiny bars.
+  const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07"];
   const gcolors={Tier01:"#ffe27a",Tier02:"#ffe27a",Tier03:"#9be15d",Tier04:"#9be15d",Tier05:"#9be15d",
-                 Tier06:"#5dd6e1",Tier07:"#5dd6e1",Tier08:"#5dd6e1",Tier09:"#7aa8ff",Tier10:"#7aa8ff",
-                 Tier11:"#7aa8ff",Tier12:"#c99bff",Tier13:"#c99bff",Tier14:"#c99bff",Tier15:"#ffa45d",
-                 Tier16:"#ffa45d",Tier17:"#ffa45d"};
+                 Tier06:"#5dd6e1",Tier07:"#5dd6e1"};
   const gItems=gOrder.filter(k=>d.byGrade[k]!=null)
         .map(k=>({label:`${gradeLetter(k)} (${k.replace("Tier","T")})`,v:d.byGrade[k],color:gcolors[k]}));
+  const gRest=Object.entries(d.byGrade)
+        .filter(([k,v])=>/^Tier(0[89]|1\d|20)$/.test(k)&&v>0)
+        .reduce((a,[,v])=>a+v,0);
+  if(gRest>0) gItems.push({label:`below ${gradeLetter("Tier07")}`,v:gRest,color:"#8b93a7"});
   const gradeTot = gItems.reduce((a,b)=>a+b.v,0);
   $("#cap-grade").textContent = `Grade letters are theme-approximate · ${fmt(gradeTot)} stages passed`;
   hbars($("#c-grade"), gItems, {});
