@@ -1,6 +1,6 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-07-16** — bump this date whenever you edit this file._
+> _Last updated: **2026-07-17** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 
 A self-contained static dashboard built from a StepMania 5.1 `Save` (and `Cache`)
@@ -37,7 +37,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 | File | Purpose |
 |---|---|
 | `build_dashboard.py` | Parses Save/Cache → writes `public/data.json` + copies page assets. |
-| `config.json` | Portable app config — chart colors, top-N counts, artist aliases. Committed and shareable; no personal data. |
+| `config.json` | Portable app config — chart colors, top-N counts, artist aliases, grade thresholds. Committed and shareable; no personal data. |
 | `site.env` | Per-machine settings (player name, live dir, server host, local paths). Copy `site.env.example` and edit. |
 | `index.html` | The dashboard page (source). |
 | `nobanner.svg` | Theme-matching placeholder for songs without a banner. |
@@ -111,9 +111,34 @@ cp site.env.example site.env
 | `SM_APPDATA` | (WSL client) Windows `StepMania 5.1` dir; auto-detected if unset. |
 | `SM_SONGS_DIR` | (video-banner tools) local `Songs/` folder to scan. |
 
-`config.json` keeps only portable app config (colors, top-N, artist aliases) —
-safe to commit and share. Any `site.env` key can also be overridden by an
-environment variable of the same name at runtime.
+`config.json` keeps only portable app config (colors, top-N, artist aliases,
+grade thresholds) — safe to commit and share. Any `site.env` key can also be
+overridden by an environment variable of the same name at runtime.
+
+### Grades
+
+Each play shows a letter grade. There are two modes:
+
+- **Accuracy-derived (recommended):** define `gradeThresholds` in `config.json` —
+  an ordered list of `{ "letter": "...", "min": 0.0–1.0 }` cutoffs. Every play's
+  letter is then computed from its accuracy (`PercentDP`), giving one consistent
+  scale across **all** your history regardless of which StepMania theme/version
+  recorded it. This is the default in the shipped `config.json`; the cutoffs
+  there were calibrated from real play data (a `PercentDP` of ~0.83 already reads
+  as `AA` on this player's scoring, not the textbook 0.93).
+- **StepMania's grade (fallback):** delete the whole `gradeThresholds` key and the
+  dashboard shows the grade StepMania recorded, mapped to a letter by `GRADE_MAP`
+  in `build_dashboard.py`. That map matches the **current default theme's 17-tier
+  ladder** (`AAA★, AAA, AA+, AA, AA−, A+, A, A−, B+, B, B−, C+, C, C−, D+, D, D−`,
+  read from the theme's grade graphics). A bundle recorded under a *different*
+  theme may not line up, since grade tiers are theme-defined — which is exactly
+  why the accuracy-derived mode exists.
+
+`Failed → F` and `NoData → −` always, in either mode. "D and below" (plus F) are
+the grades hidden from the ranking list and recent plays. One exception: the
+**Breakdowns → grades** bar chart uses StepMania's lifetime per-tier stage tally
+(an aggregate with no per-play accuracy), so it stays on the tier map even in
+accuracy-derived mode.
 
 ## Deploy to nginx
 
@@ -210,7 +235,8 @@ Details, env-var overrides, and the WSL2 cron caveats are in
 | Change chart colors (bars + lines) | `config.json` — edit hex values, rebuild |
 | Change how many rows the Top Artists / Top Packs cards show | `config.json` `topN: { artists: 15, packs: 15 }` — defaults to 15 each |
 | Force-merge artist name variants (e.g. `소녀시대` → `Girls' Generation`) | `config.json` `artistAliases: { "Canonical": ["variant1", "variant2"] }` — auto-norm already catches casing/punctuation; use this for cross-language merges only |
-| Hide more (or fewer) low grades | `EXCLUDE_GRADES = {"Tier07", "Failed"}` in `build_dashboard.py` |
+| Change the grade scale (letters + cutoffs) | `config.json` `gradeThresholds` — see [Grades](#grades). Delete the key to use StepMania's recorded grade instead. |
+| Hide more (or fewer) low grades | `grade_hidden()` in `build_dashboard.py` + `gradeHidden()` in `index.html` (default: displayed letter is `F` or starts with `D`) |
 | Change banner thumbnail size | `max_w=160` in `convert_banner()` |
 | Add banners to the ranking table too | call `banner(s["dir"])` per song in `parse_stats` and render in the table |
 | Prefer romanized titles | swap `tag(text, "TITLE")` and `tag(text, "TITLETRANSLIT")` order in `make_meta_lookup` |
@@ -218,18 +244,20 @@ Details, env-var overrides, and the WSL2 cron caveats are in
 
 ## Notes / gotchas
 
-- **Grade letters** (AAAA…F) are an approximate mapping of StepMania's
-  `Tier01`–`Tier07` and depend on your theme. The map lives in
-  `GRADE_MAP` (`build_dashboard.py`) and `gradeMap` (passed to JS).
+- **Grade letters** are either derived from accuracy (`gradeThresholds` in
+  `config.json`) or mapped from StepMania's recorded tier (`GRADE_MAP` in
+  `build_dashboard.py`, exposed to JS as `gradeMap`). See [Grades](#grades).
+  `grade_letter()` (Python) and `displayGrade()` (`index.html`) implement the
+  same two-mode logic; keep them in sync.
 - **"Songs played"** counts every stage including retries; **"Distinct songs"**
   counts unique charts with ≥1 play.
 - Theme-internal placeholder `Themes/default/Other/` is excluded from the
   ranking (it's not a real song).
-- **D/F filter:** songs whose *best* grade is D or F are hidden from the
-  ranking list and recent plays. KPI totals, timeline and breakdown charts
-  still reflect all plays. (Note: the filter runs *client-side* now so the
-  modal can still open if a D/F song slips through somewhere — change the
-  `EXCLUDE_BEST_GRADES` set in `index.html` to adjust.)
+- **D/F filter:** songs whose *best* displayed grade is D-and-below or F are
+  hidden from the ranking list and recent plays. KPI totals, timeline and
+  breakdown charts still reflect all plays. The test is letter-based (so it
+  works in either grade mode): `gradeHidden()` for the ranking (client-side, so
+  the modal can still open) and `grade_hidden()` for the recent feed.
 - **`charts` array per song in `data.json`:** each song carries a `charts`
   list with per-difficulty meter, radar profile, and the full HighScore
   records that StepMania kept (typically up to ~10-20 per chart, the best

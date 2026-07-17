@@ -502,7 +502,7 @@ function wireBars(el){
 
 let DATA=null;
 let SONGS_BY_DIR={};        // dir -> song record (lookup for modal click)
-const EXCLUDE_BEST_GRADES = new Set(["Tier07","Failed"]); // D/F hidden from ranking
+// Ranking-list grade hiding is letter-based (D-and-below + F) — see gradeHidden().
 fetch("./data.json").then(r=>r.json()).then(d=>{DATA=d;render(d);scrollToHash();})
   .catch(e=>{$("#meta").textContent="Failed to load data.json — "+e;});
 
@@ -526,6 +526,26 @@ const DIFF_COLORS = {Beginner:"#7aa8ff", Easy:"#9be15d", Medium:"#ffe27a",
 const DIFF_STACK_ORDER = ["Beginner","Easy","Medium","Hard","Challenge"];
 
 function gradeLetter(t){return (DATA.gradeMap&&DATA.gradeMap[t])||t||"";}
+// Derive a letter from accuracy when config.json defines gradeThresholds, else
+// fall back to StepMania's recorded tier via gradeMap. Failed/NoData always
+// F/-. Mirrors grade_letter() in build_dashboard.py.
+function gradeFromPct(pct){
+  const t = DATA.theme && DATA.theme.gradeThresholds;
+  if(!t || !t.length || pct==null) return null;
+  for(const g of t){ if(pct >= g.min) return g.letter; }
+  return t[t.length-1].letter;
+}
+function displayGrade(tier, pct){
+  if(tier==='Failed') return 'F';
+  if(tier==='NoData') return '-';
+  const byPct = gradeFromPct(pct);
+  return byPct!=null ? byPct : gradeLetter(tier);
+}
+// D-and-below + F are hidden from the ranking list — letter-based so it matches
+// whichever display mode is active.
+function gradeHidden(letter){ return letter==='F' || (!!letter && letter[0]==='D'); }
+// Grade-pill CSS class uses the base letter (strip +/-/★) so g-AA covers AA/AA+/AA-.
+function gcls(letter){ return (letter||'').replace(/[^A-Za-z].*$/,'') || (letter||''); }
 
 function render(d){
   // Index every song (incl. D/F-only ones) so modal clicks always resolve.
@@ -623,9 +643,15 @@ function render(d){
   $("#cap-diff").textContent = `All-time stage counts · ${fmt(diffTot)} total`;
   hbars($("#c-diff"), diffItems, {});
 
-  // grade (ordered Tier01..07)
-  const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07"];
-  const gcolors={Tier01:"#ffe27a",Tier02:"#ffe27a",Tier03:"#9be15d",Tier04:"#5dd6e1",Tier05:"#7aa8ff",Tier06:"#c99bff",Tier07:"#ffa45d"};
+  // grade distribution — StepMania's per-tier stage tally (aggregate, so it
+  // stays on the tier map even when gradeThresholds is set). Covers up to the
+  // current default theme's 17 tiers; colored by grade family (AAA→D).
+  const gOrder=["Tier01","Tier02","Tier03","Tier04","Tier05","Tier06","Tier07","Tier08",
+                "Tier09","Tier10","Tier11","Tier12","Tier13","Tier14","Tier15","Tier16","Tier17"];
+  const gcolors={Tier01:"#ffe27a",Tier02:"#ffe27a",Tier03:"#9be15d",Tier04:"#9be15d",Tier05:"#9be15d",
+                 Tier06:"#5dd6e1",Tier07:"#5dd6e1",Tier08:"#5dd6e1",Tier09:"#7aa8ff",Tier10:"#7aa8ff",
+                 Tier11:"#7aa8ff",Tier12:"#c99bff",Tier13:"#c99bff",Tier14:"#c99bff",Tier15:"#ffa45d",
+                 Tier16:"#ffa45d",Tier17:"#ffa45d"};
   const gItems=gOrder.filter(k=>d.byGrade[k]!=null)
         .map(k=>({label:`${gradeLetter(k)} (${k.replace("Tier","T")})`,v:d.byGrade[k],color:gcolors[k]}));
   const gradeTot = gItems.reduce((a,b)=>a+b.v,0);
@@ -666,7 +692,7 @@ let sortK="plays", sortAsc=false, page=0, filtered=[];
 const PER=50;
 function buildTable(d){
   // Rank by visible (non-D/F) ordering so #1 is the most-played eligible song.
-  d.songs.filter(s=>!EXCLUDE_BEST_GRADES.has(s.bestGrade||""))
+  d.songs.filter(s=>!gradeHidden(displayGrade(s.bestGrade||"", s.bestPct)))
          .forEach((s,i)=>s.rank=i+1);
   applyTable();
   $("#q").addEventListener("input", ()=>{page=0;applyTable();});
@@ -683,7 +709,7 @@ function applyTable(){
   const q=$("#q").value.trim().toLowerCase();
   // D/F filter happens here (previously in Python) so the full song list
   // stays reachable by the modal click handler via SONGS_BY_DIR.
-  filtered=DATA.songs.filter(s=> !EXCLUDE_BEST_GRADES.has(s.bestGrade||"")
+  filtered=DATA.songs.filter(s=> !gradeHidden(displayGrade(s.bestGrade||"", s.bestPct))
         && (!q || s.song.toLowerCase().includes(q)
             || s.pack.toLowerCase().includes(q) || (s.artist||"").toLowerCase().includes(q)));
   const dir=sortAsc?1:-1;
@@ -704,8 +730,8 @@ function renderPage(){
   const pages=Math.max(1,Math.ceil(filtered.length/PER));
   page=Math.min(page,pages-1);
   const rows=filtered.slice(page*PER,page*PER+PER).map(s=>{
-    const g=s.bestGrade?gradeLetter(s.bestGrade):"";
-    const gp=g?`<span class="pill g-${g}">${g}</span>`:'<span class="muted">—</span>';
+    const g=s.bestGrade?displayGrade(s.bestGrade,s.bestPct):"";
+    const gp=g?`<span class="pill g-${gcls(g)}">${g}</span>`:'<span class="muted">—</span>';
     const pct=s.bestPct!=null?(s.bestPct*100).toFixed(2)+"%":'<span class="muted">—</span>';
     const artist = s.artist ? esc(s.artist) : '<span class="muted">—</span>';
     const banner = `<img class="banner-mini" loading="lazy" decoding="async"
@@ -840,8 +866,8 @@ function renderHardestList(host, items){
   host.innerHTML = items.map(r => {
     const w = (r.chart.meter / maxMeter) * 100;
     const pct = (r.bestPct * 100).toFixed(2);
-    const letter = r.bestGrade ? gradeLetter(r.bestGrade) : '';
-    const pill = letter ? `<span class="pill g-${letter}">${letter}</span>` : '';
+    const letter = r.bestGrade ? displayGrade(r.bestGrade, r.bestPct) : '';
+    const pill = letter ? `<span class="pill g-${gcls(letter)}">${letter}</span>` : '';
     return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
       <span class="ach-meta">[${r.chart.meter}]</span>
       <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} · ${esc(r.song.pack||'')}</span></span>
@@ -878,8 +904,8 @@ function renderTrophyList(host, items){
     const meter = isValidMeter(r.chart.meter) ? `[${r.chart.meter}]` : '';
     const date = r.when ? r.when.slice(0,10) : '';
     const grade = bestGradeOf(r.chart);
-    const letter = grade ? gradeLetter(grade) : '';
-    const pill = letter ? `<span class="pill g-${letter}">${letter}</span>` : '';
+    const letter = grade ? displayGrade(grade, bestPctOf(r.chart)) : '';
+    const pill = letter ? `<span class="pill g-${gcls(letter)}">${letter}</span>` : '';
     return `<a class="ach-row" data-dir="${escAttr(r.song.dir)}" data-diff="${escAttr(r.chart.diff)}" href="#">
       <span class="ach-tier ${cls}">${icon} ${r.tier}</span>
       <span class="ach-name">${songNameHtml(r.song)}<span class="ach-sub">${esc(r.chart.diff)} ${meter}</span></span>
@@ -900,8 +926,8 @@ function wireAchRows(host){
 
 function buildRecent(d){
   $("#recent").innerHTML = "<ul>"+d.recent.slice(0,30).map(r=>{
-    const g=gradeLetter(r.grade);
-    const gp=`<span class="pill g-${g}">${g}</span>`;
+    const g=displayGrade(r.grade, r.pct);
+    const gp=`<span class="pill g-${gcls(g)}">${g}</span>`;
     const art = r.artist ? esc(r.artist)+" · " : "";
     const banner = `<img class="banner" loading="lazy" decoding="async"
        src="${r.banner||'nobanner.svg'}"
@@ -1028,8 +1054,8 @@ function navStep(delta){
 function renderSongModal(song, chartIdx){
   const charts = song.charts || [];
   const chart = charts[chartIdx] || null;
-  const grade = song.bestGrade ? gradeLetter(song.bestGrade) : "";
-  const gp = grade ? `<span class="pill g-${grade}">${grade}</span>` : '';
+  const grade = song.bestGrade ? displayGrade(song.bestGrade, song.bestPct) : "";
+  const gp = grade ? `<span class="pill g-${gcls(grade)}">${grade}</span>` : '';
   const banner = `<img class="banner-lg" loading="lazy" decoding="async"
        src="${song.banner||'nobanner.svg'}"
        onerror="this.onerror=null;this.src='nobanner.svg'" alt="">`;
@@ -1091,8 +1117,8 @@ function renderChartPanels(host, chart){
   const isMFC = isFC && bestJ.slice(1).every(v=>v===0);
   const fcBadge = isMFC ? '<span class="badge mfc">Marvelous FC</span>'
                  : isFC ? '<span class="badge">Full Combo</span>' : '';
-  const bestGrade = best.grade ? gradeLetter(best.grade) : "";
-  const bestGP = bestGrade ? `<span class="pill g-${bestGrade}">${bestGrade}</span>` : '';
+  const bestGrade = best.grade ? displayGrade(best.grade, best.pct) : "";
+  const bestGP = bestGrade ? `<span class="pill g-${gcls(bestGrade)}">${bestGrade}</span>` : '';
 
   host.innerHTML = `
     <div class="panels">
@@ -1313,8 +1339,8 @@ function renderProgressionPanel(scores){
 
 function renderScoreRow(s, best){
   const star = s===best ? '<span class="star" title="Best">★</span>' : '';
-  const grade = s.grade ? gradeLetter(s.grade) : '';
-  const gp = grade ? `<span class="pill g-${grade}">${grade}</span>` : '';
+  const grade = s.grade ? displayGrade(s.grade, s.pct) : '';
+  const gp = grade ? `<span class="pill g-${gcls(grade)}">${grade}</span>` : '';
   const w1 = s.j ? s.j[0] : '—';
   const miss = s.j ? s.j[5] : '—';
   const missCls = (s.j && s.j[5]>0) ? 'miss-bad' : '';

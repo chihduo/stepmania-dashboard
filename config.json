@@ -1,5 +1,5 @@
 {
-  "comment": "Portable app config (colors, top-N, artist aliases) — safe to commit and share; no personal or machine-specific values. Per-machine settings (player name, live dir, server host) live in site.env; see site.env.example. Edit and rebuild: python3 build_dashboard.py.",
+  "comment": "Portable app config (colors, top-N, artist aliases, grade thresholds) — safe to commit and share; no personal or machine-specific values. Per-machine settings (player name, live dir, server host) live in site.env; see site.env.example. gradeThresholds (below) makes every play's letter grade derive from its accuracy (PercentDP) via the listed cutoffs — consistent across StepMania versions/themes; REMOVE the whole gradeThresholds key to instead show the grade StepMania recorded in the bundle (mapped via the built-in tier table). Edit and rebuild: python3 build_dashboard.py.",
   "colors": {
     "bars": {
       "plays": "#a4b8ff",
@@ -32,5 +32,13 @@
     "T-ara": [
       "티아라"
     ]
-  }
+  },
+  "gradeThresholds": [
+    { "letter": "AAAA", "min": 0.99 }, { "letter": "AAA", "min": 0.95 },
+    { "letter": "AA+", "min": 0.89 }, { "letter": "AA", "min": 0.83 },
+    { "letter": "A+", "min": 0.77 }, { "letter": "A", "min": 0.71 },
+    { "letter": "B+", "min": 0.66 }, { "letter": "B", "min": 0.61 },
+    { "letter": "C+", "min": 0.53 }, { "letter": "C", "min": 0.46 },
+    { "letter": "D", "min": 0.00 }
+  ]
 }

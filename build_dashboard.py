@@ -41,10 +41,18 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SAVE_DIR = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "savedata", "Save")
 OUT_DIR  = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "public")
 
-# StepMania default-theme grade tiers -> friendly letters (theme-dependent; best effort).
+# StepMania grade tiers -> display letters, used only when config.json does NOT
+# define gradeThresholds (see grade_letter). This matches the CURRENT default
+# theme's 17-tier ladder (AAA★..D-), read straight from its grade graphics; a
+# bundle recorded under a different theme may not line up, since grades are
+# theme-defined. Users on a different scale set gradeThresholds to derive the
+# letter from accuracy instead.
 GRADE_MAP = {
-    "Tier01": "AAAA", "Tier02": "AAA", "Tier03": "AA", "Tier04": "A",
-    "Tier05": "B", "Tier06": "C", "Tier07": "D", "Failed": "F", "NoData": "-",
+    "Tier01": "AAA★", "Tier02": "AAA", "Tier03": "AA+", "Tier04": "AA",
+    "Tier05": "AA-", "Tier06": "A+", "Tier07": "A", "Tier08": "A-",
+    "Tier09": "B+", "Tier10": "B", "Tier11": "B-", "Tier12": "C+",
+    "Tier13": "C", "Tier14": "C-", "Tier15": "D+", "Tier16": "D",
+    "Tier17": "D-", "Failed": "F", "NoData": "-",
 }
 DIFF_ORDER = ["Beginner", "Easy", "Medium", "Hard", "Challenge", "Edit"]
 
@@ -157,9 +165,32 @@ def load_config():
     return cfg
 
 
-# Grades to hide from the ranking list and recent plays (D and below).
-# Only affects those two lists — KPIs, timeline and breakdown charts keep all plays.
-EXCLUDE_GRADES = {"Tier07", "Failed"}  # D, F
+def grade_letter(tier, pct, cfg):
+    """Display letter for one play.
+
+    If config.json defines gradeThresholds, derive the letter from PercentDP so
+    grades track accuracy consistently across themes/versions; otherwise fall
+    back to StepMania's recorded tier via GRADE_MAP. Failed/NoData are always
+    F/- regardless of mode. Mirrors displayGrade() in index.html.
+    """
+    if tier == "Failed":
+        return "F"
+    if tier == "NoData":
+        return "-"
+    thr = (cfg or {}).get("gradeThresholds")
+    if thr and pct is not None:
+        for g in thr:
+            if pct >= g.get("min", 0):
+                return g.get("letter", "")
+        return thr[-1].get("letter", "")
+    return GRADE_MAP.get(tier, tier or "")
+
+
+# Grades hidden from the ranking list and recent plays (D and below, plus F).
+# Letter-based so it works in both display modes. Only affects those two lists —
+# KPIs, timeline and breakdown charts keep all plays.
+def grade_hidden(letter):
+    return letter == "F" or (bool(letter) and letter[0] == "D")
 
 
 def txt(node, tag, default=""):
@@ -585,7 +616,7 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
 # --------------------------------------------------------------------------
 # 2) Upload/*.xml : per-play event log (exact timestamps)
 # --------------------------------------------------------------------------
-def parse_uploads(upload_dir, meta, banner=lambda d: ""):
+def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
     files = sorted(glob.glob(os.path.join(upload_dir, "*.xml")))
     daily = collections.Counter()
     monthly = collections.Counter()
@@ -675,7 +706,8 @@ def parse_uploads(upload_dir, meta, banner=lambda d: ""):
                 "combo": inum(txt(hs, "MaxCombo")),
             })
     recent.sort(key=lambda x: x["dt"], reverse=True)
-    recent = [r for r in recent if (r["grade"] or "") not in EXCLUDE_GRADES]
+    recent = [r for r in recent
+              if not grade_hidden(grade_letter(r.get("grade") or "", r.get("pct"), cfg))]
     # Resolve banners only for the trimmed list — keeps conversion cost bounded.
     # 'dir' is kept on each row so the modal click handler can find the
     # matching song record in DATA.songs.
@@ -1076,7 +1108,7 @@ def main():
           "firstPlay": "", "lastPlay": ""}
     if os.path.isdir(upload_dir):
         print(f"Parsing per-play uploads in {upload_dir} ...")
-        up = parse_uploads(upload_dir, meta, banner)
+        up = parse_uploads(upload_dir, meta, banner, cfg)
         print(f"  recorded plays: {up['recordedPlays']} "
               f"({up['firstPlay']} -> {up['lastPlay']})")
         # Stats.xml is flushed periodically / on exit, so a bundle exported
