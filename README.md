@@ -296,6 +296,11 @@ Details, env-var overrides, and the WSL2 cron caveats are in
   counts unique charts with ≥1 play.
 - Theme-internal placeholder `Themes/default/Other/` is excluded from the
   ranking (it's not a real song).
+- **Skill-trend curves exclude failed plays.** The monthly Accuracy / W1% /
+  Miss% lines count completed plays only — a fail is usually an accident
+  (injury, interruption) that ends mid-song in a wall of misses and would
+  distort the skill signal. Failed plays still count everywhere activity is
+  measured: the plays-per-month bars, hour-of-day / day-of-week, and streaks.
 - **Ranking window tabs:** the song ranking has tabs for the last
   7/30/90/180 days and 12 months (plus All time); **7 days** is the default
   tab (All time when the bundle has no Upload log). Windows are computed from the

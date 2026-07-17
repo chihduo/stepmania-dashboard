@@ -671,6 +671,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
     # Accuracy = mean(PercentDP) per play (so each play weighted equally).
     # W1% and Miss% = note-count-weighted (sum_w1 / sum_total_hits) so a long
     # song doesn't get drowned out by ten short ones.
+    # Failed plays are excluded from all three (see the guard below).
     m_pct_sum = collections.Counter()
     m_pct_n   = collections.Counter()
     m_w1   = collections.Counter()
@@ -727,19 +728,25 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
                 first = t
             if last is None or t > last:
                 last = t
-            # Skill aggregates for the combo chart
-            pct = fnum(txt(hs, "PercentDP"), -1)
-            if pct >= 0:
-                m_pct_sum[mo] += pct
-                m_pct_n[mo]   += 1
-            tn = hs.find("TapNoteScores")
-            if tn is not None:
-                counts = {c.tag: inum(c.text) for c in tn}
-                taps = sum(counts.get(k, 0) for k in ("W1","W2","W3","W4","W5","Miss"))
-                if taps > 0:
-                    m_w1[mo]   += counts.get("W1", 0)
-                    m_miss[mo] += counts.get("Miss", 0)
-                    m_taps[mo] += taps
+            # Skill aggregates for the combo chart. Failed plays are excluded
+            # from all three curves (Accuracy, W1%, Miss%): a fail is usually
+            # an accident (injury, interruption) and ends mid-song with a wall
+            # of misses, which would distort the skill signal. Fails still
+            # count in the activity metrics above (plays bars, hour/day).
+            grade = txt(hs, "Grade")
+            if grade != "Failed":
+                pct = fnum(txt(hs, "PercentDP"), -1)
+                if pct >= 0:
+                    m_pct_sum[mo] += pct
+                    m_pct_n[mo]   += 1
+                tn = hs.find("TapNoteScores")
+                if tn is not None:
+                    counts = {c.tag: inum(c.text) for c in tn}
+                    taps = sum(counts.get(k, 0) for k in ("W1","W2","W3","W4","W5","Miss"))
+                    if taps > 0:
+                        m_w1[mo]   += counts.get("W1", 0)
+                        m_miss[mo] += counts.get("Miss", 0)
+                        m_taps[mo] += taps
             if d:
                 by_chart[(d, stepstype, diff)].append(score_dict(hs))
                 all_plays.append((t, d))
@@ -749,7 +756,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
                 "dt": dt, "song": m["title"] or name, "artist": m["artist"],
                 "pack": pack, "diff": diff,
                 "pct": round(fnum(txt(hs, "PercentDP")), 4),
-                "grade": txt(hs, "Grade"),
+                "grade": grade,
                 "score": inum(txt(hs, "Score")),
                 "combo": inum(txt(hs, "MaxCombo")),
             })
