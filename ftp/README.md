@@ -1,6 +1,6 @@
 # ftp/ — local archive drop zone
 
-> _Last updated: **2026-06-12** — bump this date whenever you edit this file._
+> _Last updated: **2026-07-17** — bump this date whenever you edit this file._
 
 A workflow for refreshing the dashboard from a single archive uploaded to this
 folder. Useful if you're shuttling `Save/` + `Cache/` over FTP/SFTP/SMB from
@@ -23,7 +23,8 @@ the Windows machine instead of using the WSL pipeline.
    bash update_from_archive.sh
    ```
 
-4. The script extracts, rebuilds, and cleans up. If `/var/www/stepmania/`
+4. The script extracts, rebuilds, and cleans up. If the live web root
+   (`SM_LIVE_DIR` in `site.env`, e.g. `/var/www/stepmania/`)
    is user-writable (see the top-level README's
    _"Deploying without sudo"_ section), the build also auto-deploys to
    the live site — no further command needed. Ctrl+F5 in the browser to
@@ -55,20 +56,21 @@ the Windows machine instead of using the WSL pipeline.
    `<name>.applied-<timestamp>` so a later re-run can't silently regress the
    canonical data to a stale snapshot. Drop a fresh archive to update again.
 
-Step 6 (the build) **auto-deploys to `/var/www/stepmania/`** if that dir is
-writable by the current user — i.e. you've done the one-time chown documented
-in the top-level README. Otherwise the build just writes to `../public/` and
-you need to push it with `sudo ../deploy.sh` separately.
+Step 6 (the build) **auto-deploys to the live web root** (`SM_LIVE_DIR` in
+`site.env`) if that dir is writable by the current user — i.e. you've done the
+one-time chown documented in the top-level README. Otherwise the build just
+writes to `../public/` and you need to push it with `sudo ../deploy.sh`
+separately.
 
 ## Prerequisites
 
 | Archive type | Tool | Install |
 |---|---|---|
-| `StepMania 5.zip` | `unzip` | already installed |
-| `StepMania 5.rar` | `unrar` **or** `rar` | already installed on this server (`rar`); else `sudo apt-get install unrar` |
+| `StepMania 5.zip` | `unzip` | usually preinstalled; else `sudo apt-get install unzip` |
+| `StepMania 5.rar` | `unrar` **or** `rar` | `sudo apt-get install unrar` |
 
-The build step needs Python 3 + Pillow (`python3-pil`) for banner conversion —
-already installed on this server.
+The build step needs Python 3 + Pillow (`python3-pil`) for banner conversion
+(`sudo apt-get install python3-pil` if missing).
 
 ## Accepted layouts
 

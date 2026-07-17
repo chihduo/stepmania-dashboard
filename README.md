@@ -76,7 +76,7 @@ play log) resolves to `DDR K-Pop` (on disk).
 
 ## Rebuild after new play sessions
 
-1. On Windows, zip and copy these to this machine: `%APPDATA%\StepMania 5.1\Save`
+1. On Windows, zip and copy these to the build machine: `%APPDATA%\StepMania 5.1\Save`
    and `%APPDATA%\StepMania 5.1\Cache`.
 2. Extract to `../savedata/Save` and `../cachedata/Cache/{Songs,Banners}`
    (the defaults the builder looks for).
@@ -127,8 +127,9 @@ Each play shows a letter grade. There are two modes:
   letter is then computed from its accuracy (`PercentDP`), giving one consistent
   scale across **all** your history regardless of which StepMania theme/version
   recorded it. This is the default in the shipped `config.json`; the cutoffs
-  there were calibrated from real play data (a `PercentDP` of ~0.83 already reads
-  as `AA` on this player's scoring, not the textbook 0.93).
+  there were calibrated against one real play history — where a `PercentDP` of
+  ~0.83 was already a solid `AA`, vs the textbook 0.93 — so treat them as a
+  starting point and tune them to your own scoring.
 - **StepMania's grade (fallback):** delete the whole `gradeThresholds` key and the
   dashboard shows the grade StepMania recorded, mapped to a letter by `GRADE_MAP`
   in `build_dashboard.py`. That map matches the **current default theme's 17-tier
@@ -234,14 +235,14 @@ systemd sm-update.path  (PathChanged trigger)
     ▼
 sm-update.service (User=www-data, flock'd)
        extract → run build_dashboard.py → rsync deploy → cleanup
-       ~4 s end-to-end on this dataset
+       a few seconds end-to-end for a ~2,000-song history
 ```
 
-Zero new packages on the server (`dav_module` is already built in,
-`python3-pil` and `unzip` already installed). Install with:
+No exotic server dependencies (`dav_module` is built into stock nginx;
+`python3-pil` and `unzip` come from apt). Install with:
 
 ```bash
-sudo bash server/install.sh    # on the dashboard server (this machine)
+sudo bash server/install.sh    # on the dashboard server
 bash wsl/wsl-install.sh        # on the Windows WSL2 box
 ```
 
@@ -297,8 +298,8 @@ Details, env-var overrides, and the WSL2 cron caveats are in
 - **Banner cache is not actually PNG/JPG** despite the `.png` extension — it's
   a 32-byte StepMania `SurfaceHeader` (8 LE uint32s: w/h/pitch/RGBA-masks/bpp)
   followed by raw pixels. The current build handles 16-bit ARGB1555 (the only
-  variant present in this user's cache). If you see `decode-fail` > 0 after a
+  variant observed in real caches so far). If you see `decode-fail` > 0 after a
   cache refresh, that's a new bpp/mask combo to add to `convert_banner`.
-- **Two songs are unrecoverable** in this dataset: their on-disk folder names
-  contain non-UTF-8 bytes (`E�MO�TION`, `Ao-no-Exorcist-…-�GP���t`), so
-  artist/title/banner stay blank. 8 total plays affected.
+- **Songs whose on-disk folder names contain non-UTF-8 bytes** can't be matched
+  to their cache entries, so their artist/title/banner stay blank (the plays
+  still count). Rare — typically packs that went through a broken zip tool.
