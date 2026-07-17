@@ -21,6 +21,23 @@ chevrons in the header, or a horizontal swipe on touch) to step to the next /
 previous song in the list you opened from (the filtered ranking, or recent
 plays — your sort and search are preserved).
 
+## Contents
+
+- [Files in this directory](#files-in-this-directory)
+- [Data sources (StepMania 5.1, Windows paths)](#data-sources-stepmania-51-windows-paths)
+  - [Portable and non-Windows installs](#portable-and-non-windows-installs)
+- [Dependencies](#dependencies)
+- [Rebuild after new play sessions](#rebuild-after-new-play-sessions)
+- [Configuration](#configuration)
+  - [Grades](#grades)
+- [Deploy to nginx](#deploy-to-nginx)
+  - [Deploying without sudo](#deploying-without-sudo-auto-deploy-on-every-build)
+- [Hosting on GitHub Pages](#hosting-on-github-pages)
+- [Demo snapshot (GitHub Pages)](#demo-snapshot-github-pages)
+- [Daily WSL → server update pipeline](#daily-wsl--server-update-pipeline)
+- [Customizing](#customizing)
+- [Notes / gotchas](#notes--gotchas)
+
 ### Section anchors
 
 Each major section has a stable `id` so the URL can deep-link straight to it
@@ -48,6 +65,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 | `public/` | **The deployable folder** — `index.html`, `data.json`, `nobanner.svg`, `banners/`. (Gitignored — regenerable.) |
 | `deploy.sh` | One-shot: copies `public/` to `/var/www/stepmania/` and adds the nginx `location` block. |
 | `refresh-demo.sh` | Snapshots `public/` onto the `gh-pages` branch and pushes it — updates the GitHub Pages demo. |
+| `pages-update.sh` | Build + publish in one command: the whole update pipeline for a dashboard hosted on GitHub Pages (see [Hosting on GitHub Pages](#hosting-on-github-pages)). |
 | `.banner-cache/` | Persistent banner-conversion cache — each banner decoded once ever, builds repopulate `public/banners/` by copy. (Gitignored.) |
 | `video-banners/` | Banner frames for songs whose `#BANNER` is a video (StepMania never pre-renders those). `wsl/collect-video-banners.sh` extracts PNG frames directly in WSL (ffmpeg) — copy just the PNGs here and rebuild. Staging the raw videos also works as a fallback. (Gitignored.) |
 | `server/` | Server-side daily-update pipeline (nginx WebDAV endpoint, systemd path/service units, processing script, installer). |
@@ -221,6 +239,46 @@ What `deploy.sh` does:
    reloads. Rolls back on any failure. Idempotent — safe to re-run.
 
 URL: `https://<SM_HOST>/stepmania/` (from `site.env`).
+
+## Hosting on GitHub Pages
+
+No server? The dashboard is fully static, so GitHub Pages can host it outright —
+the [live demo](https://chihduo.github.io/stepmania-dashboard/) is exactly that.
+Compared to the nginx route: nothing to install or maintain server-side, but
+**the site is public** (Pages has no authentication), so your play history is
+visible to anyone with the URL. Publish only if you're comfortable with that.
+
+Since there's no server to receive uploads and build, the build runs on the
+machine where your StepMania data lives (any install type — installed Windows
+via WSL, a portable install, or Linux).
+
+One-time setup:
+
+1. Fork this repo and clone it on that machine; `origin` must point at your
+   fork, and pushing needs an SSH key or token.
+2. Install the build dependencies there: Python 3 + Pillow
+   (`sudo apt-get install python3-pil`).
+3. `cp site.env.example site.env` and set `SM_APPDATA` to the folder that
+   contains `Save/` and `Cache/` (see
+   [Portable and non-Windows installs](#portable-and-non-windows-installs)):
+   - installed Windows, via WSL: `/mnt/c/Users/You/AppData/Roaming/StepMania 5.1`
+   - portable install: the StepMania program folder
+   - Linux: `~/.stepmania-5.1`
+
+   Leave `SM_LIVE_DIR` and `SM_HOST` empty — there is no server.
+4. Run the pipeline once: `bash pages-update.sh`
+5. On GitHub: Settings → Pages → *Deploy from a branch* → `gh-pages`, `/ (root)`.
+   Your dashboard appears at `https://<you>.github.io/<repo>/` a minute later.
+
+From then on, the local → Pages update pipeline is one command after playing:
+
+```bash
+bash pages-update.sh      # build from $SM_APPDATA, publish to gh-pages
+```
+
+Cron it (WSL or Linux) for daily updates, like the WSL pipeline below. The
+first run converts every banner and can be slow (especially reading from
+`/mnt/c`); later runs reuse `.banner-cache/` and finish in seconds.
 
 ## Demo snapshot (GitHub Pages)
 
