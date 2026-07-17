@@ -47,6 +47,7 @@ fires on initial load *and* on subsequent in-page hash changes.
 | `nobanner.svg` | Theme-matching placeholder for songs without a banner. |
 | `public/` | **The deployable folder** — `index.html`, `data.json`, `nobanner.svg`, `banners/`. (Gitignored — regenerable.) |
 | `deploy.sh` | One-shot: copies `public/` to `/var/www/stepmania/` and adds the nginx `location` block. |
+| `refresh-demo.sh` | Snapshots `public/` onto the `gh-pages` branch and pushes it — updates the GitHub Pages demo. |
 | `.banner-cache/` | Persistent banner-conversion cache — each banner decoded once ever, builds repopulate `public/banners/` by copy. (Gitignored.) |
 | `video-banners/` | Banner frames for songs whose `#BANNER` is a video (StepMania never pre-renders those). `wsl/collect-video-banners.sh` extracts PNG frames directly in WSL (ffmpeg) — copy just the PNGs here and rebuild. Staging the raw videos also works as a fallback. (Gitignored.) |
 | `server/` | Server-side daily-update pipeline (nginx WebDAV endpoint, systemd path/service units, processing script, installer). |
@@ -229,14 +230,11 @@ static, so the snapshot is the real dashboard, not a mock. To refresh it after
 a rebuild:
 
 ```bash
-git worktree add --detach /tmp/ghp HEAD
-cd /tmp/ghp && git switch --orphan gh-pages-new
-cp -r "$OLDPWD/public/." . && touch .nojekyll
-git add -A && git commit -m "demo: refresh snapshot ($(date +%F))"
-git branch -M gh-pages-new gh-pages
-cd "$OLDPWD" && git worktree remove --force /tmp/ghp
-git push -f origin gh-pages
+bash refresh-demo.sh
 ```
+
+(The script snapshots `public/` onto an orphan `gh-pages` branch in a temp
+worktree and force-pushes it — the demo history stays a single commit.)
 
 ## Daily WSL → server update pipeline
 
