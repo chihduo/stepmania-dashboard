@@ -67,6 +67,27 @@ The parser tolerates StepMania's occasionally-malformed XML (raw `&`, non-UTF-8
 folder names) and matches cache files case-insensitively so `DDR K-POP` (in your
 play log) resolves to `DDR K-Pop` (on disk).
 
+### Portable and non-Windows installs
+
+The `%APPDATA%` paths above are the standard installed-on-Windows locations.
+The build itself doesn't care where the folders come from — it only needs to be
+handed a `Save/` and a `Cache/` folder:
+
+| Install type | Where `Save/` and `Cache/` live |
+|---|---|
+| **Portable Windows** (a blank `Portable.ini` in the StepMania program folder switches StepMania to portable mode) | Inside the program folder itself: `<StepMania folder>\Save\`, `<StepMania folder>\Cache\` |
+| **Linux** | `~/.stepmania-5.1/` (suffix matches the version: `-5.0`, `-5.1`, …) |
+
+Pointing the pipeline at them:
+
+- `build_dashboard.py` takes the Save dir as its 1st argument (and
+  `Cache/Songs` as the 3rd) — pass any location directly.
+- WSL upload client: set `SM_APPDATA` in `site.env` to the portable program
+  folder (e.g. `/mnt/d/Games/StepMania`); the bundler only requires that
+  `Save/` and `Cache/` exist inside whatever folder it's given.
+- The `ftp/` archive route is location-agnostic by construction — zip your
+  `Save/` + `Cache/` from wherever they live.
+
 ## Dependencies
 
 - **Python 3** (stdlib only for the basic build)
