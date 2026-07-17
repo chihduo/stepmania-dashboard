@@ -419,20 +419,12 @@ def merge_upload_scores(songs, upload_scores):
 # --------------------------------------------------------------------------
 # 1) Stats.xml : GeneralData aggregates + SongScores (authoritative play counts)
 # --------------------------------------------------------------------------
-def aggregate_artists(songs, aliases):
-    """Group songs by normalized artist; return top list sorted by plays.
+def _artist_alias_lookup(aliases):
+    """artistAliases config -> {normalized variant: (canonical_norm, display)}.
 
-    `aliases` maps canonical-display-name -> [list of variant strings to
-    force into the same group]. Normalization is applied to both sides.
-    `songs` is the list of song dicts emitted by parse_stats (each has
-    'artist' and 'plays').
-
-    Returns: [{artist, plays, songs, variants}] sorted by plays desc.
-    """
-    # Build alias lookup: normalized variant -> (canonical_norm, canonical_display)
-    # Stored as a tuple so we can both redirect the bucket key (so variants merge
-    # into one group) AND remember the display name (so the canonical wins over
-    # the most-played raw variant).
+    Stored as a tuple so callers can both redirect the bucket key (so variants
+    merge into one group) AND remember the display name (so the canonical wins
+    over the most-played raw variant)."""
     alias_lookup = {}
     for canonical, variants in (aliases or {}).items():
         if not canonical or canonical.startswith("_"):
@@ -444,6 +436,54 @@ def aggregate_artists(songs, aliases):
             k = normalize_artist(v)
             if k:
                 alias_lookup[k] = (canonical_norm, canonical)
+    return alias_lookup
+
+
+def build_artist_canon(songs, aliases):
+    """Map raw artist spelling -> the one display form the dashboard shows.
+
+    Same rules as aggregate_artists: spelling variants group via
+    normalize_artist(); an artistAliases canonical wins the group's name,
+    otherwise its most-played raw spelling does. Applying this to every song
+    keeps one artist from appearing as GFRIEND / G-Friend / GFriend across
+    the ranking table, modal and recent plays. Only remapped spellings are
+    returned (identity entries omitted)."""
+    alias_lookup = _artist_alias_lookup(aliases)
+    groups = {}
+    for s in songs:
+        raw = (s.get("artist") or "").strip()
+        if not raw:
+            continue
+        k = normalize_artist(raw)
+        if not k:
+            continue
+        canonical = None
+        if k in alias_lookup:
+            k, canonical = alias_lookup[k]
+        g = groups.setdefault(k, {"canon": None, "variants": collections.Counter()})
+        if canonical and not g["canon"]:
+            g["canon"] = canonical
+        g["variants"][raw] += s.get("plays", 0) or 1
+    canon_map = {}
+    for g in groups.values():
+        display = g["canon"] or g["variants"].most_common(1)[0][0]
+        for raw in g["variants"]:
+            if raw != display:
+                canon_map[raw] = display
+    return canon_map
+
+
+def aggregate_artists(songs, aliases):
+    """Group songs by normalized artist; return top list sorted by plays.
+
+    `aliases` maps canonical-display-name -> [list of variant strings to
+    force into the same group]. Normalization is applied to both sides.
+    `songs` is the list of song dicts emitted by parse_stats (each has
+    'artist' and 'plays').
+
+    Returns: [{artist, plays, songs, variants}] sorted by plays desc.
+    """
+    alias_lookup = _artist_alias_lookup(aliases)
 
     # Bucket by normalized key (or aliased canonical key)
     buckets = {}  # key -> {display, plays, songs, variants{raw:plays}}
@@ -1114,6 +1154,21 @@ def main():
     stats = parse_stats(stats_path, meta, banner)
     print(f"  songs with plays: {stats['distinctSongs']}, packs: {len(stats['packs'])}")
 
+    # Unify artist spellings on every song record (GFRIEND / G-Friend /
+    # GFriend -> one form) so the ranking table, modal and recent plays never
+    # mix variants. artistAliases picks the form when configured; otherwise
+    # the library's most-played spelling wins.
+    canon = build_artist_canon(stats["songs"], cfg.get("artistAliases", {}))
+    if canon:
+        n_uni = 0
+        for s in stats["songs"]:
+            c = canon.get((s.get("artist") or "").strip())
+            if c:
+                s["artist"] = c
+                n_uni += 1
+        print(f"  artist spellings unified: {len(canon)} variant spellings "
+              f"-> canonical on {n_uni} songs")
+
     # Build the artist top-list with normalization + manual aliases.
     # The unfiltered song list (before D/F drop) is what we want, since the
     # D/F filter is for the *ranking table*, not for artist counts.
@@ -1138,6 +1193,11 @@ def main():
         n_merged = merge_upload_scores(stats["songs"], up.get("uploadScores") or {})
         if n_merged:
             print(f"  merged {n_merged} upload-only plays missing from Stats.xml")
+        # Recent-play rows carry their own artist strings — same unification.
+        for r in up["recent"]:
+            c = canon.get((r.get("artist") or "").strip())
+            if c:
+                r["artist"] = c
         # Per-song play counts for the ranking-table window tabs ("pw"), only
         # non-zero entries so data.json stays compact.
         wc = up.get("windowCounts") or {}
