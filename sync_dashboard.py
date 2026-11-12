@@ -116,7 +116,7 @@ def build(data_dir, profile, output, baseline=None, revision="local"):
         raise ValueError("Symlinks are not allowed in an export")
     pdir = data_dir / "profiles" / profile
     manifest = read_json(pdir / "manifest.json")
-    if manifest.get("version") != 1 or manifest.get("profile_guid") != profile:
+    if manifest.get("version") != 1 or manifest.get("profile_guid") != profile or manifest.get("profile_kind") not in ("local", "machine"):
         raise ValueError("Unsupported export version or wrong profile")
     stats = xml(pdir / "Stats.xml", 32*1024*1024)
     if stats.find("RecentSongScores") is not None or stats.findtext("GeneralData/Guid") != profile:
