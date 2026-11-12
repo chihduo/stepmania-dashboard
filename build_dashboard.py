@@ -32,7 +32,8 @@ _CTRL = re.compile(r'[\x00-\x08\x0B\x0C\x0E-\x1F]')  # invalid XML 1.0 chars (ke
 
 def load_xml(path):
     """Parse possibly-malformed StepMania XML; returns the root Element."""
-    s = open(path, "rb").read().decode("utf-8", errors="replace")
+    with open(path, "rb") as f:
+        s = f.read().decode("utf-8", errors="replace")
     s = _AMP.sub("&amp;", s)
     s = _CTRL.sub("", s)
     return ET.fromstring(s)
@@ -370,7 +371,13 @@ def score_dict(hs):
     # Skip the user's near-universal default to keep JSON small.
     if mods and mods != "Overhead":
         so["m"] = mods
+    if txt(hs, "Guid"):
+        so["id"] = txt(hs, "Guid")
     return so
+
+
+def score_fingerprint(sc):
+    return tuple(json.dumps(sc.get(k), sort_keys=True) for k in ("dt", "pct", "grade", "sc", "co", "sv", "j", "h", "m"))
 
 
 def merge_upload_scores(songs, upload_scores):
@@ -381,7 +388,7 @@ def merge_upload_scores(songs, upload_scores):
     flushes the machine profile (Stats.xml) periodically / on exit, so a
     bundle exported mid-session has plays in the upload log that Stats.xml
     doesn't know yet. Without this merge those plays show in 'Recent plays'
-    but are missing from the song modal's score table. Dedupe key: DateTime.
+    but are missing from the song modal's score table. Match retained high scores by their full score fingerprint, not timestamp alone.
     Returns the number of merged plays."""
     merged = 0
     for s in songs:
@@ -390,8 +397,20 @@ def merge_upload_scores(songs, upload_scores):
             extra = upload_scores.get((s["dir"], c["stepstype"], c["diff"]))
             if not extra:
                 continue
-            have = {sc["dt"] for sc in c["scores"]}
-            new = [sc for sc in extra if sc["dt"] and sc["dt"] not in have]
+            have_ids = {sc.get("id") for sc in c["scores"] if sc.get("id")}
+            # Legacy Stats.xml has no event GUID. Match each retained score once.
+            legacy = collections.Counter(score_fingerprint(sc) for sc in c["scores"] if not sc.get("id"))
+            new = []
+            for sc in extra:
+                if not sc["dt"] or (sc.get("id") and sc["id"] in have_ids):
+                    continue
+                fp = score_fingerprint(sc)
+                if legacy[fp]:
+                    legacy[fp] -= 1
+                    continue
+                new.append(sc)
+                if sc.get("id"):
+                    have_ids.add(sc["id"])
             if not new:
                 continue
             c["scores"].extend(new)
@@ -693,6 +712,7 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
     by_chart = collections.defaultdict(list)
     all_plays = []  # (datetime, song dir) — feeds the ranking window counts
     total = 0
+    seen_guids = set()
     first = last = None
     for f in files:
         try:
@@ -707,6 +727,11 @@ def parse_uploads(upload_dir, meta, banner=lambda d: "", cfg=None):
             diff = steps_node.get("Difficulty", "?") if steps_node is not None else "?"
             stepstype = steps_node.get("StepsType", "") if steps_node is not None else ""
             hs = h.find("HighScore")
+            guid = txt(hs, "Guid")
+            if guid and guid in seen_guids:
+                continue
+            if guid:
+                seen_guids.add(guid)
             dt = txt(hs, "DateTime")
             if not dt:
                 continue
@@ -1127,7 +1152,12 @@ def select_stats_path(save_dir):
     return None
 
 
-def main():
+def main(save_dir=None, out_dir=None, meta_override=None, banner_override=None, sync=False):
+    global SAVE_DIR, OUT_DIR
+    if save_dir is not None:
+        SAVE_DIR = save_dir
+    if out_dir is not None:
+        OUT_DIR = out_dir
     stats_path = select_stats_path(SAVE_DIR)
     if not stats_path:
         sys.exit(f"No Stats.xml found under {SAVE_DIR} "
@@ -1136,15 +1166,17 @@ def main():
     upload_dir = os.path.join(SAVE_DIR, "Upload")
 
     cfg = load_config()
+    if sync:
+        cfg["liveDir"] = ""
 
-    cache_dir = resolve_cache_dir()
+    cache_dir = "" if sync else resolve_cache_dir()
     if cache_dir and os.path.isdir(cache_dir):
         print(f"Song cache: {cache_dir}")
     else:
         print("Song cache: NONE found — artist/title will be blank. "
               "Copy Cache/Songs and pass it as the 3rd arg or $SM_CACHE.")
         cache_dir = ""
-    meta = make_meta_lookup(cache_dir)
+    meta = meta_override or make_meta_lookup(cache_dir)
 
     banners_dir = resolve_banners_dir(cache_dir)
     if banners_dir:
@@ -1155,7 +1187,7 @@ def main():
     banners_out = os.path.join(OUT_DIR, "banners")
     if os.path.isdir(banners_out):
         shutil.rmtree(banners_out)
-    banner = make_banner_lookup(banners_dir, OUT_DIR, meta=meta)
+    banner = banner_override or make_banner_lookup(banners_dir, OUT_DIR, meta=meta)
 
     print(f"Parsing {stats_path} ...")
     stats = parse_stats(stats_path, meta, banner)
@@ -1218,7 +1250,7 @@ def main():
                     tagged += 1
             print(f"  ranking windows: {len(wc)} spans, {tagged} songs with recent plays "
                   f"(anchor {up['lastPlay'][:10]})")
-    if cache_dir:
+    if cache_dir and hasattr(meta, "stats"):
         s = meta.stats
         tot = s["hit"] + s["miss"]
         print(f"  artist/title matched for {s['hit']}/{tot} songs "

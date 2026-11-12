@@ -1,0 +1,84 @@
+name: Publish uploaded StepMania statistics
+run-name: 'Dashboard upload ${{ github.event.client_payload.data_revision || inputs.operation }}'
+on:
+  repository_dispatch:
+    types: [stepmania_upload]
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Preserve existing gh-pages site, or rebuild uploaded statistics
+        type: choice
+        options: [rebuild, bootstrap]
+        default: rebuild
+      profile:
+        description: Profile GUID for a manual rebuild
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: dashboard-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==11.3.0
+      - run: python -m unittest discover -s tests
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Resolve upload revision
+        if: inputs.operation != 'bootstrap'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DATA_BRANCH: ${{ vars.DASHBOARD_DATA_BRANCH || 'dashboard-data' }}
+        run: python ci/resolve_upload.py
+      - name: Check out validated data revision
+        if: inputs.operation != 'bootstrap'
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ env.DATA_REVISION }}
+          path: upload-data
+          persist-credentials: false
+      - name: Download current published history
+        if: inputs.operation != 'bootstrap'
+        env:
+          PAGES_URL: ${{ steps.pages.outputs.base_url }}
+        run: python ci/fetch_baseline.py
+      - name: Build and verify complete history
+        if: inputs.operation != 'bootstrap'
+        run: python sync_dashboard.py upload-data "$UPLOAD_PROFILE" public --baseline baseline --revision "$DATA_REVISION"
+      - name: Preserve the existing published site during migration
+        if: inputs.operation == 'bootstrap'
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: legacy-site
+          persist-credentials: false
+      - name: Copy existing site without changing its data
+        if: inputs.operation == 'bootstrap'
+        run: |
+          mkdir -p public
+          cp -a legacy-site/index.html legacy-site/data.json legacy-site/nobanner.svg legacy-site/banners public/
+          touch public/.nojekyll
+          cmp legacy-site/data.json public/data.json
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+      - name: Deploy validated site
+        id: deploy
+        uses: actions/deploy-pages@v4

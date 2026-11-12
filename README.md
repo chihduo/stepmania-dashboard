@@ -1,6 +1,6 @@
 # StepMania Play-Activity Dashboard
 
-> _Last updated: **2026-07-17** — bump this date whenever you edit this file._
+> _Last updated: **2026-11-12** — bump this date whenever you edit this file._
 > _Pipeline doc: also see [`server/README.md`](server/README.md) and [`wsl/README.md`](wsl/README.md) for the daily WSL → server update path._
 >
 > ▶ **[Live demo](https://chihduo.github.io/stepmania-dashboard/)** — static
@@ -20,6 +20,13 @@ score on that chart. Esc / click outside to close. Use **← / →** (or the
 chevrons in the header, or a horizontal swipe on touch) to step to the next /
 previous song in the list you opened from (the filtered ranking, or recent
 plays — your sort and search are preserved).
+
+## Upload directly from StepMania 6
+
+StepMania 6 can upload statistics and banner thumbnails from its title menu.
+GitHub Actions runs the Python calculations and publishes the updated dashboard.
+See [manual game upload setup and history migration](SYNC.md). Existing local and
+server build scripts remain available.
 
 ## Contents
 
