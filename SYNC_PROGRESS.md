@@ -32,7 +32,9 @@ Investigate the native song lookup separately, without a Windows build.
   importer regression tests and the actual uploaded revision against the live
   baseline. The remaining error correctly reports 827 uploaded versus 5,918
   published logs; it does not produce a successful publication status.
-- [ ] Publish the fix and verify hosted importer checks.
+- [x] Publish checkpoint a48c704; all 15 hosted importer tests pass in run
+  43477814383. Live data remains byte-for-byte identical to the migration
+  baseline (SHA-256 b8a95cf6889675a436b622dddaeedace6106b95040dd2e97b15c45f8a9a98bed).
 - [ ] Resolve the omitted legacy logs before publishing the user's new data.
 
 Older retained scores in the uploaded profile have no PlayerGuid. The native
@@ -41,3 +43,12 @@ empty IDs. The source Save/Upload files and pending.json counters are not presen
 in the data branch, so whether all older logs are present locally still needs
 confirmation. Do not guess ownership, replace history with totals, or bypass the
 preservation checks to make this upload pass. Windows builds remain deferred.
+
+Native lookup checkpoint a3f84b7120 is pushed to StepMania main with `[skip ci]`.
+A local Linux build and isolated native capture/import verify the loaded song's
+title, artist, Hard/9 chart, content-hashed PNG, preserved cumulative totals and
+calibration exclusion. The same fixture confirms that empty and unrelated player
+IDs are both counted as skipped for a local profile. No Windows build was run.
+No publication retry was dispatched with the known-incomplete export; the user's
+older source logs and pending.json counter are needed to resolve the remaining
+history gap. The first actual Windows upload remains unverified for publication.
