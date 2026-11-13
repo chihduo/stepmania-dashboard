@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Ram/Do The Dance V2/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier12</Grade>
+				<Score>74745994</Score>
+				<PercentDP>0.645100</PercentDP>
+				<SurviveSeconds>116.221779</SurviveSeconds>
+				<MaxCombo>66</MaxCombo>
+				<Modifiers>FailOff, Overhead</Modifiers>
+				<DateTime>2026-07-14 18:33:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>6</W5>
+					<W4>20</W4>
+					<W3>79</W3>
+					<W2>82</W2>
+					<W1>86</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>33</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>96e6dc5a-058a-48d1-a65e-698571952544</StageGuid>
+				<Guid>e88c4fef-2cac-4c96-af7f-45ac87d97283</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/PIU UCS/MS028 VIVIZI-MANIAC/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>180378051</Score>
+				<PercentDP>0.827200</PercentDP>
+				<SurviveSeconds>165.594376</SurviveSeconds>
+				<MaxCombo>290</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-10 21:50:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>2</W5>
+					<W4>0</W4>
+					<W3>35</W3>
+					<W2>129</W2>
+					<W1>236</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c535c25a-bee4-4e34-aae7-801fc7ce87f6</StageGuid>
+				<Guid>9659a591-5f51-4923-a44c-e56e27252b80</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

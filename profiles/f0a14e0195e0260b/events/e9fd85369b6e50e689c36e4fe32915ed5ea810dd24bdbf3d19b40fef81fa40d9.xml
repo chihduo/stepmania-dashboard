@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/JBEAN Originals/Be The One (Radio Edit)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>91954636</Score>
+				<PercentDP>0.834300</PercentDP>
+				<SurviveSeconds>134.913422</SurviveSeconds>
+				<MaxCombo>206</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-09-04 18:49:18</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>43</W3>
+					<W2>142</W2>
+					<W1>297</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b173eeb9-23ef-49c3-a3fc-ae6c620944dc</StageGuid>
+				<Guid>c20f25f0-1f72-4b90-aa4d-05088fab6404</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

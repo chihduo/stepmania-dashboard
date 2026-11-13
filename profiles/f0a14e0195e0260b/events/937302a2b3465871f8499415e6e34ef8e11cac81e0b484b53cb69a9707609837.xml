@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Ram/Armageddon V2/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier11</Grade>
+				<Score>74195978</Score>
+				<PercentDP>0.660800</PercentDP>
+				<SurviveSeconds>129.995102</SurviveSeconds>
+				<MaxCombo>70</MaxCombo>
+				<Modifiers>FailOff, Overhead</Modifiers>
+				<DateTime>2026-07-14 18:03:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>8</W4>
+					<W3>70</W3>
+					<W2>62</W2>
+					<W1>75</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>632e9005-2434-4b71-a140-65823e56ab45</StageGuid>
+				<Guid>ac6dc0a6-49bb-4bc5-ab30-1db7be30af95</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Rhythmic Garbage/Somewhere to Run/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>90581386</Score>
+				<PercentDP>0.817200</PercentDP>
+				<SurviveSeconds>137.404160</SurviveSeconds>
+				<MaxCombo>111</MaxCombo>
+				<Modifiers>NoMines, Overhead</Modifiers>
+				<DateTime>2026-09-29 20:29:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>2</W4>
+					<W3>39</W3>
+					<W2>100</W2>
+					<W1>206</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>356778e0-84df-45f5-afe1-c020bbf31df2</StageGuid>
+				<Guid>abc59e19-3e5e-4835-a5d5-6ec3ca394420</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

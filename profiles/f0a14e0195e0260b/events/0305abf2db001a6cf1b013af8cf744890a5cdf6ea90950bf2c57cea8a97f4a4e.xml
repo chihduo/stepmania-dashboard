@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Beatvolt PIU/DICE/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>91520448</Score>
+				<PercentDP>0.830100</PercentDP>
+				<SurviveSeconds>127.094101</SurviveSeconds>
+				<MaxCombo>223</MaxCombo>
+				<Modifiers>FailOff, Overhead</Modifiers>
+				<DateTime>2026-07-16 16:00:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>46</W3>
+					<W2>85</W2>
+					<W1>186</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>50</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dbf5f6f1-ee89-4d4b-af0d-05afd30d97dd</StageGuid>
+				<Guid>c68e47dc-9da5-41f7-a298-8622c6068179</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Fox/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>84378840</Score>
+				<PercentDP>0.766000</PercentDP>
+				<SurviveSeconds>103.409798</SurviveSeconds>
+				<MaxCombo>60</MaxCombo>
+				<Modifiers>NoMines, Overhead</Modifiers>
+				<DateTime>2026-09-26 21:45:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>8</W4>
+					<W3>40</W3>
+					<W2>97</W2>
+					<W1>126</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>35</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>416bb4d1-01dc-42c3-a8ad-3b3ff6f38742</StageGuid>
+				<Guid>f9a889d0-9f67-424d-a7a7-551cb61f3f21</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

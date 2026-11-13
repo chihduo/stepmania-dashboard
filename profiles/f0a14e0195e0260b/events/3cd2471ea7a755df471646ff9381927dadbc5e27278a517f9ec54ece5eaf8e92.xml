@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo OtakuVibes/FROZEN MIDNIGHT [Koori Zokusei Danshi to Cool na Douryou Joshi OP]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>92597101</Score>
+				<PercentDP>0.884100</PercentDP>
+				<SurviveSeconds>99.838707</SurviveSeconds>
+				<MaxCombo>155</MaxCombo>
+				<Modifiers>NoMines, Overhead</Modifiers>
+				<DateTime>2026-09-26 20:14:19</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>0</W4>
+					<W3>19</W3>
+					<W2>59</W2>
+					<W1>157</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>90</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ba777f5c-425d-410e-a95c-4c891a6e9b36</StageGuid>
+				<Guid>96484345-e67a-4f45-ac54-0a51ebe9c442</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Gensouyou/[Fraxtil] Phantoms In Da House/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>94579051</Score>
+				<PercentDP>0.898800</PercentDP>
+				<SurviveSeconds>142.768616</SurviveSeconds>
+				<MaxCombo>116</MaxCombo>
+				<Modifiers>NoMines, Overhead</Modifiers>
+				<DateTime>2026-09-29 21:24:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>5</W5>
+					<W4>0</W4>
+					<W3>7</W3>
+					<W2>67</W2>
+					<W1>235</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>38</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d3e6823d-3f16-4233-a736-555cb1a73c44</StageGuid>
+				<Guid>4e875974-86cc-4ebd-af5c-6b22095f35fb</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

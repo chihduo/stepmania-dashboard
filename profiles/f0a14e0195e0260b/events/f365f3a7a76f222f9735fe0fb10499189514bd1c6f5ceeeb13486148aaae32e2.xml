@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/So Crazy - T Ara/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>90625145</Score>
+				<PercentDP>0.827400</PercentDP>
+				<SurviveSeconds>132.124557</SurviveSeconds>
+				<MaxCombo>229</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-07-16 20:49:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>45</W3>
+					<W2>117</W2>
+					<W1>244</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>91daf6d2-007f-492c-a2ce-7767a7f39553</StageGuid>
+				<Guid>f10454d1-41b4-4eca-a2e9-836c1e584e50</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

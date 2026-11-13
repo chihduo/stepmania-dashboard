@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/PIU UCS/MS001 IVE-baddie/'/>
+			<Steps Description='baddie S3' Difficulty='Edit' Hash='4282550368' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier17</Grade>
+				<Score>6568</Score>
+				<PercentDP>0.001900</PercentDP>
+				<SurviveSeconds>10.474010</SurviveSeconds>
+				<MaxCombo>1</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-08-05 21:30:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>1</W3>
+					<W2>0</W2>
+					<W1>0</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>70734ea9-dfef-45ac-ade7-a5524c4861c3</StageGuid>
+				<Guid>cdf52963-d392-4e8e-a10d-2ffb9b094f04</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

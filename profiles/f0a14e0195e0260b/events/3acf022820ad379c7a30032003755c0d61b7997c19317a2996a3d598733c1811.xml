@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Native Faith/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>89803223</Score>
+				<PercentDP>0.818800</PercentDP>
+				<SurviveSeconds>154.440933</SurviveSeconds>
+				<MaxCombo>314</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-09-03 20:23:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>6</W4>
+					<W3>57</W3>
+					<W2>137</W2>
+					<W1>260</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>53</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>07c7d062-cf50-47c0-a044-e2fdbed9fba7</StageGuid>
+				<Guid>a2a14adb-3be5-4e9c-aab4-854a84b38cce</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

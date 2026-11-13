@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Speirmix Galaxy/Ain&apos;t Nobody (Loves Me Better)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>96254209</Score>
+				<PercentDP>0.908100</PercentDP>
+				<SurviveSeconds>129.700317</SurviveSeconds>
+				<MaxCombo>278</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-09-06 21:20:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>5</W3>
+					<W2>68</W2>
+					<W1>181</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>39</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2988adf5-627c-4452-af08-c7553f40283b</StageGuid>
+				<Guid>82ddd125-8ade-4389-a668-d2f800572101</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

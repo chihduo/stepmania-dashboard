@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Oumukan/Beat of Summer [Gpop]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>87685907</Score>
+				<PercentDP>0.812900</PercentDP>
+				<SurviveSeconds>153.377335</SurviveSeconds>
+				<MaxCombo>229</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-09-15 21:53:05</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>10</W4>
+					<W3>40</W3>
+					<W2>88</W2>
+					<W1>209</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>32</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b681506b-9de2-455a-abca-526636e8fff8</StageGuid>
+				<Guid>7c3db1b3-b95a-4308-a5b7-87cccdf266ef</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
