@@ -54,7 +54,7 @@ def read_json(path, limit=256*1024):
     return json.loads(read_bytes(path, limit))
 
 
-def xml(path, limit):
+def xml(path, limit, *, allow_theme_songs=False):
     raw = read_bytes(path, limit)
     if b"<!" in raw:
         raise ValueError("XML declarations/entities/comments are not allowed")
@@ -69,13 +69,24 @@ def xml(path, limit):
         if len(node.text or "") > 8192:
             raise ValueError("XML value too long")
         if node.tag == "Song":
-            validate_song_dir(node.get("Dir", ""))
+            validate_song_dir(node.get("Dir", ""), allow_theme=allow_theme_songs)
     return root
 
 
-def validate_song_dir(d):
-    if not isinstance(d, str) or not d.startswith("Songs/") or len(d) > 2048 or "\\" in d or ".." in d.split("/"):
+def validate_song_dir(d, *, allow_theme=False):
+    if not isinstance(d, str) or len(d) > 2048 or "\\" in d or any(ord(c) < 32 for c in d):
         raise ValueError("Invalid relative song directory")
+    parts = (d[:-1] if d.endswith("/") else d).split("/")
+    if any(p in ("", ".", "..") for p in parts):
+        raise ValueError("Invalid relative song directory")
+    if parts[0] == "Songs" and len(parts) > 1:
+        return
+    # Calibration songs live in Themes/<theme>/Other/ and can remain in old
+    # cumulative profiles. The builder already excludes them from song lists.
+    # Only Stats.xml may contain these entries; metadata and events stay strict.
+    if allow_theme and len(parts) >= 3 and parts[0] == "Themes" and parts[2] == "Other":
+        return
+    raise ValueError("Invalid relative song directory")
 
 
 def event_identity(node):
@@ -94,17 +105,28 @@ def verify_history(previous, current):
     for key in ("songsPlayed", "tapsAndHolds", "jumps", "holds", "rolls", "mines", "hands", "lifts", "dancePoints", "gameplaySeconds", "sessions"):
         if current["totals"].get(key, 0) < previous.get("totals", {}).get(key, 0):
             raise ValueError(f"Historical total decreased: {key}; restore the complete Save history")
+    # Missing logs also reduce some merged per-song counts. Diagnose the log
+    # gap first so users can distinguish omitted/filtered logs from a reset save.
+    advice = ("Check the complete Save/Upload history and skipped_other_profiles "
+              "in Save/Dashboard/pending.json; older logs without a matching "
+              "PlayerGuid are filtered out by local-profile uploads. "
+              "The published dashboard has not been replaced.")
+    uploaded = current.get("recordedPlays", 0)
+    published = previous.get("recordedPlays", 0)
+    if uploaded < published:
+        raise ValueError(f"Historical play logs are incomplete: {uploaded} uploaded, "
+                         f"{published} already published. {advice}")
+    for key in ("playsDaily", "playsMonthly"):
+        counts = dict(current.get(key, []))
+        for day, n in previous.get(key, []):
+            if counts.get(day, 0) < n:
+                raise ValueError(f"Historical play logs are incomplete for {day}: "
+                                 f"{counts.get(day, 0)} uploaded, {n} already published. {advice}")
     songs = {s["dir"]: s for s in current["songs"]}
     for old in previous.get("songs", []):
         new = songs.get(old["dir"])
         if not new or new["plays"] < old["plays"]:
-            raise ValueError("Historical song plays are missing; restore the complete profile")
-    for key in ("playsDaily", "playsMonthly"):
-        counts = dict(current.get(key, []))
-        if any(counts.get(day, 0) < n for day, n in previous.get(key, [])):
-            raise ValueError("Historical per-play logs are missing; restore Save/Upload")
-    if current.get("recordedPlays", 0) < previous.get("recordedPlays", 0):
-        raise ValueError("Historical per-play records decreased")
+            raise ValueError("Historical song plays are missing; restore the complete profile and Save/Upload")
 
 
 def build(data_dir, profile, output, baseline=None, revision="local"):
@@ -118,7 +140,7 @@ def build(data_dir, profile, output, baseline=None, revision="local"):
     manifest = read_json(pdir / "manifest.json")
     if manifest.get("version") != 1 or manifest.get("profile_guid") != profile or manifest.get("profile_kind") not in ("local", "machine"):
         raise ValueError("Unsupported export version or wrong profile")
-    stats = xml(pdir / "Stats.xml", 32*1024*1024)
+    stats = xml(pdir / "Stats.xml", 32*1024*1024, allow_theme_songs=True)
     if stats.find("RecentSongScores") is not None or stats.findtext("GeneralData/Guid") != profile:
         raise ValueError("Invalid profile snapshot")
     previous = read_json(Path(baseline)/"data.json", 64*1024*1024) if baseline else None

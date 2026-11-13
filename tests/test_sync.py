@@ -87,6 +87,71 @@ class SyncTests(unittest.TestCase):
         (self.data/'link').unlink()
         self.event('play-1').rename(self.profile/'events'/'wrong.xml')
         with self.assertRaisesRegex(ValueError,'filename'): self.build()
+    def test_theme_calibration_in_snapshot_preserves_totals(self):
+        self.build()
+        for theme in ('default', '_fallback', 'Chiikawa'):
+            with self.subTest(theme=theme):
+                root = ET.fromstring(self.stats)
+                root.find('GeneralData/NumTotalSongsPlayed').text = '4'
+                calibration = copy.deepcopy(root.find('SongScores/Song'))
+                calibration.set('Dir', f'Themes/{theme}/Other/')
+                calibration.find('.//NumTimesPlayed').text = '3'
+                root.find('SongScores').append(calibration)
+                ET.ElementTree(root).write(self.profile/'Stats.xml')
+                result = self.build('with-calibration', self.root/'site')
+                self.assertEqual(result['totals']['songsPlayed'], 4)
+                self.assertEqual(result['recordedPlays'], 1)
+                self.assertEqual([s['dir'] for s in result['songs']], [SONG])
+
+    def test_theme_calibration_cannot_bypass_path_validation(self):
+        for directory in ('Themes/../Other/', 'Themes/default/Other/../../Save/',
+                          'Themes/default/Other/./', 'Themes/default//Other/',
+                          '/Themes/default/Other/', 'Themes/default/Other\\secret/',
+                          'Themes/default/Graphics/', 'Save/LocalProfiles/',
+                          'Songs/../Save/', 'Songs/./Example/'):
+            with self.subTest(directory=directory):
+                (self.profile/'Stats.xml').write_text(self.stats.replace(SONG, directory))
+                with self.assertRaisesRegex(ValueError, 'directory'):
+                    self.build()
+
+    def test_theme_directory_only_allowed_in_snapshot(self):
+        theme_dir = 'Themes/default/Other/'
+        event = self.event('play-1')
+        original = event.read_text()
+        event.write_text(original.replace(SONG, theme_dir))
+        with self.assertRaisesRegex(ValueError, 'directory'):
+            self.build()
+        event.write_text(original)
+        self.meta['dir'] = theme_dir
+        self.save_meta()
+        with self.assertRaisesRegex(ValueError, 'directory'):
+            self.build()
+
+    def test_history_error_explains_omitted_logs(self):
+        current = self.build()
+        previous = copy.deepcopy(current)
+        previous['recordedPlays'] = 5918
+        current['recordedPlays'] = 827
+        # This also looks like a per-song regression; report the missing logs first.
+        previous['songs'][0]['plays'] = 2
+        with self.assertRaisesRegex(ValueError, '827 uploaded, 5918 already published.*skipped_other_profiles'):
+            sync.verify_history(previous, current)
+
+    def test_new_logs_cannot_hide_missing_older_days(self):
+        previous = self.build()
+        current = copy.deepcopy(previous)
+        current['recordedPlays'] += 1
+        current['playsDaily'] = [['2026-11-13', 2]]
+        with self.assertRaisesRegex(ValueError, 'incomplete for 2026-11-12'):
+            sync.verify_history(previous, current)
+
+    def test_song_history_is_still_checked_with_complete_logs(self):
+        previous = self.build()
+        current = copy.deepcopy(previous)
+        current['songs'][0]['plays'] = 0
+        with self.assertRaisesRegex(ValueError, 'Historical song plays'):
+            sync.verify_history(previous, current)
+
     def test_banner_envelope_and_historical_retention(self):
         raw = io.BytesIO();builder.Image.new('RGB',(80,20),'pink').save(raw,'PNG');png=raw.getvalue()
         digest = hashlib.sha256(png).hexdigest()

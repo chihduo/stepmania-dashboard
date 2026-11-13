@@ -79,3 +79,21 @@ The baseline directory contains `data.json` and any thumbnails needed for fallba
 The game keeps its export under `Save/Dashboard/outbox/`. To troubleshoot a rejected
 upload, open the workflow log. Repair the missing data locally and select the game
 menu option again. A workflow failure never means the local scores were deleted.
+
+## Legacy saves and rejected uploads
+
+Cumulative profiles can contain calibration scores under
+`Themes/<theme>/Other/`. These entries are accepted in Stats.xml and excluded
+from song rankings, as in the original builder; lifetime totals remain unchanged.
+Normal song metadata and per-play events still require relative `Songs/` paths.
+
+An **incomplete historical play logs** error reports the uploaded and published
+counts. It can mean old `Save/Upload` files are missing or that the game filtered
+them. For a local-profile upload, the game accepts only records whose PlayerGuid
+matches the selected profile; older records with empty PlayerGuid are also
+excluded. Check `skipped_other_profiles` in `Save/Dashboard/pending.json` and the
+PlayerGuid field in an older local upload XML. Retain the originals. Restoring
+files alone will not resolve a player-ID mismatch, and switching to the machine
+profile would fail the published dashboard's profile-identity check. Legacy
+ownership needs to be resolved deliberately before those records are included.
+The existing dashboard remains online when validation fails.
