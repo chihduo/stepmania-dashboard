@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Saikio Simfiles/DADDY/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86312953</Score>
+				<PercentDP>0.742700</PercentDP>
+				<SurviveSeconds>143.361115</SurviveSeconds>
+				<MaxCombo>118</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-20 20:45:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>1</W5>
+					<W4>5</W4>
+					<W3>47</W3>
+					<W2>96</W2>
+					<W1>131</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dc58e325-5f12-44af-a64e-8d5f9f650d61</StageGuid>
+				<Guid>f46a6354-40c5-44b7-a525-63c79712d161</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

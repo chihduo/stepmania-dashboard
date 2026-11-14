@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/juicy/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87179121</Score>
+				<PercentDP>0.782100</PercentDP>
+				<SurviveSeconds>137.094574</SurviveSeconds>
+				<MaxCombo>94</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-31 22:01:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>4</W5>
+					<W4>9</W4>
+					<W3>50</W3>
+					<W2>103</W2>
+					<W1>194</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>21</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>183ae50c-b18e-4df5-aca2-d52c6b1e7dcc</StageGuid>
+				<Guid>8cb9f295-7905-49dd-ab50-01ef63638beb</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

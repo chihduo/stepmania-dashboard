@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[VIP Room Round 2] - Sugar Free/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87001701</Score>
+				<PercentDP>0.760400</PercentDP>
+				<SurviveSeconds>130.868057</SurviveSeconds>
+				<MaxCombo>100</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-25 22:15:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>7</W4>
+					<W3>49</W3>
+					<W2>109</W2>
+					<W1>156</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0c49e4cd-c164-44df-a5f9-d6bef989f021</StageGuid>
+				<Guid>ce95f995-2084-42e1-a027-eb3ca6e29324</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

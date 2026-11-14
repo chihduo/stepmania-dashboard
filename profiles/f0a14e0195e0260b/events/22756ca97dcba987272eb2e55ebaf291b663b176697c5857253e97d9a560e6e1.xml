@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Take That (feat. Xuan Zhang Yan)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92160938</Score>
+				<PercentDP>0.878500</PercentDP>
+				<SurviveSeconds>80.837242</SurviveSeconds>
+				<MaxCombo>89</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-27 21:30:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>10</W3>
+					<W2>24</W2>
+					<W1>80</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>48c9e49d-447a-4e14-a7ac-b34abc9985d2</StageGuid>
+				<Guid>fd767dd8-7504-4bdd-a18f-f8f448be513b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

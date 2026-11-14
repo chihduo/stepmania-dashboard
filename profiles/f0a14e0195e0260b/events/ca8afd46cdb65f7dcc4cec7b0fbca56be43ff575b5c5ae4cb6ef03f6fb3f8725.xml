@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Saikio Simfiles/LION/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>90373929</Score>
+				<PercentDP>0.824000</PercentDP>
+				<SurviveSeconds>141.202560</SurviveSeconds>
+				<MaxCombo>144</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-10-28 21:50:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>24</W3>
+					<W2>82</W2>
+					<W1>138</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>01d4194d-8503-4d93-ad8f-df65dc9e94ba</StageGuid>
+				<Guid>f2144d2d-3f1b-4a51-a4fd-450567df6619</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

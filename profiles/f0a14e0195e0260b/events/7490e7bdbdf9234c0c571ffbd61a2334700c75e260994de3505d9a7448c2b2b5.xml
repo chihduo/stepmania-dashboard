@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Flyers/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91862556</Score>
+				<PercentDP>0.836800</PercentDP>
+				<SurviveSeconds>88.468437</SurviveSeconds>
+				<MaxCombo>73</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-17 21:30:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>4</W5>
+					<W4>2</W4>
+					<W3>29</W3>
+					<W2>80</W2>
+					<W1>176</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>38</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f1f3a29b-28f7-4f24-a6e2-5e1bae492066</StageGuid>
+				<Guid>939f0fc3-f554-4b88-aa7a-2de6000b201e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Close To Me/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87861407</Score>
+				<PercentDP>0.801800</PercentDP>
+				<SurviveSeconds>132.853531</SurviveSeconds>
+				<MaxCombo>90</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-13 18:52:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>8</W4>
+					<W3>34</W3>
+					<W2>97</W2>
+					<W1>176</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dc907c0a-70df-4e90-a480-056e38443cb1</StageGuid>
+				<Guid>546d13df-bddd-4944-a74b-ba9936f35c92</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

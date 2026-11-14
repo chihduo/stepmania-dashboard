@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Beatvolt PIU/Rum Pum Pum/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>79659070</Score>
+				<PercentDP>0.699000</PercentDP>
+				<SurviveSeconds>145.073120</SurviveSeconds>
+				<MaxCombo>212</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-07-06 18:27:05</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>5</W4>
+					<W3>108</W3>
+					<W2>107</W2>
+					<W1>105</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>54</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2645a0ac-8ca2-41fc-ac9e-9e0b5da7f5c9</StageGuid>
+				<Guid>876be007-d3cb-4114-a5e6-3a245d764e6a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

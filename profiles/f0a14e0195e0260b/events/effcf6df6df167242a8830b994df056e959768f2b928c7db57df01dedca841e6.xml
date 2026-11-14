@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Huh/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>94984867</Score>
+				<PercentDP>0.895300</PercentDP>
+				<SurviveSeconds>98.910156</SurviveSeconds>
+				<MaxCombo>147</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-09 17:52:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>9</W3>
+					<W2>55</W2>
+					<W1>173</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e97e9d02-9bbc-41f7-a351-82237c98a55e</StageGuid>
+				<Guid>75137fb2-3342-4fe3-ab2a-ec7b536a8742</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round E] - Tokyo Bon (Makudonarudo)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78873494</Score>
+				<PercentDP>0.709700</PercentDP>
+				<SurviveSeconds>123.832985</SurviveSeconds>
+				<MaxCombo>62</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-25 19:08:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>16</W5>
+					<W4>16</W4>
+					<W3>64</W3>
+					<W2>99</W2>
+					<W1>177</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cdd245a6-296b-47bf-ac26-7a689b98802c</StageGuid>
+				<Guid>ebcb0cd4-a3fa-4b03-a020-5d1bd2099da5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

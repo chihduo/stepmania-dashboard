@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/GLASSY/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>77672765</Score>
+				<PercentDP>0.661400</PercentDP>
+				<SurviveSeconds>103.080009</SurviveSeconds>
+				<MaxCombo>49</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-14 19:34:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>16</W4>
+					<W3>80</W3>
+					<W2>102</W2>
+					<W1>84</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>31</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7dc9b702-5b30-4282-a83b-fd36a7aea12e</StageGuid>
+				<Guid>4e19a1be-063c-431d-a4a5-5c86aa05ee14</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

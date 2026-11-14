@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Hot Issue/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82412692</Score>
+				<PercentDP>0.756000</PercentDP>
+				<SurviveSeconds>118.847397</SurviveSeconds>
+				<MaxCombo>110</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-07 22:16:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>10</W5>
+					<W4>9</W4>
+					<W3>49</W3>
+					<W2>106</W2>
+					<W1>171</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>24</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>89d52268-8902-488b-af81-9747052ab88a</StageGuid>
+				<Guid>1b6e45fd-500d-46a1-a576-c4be746ec67e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

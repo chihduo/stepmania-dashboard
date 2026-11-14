@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Step/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>176907797</Score>
+				<PercentDP>0.818000</PercentDP>
+				<SurviveSeconds>209.448944</SurviveSeconds>
+				<MaxCombo>141</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-30 20:49:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>7</W5>
+					<W4>24</W4>
+					<W3>83</W3>
+					<W2>151</W2>
+					<W1>313</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>191</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8d7dadb6-5640-4e34-a825-b5e33084d1b7</StageGuid>
+				<Guid>8fcb5c0e-fe90-4b57-a041-f40b0d29584b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

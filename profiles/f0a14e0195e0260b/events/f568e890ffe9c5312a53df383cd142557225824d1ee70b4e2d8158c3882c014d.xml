@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/I Am A Woman Too/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88546115</Score>
+				<PercentDP>0.796700</PercentDP>
+				<SurviveSeconds>149.514267</SurviveSeconds>
+				<MaxCombo>180</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-04 20:05:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>47</W3>
+					<W2>110</W2>
+					<W1>196</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8cc31170-01a9-4010-a80a-2e4f1476b2cb</StageGuid>
+				<Guid>87571913-227c-4cd6-adb6-6e048feeec4e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

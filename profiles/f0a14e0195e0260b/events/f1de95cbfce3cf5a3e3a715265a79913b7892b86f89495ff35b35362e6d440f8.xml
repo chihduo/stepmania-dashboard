@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Ambiguous/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88030116</Score>
+				<PercentDP>0.791200</PercentDP>
+				<SurviveSeconds>95.004623</SurviveSeconds>
+				<MaxCombo>112</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-31 11:40:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>35</W3>
+					<W2>50</W2>
+					<W1>97</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>21</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e7fdd7a7-f7f8-4ce1-a98e-7a02f32dba7b</StageGuid>
+				<Guid>3ac852d3-31b4-48df-ae1b-bd0a2e1ab3e5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

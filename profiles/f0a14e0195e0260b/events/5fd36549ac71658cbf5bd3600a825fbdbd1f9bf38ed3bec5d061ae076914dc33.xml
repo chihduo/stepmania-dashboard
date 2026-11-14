@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/fof/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84641862</Score>
+				<PercentDP>0.725600</PercentDP>
+				<SurviveSeconds>100.663399</SurviveSeconds>
+				<MaxCombo>59</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-17 18:47:59</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>9</W4>
+					<W3>64</W3>
+					<W2>106</W2>
+					<W1>129</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6d7e8b83-a00c-4135-a567-b44128732262</StageGuid>
+				<Guid>c813c942-2bdd-4c31-ab10-ccae43650cbb</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Lisek&apos;s Simfiles/Galaxy Supernova/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>75803977</Score>
+				<PercentDP>0.658900</PercentDP>
+				<SurviveSeconds>126.638031</SurviveSeconds>
+				<MaxCombo>94</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-04 18:13:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>4</W5>
+					<W4>17</W4>
+					<W3>82</W3>
+					<W2>117</W2>
+					<W1>119</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ba7c22f5-36e8-4d37-ab4a-f29e3a41fcbc</StageGuid>
+				<Guid>f07346b3-6ee9-40e9-adff-dd5eb5d14669</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

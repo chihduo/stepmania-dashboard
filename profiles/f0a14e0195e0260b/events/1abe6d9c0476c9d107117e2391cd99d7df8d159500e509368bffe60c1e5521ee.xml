@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Raje&apos;s New Journey/Diamond/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85367561</Score>
+				<PercentDP>0.815100</PercentDP>
+				<SurviveSeconds>115.579147</SurviveSeconds>
+				<MaxCombo>184</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-09 17:01:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>2</W5>
+					<W4>10</W4>
+					<W3>33</W3>
+					<W2>82</W2>
+					<W1>173</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>45</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4ee155fd-94ab-40a4-a740-261bbab84727</StageGuid>
+				<Guid>8faec8a6-f7da-4381-a703-dc7a2df71a33</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

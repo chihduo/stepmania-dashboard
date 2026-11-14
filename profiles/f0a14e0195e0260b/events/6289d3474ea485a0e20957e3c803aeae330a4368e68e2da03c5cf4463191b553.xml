@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Zimons Originals/Cinta Segitiga/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89263109</Score>
+				<PercentDP>0.772400</PercentDP>
+				<SurviveSeconds>120.277924</SurviveSeconds>
+				<MaxCombo>115</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-24 18:23:41</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>19</W3>
+					<W2>49</W2>
+					<W1>63</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e8a726df-0be7-44f8-af7c-287058c0a06f</StageGuid>
+				<Guid>200e5c9e-f77c-4f0c-a353-2cbdb95e0de4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

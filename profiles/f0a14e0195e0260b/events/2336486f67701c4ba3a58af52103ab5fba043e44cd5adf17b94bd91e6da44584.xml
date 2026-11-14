@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/BLACK MAMBA/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85455850</Score>
+				<PercentDP>0.723500</PercentDP>
+				<SurviveSeconds>118.191704</SurviveSeconds>
+				<MaxCombo>143</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-23 20:31:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>7</W4>
+					<W3>56</W3>
+					<W2>99</W2>
+					<W1>120</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>84d45db3-b9a3-4683-a8b3-f17c9bce83a1</StageGuid>
+				<Guid>96dd649d-a73a-4581-a716-6ce369941957</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

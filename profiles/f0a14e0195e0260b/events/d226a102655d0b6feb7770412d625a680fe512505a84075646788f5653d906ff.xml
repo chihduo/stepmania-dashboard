@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Girls Generation-TTS - Twinkle/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>175258712</Score>
+				<PercentDP>0.745200</PercentDP>
+				<SurviveSeconds>157.673401</SurviveSeconds>
+				<MaxCombo>82</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-24 20:08:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>11</W4>
+					<W3>72</W3>
+					<W2>83</W2>
+					<W1>96</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>84</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a8da33cc-cd40-4821-a62d-de4905f80fd5</StageGuid>
+				<Guid>59805aa0-c4e1-4e3d-adad-6826c7ebc6b8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

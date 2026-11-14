@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Love Adventure/Treat Me/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>80203269</Score>
+				<PercentDP>0.735600</PercentDP>
+				<SurviveSeconds>93.492241</SurviveSeconds>
+				<MaxCombo>94</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-12 20:56:31</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>0</W5>
+					<W4>7</W4>
+					<W3>38</W3>
+					<W2>65</W2>
+					<W1>100</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ec45d179-4edd-4c99-af97-021218404806</StageGuid>
+				<Guid>ec999e5c-4487-42f1-a15c-a46c69469fcf</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/before dawn daybreak/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78542368</Score>
+				<PercentDP>0.711800</PercentDP>
+				<SurviveSeconds>126.463455</SurviveSeconds>
+				<MaxCombo>49</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-27 21:40:42</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>14</W5>
+					<W4>10</W4>
+					<W3>55</W3>
+					<W2>100</W2>
+					<W1>147</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>20</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9c59a618-7dac-410e-a6e6-79f14c878243</StageGuid>
+				<Guid>7e24b4c2-d8a6-46ca-a191-72cc72b24ae8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

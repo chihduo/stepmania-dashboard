@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/housecat/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>154529463</Score>
+				<PercentDP>0.653700</PercentDP>
+				<SurviveSeconds>178.760635</SurviveSeconds>
+				<MaxCombo>75</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-30 17:17:52</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>9</Miss>
+					<W5>7</W5>
+					<W4>25</W4>
+					<W3>125</W3>
+					<W2>136</W2>
+					<W1>178</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a8b74925-4f8a-47d5-a98c-e2d7ecd0f35b</StageGuid>
+				<Guid>36c1310f-53b0-45a5-a78f-586b81340b01</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 2/Secret/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>58672</Score>
+				<PercentDP>0.016000</PercentDP>
+				<SurviveSeconds>21.292076</SurviveSeconds>
+				<MaxCombo>7</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-19 19:26:25</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>2</W3>
+					<W2>5</W2>
+					<W1>3</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d5e7c025-acc8-40a5-a3f8-20ea3caea465</StageGuid>
+				<Guid>8d718b42-f8ab-4dc7-a4c6-49d67185aa1b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

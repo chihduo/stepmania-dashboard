@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Kimagure Princess/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85942831</Score>
+				<PercentDP>0.779000</PercentDP>
+				<SurviveSeconds>113.785690</SurviveSeconds>
+				<MaxCombo>192</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-15 19:27:56</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>6</W4>
+					<W3>51</W3>
+					<W2>98</W2>
+					<W1>173</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6dfefffa-5ecd-41b4-ad2a-2febf88d02f4</StageGuid>
+				<Guid>c6abcde6-bb19-4f03-aba7-71f3a4013d00</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

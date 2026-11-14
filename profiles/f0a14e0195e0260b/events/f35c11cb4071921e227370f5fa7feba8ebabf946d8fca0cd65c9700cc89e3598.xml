@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/chewi pack 02/I Am The Best/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92773786</Score>
+				<PercentDP>0.855100</PercentDP>
+				<SurviveSeconds>103.747749</SurviveSeconds>
+				<MaxCombo>72</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-14 22:17:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>14</W3>
+					<W2>46</W2>
+					<W1>117</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>38a09b99-2ce3-41f0-a318-88317a6e06dc</StageGuid>
+				<Guid>4e26c315-3788-4554-a11b-f723deb850bd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/HEART&amp;SOUL [Ikkitousen Dragon Destiny OP][118]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84651134</Score>
+				<PercentDP>0.777700</PercentDP>
+				<SurviveSeconds>99.195206</SurviveSeconds>
+				<MaxCombo>257</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-12 19:04:52</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>58</W3>
+					<W2>81</W2>
+					<W1>150</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>24</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c7a3b7a4-0773-4bc9-afad-cc1e748d114c</StageGuid>
+				<Guid>3c26b645-2514-422a-a4f0-f3c8790f5467</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

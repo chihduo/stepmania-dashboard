@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/ELEVEN/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>72779655</Score>
+				<PercentDP>0.662500</PercentDP>
+				<SurviveSeconds>81.060562</SurviveSeconds>
+				<MaxCombo>63</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-04 15:22:57</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>6</W5>
+					<W4>11</W4>
+					<W3>45</W3>
+					<W2>83</W2>
+					<W1>84</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4cc98839-ac9a-4364-a9b3-ce44bb37c7c3</StageGuid>
+				<Guid>3db21ee1-d1d9-4226-a51c-0709bc9a59a9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

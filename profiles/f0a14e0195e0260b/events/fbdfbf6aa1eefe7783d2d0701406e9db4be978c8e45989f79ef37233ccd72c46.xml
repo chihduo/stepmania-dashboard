@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Musouka/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86156615</Score>
+				<PercentDP>0.791500</PercentDP>
+				<SurviveSeconds>151.880295</SurviveSeconds>
+				<MaxCombo>145</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-09 17:09:27</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>4</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>4</W5>
+					<W4>15</W4>
+					<W3>70</W3>
+					<W2>121</W2>
+					<W1>204</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>130</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>28db2761-a186-42e3-a0fc-b5a129b35ab8</StageGuid>
+				<Guid>9368aa45-3bab-4dd9-a4b6-b933150c2494</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

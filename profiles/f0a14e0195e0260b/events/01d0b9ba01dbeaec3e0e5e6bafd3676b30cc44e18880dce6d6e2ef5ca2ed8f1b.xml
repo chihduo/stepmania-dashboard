@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/Tribe/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90155945</Score>
+				<PercentDP>0.817100</PercentDP>
+				<SurviveSeconds>115.588707</SurviveSeconds>
+				<MaxCombo>164</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-25 22:01:44</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>23</W3>
+					<W2>83</W2>
+					<W1>136</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>039317ed-5b70-43aa-ac5d-7ac118a4588f</StageGuid>
+				<Guid>7bb0869b-b0f2-4a85-a527-2fa1c601f736</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

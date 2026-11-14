@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/marisa-pt2/'/>
+			<Steps Difficulty='Challenge' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>475196</Score>
+				<PercentDP>0.046800</PercentDP>
+				<SurviveSeconds>18.669083</SurviveSeconds>
+				<MaxCombo>14</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-10-28 21:11:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>14</W3>
+					<W2>6</W2>
+					<W1>9</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5cdbfa31-a11a-46ae-aa88-6b0bb5316f61</StageGuid>
+				<Guid>4a2cd638-9ea5-4ee1-ae90-c338a93c6f9e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

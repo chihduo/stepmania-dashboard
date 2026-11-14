@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/yes or yes/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>176930052</Score>
+				<PercentDP>0.808300</PercentDP>
+				<SurviveSeconds>173.231033</SurviveSeconds>
+				<MaxCombo>122</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-10 17:35:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>7</W4>
+					<W3>47</W3>
+					<W2>128</W2>
+					<W1>259</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5465398c-2584-4a0f-aa40-1a346ad8a24a</StageGuid>
+				<Guid>5c664ea3-ebea-42e7-abf9-a2462fb11b27</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

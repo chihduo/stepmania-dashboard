@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/The Ace Of Charts/World On Fire/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>166560126</Score>
+				<PercentDP>0.728500</PercentDP>
+				<SurviveSeconds>158.437683</SurviveSeconds>
+				<MaxCombo>94</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-01 18:40:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>4</W5>
+					<W4>12</W4>
+					<W3>73</W3>
+					<W2>136</W2>
+					<W1>169</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>4</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2c4e128b-560b-4610-ae97-5a68c9b61682</StageGuid>
+				<Guid>56d083d7-749d-48ba-abe7-5ce2b1192351</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

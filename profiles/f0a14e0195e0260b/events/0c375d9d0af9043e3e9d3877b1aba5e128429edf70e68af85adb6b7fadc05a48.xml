@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/Kill This Love/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86482479</Score>
+				<PercentDP>0.744400</PercentDP>
+				<SurviveSeconds>130.594986</SurviveSeconds>
+				<MaxCombo>102</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-11 19:42:54</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>10</W4>
+					<W3>57</W3>
+					<W2>104</W2>
+					<W1>167</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>39dc0b27-0725-4f26-aca4-b4ea1ea03186</StageGuid>
+				<Guid>1173e37a-f439-4bc9-a8f7-c0e83be322c6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

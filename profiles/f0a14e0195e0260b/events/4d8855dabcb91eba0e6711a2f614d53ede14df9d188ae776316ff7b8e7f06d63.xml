@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Bad Boy/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88241297</Score>
+				<PercentDP>0.785100</PercentDP>
+				<SurviveSeconds>122.484917</SurviveSeconds>
+				<MaxCombo>94</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-12 20:15:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>25</W3>
+					<W2>65</W2>
+					<W1>92</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cc4e0494-e638-4c51-ae18-c8f1df35f109</StageGuid>
+				<Guid>96d0ffec-bad2-47c2-ab24-26cdb30906d7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

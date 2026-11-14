@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJMAX/[DJMAX] Closer/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82718423</Score>
+				<PercentDP>0.744900</PercentDP>
+				<SurviveSeconds>106.969803</SurviveSeconds>
+				<MaxCombo>169</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-14 22:39:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>25</W3>
+					<W2>56</W2>
+					<W1>63</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5bf20899-3085-4d8d-a52d-652702d3a413</StageGuid>
+				<Guid>6a90e5dc-ddf7-466b-a352-29c828ef7a7a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

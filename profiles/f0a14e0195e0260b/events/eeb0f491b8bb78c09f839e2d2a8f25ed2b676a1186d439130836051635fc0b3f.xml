@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Bon Bon Chocolat/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>56435000</Score>
+				<PercentDP>0.485700</PercentDP>
+				<SurviveSeconds>149.822327</SurviveSeconds>
+				<MaxCombo>88</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-06 21:11:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>5</W5>
+					<W4>53</W4>
+					<W3>182</W3>
+					<W2>75</W2>
+					<W1>78</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d8cc6065-c51f-4cee-a977-ee6f47941a7a</StageGuid>
+				<Guid>c30cc8c3-b5c7-430b-a014-b05b109bd0ff</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

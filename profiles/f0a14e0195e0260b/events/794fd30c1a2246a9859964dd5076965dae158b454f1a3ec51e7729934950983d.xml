@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/Reflectia/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83545673</Score>
+				<PercentDP>0.735000</PercentDP>
+				<SurviveSeconds>98.010658</SurviveSeconds>
+				<MaxCombo>110</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-12-31 22:31:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>7</W4>
+					<W3>49</W3>
+					<W2>65</W2>
+					<W1>94</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c2160dc1-c524-426e-a957-bd99dc898a92</StageGuid>
+				<Guid>daeb08ae-bd84-44ec-aba9-46411e30a2db</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

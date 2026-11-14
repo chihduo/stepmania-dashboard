@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/Back Door/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84471392</Score>
+				<PercentDP>0.772000</PercentDP>
+				<SurviveSeconds>143.123917</SurviveSeconds>
+				<MaxCombo>85</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-02 21:52:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>7</W4>
+					<W3>43</W3>
+					<W2>60</W2>
+					<W1>129</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>12</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a0b623d9-3307-49f2-a6a0-8789329ba61c</StageGuid>
+				<Guid>acd8eaf3-0fca-479b-aec3-34b9a799aa37</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

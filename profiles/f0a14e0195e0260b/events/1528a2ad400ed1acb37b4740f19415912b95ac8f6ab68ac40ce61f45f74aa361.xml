@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/shooting star/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84155845</Score>
+				<PercentDP>0.761400</PercentDP>
+				<SurviveSeconds>102.897324</SurviveSeconds>
+				<MaxCombo>119</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-06 17:59:31</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>3</W5>
+					<W4>7</W4>
+					<W3>44</W3>
+					<W2>94</W2>
+					<W1>150</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1e750e76-afda-410e-a53c-98924c4ec649</StageGuid>
+				<Guid>85b42654-5790-45bd-a108-78cce3c6ac0e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

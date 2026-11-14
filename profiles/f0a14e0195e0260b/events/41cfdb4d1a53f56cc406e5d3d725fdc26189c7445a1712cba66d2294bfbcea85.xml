@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Mamma Mia/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>148033398</Score>
+				<PercentDP>0.670400</PercentDP>
+				<SurviveSeconds>157.888916</SurviveSeconds>
+				<MaxCombo>62</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-29 16:49:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>2</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>11</W5>
+					<W4>35</W4>
+					<W3>123</W3>
+					<W2>104</W2>
+					<W1>172</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>69</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2e729280-1b1e-4404-a329-967bf7be0910</StageGuid>
+				<Guid>abed3511-b488-46ea-a376-c77e30b3d02c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

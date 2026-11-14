@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJSuperNOVA/Alcohol-Free/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91103225</Score>
+				<PercentDP>0.854300</PercentDP>
+				<SurviveSeconds>135.630829</SurviveSeconds>
+				<MaxCombo>264</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-20 14:45:03</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>22</W3>
+					<W2>96</W2>
+					<W1>216</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ad1a6226-018a-4409-af9a-1b3e2d779424</StageGuid>
+				<Guid>e6de3fa6-ec1f-4cd8-a5be-38dbfe46c9ad</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

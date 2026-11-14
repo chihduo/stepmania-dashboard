@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Nostalgia Eroge/(rokaz)Atarashii Koi no Katachi/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>723013</Score>
+				<PercentDP>0.052200</PercentDP>
+				<SurviveSeconds>36.384979</SurviveSeconds>
+				<MaxCombo>6</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-20 15:58:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>9</Miss>
+					<W5>10</W5>
+					<W4>14</W4>
+					<W3>13</W3>
+					<W2>5</W2>
+					<W1>7</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>14</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0ac80874-e5e6-4d4c-afb8-c0a1d0921e8c</StageGuid>
+				<Guid>bc35a261-2222-4e2e-aad3-6e7696c7e8a4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

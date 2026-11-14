@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round H] - Mamma Mia/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86273593</Score>
+				<PercentDP>0.750400</PercentDP>
+				<SurviveSeconds>112.041550</SurviveSeconds>
+				<MaxCombo>67</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-18 22:09:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>5</W5>
+					<W4>4</W4>
+					<W3>57</W3>
+					<W2>100</W2>
+					<W1>114</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>54</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f6059e53-a104-4b49-a737-ff4fe764fcb7</StageGuid>
+				<Guid>758afa28-4973-4426-adbd-ce7c2b088f99</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

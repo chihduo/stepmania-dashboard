@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/MANIAC/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87616289</Score>
+				<PercentDP>0.782300</PercentDP>
+				<SurviveSeconds>124.696304</SurviveSeconds>
+				<MaxCombo>134</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-19 18:16:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>29</W3>
+					<W2>67</W2>
+					<W1>90</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>88d9180c-bf3e-47f5-a8f8-da14b2b4b487</StageGuid>
+				<Guid>95969603-2349-4c4b-a2db-d4ece2f4ac57</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

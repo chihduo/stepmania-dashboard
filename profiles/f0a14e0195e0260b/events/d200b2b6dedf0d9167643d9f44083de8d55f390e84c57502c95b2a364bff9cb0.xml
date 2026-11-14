@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/The Complete led_light Collection/BOOMBAYAH/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85054099</Score>
+				<PercentDP>0.778400</PercentDP>
+				<SurviveSeconds>127.396301</SurviveSeconds>
+				<MaxCombo>132</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-13 18:44:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>47</W3>
+					<W2>85</W2>
+					<W1>148</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>21</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b685e49b-4962-46bc-ad3e-99e284eb4d17</StageGuid>
+				<Guid>21ecf7f0-1858-43c3-a2f8-499d5e8cce6b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

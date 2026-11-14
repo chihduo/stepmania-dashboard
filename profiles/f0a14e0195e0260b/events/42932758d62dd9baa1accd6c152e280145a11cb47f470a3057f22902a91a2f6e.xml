@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/Casting Dice/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83423950</Score>
+				<PercentDP>0.693800</PercentDP>
+				<SurviveSeconds>97.953140</SurviveSeconds>
+				<MaxCombo>43</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-08 18:18:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>9</W4>
+					<W3>51</W3>
+					<W2>70</W2>
+					<W1>73</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>140fd23c-eb19-49d0-a9b2-55a855ef5361</StageGuid>
+				<Guid>b021e0f7-56e9-4225-a567-b6d2104cf1a2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

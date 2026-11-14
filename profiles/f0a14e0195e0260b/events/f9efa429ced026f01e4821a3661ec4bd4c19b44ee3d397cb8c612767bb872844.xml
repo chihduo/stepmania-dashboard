@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Obsession/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>2834611</Score>
+				<PercentDP>0.136500</PercentDP>
+				<SurviveSeconds>30.625853</SurviveSeconds>
+				<MaxCombo>45</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-19 17:57:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>15</W3>
+					<W2>15</W2>
+					<W1>20</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ad2aec23-288a-452f-ae95-6b0f9a53776f</StageGuid>
+				<Guid>6dffb00d-022a-4dbe-a327-f5777598749d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

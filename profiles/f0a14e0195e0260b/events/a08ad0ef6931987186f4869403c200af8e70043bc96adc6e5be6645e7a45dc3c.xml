@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Remember Memories [Really Really! OP][093]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93200011</Score>
+				<PercentDP>0.872300</PercentDP>
+				<SurviveSeconds>139.984711</SurviveSeconds>
+				<MaxCombo>165</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-22 20:41:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>22</W3>
+					<W2>58</W2>
+					<W1>139</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>61</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1e646df8-bd08-4506-a4e1-060695dbf13c</StageGuid>
+				<Guid>ce35bb05-427d-4379-a057-01e0a7ce4bc2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

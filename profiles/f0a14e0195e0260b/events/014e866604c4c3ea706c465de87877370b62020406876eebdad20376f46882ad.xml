@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/Gangnam Style/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>174730629</Score>
+				<PercentDP>0.808800</PercentDP>
+				<SurviveSeconds>249.943436</SurviveSeconds>
+				<MaxCombo>157</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-05 23:48:18</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>3</W5>
+					<W4>6</W4>
+					<W3>59</W3>
+					<W2>137</W2>
+					<W1>261</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>47</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1db83051-18ae-42c1-a4e4-8a88ccbf403e</StageGuid>
+				<Guid>39d01d13-650b-4e73-a000-88fb09dcb9ae</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

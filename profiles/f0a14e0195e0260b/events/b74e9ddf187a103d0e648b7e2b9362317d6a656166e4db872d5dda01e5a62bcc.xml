@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Baby U!/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>70054822</Score>
+				<PercentDP>0.717200</PercentDP>
+				<SurviveSeconds>87.981842</SurviveSeconds>
+				<MaxCombo>66</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-12-31 20:10:31</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>22</Miss>
+					<W5>3</W5>
+					<W4>3</W4>
+					<W3>12</W3>
+					<W2>76</W2>
+					<W1>107</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>32</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d359b6a2-18cf-4573-a6b1-1b14fa3c119f</StageGuid>
+				<Guid>57d51c55-d560-4d9b-ae84-30828b0f274e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

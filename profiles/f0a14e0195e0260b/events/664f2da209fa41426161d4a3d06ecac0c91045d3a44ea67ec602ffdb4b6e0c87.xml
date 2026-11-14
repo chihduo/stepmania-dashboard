@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/BEATS LIKE THIS/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>175731</Score>
+				<PercentDP>0.034500</PercentDP>
+				<SurviveSeconds>19.702105</SurviveSeconds>
+				<MaxCombo>10</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-20 21:27:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>2</W3>
+					<W2>0</W2>
+					<W1>7</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6a13e7c7-5f89-4739-a19f-c4ce98b611a8</StageGuid>
+				<Guid>7c10c46f-3006-4afb-a533-b457ec5d9604</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/DAM DARIRAM/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84427982</Score>
+				<PercentDP>0.742700</PercentDP>
+				<SurviveSeconds>96.985703</SurviveSeconds>
+				<MaxCombo>104</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-03 19:26:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>44</W3>
+					<W2>69</W2>
+					<W1>102</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5185af47-3b69-4e4e-a17b-5a1a6e871fbc</StageGuid>
+				<Guid>9e4729d2-9e48-4cf5-a06a-23b128986293</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

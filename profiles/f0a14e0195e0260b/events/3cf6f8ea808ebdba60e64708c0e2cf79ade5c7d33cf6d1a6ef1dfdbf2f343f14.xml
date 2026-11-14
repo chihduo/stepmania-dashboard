@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Circus/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82722648</Score>
+				<PercentDP>0.790800</PercentDP>
+				<SurviveSeconds>83.424728</SurviveSeconds>
+				<MaxCombo>83</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-16 18:44:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>19</W3>
+					<W2>38</W2>
+					<W1>75</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>8</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e4512f28-e200-4db5-a17b-36a37e6a2f1f</StageGuid>
+				<Guid>46e9058a-de6c-4080-a499-53e2b486c9d8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

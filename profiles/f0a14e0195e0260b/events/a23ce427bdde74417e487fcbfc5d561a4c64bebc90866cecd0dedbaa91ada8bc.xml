@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 2/everlasting/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>52438924</Score>
+				<PercentDP>0.528500</PercentDP>
+				<SurviveSeconds>131.834396</SurviveSeconds>
+				<MaxCombo>67</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-24 19:25:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>6</W5>
+					<W4>21</W4>
+					<W3>121</W3>
+					<W2>102</W2>
+					<W1>72</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>57</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>74d6b988-c9ce-4efa-af6c-8b2a41f20032</StageGuid>
+				<Guid>2c02e3fc-61bb-403d-afc7-0078689a2b17</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

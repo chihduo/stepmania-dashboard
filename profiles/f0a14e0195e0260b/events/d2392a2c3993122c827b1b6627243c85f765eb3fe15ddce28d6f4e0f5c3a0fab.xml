@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/As If It_s Your Last/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89925040</Score>
+				<PercentDP>0.805200</PercentDP>
+				<SurviveSeconds>153.857956</SurviveSeconds>
+				<MaxCombo>92</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-02 21:40:19</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>6</W5>
+					<W4>7</W4>
+					<W3>36</W3>
+					<W2>92</W2>
+					<W1>179</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>44</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9867afd6-aecd-4250-af42-8e6c68c6b896</StageGuid>
+				<Guid>2b06ef88-044e-4dc8-aa5e-b05318c62eda</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

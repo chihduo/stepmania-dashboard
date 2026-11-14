@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Shi Jie Zhi You Wo Men/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83940141</Score>
+				<PercentDP>0.773400</PercentDP>
+				<SurviveSeconds>101.893394</SurviveSeconds>
+				<MaxCombo>121</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-08 20:53:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>39</W3>
+					<W2>53</W2>
+					<W1>109</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4527e2f0-b3d3-463d-a873-2f397ebd9e02</StageGuid>
+				<Guid>fea5a2c4-af96-4960-a345-105ec9c3e612</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

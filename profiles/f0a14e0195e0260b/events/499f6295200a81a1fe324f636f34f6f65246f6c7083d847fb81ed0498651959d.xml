@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Ace of Arrows/To the Beginning/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89325981</Score>
+				<PercentDP>0.814200</PercentDP>
+				<SurviveSeconds>97.560738</SurviveSeconds>
+				<MaxCombo>76</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-09 20:24:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>8</W4>
+					<W3>41</W3>
+					<W2>67</W2>
+					<W1>90</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>122</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>30e29341-6526-4d69-abce-72492ad09ba1</StageGuid>
+				<Guid>ccd8fe64-ebe7-4a42-aa0b-34a30f0ed8da</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

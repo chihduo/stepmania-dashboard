@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/GFRIEND-MAGO/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>266716</Score>
+				<PercentDP>0.034900</PercentDP>
+				<SurviveSeconds>29.225250</SurviveSeconds>
+				<MaxCombo>9</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-22 20:31:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>10</W3>
+					<W2>6</W2>
+					<W1>2</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>612aeba1-9b35-4c82-a1aa-f53a2c674d08</StageGuid>
+				<Guid>df7f4626-c5ab-48d6-a480-40c0963627ca</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

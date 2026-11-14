@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/After LIKE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>79006941</Score>
+				<PercentDP>0.707400</PercentDP>
+				<SurviveSeconds>118.717316</SurviveSeconds>
+				<MaxCombo>80</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-02 21:58:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>4</W5>
+					<W4>14</W4>
+					<W3>79</W3>
+					<W2>83</W2>
+					<W1>146</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9bff4036-73fc-4e50-a93f-7afce2b2f9af</StageGuid>
+				<Guid>0b5767e9-9fb9-4e94-ae39-6b10558cf518</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

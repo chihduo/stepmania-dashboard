@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/HIGH HEELS/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85105840</Score>
+				<PercentDP>0.759800</PercentDP>
+				<SurviveSeconds>125.720970</SurviveSeconds>
+				<MaxCombo>89</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-04 19:59:57</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>67</W3>
+					<W2>112</W2>
+					<W1>195</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>74e067b9-0385-4bf0-abc7-60cb354e132f</StageGuid>
+				<Guid>946c8e60-be2c-4e47-a557-a68c16c8152c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

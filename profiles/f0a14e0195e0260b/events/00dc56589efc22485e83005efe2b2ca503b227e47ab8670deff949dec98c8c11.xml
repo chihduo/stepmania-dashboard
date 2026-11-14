@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/BAD GIRL feat.DEV (The Cataracs remix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84297332</Score>
+				<PercentDP>0.747600</PercentDP>
+				<SurviveSeconds>123.349258</SurviveSeconds>
+				<MaxCombo>31</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-06-21 21:26:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>5</W5>
+					<W4>7</W4>
+					<W3>33</W3>
+					<W2>60</W2>
+					<W1>78</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>31</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>16e8bfb3-74d6-4973-ab40-ee21c06c2beb</StageGuid>
+				<Guid>f5f481b0-8e6f-41d9-a421-38d9fa523320</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

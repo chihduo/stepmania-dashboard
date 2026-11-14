@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Jesters of the Moon/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>81841000</Score>
+				<PercentDP>0.733700</PercentDP>
+				<SurviveSeconds>96.733589</SurviveSeconds>
+				<MaxCombo>140</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-03 20:21:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>36</W3>
+					<W2>43</W2>
+					<W1>57</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2e3d27ef-47bd-48bd-a4f3-6426794349cc</StageGuid>
+				<Guid>2f3b1307-862c-479e-a688-485bcf5fad29</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

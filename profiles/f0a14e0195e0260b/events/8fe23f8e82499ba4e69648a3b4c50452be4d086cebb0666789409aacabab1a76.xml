@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Silverhawke&apos;s Pack 1/helix pulse/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82240983</Score>
+				<PercentDP>0.760200</PercentDP>
+				<SurviveSeconds>122.796402</SurviveSeconds>
+				<MaxCombo>117</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-22 19:25:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>1</W5>
+					<W4>7</W4>
+					<W3>45</W3>
+					<W2>111</W2>
+					<W1>153</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b43568bc-ba01-4a77-a000-ee010e6e069e</StageGuid>
+				<Guid>2f440ef6-1043-4f5d-a31f-b0089581d7ea</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

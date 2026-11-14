@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/DUMHDURUM/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>86965</Score>
+				<PercentDP>0.021800</PercentDP>
+				<SurviveSeconds>17.385023</SurviveSeconds>
+				<MaxCombo>5</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-09 18:57:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>0</W5>
+					<W4>5</W4>
+					<W3>2</W3>
+					<W2>3</W2>
+					<W1>9</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b106caef-7968-4125-a705-3e110c8bd038</StageGuid>
+				<Guid>7e745b18-9740-48af-a473-e138068523b3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

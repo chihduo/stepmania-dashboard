@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/Programmed Universe/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84406733</Score>
+				<PercentDP>0.752200</PercentDP>
+				<SurviveSeconds>112.440117</SurviveSeconds>
+				<MaxCombo>98</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-25 21:47:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>9</W4>
+					<W3>41</W3>
+					<W2>76</W2>
+					<W1>118</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>13c239cd-b744-4c7d-a715-756d3d2565f0</StageGuid>
+				<Guid>ed0faa3b-68c1-4312-aa4d-aad171de1639</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/FLY/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>90927376</Score>
+				<PercentDP>0.805500</PercentDP>
+				<SurviveSeconds>151.642654</SurviveSeconds>
+				<MaxCombo>230</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-08 22:19:08</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>26</W3>
+					<W2>81</W2>
+					<W1>106</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6ea3416b-18ac-48b4-ad81-80ced97aab3b</StageGuid>
+				<Guid>0104cd5c-f8c3-4f75-a72f-687122d36ae0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

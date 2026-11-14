@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/Abracadabra/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>69101416</Score>
+				<PercentDP>0.620400</PercentDP>
+				<SurviveSeconds>141.467178</SurviveSeconds>
+				<MaxCombo>22</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-13 20:34:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>17</Miss>
+					<W5>12</W5>
+					<W4>16</W4>
+					<W3>73</W3>
+					<W2>66</W2>
+					<W1>98</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>26</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cb7bcab1-cfad-4dfe-a78d-394d25c09b5e</StageGuid>
+				<Guid>d60688c2-0091-484e-a227-e487c1726b80</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

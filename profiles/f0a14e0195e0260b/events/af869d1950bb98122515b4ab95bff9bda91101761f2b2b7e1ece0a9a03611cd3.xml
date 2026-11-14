@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Kiss Me Aishiteru/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>79496</Score>
+				<PercentDP>0.016800</PercentDP>
+				<SurviveSeconds>16.918024</SurviveSeconds>
+				<MaxCombo>7</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-07 18:44:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>4</W3>
+					<W2>4</W2>
+					<W1>4</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f8948645-8e4a-41b5-a27f-71830bbaf7c2</StageGuid>
+				<Guid>27096571-d321-4bb5-ad21-66c2a052f2d3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

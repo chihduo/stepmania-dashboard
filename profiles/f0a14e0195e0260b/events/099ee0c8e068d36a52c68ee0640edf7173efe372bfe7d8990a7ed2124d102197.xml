@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 1/Teenage Solution/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91687915</Score>
+				<PercentDP>0.820600</PercentDP>
+				<SurviveSeconds>126.773743</SurviveSeconds>
+				<MaxCombo>101</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-19 19:11:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>1</W4>
+					<W3>25</W3>
+					<W2>87</W2>
+					<W1>150</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2c8023ed-8e43-41cf-aa60-e54e7f841960</StageGuid>
+				<Guid>fe7c5b40-190d-414b-a893-068063b77da9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

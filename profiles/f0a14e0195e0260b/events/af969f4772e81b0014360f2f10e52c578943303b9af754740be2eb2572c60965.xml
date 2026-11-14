@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 2/ELEVEN/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83151498</Score>
+				<PercentDP>0.778600</PercentDP>
+				<SurviveSeconds>129.371490</SurviveSeconds>
+				<MaxCombo>121</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-09 20:42:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>58</W3>
+					<W2>88</W2>
+					<W1>182</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>32</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3267fe7a-96c9-4e6b-a857-c12bc010d78f</StageGuid>
+				<Guid>7ce54070-0b69-443f-acda-f18e4c16b267</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

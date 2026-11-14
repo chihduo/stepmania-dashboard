@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/COSMIC LOVE/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>82171264</Score>
+				<PercentDP>0.693100</PercentDP>
+				<SurviveSeconds>100.431595</SurviveSeconds>
+				<MaxCombo>71</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-01 18:47:27</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>5</W5>
+					<W4>11</W4>
+					<W3>57</W3>
+					<W2>78</W2>
+					<W1>109</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>12</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c4e3c11f-4ec4-4b35-a4ef-519e6c5eb2c8</StageGuid>
+				<Guid>096a85a3-76c7-45e0-aa5d-3ce1e0004eee</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

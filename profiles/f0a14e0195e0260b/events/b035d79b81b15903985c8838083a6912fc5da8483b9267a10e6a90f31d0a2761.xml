@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Abracadabra/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93999149</Score>
+				<PercentDP>0.868200</PercentDP>
+				<SurviveSeconds>103.981331</SurviveSeconds>
+				<MaxCombo>98</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-19 14:49:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>12</W3>
+					<W2>36</W2>
+					<W1>101</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d31cb1e4-ec94-46d8-a7dc-c7ef0266caa0</StageGuid>
+				<Guid>bb49f0ac-a918-404d-aad7-dd1efbc95bd2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

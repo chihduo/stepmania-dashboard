@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/future gazer/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85023823</Score>
+				<PercentDP>0.743800</PercentDP>
+				<SurviveSeconds>101.979637</SurviveSeconds>
+				<MaxCombo>80</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-23 18:06:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>26</W3>
+					<W2>63</W2>
+					<W1>58</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>23</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d9e34216-591d-4a8b-a55a-8eaf65e1ed1e</StageGuid>
+				<Guid>36ada756-7aad-432e-ae80-16cb21493646</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

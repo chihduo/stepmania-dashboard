@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/Kimi to no kioku/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>5374806</Score>
+				<PercentDP>0.181800</PercentDP>
+				<SurviveSeconds>50.613426</SurviveSeconds>
+				<MaxCombo>22</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-05 21:25:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>23</Miss>
+					<W5>8</W5>
+					<W4>15</W4>
+					<W3>16</W3>
+					<W2>29</W2>
+					<W1>44</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>19</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b9ef98c5-7c5f-4902-ae02-8327a7566c57</StageGuid>
+				<Guid>358da5d6-c168-4597-a237-0d319cbaec10</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/Hello Bitches/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84850025</Score>
+				<PercentDP>0.739400</PercentDP>
+				<SurviveSeconds>85.717323</SurviveSeconds>
+				<MaxCombo>66</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-27 16:14:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>2</W4>
+					<W3>36</W3>
+					<W2>58</W2>
+					<W1>91</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0f045910-5cd8-474e-a71e-2e49b89d6dc2</StageGuid>
+				<Guid>7d78abbb-2b9d-4778-abc6-158ebab4a045</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

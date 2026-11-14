@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Cardboard Box/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83491126</Score>
+				<PercentDP>0.735400</PercentDP>
+				<SurviveSeconds>114.476173</SurviveSeconds>
+				<MaxCombo>170</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-11 20:24:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>53</W3>
+					<W2>85</W2>
+					<W1>97</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b5b71477-126e-460a-a29d-22c26217cf54</StageGuid>
+				<Guid>a3bb5905-56f8-4f62-a5b1-ccb87561966e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/xingfu de ditu/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87704153</Score>
+				<PercentDP>0.772200</PercentDP>
+				<SurviveSeconds>129.212143</SurviveSeconds>
+				<MaxCombo>284</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-06 00:15:54</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>58</W3>
+					<W2>99</W2>
+					<W1>159</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7e9d42a5-df28-4a16-a6b8-f5f5d991e239</StageGuid>
+				<Guid>2fb8847a-2f93-48e8-a937-912d0d378f95</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

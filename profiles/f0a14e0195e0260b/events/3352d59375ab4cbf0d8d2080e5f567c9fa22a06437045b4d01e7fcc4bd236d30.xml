@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Sailor Stars/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>80390487</Score>
+				<PercentDP>0.718500</PercentDP>
+				<SurviveSeconds>113.330139</SurviveSeconds>
+				<MaxCombo>70</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-23 19:15:03</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>17</W4>
+					<W3>84</W3>
+					<W2>96</W2>
+					<W1>144</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>50</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>029f354f-92a1-4f2d-a999-89ca64164c6b</StageGuid>
+				<Guid>e326b530-414d-49ff-a7e4-63a7a1b07a8b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

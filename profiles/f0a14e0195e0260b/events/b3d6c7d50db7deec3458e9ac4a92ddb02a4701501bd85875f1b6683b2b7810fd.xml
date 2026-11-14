@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[ROUND 4] - Cry Cry/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>79362913</Score>
+				<PercentDP>0.728400</PercentDP>
+				<SurviveSeconds>129.373474</SurviveSeconds>
+				<MaxCombo>77</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-08 18:51:41</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>7</W5>
+					<W4>13</W4>
+					<W3>54</W3>
+					<W2>81</W2>
+					<W1>138</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7b6742bb-a72a-4b52-a832-c294a7dec163</StageGuid>
+				<Guid>2d3e1851-cf6e-4ef0-a173-91ea92e69643</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

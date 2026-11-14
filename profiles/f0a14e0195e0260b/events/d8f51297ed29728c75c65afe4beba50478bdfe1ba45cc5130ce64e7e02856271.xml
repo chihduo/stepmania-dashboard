@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Gossip Girls/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>73537262</Score>
+				<PercentDP>0.631600</PercentDP>
+				<SurviveSeconds>141.183975</SurviveSeconds>
+				<MaxCombo>35</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-11 23:42:00</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>8</W5>
+					<W4>44</W4>
+					<W3>122</W3>
+					<W2>117</W2>
+					<W1>153</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>41</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>43a577fc-16b0-4ed4-a774-dbbb6747f067</StageGuid>
+				<Guid>92ea438c-da5c-4518-a522-5ff1f0c19a5c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

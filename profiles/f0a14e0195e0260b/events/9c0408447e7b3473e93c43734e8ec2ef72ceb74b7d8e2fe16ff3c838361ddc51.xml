@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Silverhawke&apos;s Pack 1/L&apos;avide/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91215732</Score>
+				<PercentDP>0.842500</PercentDP>
+				<SurviveSeconds>126.152077</SurviveSeconds>
+				<MaxCombo>179</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-04 18:06:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>32</W3>
+					<W2>112</W2>
+					<W1>218</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>32</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0fa1af0f-8022-4030-a14a-957d69c44de4</StageGuid>
+				<Guid>3fa4ca9f-9cd3-40b8-ad8e-36f692546c46</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

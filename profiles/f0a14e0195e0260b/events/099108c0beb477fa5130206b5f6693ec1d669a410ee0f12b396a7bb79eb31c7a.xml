@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Allure/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>93446752</Score>
+				<PercentDP>0.838000</PercentDP>
+				<SurviveSeconds>111.353683</SurviveSeconds>
+				<MaxCombo>165</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-10 16:50:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>20</W3>
+					<W2>66</W2>
+					<W1>157</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1982d17a-4c38-4d8b-adf6-20272566c18e</StageGuid>
+				<Guid>8c103411-bdcd-4d6a-a23a-7209b9c29fb3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

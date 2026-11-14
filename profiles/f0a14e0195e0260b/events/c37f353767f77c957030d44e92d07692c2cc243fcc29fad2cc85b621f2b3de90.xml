@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Who Are You (Feat. Gaeko)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87621798</Score>
+				<PercentDP>0.781000</PercentDP>
+				<SurviveSeconds>134.294922</SurviveSeconds>
+				<MaxCombo>100</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-16 21:48:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>31</W3>
+					<W2>61</W2>
+					<W1>79</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>db44b7e0-0c5b-4ead-a986-ba5163167399</StageGuid>
+				<Guid>28b8739e-c84d-4e31-acdb-9ce55e4870a5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

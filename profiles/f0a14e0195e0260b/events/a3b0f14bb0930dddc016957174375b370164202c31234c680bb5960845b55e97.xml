@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Crying/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86620153</Score>
+				<PercentDP>0.761200</PercentDP>
+				<SurviveSeconds>140.933990</SurviveSeconds>
+				<MaxCombo>112</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-06 20:44:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>4</W5>
+					<W4>10</W4>
+					<W3>74</W3>
+					<W2>129</W2>
+					<W1>228</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a24b4592-5409-4a1a-a4a3-eaf3303110a0</StageGuid>
+				<Guid>39cce37b-b3bb-4ef9-a9e2-d12b43597802</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

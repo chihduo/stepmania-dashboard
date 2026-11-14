@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Don_t Let Me Be The Last To Know (Hex Hector Radio Mix)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76926455</Score>
+				<PercentDP>0.683400</PercentDP>
+				<SurviveSeconds>97.125107</SurviveSeconds>
+				<MaxCombo>72</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-04 15:15:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>9</W5>
+					<W4>5</W4>
+					<W3>66</W3>
+					<W2>91</W2>
+					<W1>117</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7a3a3dde-0172-44ba-a271-07360b7247e0</StageGuid>
+				<Guid>844acf9c-730a-496f-aa82-4124babd95c8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

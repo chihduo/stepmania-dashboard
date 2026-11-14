@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/pedo/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>643908</Score>
+				<PercentDP>0.060600</PercentDP>
+				<SurviveSeconds>22.473076</SurviveSeconds>
+				<MaxCombo>11</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-27 21:36:05</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>4</W3>
+					<W2>9</W2>
+					<W1>12</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>02eda928-f065-4995-a4ab-5f53994be28c</StageGuid>
+				<Guid>ed10542a-b993-450f-a8e9-166ed7c4d99c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

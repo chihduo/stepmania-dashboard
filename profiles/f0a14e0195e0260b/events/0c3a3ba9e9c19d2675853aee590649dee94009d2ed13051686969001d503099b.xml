@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Silverhawke&apos;s Pack 1/IMMORAL/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87143505</Score>
+				<PercentDP>0.806200</PercentDP>
+				<SurviveSeconds>113.557129</SurviveSeconds>
+				<MaxCombo>192</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-10-28 22:01:59</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>49</W3>
+					<W2>87</W2>
+					<W1>176</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>23</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>65a62844-b174-4fb9-a5c3-8b109e081505</StageGuid>
+				<Guid>0ffa494f-6e13-4e05-ab40-fe57b04f69b4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

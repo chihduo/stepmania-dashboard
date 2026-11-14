@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Real Emotion/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89892770</Score>
+				<PercentDP>0.808600</PercentDP>
+				<SurviveSeconds>142.505402</SurviveSeconds>
+				<MaxCombo>133</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-20 21:22:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>41</W3>
+					<W2>122</W2>
+					<W1>207</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9bac43a3-fd3b-47c0-a808-881166ed925c</StageGuid>
+				<Guid>4d7adbcb-ab6c-4827-ae3f-77b7a0be5409</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Asu e no Namida [Onegai Twins ED][042]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>6879</Score>
+				<PercentDP>0.001900</PercentDP>
+				<SurviveSeconds>15.999003</SurviveSeconds>
+				<MaxCombo>1</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-20 21:59:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>11</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>1</W3>
+					<W2>0</W2>
+					<W1>0</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>213a5bab-5cc6-4f0a-a63b-584c22aade54</StageGuid>
+				<Guid>ace293ac-acd5-4c96-acee-44dcf19af7a7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

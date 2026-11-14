@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Hot Summer/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>90688400</Score>
+				<PercentDP>0.801700</PercentDP>
+				<SurviveSeconds>91.687737</SurviveSeconds>
+				<MaxCombo>165</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-18 21:25:27</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>23</W3>
+					<W2>45</W2>
+					<W1>77</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>11a2233f-947e-42b7-a90a-02fdaf102d2f</StageGuid>
+				<Guid>1239a203-abb7-4859-aabe-46581f6956bf</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

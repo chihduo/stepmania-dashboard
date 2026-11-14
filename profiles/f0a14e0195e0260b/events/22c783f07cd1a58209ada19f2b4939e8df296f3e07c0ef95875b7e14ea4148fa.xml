@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Scars of FAUNA/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82732157</Score>
+				<PercentDP>0.742100</PercentDP>
+				<SurviveSeconds>124.517281</SurviveSeconds>
+				<MaxCombo>133</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-04 20:08:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>12</W4>
+					<W3>70</W3>
+					<W2>91</W2>
+					<W1>141</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>6</LetGo>
+					<Held>60</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>73fcf9b2-1639-4e96-a1b0-d797155580cf</StageGuid>
+				<Guid>ee523ae7-b295-4b35-ad2f-72c5cdf5506b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Nostalgia Eroge/(Sakura)Ever stay snow/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>16416</Score>
+				<PercentDP>0.004300</PercentDP>
+				<SurviveSeconds>16.215010</SurviveSeconds>
+				<MaxCombo>2</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-20 15:59:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>3</W3>
+					<W2>1</W2>
+					<W1>1</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4cb7e8d4-efa9-48f0-af93-95021464cb95</StageGuid>
+				<Guid>de9b2f35-49a3-459c-a278-297bf8e7ad2e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

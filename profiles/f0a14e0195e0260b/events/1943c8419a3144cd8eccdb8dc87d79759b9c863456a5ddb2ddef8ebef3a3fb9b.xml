@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 1/I Need to Know/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>72050936</Score>
+				<PercentDP>0.595300</PercentDP>
+				<SurviveSeconds>124.667313</SurviveSeconds>
+				<MaxCombo>60</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-15 20:25:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>5</W5>
+					<W4>24</W4>
+					<W3>104</W3>
+					<W2>97</W2>
+					<W1>93</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>22</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c1e30ee1-5c82-4010-aa05-519d12b07a7f</StageGuid>
+				<Guid>e4266848-defc-4162-a191-89a7f822f858</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[GARNiDELiA] Otome no Kokoroe/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84206464</Score>
+				<PercentDP>0.749700</PercentDP>
+				<SurviveSeconds>98.309547</SurviveSeconds>
+				<MaxCombo>88</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-22 20:35:56</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>50</W3>
+					<W2>90</W2>
+					<W1>127</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1a28f75d-6a53-449c-a639-e4c64e8383a9</StageGuid>
+				<Guid>bcc3cd8d-d93a-4c88-aba1-4dadb1e0dd0b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

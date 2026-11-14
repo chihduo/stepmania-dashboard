@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DanceDanceRevolution XL/Zombie/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86990501</Score>
+				<PercentDP>0.769900</PercentDP>
+				<SurviveSeconds>136.711029</SurviveSeconds>
+				<MaxCombo>112</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-30 15:40:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>16</W4>
+					<W3>42</W3>
+					<W2>93</W2>
+					<W1>153</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>48e974b7-e862-4138-a2cc-b0a8b27f8026</StageGuid>
+				<Guid>a271c9e7-8ebf-4347-a660-1db50cd97cf5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

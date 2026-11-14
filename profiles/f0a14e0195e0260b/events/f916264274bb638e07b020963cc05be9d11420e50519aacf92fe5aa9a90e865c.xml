@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Beatvolt PIU/I WANT/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82165643</Score>
+				<PercentDP>0.702300</PercentDP>
+				<SurviveSeconds>139.473602</SurviveSeconds>
+				<MaxCombo>237</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-23 21:39:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>94</W3>
+					<W2>103</W2>
+					<W1>103</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>33</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>08f1a6dc-52c0-4886-a4c9-15525f600f03</StageGuid>
+				<Guid>64dc57c7-b0e6-4506-a7d7-f6ab7bf271fe</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

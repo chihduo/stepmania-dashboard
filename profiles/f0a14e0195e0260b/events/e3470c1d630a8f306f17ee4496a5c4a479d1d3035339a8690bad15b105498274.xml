@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/GOTTA BE YOU/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91529949</Score>
+				<PercentDP>0.835100</PercentDP>
+				<SurviveSeconds>146.311417</SurviveSeconds>
+				<MaxCombo>118</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-19 15:35:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>41</W3>
+					<W2>88</W2>
+					<W1>210</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a6ff8f9e-5d2f-472c-a964-ab02247c4b68</StageGuid>
+				<Guid>e9ff99ea-5a21-42c9-a6e5-2b213bec6613</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

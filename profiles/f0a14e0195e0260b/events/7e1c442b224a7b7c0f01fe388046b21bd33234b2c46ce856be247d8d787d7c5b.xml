@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Kanon/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>79888650</Score>
+				<PercentDP>0.719600</PercentDP>
+				<SurviveSeconds>144.340195</SurviveSeconds>
+				<MaxCombo>122</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-23 19:02:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>3</W5>
+					<W4>13</W4>
+					<W3>83</W3>
+					<W2>118</W2>
+					<W1>173</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9bda1032-b24f-4c28-ae89-4cef79acd8fe</StageGuid>
+				<Guid>bb3dd418-c5bc-43af-a44c-98445a8eda53</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

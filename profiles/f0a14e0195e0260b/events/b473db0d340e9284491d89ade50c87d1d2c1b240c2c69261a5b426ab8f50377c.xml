@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Pray/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>161519797</Score>
+				<PercentDP>0.716600</PercentDP>
+				<SurviveSeconds>269.199036</SurviveSeconds>
+				<MaxCombo>154</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-22 19:02:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>10</W5>
+					<W4>24</W4>
+					<W3>146</W3>
+					<W2>248</W2>
+					<W1>318</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>32</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bba1af70-ee38-42b2-abcc-361d45d3f8cc</StageGuid>
+				<Guid>51c8854e-521f-4c85-a91f-8f0939e16cda</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

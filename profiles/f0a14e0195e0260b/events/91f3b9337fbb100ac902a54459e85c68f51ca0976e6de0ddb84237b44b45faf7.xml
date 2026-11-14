@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round H] - DDU DU DDU DU/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85189584</Score>
+				<PercentDP>0.769500</PercentDP>
+				<SurviveSeconds>129.981644</SurviveSeconds>
+				<MaxCombo>131</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-12 18:27:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>4</W4>
+					<W3>49</W3>
+					<W2>99</W2>
+					<W1>162</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>acc39536-7e0c-424c-a8f2-81986a7bc929</StageGuid>
+				<Guid>0e1d6189-f34c-4f17-a123-5688026436ba</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

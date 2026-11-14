@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/daisuke/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91230613</Score>
+				<PercentDP>0.822700</PercentDP>
+				<SurviveSeconds>117.529816</SurviveSeconds>
+				<MaxCombo>209</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-17 18:42:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>36</W3>
+					<W2>110</W2>
+					<W1>184</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d545a0fb-d443-4e71-ab1e-8091740a4699</StageGuid>
+				<Guid>75864e5b-dd53-466c-a9fc-f08b3006d1a8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

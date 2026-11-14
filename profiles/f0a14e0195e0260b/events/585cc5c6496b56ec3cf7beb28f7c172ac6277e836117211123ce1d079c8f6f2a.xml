@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/CAN&apos;T NOBODY by chewi/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>95002036</Score>
+				<PercentDP>0.867700</PercentDP>
+				<SurviveSeconds>141.584015</SurviveSeconds>
+				<MaxCombo>162</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-29 19:30:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>16</W3>
+					<W2>83</W2>
+					<W1>174</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7626a90d-7afb-4567-a1c3-c037347125d3</StageGuid>
+				<Guid>6ba457f2-9044-42e7-af49-19c13f578321</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

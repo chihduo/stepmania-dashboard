@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Butterfly (Hua Hu Die)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86122746</Score>
+				<PercentDP>0.791000</PercentDP>
+				<SurviveSeconds>130.373062</SurviveSeconds>
+				<MaxCombo>60</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-10-28 19:21:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>9</W4>
+					<W3>55</W3>
+					<W2>97</W2>
+					<W1>195</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>40</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1aaa52de-075f-41a5-a04d-60855e399ac9</StageGuid>
+				<Guid>a4c573ba-8bb5-4c27-a185-40cb0ea40376</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

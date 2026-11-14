@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/A BAD THING/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85214279</Score>
+				<PercentDP>0.779000</PercentDP>
+				<SurviveSeconds>122.507416</SurviveSeconds>
+				<MaxCombo>122</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-10 20:03:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>3</W4>
+					<W3>35</W3>
+					<W2>72</W2>
+					<W1>125</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>21</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0a9a054d-224f-4e09-a5df-e8fb5161b67c</StageGuid>
+				<Guid>012e4b1b-2606-4a92-a13c-5ce96c81da79</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

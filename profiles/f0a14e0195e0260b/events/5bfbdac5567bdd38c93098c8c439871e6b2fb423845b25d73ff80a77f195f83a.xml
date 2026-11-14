@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Girls Generation - Paparazzi/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>171772532</Score>
+				<PercentDP>0.803300</PercentDP>
+				<SurviveSeconds>165.404800</SurviveSeconds>
+				<MaxCombo>76</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-18 19:58:57</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>7</W5>
+					<W4>6</W4>
+					<W3>48</W3>
+					<W2>93</W2>
+					<W1>192</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>61</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e0a58a21-1ada-4df6-aff2-bb1d32400da4</StageGuid>
+				<Guid>174a2584-bb74-45d7-a03a-1578ee7950aa</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

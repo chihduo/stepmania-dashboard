@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/SIREN/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83324954</Score>
+				<PercentDP>0.748300</PercentDP>
+				<SurviveSeconds>137.480621</SurviveSeconds>
+				<MaxCombo>110</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-27 20:50:41</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>11</W4>
+					<W3>75</W3>
+					<W2>110</W2>
+					<W1>196</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1737f7a7-9192-4234-a2c7-bd5b641e00a0</StageGuid>
+				<Guid>8c2354b3-3f80-49b9-ab0d-667213cb876b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

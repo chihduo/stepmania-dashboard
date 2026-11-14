@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Abittipsy/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>74516653</Score>
+				<PercentDP>0.607000</PercentDP>
+				<SurviveSeconds>132.393677</SurviveSeconds>
+				<MaxCombo>73</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-18 18:17:42</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>11</W4>
+					<W3>115</W3>
+					<W2>90</W2>
+					<W1>72</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b030053c-2ecc-4846-a246-69810fcc8b16</StageGuid>
+				<Guid>8bb40f8c-f9ed-421c-aa78-51eb0a8ab9ab</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

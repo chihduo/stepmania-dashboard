@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/I Am The Best/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86405358</Score>
+				<PercentDP>0.817200</PercentDP>
+				<SurviveSeconds>103.633492</SurviveSeconds>
+				<MaxCombo>211</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-19 21:11:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>38</W3>
+					<W2>70</W2>
+					<W1>166</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>28</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b0e94dbd-435b-4369-ab52-d68eb0e75d10</StageGuid>
+				<Guid>b381cf2d-15f0-4c85-abf8-1bc6b3d61164</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

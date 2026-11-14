@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/U.K.U.G/Anataga...Inai/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>75141</Score>
+				<PercentDP>0.018000</PercentDP>
+				<SurviveSeconds>19.803013</SurviveSeconds>
+				<MaxCombo>3</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-20 13:29:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>1</W3>
+					<W2>2</W2>
+					<W1>3</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1e1cd4a1-b795-48ba-ab72-ff995736e72c</StageGuid>
+				<Guid>6de8455a-8a12-47d1-af45-605009696708</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

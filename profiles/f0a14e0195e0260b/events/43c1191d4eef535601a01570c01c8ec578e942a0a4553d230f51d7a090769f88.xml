@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/The Ace Of Charts/Lethargic Slumber/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85985544</Score>
+				<PercentDP>0.829400</PercentDP>
+				<SurviveSeconds>153.867111</SurviveSeconds>
+				<MaxCombo>111</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-13 19:19:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>3</W5>
+					<W4>13</W4>
+					<W3>52</W3>
+					<W2>119</W2>
+					<W1>267</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>95</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4f296658-0d9e-4b54-a974-3972127c797c</StageGuid>
+				<Guid>f14fa0b2-b6ff-4578-a856-f082f26b7a41</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

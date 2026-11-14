@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Invader Invader/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>82201568</Score>
+				<PercentDP>0.677200</PercentDP>
+				<SurviveSeconds>118.661575</SurviveSeconds>
+				<MaxCombo>187</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-10-28 19:14:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>6</W5>
+					<W4>18</W4>
+					<W3>97</W3>
+					<W2>91</W2>
+					<W1>150</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3ced4e7c-8054-41b7-ab79-172cbab719ad</StageGuid>
+				<Guid>83a1d741-2187-405a-a982-5d42c60228bf</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/tamayura/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>175789296</Score>
+				<PercentDP>0.772600</PercentDP>
+				<SurviveSeconds>157.425262</SurviveSeconds>
+				<MaxCombo>67</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-22 17:59:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>7</W5>
+					<W4>5</W4>
+					<W3>58</W3>
+					<W2>108</W2>
+					<W1>197</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>30deb7a6-1035-48d5-a983-9e9e8b32f093</StageGuid>
+				<Guid>538f1c2a-ea33-4f0a-ae1d-4b1f6e2636d3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

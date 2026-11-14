@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DanceDanceRevolution XL/The Feels/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88337812</Score>
+				<PercentDP>0.799400</PercentDP>
+				<SurviveSeconds>145.145309</SurviveSeconds>
+				<MaxCombo>223</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-19 18:20:27</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>54</W3>
+					<W2>96</W2>
+					<W1>182</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>21477236-5bdc-4616-a768-a7efd87ae5b7</StageGuid>
+				<Guid>f77e6f1d-3b4e-4b87-a23c-8ad18011136a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

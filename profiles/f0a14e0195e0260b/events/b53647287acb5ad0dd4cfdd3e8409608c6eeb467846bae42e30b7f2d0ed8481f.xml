@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Wild Side/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>80755056</Score>
+				<PercentDP>0.697000</PercentDP>
+				<SurviveSeconds>146.207458</SurviveSeconds>
+				<MaxCombo>63</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-15 23:08:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>11</W4>
+					<W3>79</W3>
+					<W2>106</W2>
+					<W1>140</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ae2cf7f0-13a8-41ce-ac5d-c4ad15b78412</StageGuid>
+				<Guid>4df6e8d0-f443-4463-aba4-f28bfd332bac</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

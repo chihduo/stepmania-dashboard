@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/New Beginning/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89835439</Score>
+				<PercentDP>0.807300</PercentDP>
+				<SurviveSeconds>111.541519</SurviveSeconds>
+				<MaxCombo>123</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-25 21:42:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>36</W3>
+					<W2>77</W2>
+					<W1>135</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>35</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f17ebaf5-f41c-43c5-a471-bd7a14b935d1</StageGuid>
+				<Guid>f3b4be81-4b81-445a-a7a9-d202f97e7995</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

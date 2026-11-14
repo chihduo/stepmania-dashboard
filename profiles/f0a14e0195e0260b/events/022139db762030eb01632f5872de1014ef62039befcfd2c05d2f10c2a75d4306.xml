@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Bye Bye Dam Dariram (Baby Balloon Beat)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86845542</Score>
+				<PercentDP>0.791100</PercentDP>
+				<SurviveSeconds>97.402138</SurviveSeconds>
+				<MaxCombo>153</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-26 20:24:25</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>32</W3>
+					<W2>79</W2>
+					<W1>130</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f101783e-30ad-4fc7-a1fd-3e2324fd5ebc</StageGuid>
+				<Guid>b82e605a-b883-419b-a83c-8f0a256686fd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

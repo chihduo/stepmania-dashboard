@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Girls Generation - Run Devil Run/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86784156</Score>
+				<PercentDP>0.761400</PercentDP>
+				<SurviveSeconds>132.837219</SurviveSeconds>
+				<MaxCombo>91</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-13 20:25:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>9</W4>
+					<W3>65</W3>
+					<W2>61</W2>
+					<W1>122</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>54</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2ff8822c-9cac-4d9e-a587-1d6fcfcf95ca</StageGuid>
+				<Guid>e695cb62-6942-491a-ad94-9965a4fd8fda</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

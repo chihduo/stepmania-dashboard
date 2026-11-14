@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/SCREAM/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87878213</Score>
+				<PercentDP>0.799700</PercentDP>
+				<SurviveSeconds>98.293709</SurviveSeconds>
+				<MaxCombo>140</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-01 19:14:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>3</W4>
+					<W3>26</W3>
+					<W2>79</W2>
+					<W1>142</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a6d12c34-28c3-4e05-ad0a-616dacf695b3</StageGuid>
+				<Guid>a907cfe8-d03d-466a-a841-983f3a726d25</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

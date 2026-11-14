@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/BYE BYE BABY BALLOON/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91201412</Score>
+				<PercentDP>0.822300</PercentDP>
+				<SurviveSeconds>92.459137</SurviveSeconds>
+				<MaxCombo>113</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-29 18:50:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>21</W3>
+					<W2>64</W2>
+					<W1>127</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>63b6e566-df31-416e-adbe-dd18c7ad4cfd</StageGuid>
+				<Guid>f845184a-8828-4d45-af0b-07e77ab40b38</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

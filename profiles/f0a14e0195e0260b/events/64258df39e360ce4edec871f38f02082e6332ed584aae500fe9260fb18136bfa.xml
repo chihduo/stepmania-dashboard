@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJSuperNOVA/FANCY/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>92144348</Score>
+				<PercentDP>0.833300</PercentDP>
+				<SurviveSeconds>146.706772</SurviveSeconds>
+				<MaxCombo>117</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-15 13:31:05</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>27</W3>
+					<W2>76</W2>
+					<W1>156</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8ac831ba-561f-4d0a-a68e-2cfd21ebf776</StageGuid>
+				<Guid>1642fb99-e2a5-48a1-abeb-6101b73b67f5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

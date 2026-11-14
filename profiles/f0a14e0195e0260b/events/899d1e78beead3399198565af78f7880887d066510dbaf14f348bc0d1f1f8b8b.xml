@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Beatvolt PIU/ASAP/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91505503</Score>
+				<PercentDP>0.857400</PercentDP>
+				<SurviveSeconds>124.823402</SurviveSeconds>
+				<MaxCombo>248</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-23 21:16:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>25</W3>
+					<W2>68</W2>
+					<W1>159</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>34f52180-d37a-4067-a56a-14977f7d3f97</StageGuid>
+				<Guid>490feba0-b3ad-43f2-ac50-c558471765b7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

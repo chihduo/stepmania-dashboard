@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/SMTOWN/Look Who&apos;s Talking/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>84805978</Score>
+				<PercentDP>0.737800</PercentDP>
+				<SurviveSeconds>125.373619</SurviveSeconds>
+				<MaxCombo>54</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-22 18:13:18</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>6</W5>
+					<W4>16</W4>
+					<W3>45</W3>
+					<W2>109</W2>
+					<W1>162</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ccf3adb7-2d44-4c38-ac47-3d74e6c68019</StageGuid>
+				<Guid>7de274bc-389c-4ed2-a01d-46ec48368185</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

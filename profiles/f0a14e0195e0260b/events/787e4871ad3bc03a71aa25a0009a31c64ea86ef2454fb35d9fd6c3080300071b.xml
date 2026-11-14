@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kewing&apos;s Originals/Vertex (Stage1)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78090399</Score>
+				<PercentDP>0.703000</PercentDP>
+				<SurviveSeconds>81.405388</SurviveSeconds>
+				<MaxCombo>86</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-02 23:18:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>5</W5>
+					<W4>6</W4>
+					<W3>32</W3>
+					<W2>78</W2>
+					<W1>87</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>01e3bdf6-87ec-4eec-af7b-18941bb0dfb7</StageGuid>
+				<Guid>eab3ef71-e83d-4c1d-afda-0ed78b91e4b5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

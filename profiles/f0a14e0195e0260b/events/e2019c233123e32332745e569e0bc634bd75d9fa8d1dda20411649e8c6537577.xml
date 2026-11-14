@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/Oh/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89511310</Score>
+				<PercentDP>0.826400</PercentDP>
+				<SurviveSeconds>134.573608</SurviveSeconds>
+				<MaxCombo>87</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-05 23:22:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>37</W3>
+					<W2>68</W2>
+					<W1>179</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ec338f4c-b617-44ac-ac9c-2a3f8a3ee477</StageGuid>
+				<Guid>ffdcdda9-7166-445e-a50d-2cd13e33c9da</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

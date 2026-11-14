@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Love is like a Petal/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88742649</Score>
+				<PercentDP>0.811400</PercentDP>
+				<SurviveSeconds>153.647797</SurviveSeconds>
+				<MaxCombo>175</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-31 21:05:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>4</W5>
+					<W4>4</W4>
+					<W3>44</W3>
+					<W2>116</W2>
+					<W1>218</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e390db25-22f4-4319-a88c-59d307bb6d86</StageGuid>
+				<Guid>26586b89-9d48-4302-ac08-73cfc91c9f2f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

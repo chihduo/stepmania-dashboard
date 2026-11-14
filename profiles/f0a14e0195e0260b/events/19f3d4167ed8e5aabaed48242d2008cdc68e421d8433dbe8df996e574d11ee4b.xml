@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/LOCO/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84852130</Score>
+				<PercentDP>0.749700</PercentDP>
+				<SurviveSeconds>134.921661</SurviveSeconds>
+				<MaxCombo>101</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-28 20:32:57</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>3</W5>
+					<W4>8</W4>
+					<W3>50</W3>
+					<W2>123</W2>
+					<W1>166</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>12</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5caf85ba-b2e7-4213-acda-f118cf08fcd4</StageGuid>
+				<Guid>190f46ff-2704-4653-a143-ce14a422c63b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

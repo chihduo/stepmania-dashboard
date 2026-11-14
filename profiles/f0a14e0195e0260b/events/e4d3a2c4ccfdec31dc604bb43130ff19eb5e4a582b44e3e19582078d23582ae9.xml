@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Abracadabra/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>5867517</Score>
+				<PercentDP>0.128300</PercentDP>
+				<SurviveSeconds>45.454254</SurviveSeconds>
+				<MaxCombo>22</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-27 22:49:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>1</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>19</W3>
+					<W2>32</W2>
+					<W1>40</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3e0b2343-c326-4a15-aaca-9a5f93f34a4b</StageGuid>
+				<Guid>407b1476-ed53-4c8c-aa76-f6c30ca2725e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

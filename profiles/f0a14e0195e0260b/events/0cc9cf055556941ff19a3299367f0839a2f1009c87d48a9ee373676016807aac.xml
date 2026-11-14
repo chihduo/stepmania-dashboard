@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Platinum_Disco/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>77732522</Score>
+				<PercentDP>0.666600</PercentDP>
+				<SurviveSeconds>97.775940</SurviveSeconds>
+				<MaxCombo>57</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-15 00:45:54</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>5</W5>
+					<W4>7</W4>
+					<W3>74</W3>
+					<W2>78</W2>
+					<W1>89</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3d373351-c2a4-4df7-a2ff-4575d1ab7591</StageGuid>
+				<Guid>d2f8dc2b-7160-468f-ad16-f02161bcc452</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

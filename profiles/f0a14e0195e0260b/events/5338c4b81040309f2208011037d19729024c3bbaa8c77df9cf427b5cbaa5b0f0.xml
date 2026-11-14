@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Hwi hwi/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85922189</Score>
+				<PercentDP>0.775700</PercentDP>
+				<SurviveSeconds>143.810257</SurviveSeconds>
+				<MaxCombo>245</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-12 19:06:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>0</W5>
+					<W4>10</W4>
+					<W3>69</W3>
+					<W2>113</W2>
+					<W1>190</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>53</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3d13b39d-c0f3-45ca-a5f0-0a59d2e68088</StageGuid>
+				<Guid>b7bcbd23-795e-4edd-a005-6c48282b61b8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

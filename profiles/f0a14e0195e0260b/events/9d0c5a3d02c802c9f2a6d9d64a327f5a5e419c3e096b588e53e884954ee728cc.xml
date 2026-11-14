@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/I_m Not Cool/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84499704</Score>
+				<PercentDP>0.742600</PercentDP>
+				<SurviveSeconds>125.619347</SurviveSeconds>
+				<MaxCombo>134</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-15 22:51:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>59</W3>
+					<W2>100</W2>
+					<W1>123</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fe520e66-eed4-434a-af78-c0d6d7e2ea97</StageGuid>
+				<Guid>1b1e6ccd-537b-427f-aac6-edb7b14e0c15</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

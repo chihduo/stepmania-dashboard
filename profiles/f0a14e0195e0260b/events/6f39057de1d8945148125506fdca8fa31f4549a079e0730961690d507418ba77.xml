@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Destrier75 DDR MIX 2/Do It!/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87021007</Score>
+				<PercentDP>0.803400</PercentDP>
+				<SurviveSeconds>112.389397</SurviveSeconds>
+				<MaxCombo>134</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-22 19:49:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>41</W3>
+					<W2>107</W2>
+					<W1>174</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>23</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>aee88b80-e3c9-46d3-a286-568139bb3300</StageGuid>
+				<Guid>9d69b173-c059-48c4-a6b8-55c39191186c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

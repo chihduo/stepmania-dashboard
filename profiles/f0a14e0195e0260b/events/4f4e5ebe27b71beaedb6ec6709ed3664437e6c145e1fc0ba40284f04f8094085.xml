@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KIJIMARU KUN mix 2nd/Yukemuri Utopia/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>3779635</Score>
+				<PercentDP>0.146900</PercentDP>
+				<SurviveSeconds>39.687904</SurviveSeconds>
+				<MaxCombo>38</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-27 20:54:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>6</W5>
+					<W4>5</W4>
+					<W3>20</W3>
+					<W2>21</W2>
+					<W1>33</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8e81e8e8-7f8a-4c01-aeba-15cc101831f5</StageGuid>
+				<Guid>3eb1eee1-e549-43e7-abf6-a06dbf689efa</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

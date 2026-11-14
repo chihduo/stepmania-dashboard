@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJMAX/Who Dis/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90789654</Score>
+				<PercentDP>0.838800</PercentDP>
+				<SurviveSeconds>111.509567</SurviveSeconds>
+				<MaxCombo>82</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-10 02:06:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>14</W3>
+					<W2>48</W2>
+					<W1>99</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2cec27d1-a54b-4624-a540-25241147586a</StageGuid>
+				<Guid>cffc0724-bf84-4ec6-a4d7-29c37fe4ab88</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

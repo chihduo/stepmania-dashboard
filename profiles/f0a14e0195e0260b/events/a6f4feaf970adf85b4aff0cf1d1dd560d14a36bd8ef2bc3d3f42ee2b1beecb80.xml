@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Give a Reason/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>6595615</Score>
+				<PercentDP>0.181400</PercentDP>
+				<SurviveSeconds>38.305889</SurviveSeconds>
+				<MaxCombo>32</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-06-28 19:40:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>22</Miss>
+					<W5>5</W5>
+					<W4>6</W4>
+					<W3>30</W3>
+					<W2>20</W2>
+					<W1>26</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>3</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4dfd98a6-8ba6-4ac5-ab05-feb008017521</StageGuid>
+				<Guid>6ebe8b76-172b-4aaa-adb3-955904275ea4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

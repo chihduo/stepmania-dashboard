@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Splash Free/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83037761</Score>
+				<PercentDP>0.762000</PercentDP>
+				<SurviveSeconds>97.043869</SurviveSeconds>
+				<MaxCombo>79</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-19 20:48:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>5</W5>
+					<W4>9</W4>
+					<W3>43</W3>
+					<W2>74</W2>
+					<W1>127</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>41</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>710fab0e-7467-4490-af2a-e3df4dc70c85</StageGuid>
+				<Guid>04344249-51d8-4f80-a6a6-2f966ce4db89</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

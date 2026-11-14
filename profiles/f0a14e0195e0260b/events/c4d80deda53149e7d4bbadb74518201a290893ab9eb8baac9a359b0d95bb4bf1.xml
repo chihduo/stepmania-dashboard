@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/CHI MAT BA RAM/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>68062082</Score>
+				<PercentDP>0.609800</PercentDP>
+				<SurviveSeconds>144.375259</SurviveSeconds>
+				<MaxCombo>31</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-06 20:32:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>24</Miss>
+					<W5>15</W5>
+					<W4>43</W4>
+					<W3>106</W3>
+					<W2>126</W2>
+					<W1>170</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f85e45f5-65a9-499e-a6e7-e39f876b51df</StageGuid>
+				<Guid>850683ad-b09c-4206-acd7-578377d2477e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

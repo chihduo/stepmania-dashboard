@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/memesikutekpop/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>75287784</Score>
+				<PercentDP>0.671400</PercentDP>
+				<SurviveSeconds>114.363396</SurviveSeconds>
+				<MaxCombo>83</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-06 21:36:25</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>1</W5>
+					<W4>9</W4>
+					<W3>71</W3>
+					<W2>80</W2>
+					<W1>95</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fc5ab004-dfc9-4216-a042-6850cf2c3510</StageGuid>
+				<Guid>d99bb97c-96b5-444e-ab79-69d8a6c24844</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

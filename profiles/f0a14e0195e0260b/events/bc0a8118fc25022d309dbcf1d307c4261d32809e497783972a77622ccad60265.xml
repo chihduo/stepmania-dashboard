@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DanceDanceRevolution XL/How You Like That/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92836465</Score>
+				<PercentDP>0.841800</PercentDP>
+				<SurviveSeconds>124.939140</SurviveSeconds>
+				<MaxCombo>219</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-13 18:49:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>27</W3>
+					<W2>77</W2>
+					<W1>174</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b8ce4ab1-fff6-44b8-a010-b0e4fe4a36b4</StageGuid>
+				<Guid>53ca6897-789b-498e-a426-cbe12323b19a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

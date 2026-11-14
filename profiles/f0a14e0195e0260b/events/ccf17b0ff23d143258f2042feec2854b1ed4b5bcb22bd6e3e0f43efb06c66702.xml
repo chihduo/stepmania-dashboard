@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/I&apos;m so sick/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>49922</Score>
+				<PercentDP>0.013700</PercentDP>
+				<SurviveSeconds>20.873095</SurviveSeconds>
+				<MaxCombo>4</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-03 22:33:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>3</W3>
+					<W2>2</W2>
+					<W1>2</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8a80c174-c3b4-4c68-ac85-9d1999210855</StageGuid>
+				<Guid>fa6f39ca-fc1e-452b-a150-cc42fbd085b4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/I&apos;m so sick/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78214896</Score>
+				<PercentDP>0.665200</PercentDP>
+				<SurviveSeconds>137.034775</SurviveSeconds>
+				<MaxCombo>91</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-04 20:33:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>14</Miss>
+					<W5>6</W5>
+					<W4>27</W4>
+					<W3>101</W3>
+					<W2>115</W2>
+					<W1>173</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>24</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ff77ca85-b92a-4276-abf2-7d5cbb813924</StageGuid>
+				<Guid>e7083f9c-510e-451f-ade4-48f119e37584</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

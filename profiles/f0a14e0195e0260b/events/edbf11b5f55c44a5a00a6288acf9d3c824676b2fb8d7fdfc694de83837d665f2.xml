@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/You_re Not Alone!/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>65948820</Score>
+				<PercentDP>0.595800</PercentDP>
+				<SurviveSeconds>116.901840</SurviveSeconds>
+				<MaxCombo>65</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-06 21:29:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>9</Miss>
+					<W5>9</W5>
+					<W4>27</W4>
+					<W3>83</W3>
+					<W2>75</W2>
+					<W1>80</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>4</LetGo>
+					<Held>33</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d656f245-c1e5-4896-a513-b4a0a5a088b7</StageGuid>
+				<Guid>e75d69e8-7e55-4b1c-a773-0498676f4c6a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

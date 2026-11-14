@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/WE LIKE/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>493133</Score>
+				<PercentDP>0.046800</PercentDP>
+				<SurviveSeconds>27.046898</SurviveSeconds>
+				<MaxCombo>20</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-01 19:38:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>4</W5>
+					<W4>3</W4>
+					<W3>15</W3>
+					<W2>5</W2>
+					<W1>10</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9d78da46-0d2f-4191-af8d-feb8f8fa81ca</StageGuid>
+				<Guid>0d0e6284-c340-443b-aacc-62c58af7c873</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

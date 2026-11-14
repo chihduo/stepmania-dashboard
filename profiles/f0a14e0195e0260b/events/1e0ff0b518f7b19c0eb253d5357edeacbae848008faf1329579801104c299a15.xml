@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Sunset Road/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87089677</Score>
+				<PercentDP>0.774600</PercentDP>
+				<SurviveSeconds>128.454285</SurviveSeconds>
+				<MaxCombo>159</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-15 23:02:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>3</W4>
+					<W3>46</W3>
+					<W2>80</W2>
+					<W1>139</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6d330e67-d1fe-442e-a3b5-49487a16a1c7</StageGuid>
+				<Guid>f477fbc9-6b4b-4827-ad02-34f8b2d54ac5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

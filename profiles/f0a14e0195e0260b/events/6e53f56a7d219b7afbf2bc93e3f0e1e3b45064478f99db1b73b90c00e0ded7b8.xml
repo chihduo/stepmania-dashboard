@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Yi Ge Ren/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87230825</Score>
+				<PercentDP>0.776700</PercentDP>
+				<SurviveSeconds>141.601593</SurviveSeconds>
+				<MaxCombo>191</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-12 21:04:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>41</W3>
+					<W2>107</W2>
+					<W1>152</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>015f5b85-85ef-4445-a97d-66c7f7c26bae</StageGuid>
+				<Guid>73c3036a-047d-41df-a918-b6d6cb54bf2a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

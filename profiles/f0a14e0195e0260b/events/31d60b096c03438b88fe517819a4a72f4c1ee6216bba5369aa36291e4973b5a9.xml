@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/for muzik/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86523712</Score>
+				<PercentDP>0.766800</PercentDP>
+				<SurviveSeconds>125.704880</SurviveSeconds>
+				<MaxCombo>170</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-08 22:21:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>32</W3>
+					<W2>75</W2>
+					<W1>89</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3fcf6023-0ac2-4368-a91e-76142f154238</StageGuid>
+				<Guid>c36db877-4bf1-4703-a2c1-e4c4013376b6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

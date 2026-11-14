@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Mirage Lullaby/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88593739</Score>
+				<PercentDP>0.785100</PercentDP>
+				<SurviveSeconds>145.710556</SurviveSeconds>
+				<MaxCombo>326</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-20 23:00:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>53</W3>
+					<W2>97</W2>
+					<W1>154</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1ed53aab-c4b9-4470-a2cc-9a411ea9edd7</StageGuid>
+				<Guid>65a529d2-65a4-4316-a6f1-f797c0471557</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

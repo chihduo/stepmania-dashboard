@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Beatvolt PIU/After Like/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91356473</Score>
+				<PercentDP>0.834300</PercentDP>
+				<SurviveSeconds>119.702766</SurviveSeconds>
+				<MaxCombo>140</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-23 21:12:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>25</W3>
+					<W2>95</W2>
+					<W1>152</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>40</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2dabb0fe-4926-440b-aee4-600ad1c451e3</StageGuid>
+				<Guid>d6e0c552-1323-4474-adc4-043165c7f514</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

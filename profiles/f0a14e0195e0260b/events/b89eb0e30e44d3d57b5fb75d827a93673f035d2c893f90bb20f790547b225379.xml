@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/eterblaze/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>79501691</Score>
+				<PercentDP>0.712000</PercentDP>
+				<SurviveSeconds>108.813133</SurviveSeconds>
+				<MaxCombo>98</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-30 19:21:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>4</W5>
+					<W4>11</W4>
+					<W3>79</W3>
+					<W2>118</W2>
+					<W1>159</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8f853973-580a-49ee-af03-719423c2794e</StageGuid>
+				<Guid>fda55419-79c7-4ea9-aeb7-6bbc685dcb2f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

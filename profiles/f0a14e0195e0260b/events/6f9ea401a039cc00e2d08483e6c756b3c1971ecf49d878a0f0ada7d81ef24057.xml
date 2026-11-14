@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/CardCaptorSakura/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87200144</Score>
+				<PercentDP>0.762100</PercentDP>
+				<SurviveSeconds>85.290695</SurviveSeconds>
+				<MaxCombo>87</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-11 22:41:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>31</W3>
+					<W2>58</W2>
+					<W1>85</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6a851ae5-7f89-4746-a569-c3a76e31b7ce</StageGuid>
+				<Guid>9f94639f-052c-4a5a-a090-107bce4e30f7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

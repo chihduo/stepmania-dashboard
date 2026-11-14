@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DanceDanceRevolution Pop/Oui mais non/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91720128</Score>
+				<PercentDP>0.834500</PercentDP>
+				<SurviveSeconds>111.809212</SurviveSeconds>
+				<MaxCombo>115</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-26 15:37:32</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>31</W3>
+					<W2>60</W2>
+					<W1>115</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>55</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9d2c3c45-6142-483e-ac9f-f2be17a7fdca</StageGuid>
+				<Guid>10f6b004-6e9c-4959-ac49-4e0e4a92d1e1</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

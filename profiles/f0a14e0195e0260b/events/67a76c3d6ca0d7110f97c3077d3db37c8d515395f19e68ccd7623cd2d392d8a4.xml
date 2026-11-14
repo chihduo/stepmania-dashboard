@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/PSYCHO/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>68013405</Score>
+				<PercentDP>0.621000</PercentDP>
+				<SurviveSeconds>145.308914</SurviveSeconds>
+				<MaxCombo>71</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-30 21:00:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>14</Miss>
+					<W5>12</W5>
+					<W4>36</W4>
+					<W3>140</W3>
+					<W2>121</W2>
+					<W1>175</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>20</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>89e77844-5bf9-4900-a734-1f5b737c1828</StageGuid>
+				<Guid>ca15c754-2b6e-422a-a6b2-7abecb7a8712</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

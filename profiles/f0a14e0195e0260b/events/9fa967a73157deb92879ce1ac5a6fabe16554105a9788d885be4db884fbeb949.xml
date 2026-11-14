@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/TT/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90680269</Score>
+				<PercentDP>0.839700</PercentDP>
+				<SurviveSeconds>133.420853</SurviveSeconds>
+				<MaxCombo>104</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-23 22:18:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>2</W4>
+					<W3>24</W3>
+					<W2>62</W2>
+					<W1>177</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>48685dd1-f400-44b1-a6d8-1d694bb19a80</StageGuid>
+				<Guid>cffff7aa-bf5c-4330-a911-3ee776a99016</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

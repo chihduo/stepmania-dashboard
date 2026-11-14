@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/LUV/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76572230</Score>
+				<PercentDP>0.743800</PercentDP>
+				<SurviveSeconds>132.307617</SurviveSeconds>
+				<MaxCombo>192</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-31 21:52:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>4</W5>
+					<W4>17</W4>
+					<W3>53</W3>
+					<W2>92</W2>
+					<W1>172</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>19</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>104d2311-df51-4239-afdb-4a28cff46a8c</StageGuid>
+				<Guid>52c95fcf-424a-4a10-abf1-1c9bf75ba67f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

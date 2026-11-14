@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Number 9/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90001867</Score>
+				<PercentDP>0.816700</PercentDP>
+				<SurviveSeconds>128.137573</SurviveSeconds>
+				<MaxCombo>121</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-23 20:10:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>27</W3>
+					<W2>64</W2>
+					<W1>136</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>38101a1e-d46f-4700-a85e-e38200ed2568</StageGuid>
+				<Guid>2534ac46-c5b9-433d-a1f5-ae59cf1e1fae</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

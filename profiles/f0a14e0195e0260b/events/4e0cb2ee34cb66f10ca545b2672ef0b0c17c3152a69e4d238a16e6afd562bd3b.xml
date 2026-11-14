@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/Melt/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87718011</Score>
+				<PercentDP>0.794800</PercentDP>
+				<SurviveSeconds>148.883469</SurviveSeconds>
+				<MaxCombo>262</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-03 21:36:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>53</W3>
+					<W2>105</W2>
+					<W1>205</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2cb125d3-14d9-4818-ad13-0a6c46f1facb</StageGuid>
+				<Guid>013d4c59-5bfa-4b67-ac2a-aea457ba4f7a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

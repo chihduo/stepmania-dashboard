@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 2/ChiruChiru/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>83926891</Score>
+				<PercentDP>0.748900</PercentDP>
+				<SurviveSeconds>138.301285</SurviveSeconds>
+				<MaxCombo>41</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-06-22 16:47:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>9</W5>
+					<W4>12</W4>
+					<W3>37</W3>
+					<W2>86</W2>
+					<W1>144</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>51a8acfa-71bb-4089-ac0c-6dd053030fde</StageGuid>
+				<Guid>2239b8a2-ddb1-40d7-a593-1be8976d1f47</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

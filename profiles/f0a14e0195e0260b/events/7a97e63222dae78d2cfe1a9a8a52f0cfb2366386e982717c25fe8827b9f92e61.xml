@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/Bon Voyage/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92832630</Score>
+				<PercentDP>0.862400</PercentDP>
+				<SurviveSeconds>126.303284</SurviveSeconds>
+				<MaxCombo>280</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-24 20:05:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>23</W3>
+					<W2>81</W2>
+					<W1>174</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>36</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>eade3585-8745-4fe1-a5fc-89a0007517e2</StageGuid>
+				<Guid>49347bc3-d762-44ab-a6d9-04ab34369d6e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

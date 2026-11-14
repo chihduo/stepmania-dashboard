@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 1/I&apos;ll believe/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90053761</Score>
+				<PercentDP>0.807300</PercentDP>
+				<SurviveSeconds>135.943314</SurviveSeconds>
+				<MaxCombo>165</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-19 18:57:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>44</W3>
+					<W2>120</W2>
+					<W1>207</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5c9602f7-7e8f-4241-ada5-4a42991db306</StageGuid>
+				<Guid>34afcae0-0c73-4fad-aa28-c2af20a1a8e1</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

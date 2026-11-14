@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/SEE SEA/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87878580</Score>
+				<PercentDP>0.799000</PercentDP>
+				<SurviveSeconds>154.804352</SurviveSeconds>
+				<MaxCombo>128</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-22 21:22:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>5</W5>
+					<W4>6</W4>
+					<W3>60</W3>
+					<W2>119</W2>
+					<W1>233</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>44</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5c67b2ba-34d8-49e1-a8f8-c45cc36654eb</StageGuid>
+				<Guid>ba4f9020-cdd1-4a67-af8e-39abbdb812f6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

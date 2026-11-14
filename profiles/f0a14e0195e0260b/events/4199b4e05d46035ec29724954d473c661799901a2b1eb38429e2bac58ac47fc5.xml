@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/candy boy/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>171873467</Score>
+				<PercentDP>0.759400</PercentDP>
+				<SurviveSeconds>220.395126</SurviveSeconds>
+				<MaxCombo>264</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-31 22:59:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>92</W3>
+					<W2>170</W2>
+					<W1>238</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>19</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fab19246-dae7-4a06-aee9-2d85f7f54164</StageGuid>
+				<Guid>e56478e5-38fa-474f-a9a3-52cef3b732dc</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

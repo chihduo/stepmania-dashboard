@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/U.K.U.G/Rumbling Hearts/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76503134</Score>
+				<PercentDP>0.672200</PercentDP>
+				<SurviveSeconds>131.775208</SurviveSeconds>
+				<MaxCombo>68</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-03 20:54:42</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>7</W5>
+					<W4>16</W4>
+					<W3>81</W3>
+					<W2>91</W2>
+					<W1>80</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>5</LetGo>
+					<Held>75</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a6af3677-899d-4346-ad93-a53e9e97fa40</StageGuid>
+				<Guid>f7096ef3-020f-4a9a-a433-0549ebb86c41</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Talk That Talk/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84277460</Score>
+				<PercentDP>0.750700</PercentDP>
+				<SurviveSeconds>129.140366</SurviveSeconds>
+				<MaxCombo>85</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-25 21:28:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>14</W4>
+					<W3>89</W3>
+					<W2>112</W2>
+					<W1>174</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>76</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ed9dfc6c-5c40-409e-a6ff-fe5b3478bfd4</StageGuid>
+				<Guid>87090ed3-ffbd-49f8-a249-a9b30c8fb58b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

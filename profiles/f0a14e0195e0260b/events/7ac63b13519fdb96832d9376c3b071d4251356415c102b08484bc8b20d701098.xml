@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/AS IF IT&apos;S YOUR LAST/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>81092801</Score>
+				<PercentDP>0.708600</PercentDP>
+				<SurviveSeconds>99.545906</SurviveSeconds>
+				<MaxCombo>57</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-16 22:00:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>6</W5>
+					<W4>7</W4>
+					<W3>44</W3>
+					<W2>65</W2>
+					<W1>105</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>35892cb4-55f1-4642-a688-4e0d4fc05f5a</StageGuid>
+				<Guid>9d00ac95-be96-4a26-aa82-9d9a8a843e98</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

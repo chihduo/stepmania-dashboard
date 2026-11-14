@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Super Lady/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>188538542</Score>
+				<PercentDP>0.889200</PercentDP>
+				<SurviveSeconds>156.907211</SurviveSeconds>
+				<MaxCombo>161</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-03 21:52:37</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>13</W3>
+					<W2>82</W2>
+					<W1>240</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c1cecb99-5558-44fd-ac71-085ba5d7107a</StageGuid>
+				<Guid>5cf9686f-8f09-47e6-acb3-951d2315fe47</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

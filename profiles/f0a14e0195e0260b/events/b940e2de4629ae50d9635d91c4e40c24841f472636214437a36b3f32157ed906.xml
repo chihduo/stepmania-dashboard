@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kewing&apos;s Originals/HALOGEN/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>188053410</Score>
+				<PercentDP>0.857700</PercentDP>
+				<SurviveSeconds>157.399307</SurviveSeconds>
+				<MaxCombo>432</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-22 20:19:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>34</W3>
+					<W2>107</W2>
+					<W1>268</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bf807f92-1343-4c45-a511-82717bca88de</StageGuid>
+				<Guid>03421cdc-576b-4fa0-a515-56db9cda65f5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

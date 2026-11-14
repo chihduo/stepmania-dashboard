@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 2/Rough/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84020301</Score>
+				<PercentDP>0.750500</PercentDP>
+				<SurviveSeconds>154.329285</SurviveSeconds>
+				<MaxCombo>213</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-19 19:25:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>6</W4>
+					<W3>91</W3>
+					<W2>142</W2>
+					<W1>158</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>63</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>25167ebe-11e5-4508-a8a8-8879902abd6f</StageGuid>
+				<Guid>f97c4d68-d379-41a9-a4c0-106e7da8c6b2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

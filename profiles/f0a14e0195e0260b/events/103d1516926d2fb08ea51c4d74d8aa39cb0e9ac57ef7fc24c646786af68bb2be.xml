@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/ZIv Freestyle Showcase 2020/Pretty Savage/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89125113</Score>
+				<PercentDP>0.847100</PercentDP>
+				<SurviveSeconds>137.327423</SurviveSeconds>
+				<MaxCombo>109</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-17 00:48:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>33</W3>
+					<W2>54</W2>
+					<W1>142</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>77</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>879c904e-de42-4886-a7e2-8405a7dde1b0</StageGuid>
+				<Guid>6ef177b7-2a88-4e9c-aa6d-64139b8863b7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

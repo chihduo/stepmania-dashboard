@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Love Adventure/Thank You/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>74416612</Score>
+				<PercentDP>0.707800</PercentDP>
+				<SurviveSeconds>133.539063</SurviveSeconds>
+				<MaxCombo>70</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-12 20:47:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>17</Miss>
+					<W5>3</W5>
+					<W4>14</W4>
+					<W3>54</W3>
+					<W2>88</W2>
+					<W1>150</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3d417d76-347a-4417-ad6c-0910fb84c407</StageGuid>
+				<Guid>b272507f-95e7-402c-a72c-06e527409159</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

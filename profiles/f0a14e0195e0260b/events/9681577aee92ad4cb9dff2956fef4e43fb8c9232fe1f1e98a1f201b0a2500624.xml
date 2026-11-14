@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/MOMOLAND - BAAM/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92899491</Score>
+				<PercentDP>0.845100</PercentDP>
+				<SurviveSeconds>122.366302</SurviveSeconds>
+				<MaxCombo>199</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-25 23:00:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>21</W3>
+					<W2>73</W2>
+					<W1>156</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fb511bcd-063b-4384-a4a5-a1008c63473d</StageGuid>
+				<Guid>fbc30cab-b05d-4411-a0a5-1c0b50f68d21</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

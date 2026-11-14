@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/STRAIGHT JET/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90371461</Score>
+				<PercentDP>0.803500</PercentDP>
+				<SurviveSeconds>109.074020</SurviveSeconds>
+				<MaxCombo>160</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-30 18:37:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>47</W3>
+					<W2>89</W2>
+					<W1>170</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>29</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>237e82ec-e1ec-4799-a4a2-9adbcba9c7cc</StageGuid>
+				<Guid>684b002a-2a96-4cd4-a57c-a48aa9ccf9ee</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

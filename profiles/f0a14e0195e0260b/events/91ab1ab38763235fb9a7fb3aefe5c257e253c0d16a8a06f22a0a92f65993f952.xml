@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Necron Battle Theme/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85144529</Score>
+				<PercentDP>0.747100</PercentDP>
+				<SurviveSeconds>140.282776</SurviveSeconds>
+				<MaxCombo>191</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-30 21:22:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>8</W5>
+					<W4>7</W4>
+					<W3>71</W3>
+					<W2>115</W2>
+					<W1>191</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8a0f65f8-0506-49ba-a564-bc00cac0469a</StageGuid>
+				<Guid>6db96fb3-b2e6-4b39-ab4d-5f3c44b6e270</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

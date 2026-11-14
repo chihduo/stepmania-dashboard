@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/ORDINARY WORLD (Above _ Beyond Remix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86120167</Score>
+				<PercentDP>0.808200</PercentDP>
+				<SurviveSeconds>74.906441</SurviveSeconds>
+				<MaxCombo>72</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-25 21:56:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>15</W3>
+					<W2>26</W2>
+					<W1>67</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e1ce5878-1d31-4491-ad9b-5721f8ac65ed</StageGuid>
+				<Guid>3e5111c2-d7f9-45db-aea0-298052902023</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

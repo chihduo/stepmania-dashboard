@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/shake it/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>66820589</Score>
+				<PercentDP>0.551300</PercentDP>
+				<SurviveSeconds>128.048386</SurviveSeconds>
+				<MaxCombo>61</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-19 18:10:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>4</W5>
+					<W4>25</W4>
+					<W3>151</W3>
+					<W2>97</W2>
+					<W1>73</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2d40b773-7df0-4f7f-aebc-0d4389a805d5</StageGuid>
+				<Guid>26e4e4c1-a969-4a5a-af43-c8b5e6a18a53</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

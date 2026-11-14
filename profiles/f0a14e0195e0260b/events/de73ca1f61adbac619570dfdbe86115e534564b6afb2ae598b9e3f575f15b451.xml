@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR DAIKENKAI/begin/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85332601</Score>
+				<PercentDP>0.769700</PercentDP>
+				<SurviveSeconds>113.476089</SurviveSeconds>
+				<MaxCombo>77</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-27 21:58:35</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>13</W4>
+					<W3>59</W3>
+					<W2>93</W2>
+					<W1>145</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>72</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c66abd48-1eaf-4ec2-a8df-203b7d3ac19d</StageGuid>
+				<Guid>73980df4-0e24-4366-a380-60552ecb2549</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

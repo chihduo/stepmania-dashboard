@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJMAX/Din Don Dan v1/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>66567447</Score>
+				<PercentDP>0.605700</PercentDP>
+				<SurviveSeconds>105.900101</SurviveSeconds>
+				<MaxCombo>32</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-10 01:29:00</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>19</Miss>
+					<W5>9</W5>
+					<W4>24</W4>
+					<W3>68</W3>
+					<W2>82</W2>
+					<W1>114</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>350581d8-14e5-4779-ab0a-0f8a76aa4c1b</StageGuid>
+				<Guid>2fb7cb71-9eec-4efb-a99f-b1db9a5e922d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

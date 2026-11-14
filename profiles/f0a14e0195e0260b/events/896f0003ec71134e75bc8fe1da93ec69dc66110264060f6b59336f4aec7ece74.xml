@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/bneworld/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>79952988</Score>
+				<PercentDP>0.688500</PercentDP>
+				<SurviveSeconds>109.970459</SurviveSeconds>
+				<MaxCombo>75</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-17 18:38:32</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>11</W4>
+					<W3>78</W3>
+					<W2>80</W2>
+					<W1>116</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8f90896d-f4e2-4a58-a8ac-d9c027104127</StageGuid>
+				<Guid>7d8b1e71-f943-456f-aa78-b5a026374048</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

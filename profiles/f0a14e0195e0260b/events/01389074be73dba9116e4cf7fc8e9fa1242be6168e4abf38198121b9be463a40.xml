@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 2/Share the World/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84955689</Score>
+				<PercentDP>0.744800</PercentDP>
+				<SurviveSeconds>144.772354</SurviveSeconds>
+				<MaxCombo>132</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-04 16:47:44</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>69</W3>
+					<W2>103</W2>
+					<W1>168</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>48f41bf2-8732-48c1-afa6-5617e0993d2f</StageGuid>
+				<Guid>5dfc8ddd-8cc8-48ef-a608-ce600e59606e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

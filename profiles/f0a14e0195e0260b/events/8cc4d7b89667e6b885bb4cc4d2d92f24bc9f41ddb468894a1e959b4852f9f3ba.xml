@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/Suzumiya Haruhi no Yuutsu ed - Hare Hare Yukai/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85752512</Score>
+				<PercentDP>0.771300</PercentDP>
+				<SurviveSeconds>73.521713</SurviveSeconds>
+				<MaxCombo>51</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-01 18:50:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>28</W3>
+					<W2>56</W2>
+					<W1>110</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>07e9e9e6-44f1-4ac3-aa79-9c9a588f720c</StageGuid>
+				<Guid>30edc6e5-ffa4-414f-a15f-9fa260d0a470</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

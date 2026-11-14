@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/SisterPrincess/'/>
+			<Steps Difficulty='Challenge' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>9120312</Score>
+				<PercentDP>0.226000</PercentDP>
+				<SurviveSeconds>45.786762</SurviveSeconds>
+				<MaxCombo>23</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-06-28 20:27:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>21</Miss>
+					<W5>4</W5>
+					<W4>4</W4>
+					<W3>19</W3>
+					<W2>21</W2>
+					<W1>36</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d9b58142-3273-48b3-ab66-f490e3570d99</StageGuid>
+				<Guid>af124427-863d-413e-a334-7fe1b99e6a42</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

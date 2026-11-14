@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Party2/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>82579547</Score>
+				<PercentDP>0.725400</PercentDP>
+				<SurviveSeconds>133.704636</SurviveSeconds>
+				<MaxCombo>45</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-05 21:12:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>11</W5>
+					<W4>13</W4>
+					<W3>59</W3>
+					<W2>95</W2>
+					<W1>149</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>db7004fd-b8da-4816-af4d-54b0c9800143</StageGuid>
+				<Guid>56ed3747-b256-4297-ad05-410df7161b5e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/[Ilo] Ninkyou Hana Otome OP - This World is a Roulette/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85032829</Score>
+				<PercentDP>0.775500</PercentDP>
+				<SurviveSeconds>148.660812</SurviveSeconds>
+				<MaxCombo>104</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-20 21:37:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>8</W4>
+					<W3>55</W3>
+					<W2>92</W2>
+					<W1>152</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>39</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a91df0ac-13fa-4a9e-aea0-220078e9c1ca</StageGuid>
+				<Guid>24aa1657-ac7f-4d86-a660-3e4c0720e22c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

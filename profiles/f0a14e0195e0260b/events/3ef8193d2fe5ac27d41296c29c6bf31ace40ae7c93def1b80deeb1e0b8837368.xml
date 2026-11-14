@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/4 Minute - Hot Issue1/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>30213264</Score>
+				<PercentDP>0.436100</PercentDP>
+				<SurviveSeconds>96.092346</SurviveSeconds>
+				<MaxCombo>61</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-14 20:10:25</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>17</Miss>
+					<W5>8</W5>
+					<W4>11</W4>
+					<W3>66</W3>
+					<W2>72</W2>
+					<W1>96</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>39</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f957d541-b590-4dfe-abbe-c391e53b11a8</StageGuid>
+				<Guid>083ba0aa-7812-4342-af47-a2dde3fc98d2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

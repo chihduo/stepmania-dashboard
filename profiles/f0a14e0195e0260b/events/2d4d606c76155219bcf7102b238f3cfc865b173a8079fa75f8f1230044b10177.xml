@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Gee/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85289504</Score>
+				<PercentDP>0.736700</PercentDP>
+				<SurviveSeconds>123.183693</SurviveSeconds>
+				<MaxCombo>60</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-19 21:07:56</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>4</W5>
+					<W4>8</W4>
+					<W3>47</W3>
+					<W2>120</W2>
+					<W1>139</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c91089ed-f498-4fd5-a659-06c9b7950a07</StageGuid>
+				<Guid>dd3c1eff-52d8-486e-a420-37f99626ed66</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

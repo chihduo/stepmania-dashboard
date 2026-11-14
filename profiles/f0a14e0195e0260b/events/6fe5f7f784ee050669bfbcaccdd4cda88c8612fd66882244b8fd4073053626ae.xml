@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Greenhorn 2/'/>
+			<Steps Difficulty='Challenge' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>9957486</Score>
+				<PercentDP>0.191100</PercentDP>
+				<SurviveSeconds>54.206203</SurviveSeconds>
+				<MaxCombo>37</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-30 17:55:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>3</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>37</W3>
+					<W2>27</W2>
+					<W1>12</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7092e94c-ed0b-4963-a4e2-b0157ceb5357</StageGuid>
+				<Guid>66e24277-ae8f-41c9-a9f6-d09ce4e887e7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

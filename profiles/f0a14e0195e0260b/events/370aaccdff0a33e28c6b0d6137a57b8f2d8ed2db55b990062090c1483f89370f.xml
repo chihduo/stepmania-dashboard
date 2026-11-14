@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/FEARMIX 2021/Elt [DJEmbrace]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85902842</Score>
+				<PercentDP>0.767700</PercentDP>
+				<SurviveSeconds>135.924805</SurviveSeconds>
+				<MaxCombo>106</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-10 23:07:42</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>63</W3>
+					<W2>118</W2>
+					<W1>164</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>35</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4cdfa1d3-bce0-43ed-a91b-7d7d88e196bc</StageGuid>
+				<Guid>2c19b6d5-e9e3-46ab-a67a-2c4999d88d06</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

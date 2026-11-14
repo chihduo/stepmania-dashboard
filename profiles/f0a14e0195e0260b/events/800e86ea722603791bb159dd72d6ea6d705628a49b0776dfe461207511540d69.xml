@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Endless Tears (feat. Nakamura Maiko)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>171749698</Score>
+				<PercentDP>0.782800</PercentDP>
+				<SurviveSeconds>265.153687</SurviveSeconds>
+				<MaxCombo>279</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-26 18:26:08</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>7</W5>
+					<W4>15</W4>
+					<W3>89</W3>
+					<W2>180</W2>
+					<W1>308</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>77</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cb3d949c-7805-41b4-a2b7-ae36549a9ab6</StageGuid>
+				<Guid>971fc21b-cb95-4865-a391-2650e208fcf8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

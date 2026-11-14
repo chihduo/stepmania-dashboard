@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Zimons Originals/Never Say Goodbye/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>81501042</Score>
+				<PercentDP>0.716500</PercentDP>
+				<SurviveSeconds>130.330032</SurviveSeconds>
+				<MaxCombo>84</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-19 19:57:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>11</W4>
+					<W3>86</W3>
+					<W2>107</W2>
+					<W1>153</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>101010d9-997a-4ff2-a191-19b61a30d8ab</StageGuid>
+				<Guid>890c8452-0257-4fd9-a044-e7efa2ff73bd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

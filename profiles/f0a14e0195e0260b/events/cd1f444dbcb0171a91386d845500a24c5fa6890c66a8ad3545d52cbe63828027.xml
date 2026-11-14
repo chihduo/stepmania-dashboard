@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/ZIv Freestyle Showcase 2020/I CAN&apos;T STOP ME/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84949196</Score>
+				<PercentDP>0.764400</PercentDP>
+				<SurviveSeconds>136.178391</SurviveSeconds>
+				<MaxCombo>92</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-23 22:09:42</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>3</W5>
+					<W4>4</W4>
+					<W3>60</W3>
+					<W2>104</W2>
+					<W1>159</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>33</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>86793703-d2ae-4d98-aea5-5d0377c7086f</StageGuid>
+				<Guid>dc575bf2-12ca-48de-aa02-a352083cbd6c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

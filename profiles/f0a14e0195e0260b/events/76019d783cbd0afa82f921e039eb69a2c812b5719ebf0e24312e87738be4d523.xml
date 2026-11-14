@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Girls Generation - Oh!/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88758806</Score>
+				<PercentDP>0.805100</PercentDP>
+				<SurviveSeconds>138.196808</SurviveSeconds>
+				<MaxCombo>267</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-22 20:58:32</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>60</W3>
+					<W2>112</W2>
+					<W1>214</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>44</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>49d0a8de-34c8-41e4-afc4-eed712b6e7dd</StageGuid>
+				<Guid>3097c867-c3d3-4503-aa44-00bb65ae442a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

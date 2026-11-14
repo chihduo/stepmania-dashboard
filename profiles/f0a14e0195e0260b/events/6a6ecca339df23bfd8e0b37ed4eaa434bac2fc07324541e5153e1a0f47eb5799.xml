@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/ALICE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>75395958</Score>
+				<PercentDP>0.703300</PercentDP>
+				<SurviveSeconds>138.950546</SurviveSeconds>
+				<MaxCombo>175</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-18 19:19:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>3</W5>
+					<W4>16</W4>
+					<W3>97</W3>
+					<W2>104</W2>
+					<W1>179</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>26</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6344d641-b80f-4e0b-a665-3efbe05b1000</StageGuid>
+				<Guid>d8b78143-f691-499d-ab78-ccb2512b9986</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

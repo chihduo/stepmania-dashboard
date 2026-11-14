@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Genie (ROBOTAKI Remix)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76553772</Score>
+				<PercentDP>0.687000</PercentDP>
+				<SurviveSeconds>129.325989</SurviveSeconds>
+				<MaxCombo>70</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-29 19:37:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>5</W5>
+					<W4>13</W4>
+					<W3>122</W3>
+					<W2>100</W2>
+					<W1>170</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>38</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8473636f-5b49-4aa2-ace4-b0f5ff688cfc</StageGuid>
+				<Guid>2d2d8d3b-1cce-451d-ae3f-361386cc57d2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

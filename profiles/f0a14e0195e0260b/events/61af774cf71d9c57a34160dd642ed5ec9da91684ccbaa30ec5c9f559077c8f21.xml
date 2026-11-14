@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Mighty No. 9] - Do It! Now/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93603366</Score>
+				<PercentDP>0.852500</PercentDP>
+				<SurviveSeconds>140.634247</SurviveSeconds>
+				<MaxCombo>226</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-12 18:35:03</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>17</W3>
+					<W2>66</W2>
+					<W1>134</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b235cfd4-5865-4ffa-a36f-f724cbf234bc</StageGuid>
+				<Guid>b11acee9-9a97-4122-afe2-169edb3ba92b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Lisek&apos;s Simfiles/Astro Teemo/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93328867</Score>
+				<PercentDP>0.861600</PercentDP>
+				<SurviveSeconds>127.438835</SurviveSeconds>
+				<MaxCombo>250</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-29 17:54:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>25</W3>
+					<W2>74</W2>
+					<W1>190</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3cb81989-469f-4405-a1d7-6db1805a4f99</StageGuid>
+				<Guid>2792e13d-b919-4467-a659-209151a23e6f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

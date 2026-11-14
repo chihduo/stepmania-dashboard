@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/heart attack/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89448305</Score>
+				<PercentDP>0.829200</PercentDP>
+				<SurviveSeconds>151.075500</SurviveSeconds>
+				<MaxCombo>224</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-08 22:42:57</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>26</W3>
+					<W2>89</W2>
+					<W1>165</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>50de5b8a-1ca1-409d-ae50-e98c316c0a60</StageGuid>
+				<Guid>055c8e6e-4e97-40e4-a105-acb13820cf6e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

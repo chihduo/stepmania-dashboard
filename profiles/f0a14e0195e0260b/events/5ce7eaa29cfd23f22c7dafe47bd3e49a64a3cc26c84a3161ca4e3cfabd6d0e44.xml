@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Dripping Tears/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>81997963</Score>
+				<PercentDP>0.709100</PercentDP>
+				<SurviveSeconds>129.850616</SurviveSeconds>
+				<MaxCombo>83</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-02-04 19:38:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>6</W4>
+					<W3>64</W3>
+					<W2>92</W2>
+					<W1>121</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a928e04f-14f5-44f7-a984-3dee084e7f83</StageGuid>
+				<Guid>84c492f8-09e8-4d81-a896-ec066d9dbb2b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

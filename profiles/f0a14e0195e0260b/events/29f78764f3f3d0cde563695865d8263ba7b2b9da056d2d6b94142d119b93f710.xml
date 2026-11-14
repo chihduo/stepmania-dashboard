@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Daisuki/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88020553</Score>
+				<PercentDP>0.778100</PercentDP>
+				<SurviveSeconds>98.324173</SurviveSeconds>
+				<MaxCombo>129</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-20 17:06:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>2</W4>
+					<W3>45</W3>
+					<W2>78</W2>
+					<W1>139</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>42e79203-80da-4546-a793-0d58ccfa9e7e</StageGuid>
+				<Guid>fee1d4f1-b6a8-4803-a3eb-80113febc778</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

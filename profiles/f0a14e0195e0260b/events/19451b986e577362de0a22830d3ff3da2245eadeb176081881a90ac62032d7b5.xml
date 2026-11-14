@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Attention/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89180659</Score>
+				<PercentDP>0.828800</PercentDP>
+				<SurviveSeconds>98.288857</SurviveSeconds>
+				<MaxCombo>142</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-31 20:25:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>1</W4>
+					<W3>24</W3>
+					<W2>65</W2>
+					<W1>158</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a68bfa4b-b190-4744-a3fc-736606d0a158</StageGuid>
+				<Guid>d8ffbd8f-cbbc-4400-a298-8a4608f824a4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

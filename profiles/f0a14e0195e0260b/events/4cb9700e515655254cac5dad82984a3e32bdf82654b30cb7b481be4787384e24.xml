@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Destrier75 DDR MIX 2/One Way Ticket (To The Blues)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>96935213</Score>
+				<PercentDP>0.898500</PercentDP>
+				<SurviveSeconds>135.339355</SurviveSeconds>
+				<MaxCombo>275</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-02 22:52:37</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>10</W3>
+					<W2>68</W2>
+					<W1>171</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>40</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c72a94f6-6f95-47db-a757-5f501b850f24</StageGuid>
+				<Guid>89775589-6a36-44af-ae3a-1dcfd7a788c1</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/God Knows [Suzumiya Haruhi EP12][048]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>154537505</Score>
+				<PercentDP>0.715700</PercentDP>
+				<SurviveSeconds>167.765610</SurviveSeconds>
+				<MaxCombo>67</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-22 20:22:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>19</Miss>
+					<W5>18</W5>
+					<W4>28</W4>
+					<W3>80</W3>
+					<W2>108</W2>
+					<W1>199</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>106</Held>
+					<MissedHold>4</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>43f0b541-43dc-4879-a210-1239a620ef84</StageGuid>
+				<Guid>2391c182-fc8b-4c51-ad9e-0c1a10bb73f7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

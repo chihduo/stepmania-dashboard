@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Roll Deep (Because I_m The Best)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>39627035</Score>
+				<PercentDP>0.476900</PercentDP>
+				<SurviveSeconds>106.763573</SurviveSeconds>
+				<MaxCombo>72</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-03 22:16:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>18</Miss>
+					<W5>4</W5>
+					<W4>10</W4>
+					<W3>52</W3>
+					<W2>84</W2>
+					<W1>89</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bcf1b326-6619-47c3-ac45-42af9bd178d5</StageGuid>
+				<Guid>f5102b88-4353-4cd9-a782-f2d3adb2dd4f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

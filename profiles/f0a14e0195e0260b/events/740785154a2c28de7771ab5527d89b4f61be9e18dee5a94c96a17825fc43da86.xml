@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Tippy Toes/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91379468</Score>
+				<PercentDP>0.806600</PercentDP>
+				<SurviveSeconds>144.776321</SurviveSeconds>
+				<MaxCombo>185</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-15 14:08:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>44</W3>
+					<W2>125</W2>
+					<W1>211</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7ab3a1e7-d618-4f8f-ab25-e9fa28f54656</StageGuid>
+				<Guid>035d6e5c-b44f-4066-ae51-2ca4ea8a2ce8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

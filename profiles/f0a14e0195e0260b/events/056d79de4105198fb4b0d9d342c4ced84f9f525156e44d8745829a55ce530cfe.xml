@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/I_ll believe/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85110787</Score>
+				<PercentDP>0.766400</PercentDP>
+				<SurviveSeconds>135.662674</SurviveSeconds>
+				<MaxCombo>114</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-16 21:28:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>5</W5>
+					<W4>6</W4>
+					<W3>64</W3>
+					<W2>113</W2>
+					<W1>189</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>717289ba-0925-4d4a-ac0e-4d8d31b200a0</StageGuid>
+				<Guid>9ea0f0cd-996e-4d44-a9be-5922e2a742d9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

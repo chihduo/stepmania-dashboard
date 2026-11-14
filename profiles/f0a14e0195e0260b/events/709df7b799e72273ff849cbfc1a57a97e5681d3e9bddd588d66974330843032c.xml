@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/So Crazy - T Ara/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91252399</Score>
+				<PercentDP>0.839200</PercentDP>
+				<SurviveSeconds>131.075363</SurviveSeconds>
+				<MaxCombo>178</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-12 21:48:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>4</W5>
+					<W4>2</W4>
+					<W3>32</W3>
+					<W2>119</W2>
+					<W1>252</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>08842e2c-a1e1-4d19-a58b-f852d955d48c</StageGuid>
+				<Guid>b02fc22e-89fa-4079-a33c-d54590dad2ef</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

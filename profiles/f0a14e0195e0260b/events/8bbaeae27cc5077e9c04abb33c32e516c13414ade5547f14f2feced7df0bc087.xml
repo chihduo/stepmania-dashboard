@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Miracle Hinacle/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>80968319</Score>
+				<PercentDP>0.714900</PercentDP>
+				<SurviveSeconds>143.191132</SurviveSeconds>
+				<MaxCombo>118</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-14 21:28:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>4</W5>
+					<W4>17</W4>
+					<W3>108</W3>
+					<W2>131</W2>
+					<W1>207</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c00b6561-2171-4513-a2ae-a3c26f39a70b</StageGuid>
+				<Guid>f43cd4e9-5aed-4bfd-ad81-b5a4c8cad689</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

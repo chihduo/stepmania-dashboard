@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round 1] - Movin&apos; on without you/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>63613604</Score>
+				<PercentDP>0.632700</PercentDP>
+				<SurviveSeconds>113.765251</SurviveSeconds>
+				<MaxCombo>35</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-22 21:11:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>18</Miss>
+					<W5>4</W5>
+					<W4>21</W4>
+					<W3>61</W3>
+					<W2>73</W2>
+					<W1>139</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2b34e73a-3e27-46b3-ab52-83c9aeb54dc1</StageGuid>
+				<Guid>6720a93c-e318-4713-a38f-9e6945bb135d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

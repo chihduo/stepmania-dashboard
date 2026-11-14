@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Beatvolt PIU/Damaged Lady (v2)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87105982</Score>
+				<PercentDP>0.791400</PercentDP>
+				<SurviveSeconds>141.237137</SurviveSeconds>
+				<MaxCombo>118</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-23 21:32:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>60</W3>
+					<W2>125</W2>
+					<W1>179</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>52</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d24c1fe6-6bea-49e2-ac65-994db1d8c1ec</StageGuid>
+				<Guid>96f6327c-7f4e-4f43-a8c1-eb09d341f62c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

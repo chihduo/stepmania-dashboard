@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Boombayah/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86592522</Score>
+				<PercentDP>0.785800</PercentDP>
+				<SurviveSeconds>129.111435</SurviveSeconds>
+				<MaxCombo>66</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-14 19:21:42</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>5</W5>
+					<W4>6</W4>
+					<W3>42</W3>
+					<W2>89</W2>
+					<W1>161</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>36</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e212c7fb-d40c-4c33-a668-e8ed21de762b</StageGuid>
+				<Guid>f530c918-d928-41be-a09a-35a2eb20145d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

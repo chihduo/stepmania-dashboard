@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Nostalgia Eroge/(sweets)Mikomiko Nurse/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>18546</Score>
+				<PercentDP>0.008200</PercentDP>
+				<SurviveSeconds>13.730006</SurviveSeconds>
+				<MaxCombo>2</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-20 15:57:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>5</W5>
+					<W4>1</W4>
+					<W3>0</W3>
+					<W2>0</W2>
+					<W1>2</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c416df8b-3622-4fce-aef0-7a4cd2d9171a</StageGuid>
+				<Guid>dc4d8888-382c-46e1-aecf-c57e45bc3565</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

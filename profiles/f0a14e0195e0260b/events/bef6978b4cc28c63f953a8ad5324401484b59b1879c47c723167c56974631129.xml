@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Renai Circulation/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>568051</Score>
+				<PercentDP>0.059900</PercentDP>
+				<SurviveSeconds>23.672989</SurviveSeconds>
+				<MaxCombo>24</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-06-28 20:16:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>2</W5>
+					<W4>0</W4>
+					<W3>6</W3>
+					<W2>7</W2>
+					<W1>10</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>3</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7802e094-2e13-41e8-af0d-d562ec468f76</StageGuid>
+				<Guid>f6bf21a3-12bf-4661-a382-2f7b99bf8a28</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

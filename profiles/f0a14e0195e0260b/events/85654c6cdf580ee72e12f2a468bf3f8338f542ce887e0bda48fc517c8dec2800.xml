@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/Off the Record/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>94357930</Score>
+				<PercentDP>0.829700</PercentDP>
+				<SurviveSeconds>129.958313</SurviveSeconds>
+				<MaxCombo>230</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-07-06 17:58:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>30</W3>
+					<W2>102</W2>
+					<W1>145</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>50</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>73be3055-1210-4ef7-a50a-f2580b3e9b58</StageGuid>
+				<Guid>07fa2d14-05cf-4a1e-a1a2-62765ee557ab</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

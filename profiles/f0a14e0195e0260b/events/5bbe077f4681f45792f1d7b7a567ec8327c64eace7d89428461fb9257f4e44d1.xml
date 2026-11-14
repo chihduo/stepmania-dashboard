@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Dumhdurum/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87251969</Score>
+				<PercentDP>0.763000</PercentDP>
+				<SurviveSeconds>123.885765</SurviveSeconds>
+				<MaxCombo>181</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-06 19:52:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>50</W3>
+					<W2>101</W2>
+					<W1>130</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>665e4e91-365c-4d92-ac33-37cc5e853816</StageGuid>
+				<Guid>74157a9d-d251-4d41-aa36-ba4093af6ac4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/After LIKE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91578271</Score>
+				<PercentDP>0.792800</PercentDP>
+				<SurviveSeconds>119.434746</SurviveSeconds>
+				<MaxCombo>232</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-07-08 21:34:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>49</W3>
+					<W2>118</W2>
+					<W1>184</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a0516346-1f63-4413-aad8-0e236cca64d0</StageGuid>
+				<Guid>8f16c644-1ff1-44e9-a1a3-18c6c893e00b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

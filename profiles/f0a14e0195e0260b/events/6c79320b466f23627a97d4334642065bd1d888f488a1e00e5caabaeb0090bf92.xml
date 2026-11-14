@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Brown Eyed Girls - Abracadabra/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>88045</Score>
+				<PercentDP>0.012300</PercentDP>
+				<SurviveSeconds>16.799026</SurviveSeconds>
+				<MaxCombo>8</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-27 22:51:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>10</W3>
+					<W2>4</W2>
+					<W1>0</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>473a0b31-67fa-415e-a230-1481b797a031</StageGuid>
+				<Guid>a07a9ecd-a5ab-43f5-a598-74f3ed535d18</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

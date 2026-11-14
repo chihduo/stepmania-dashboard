@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/IMMORAL/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>79181165</Score>
+				<PercentDP>0.739400</PercentDP>
+				<SurviveSeconds>113.490280</SurviveSeconds>
+				<MaxCombo>88</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-29 17:49:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>3</W5>
+					<W4>5</W4>
+					<W3>69</W3>
+					<W2>91</W2>
+					<W1>143</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>24</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f280da73-658d-4f81-ad04-1d861ca37150</StageGuid>
+				<Guid>3f564374-63c5-4dd9-a8db-64212f41f803</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

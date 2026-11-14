@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Weekend/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89033116</Score>
+				<PercentDP>0.774000</PercentDP>
+				<SurviveSeconds>101.658295</SurviveSeconds>
+				<MaxCombo>98</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-01 21:17:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>3</W5>
+					<W4>2</W4>
+					<W3>34</W3>
+					<W2>65</W2>
+					<W1>113</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3259a079-d032-49a5-a1b7-50c4c1167e16</StageGuid>
+				<Guid>168f865d-9371-439c-a36a-c4a4314249b7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

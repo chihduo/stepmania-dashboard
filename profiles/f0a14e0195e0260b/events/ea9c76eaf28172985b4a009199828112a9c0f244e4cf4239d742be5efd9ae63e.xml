@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/euphoric field/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>64939097</Score>
+				<PercentDP>0.572800</PercentDP>
+				<SurviveSeconds>97.710846</SurviveSeconds>
+				<MaxCombo>56</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-22 21:18:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>11</W5>
+					<W4>18</W4>
+					<W3>85</W3>
+					<W2>73</W2>
+					<W1>88</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6109b9fe-26ea-451a-a6f3-38f34b367611</StageGuid>
+				<Guid>5c8ec328-d814-434e-a78c-7234763e69aa</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

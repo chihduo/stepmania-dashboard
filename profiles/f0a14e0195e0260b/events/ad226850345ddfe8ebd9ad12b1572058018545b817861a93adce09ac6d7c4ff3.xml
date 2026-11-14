@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/LIFE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86038528</Score>
+				<PercentDP>0.759000</PercentDP>
+				<SurviveSeconds>109.251305</SurviveSeconds>
+				<MaxCombo>96</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-12 21:27:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>57</W3>
+					<W2>85</W2>
+					<W1>116</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>33</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b524a37e-2195-43a3-a752-adde907fde48</StageGuid>
+				<Guid>149e549a-9e3a-4feb-a4b9-b3cbd7807e4d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

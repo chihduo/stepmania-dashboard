@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/Shugo Chara! ed3 - Kiss! Kiss! Kiss!/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91707964</Score>
+				<PercentDP>0.810000</PercentDP>
+				<SurviveSeconds>101.429558</SurviveSeconds>
+				<MaxCombo>101</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-06 17:39:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>19</W3>
+					<W2>67</W2>
+					<W1>101</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c86319a7-124d-48d2-abc2-8c2bcbb83739</StageGuid>
+				<Guid>ef3237c8-efab-4361-a072-99b2b9e2f5f8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

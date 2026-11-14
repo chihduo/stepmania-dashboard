@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/DALLA DALLA/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89662924</Score>
+				<PercentDP>0.840100</PercentDP>
+				<SurviveSeconds>140.049179</SurviveSeconds>
+				<MaxCombo>184</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-03 21:41:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>27</W3>
+					<W2>83</W2>
+					<W1>200</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6c3c3527-e285-45e1-af8e-5012a22af99a</StageGuid>
+				<Guid>db4f5824-94f7-4c59-a8f3-059149f93cfa</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

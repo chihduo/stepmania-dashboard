@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Sakura Taisen/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>5607216</Score>
+				<PercentDP>0.191600</PercentDP>
+				<SurviveSeconds>44.317406</SurviveSeconds>
+				<MaxCombo>59</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-16 21:41:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>2</W5>
+					<W4>9</W4>
+					<W3>19</W3>
+					<W2>24</W2>
+					<W1>50</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>90664561-fea7-47d7-ab63-2acd27bbbf07</StageGuid>
+				<Guid>178eb43b-b0a9-4a2f-aa4a-41a3c6334005</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

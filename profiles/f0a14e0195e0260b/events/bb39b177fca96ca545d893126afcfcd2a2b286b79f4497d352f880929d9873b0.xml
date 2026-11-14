@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/Dolphin/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>64305</Score>
+				<PercentDP>0.015600</PercentDP>
+				<SurviveSeconds>17.272987</SurviveSeconds>
+				<MaxCombo>6</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-04 22:07:05</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>4</W3>
+					<W2>3</W2>
+					<W1>2</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>152b2486-eddc-4881-a2bd-12ab6545df74</StageGuid>
+				<Guid>c49ca3d6-8d21-4433-a6fb-826f435fc9ed</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

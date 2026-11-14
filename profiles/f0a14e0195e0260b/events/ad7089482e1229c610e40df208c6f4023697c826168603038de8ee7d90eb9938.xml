@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Turtle/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>31659907</Score>
+				<PercentDP>0.424300</PercentDP>
+				<SurviveSeconds>103.198326</SurviveSeconds>
+				<MaxCombo>98</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-15 14:10:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>3</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>30</Miss>
+					<W5>4</W5>
+					<W4>28</W4>
+					<W3>103</W3>
+					<W2>113</W2>
+					<W1>166</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3b922f14-7232-40d2-aa87-25746cbfac53</StageGuid>
+				<Guid>f17a6bb4-1c16-4b60-a97a-88f095061c86</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

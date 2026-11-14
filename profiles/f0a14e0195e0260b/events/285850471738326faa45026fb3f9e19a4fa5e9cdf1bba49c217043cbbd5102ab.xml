@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Be Mine/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93523795</Score>
+				<PercentDP>0.884800</PercentDP>
+				<SurviveSeconds>118.726738</SurviveSeconds>
+				<MaxCombo>132</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-19 15:02:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>17</W3>
+					<W2>58</W2>
+					<W1>171</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>51</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>29323e9d-5d1d-470e-a834-f94daf012a22</StageGuid>
+				<Guid>8eb9b080-2d2a-4061-afcb-938aa2f80266</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

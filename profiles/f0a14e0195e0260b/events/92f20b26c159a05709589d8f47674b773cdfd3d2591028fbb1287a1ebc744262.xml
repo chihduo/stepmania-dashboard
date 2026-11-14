@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Troublemaker/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78820753</Score>
+				<PercentDP>0.695500</PercentDP>
+				<SurviveSeconds>143.020767</SurviveSeconds>
+				<MaxCombo>56</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-16 20:08:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>0</W5>
+					<W4>15</W4>
+					<W3>61</W3>
+					<W2>71</W2>
+					<W1>114</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5efc863f-b102-4b93-a7df-fd6f775f13f3</StageGuid>
+				<Guid>29904088-9108-4533-aabb-6b42250fe18b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

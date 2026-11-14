@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Lamb/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>138033</Score>
+				<PercentDP>0.033200</PercentDP>
+				<SurviveSeconds>21.810093</SurviveSeconds>
+				<MaxCombo>11</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-15 19:29:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>1</W3>
+					<W2>3</W2>
+					<W1>8</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6fcca004-caf6-4c42-a27d-bb43c98390f3</StageGuid>
+				<Guid>e1980943-f978-4959-abe4-a0fd6bca716d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

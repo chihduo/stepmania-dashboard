@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/YOU CAN_T SIT WITH US/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>72719874</Score>
+				<PercentDP>0.680100</PercentDP>
+				<SurviveSeconds>140.453308</SurviveSeconds>
+				<MaxCombo>64</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-25 21:15:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>14</Miss>
+					<W5>25</W5>
+					<W4>21</W4>
+					<W3>93</W3>
+					<W2>156</W2>
+					<W1>210</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e769c35b-057b-4251-ad70-0391fcaee717</StageGuid>
+				<Guid>49c90452-0da6-4fc0-a2cf-aab0fc48ceb5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

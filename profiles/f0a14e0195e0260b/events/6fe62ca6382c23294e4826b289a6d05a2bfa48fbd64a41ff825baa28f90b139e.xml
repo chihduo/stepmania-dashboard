@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/MOMOLAND - BAAM/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85548923</Score>
+				<PercentDP>0.762900</PercentDP>
+				<SurviveSeconds>122.299530</SurviveSeconds>
+				<MaxCombo>140</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-12 21:20:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>17</W5>
+					<W4>4</W4>
+					<W3>52</W3>
+					<W2>117</W2>
+					<W1>177</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>42</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>53014ad3-3061-4603-a5a8-ed83c6e5614f</StageGuid>
+				<Guid>c4d36c3f-8ea2-4eea-af2c-84db8edf3514</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

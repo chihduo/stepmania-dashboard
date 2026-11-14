@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/HULA HOOP/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>81385703</Score>
+				<PercentDP>0.697600</PercentDP>
+				<SurviveSeconds>135.554077</SurviveSeconds>
+				<MaxCombo>168</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-18 18:45:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>3</W4>
+					<W3>87</W3>
+					<W2>104</W2>
+					<W1>120</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>060e6548-afcf-48b1-a842-952faae55b39</StageGuid>
+				<Guid>f6d0176c-ee82-4cb3-a991-726170a4554a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

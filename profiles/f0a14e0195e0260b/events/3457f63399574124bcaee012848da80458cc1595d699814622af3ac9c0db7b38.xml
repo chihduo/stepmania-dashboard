@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/HIP - Mamamoo/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>30027694</Score>
+				<PercentDP>0.421200</PercentDP>
+				<SurviveSeconds>97.127403</SurviveSeconds>
+				<MaxCombo>77</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-22 20:24:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>19</Miss>
+					<W5>0</W5>
+					<W4>9</W4>
+					<W3>64</W3>
+					<W2>80</W2>
+					<W1>87</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>27b20293-7349-43bf-aff7-4a69f97f7884</StageGuid>
+				<Guid>6e2f24bb-4d0c-482a-a731-7d7f0d722c05</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

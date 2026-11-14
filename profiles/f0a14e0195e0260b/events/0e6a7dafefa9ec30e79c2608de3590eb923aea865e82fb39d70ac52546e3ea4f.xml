@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/NU ABO/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93909975</Score>
+				<PercentDP>0.858300</PercentDP>
+				<SurviveSeconds>127.386528</SurviveSeconds>
+				<MaxCombo>299</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-11 20:15:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>21</W3>
+					<W2>91</W2>
+					<W1>187</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>73cafdfe-c74b-440b-a44e-611a6103bf3d</StageGuid>
+				<Guid>7da49030-b25d-44f0-a29c-58652aaf1fbf</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/Heavy Rotation/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88712853</Score>
+				<PercentDP>0.815600</PercentDP>
+				<SurviveSeconds>125.399895</SurviveSeconds>
+				<MaxCombo>111</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-05 21:03:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>39</W3>
+					<W2>78</W2>
+					<W1>162</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>34</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5facf522-932d-4b4b-a8b7-734cdd5f6d5b</StageGuid>
+				<Guid>5d451c6f-f52c-47f5-a8e0-cc57a3491a7e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

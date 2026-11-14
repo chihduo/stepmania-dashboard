@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Look Who&apos;s Talking/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86935615</Score>
+				<PercentDP>0.769600</PercentDP>
+				<SurviveSeconds>125.335655</SurviveSeconds>
+				<MaxCombo>123</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-21 17:42:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>9</W4>
+					<W3>55</W3>
+					<W2>91</W2>
+					<W1>182</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bab0fce8-398c-4633-ac7d-f668979bd2e3</StageGuid>
+				<Guid>ab349ee2-a3c4-4bcc-a80c-7a92f31789bc</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

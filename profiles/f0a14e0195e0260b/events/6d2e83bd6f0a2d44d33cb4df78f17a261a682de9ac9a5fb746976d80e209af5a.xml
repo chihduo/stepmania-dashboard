@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/SISTAR - I Like That/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>30178270</Score>
+				<PercentDP>0.416800</PercentDP>
+				<SurviveSeconds>93.785164</SurviveSeconds>
+				<MaxCombo>52</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-19 18:07:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>23</Miss>
+					<W5>8</W5>
+					<W4>12</W4>
+					<W3>67</W3>
+					<W2>95</W2>
+					<W1>119</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>451d2fd8-2dc8-4036-a635-ca2749ba7eac</StageGuid>
+				<Guid>686d6f14-4c2f-40b7-abbc-ca113a4b942d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

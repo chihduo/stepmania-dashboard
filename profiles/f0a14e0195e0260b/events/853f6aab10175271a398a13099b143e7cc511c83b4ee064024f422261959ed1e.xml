@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/CrossHeart [Kyoshiro to Towa no Sora OP][096]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>94679850</Score>
+				<PercentDP>0.864400</PercentDP>
+				<SurviveSeconds>99.164185</SurviveSeconds>
+				<MaxCombo>138</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-30 19:12:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>14</W3>
+					<W2>56</W2>
+					<W1>116</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ae16a825-e072-45ea-ac27-be586d2cf9bb</StageGuid>
+				<Guid>384ba1e7-e4ad-4619-a85d-f4098840a91d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

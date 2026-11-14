@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/MAGO/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91127605</Score>
+				<PercentDP>0.855900</PercentDP>
+				<SurviveSeconds>134.396469</SurviveSeconds>
+				<MaxCombo>74</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-02 11:20:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>2</W4>
+					<W3>18</W3>
+					<W2>70</W2>
+					<W1>131</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>56</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ddd84f1d-4972-4d65-a655-22317760ddce</StageGuid>
+				<Guid>b4299cb4-3f46-4e01-ac62-3abcb904a034</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

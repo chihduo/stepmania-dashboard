@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/Next Level/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88690071</Score>
+				<PercentDP>0.778700</PercentDP>
+				<SurviveSeconds>142.454117</SurviveSeconds>
+				<MaxCombo>233</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-08 21:14:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>54</W3>
+					<W2>110</W2>
+					<W1>176</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5fdb33d3-e79d-4ace-ae01-1f1eddee2635</StageGuid>
+				<Guid>ba649391-16db-412b-a249-1657b5b95d0c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

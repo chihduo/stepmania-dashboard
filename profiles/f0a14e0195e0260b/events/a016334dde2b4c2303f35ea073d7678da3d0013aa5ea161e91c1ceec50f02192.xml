@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Utada Hikaru/traveling/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83837030</Score>
+				<PercentDP>0.756200</PercentDP>
+				<SurviveSeconds>131.525192</SurviveSeconds>
+				<MaxCombo>54</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-09 21:09:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>13</W5>
+					<W4>11</W4>
+					<W3>49</W3>
+					<W2>74</W2>
+					<W1>145</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>51</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c9f1c325-2c70-486b-a1f7-14e2a912b097</StageGuid>
+				<Guid>75ffa528-3363-47bb-acaf-132548e7e5f6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR DAIKENKAI/THE BOYS/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>6857574</Score>
+				<PercentDP>0.206000</PercentDP>
+				<SurviveSeconds>62.551956</SurviveSeconds>
+				<MaxCombo>56</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-12-31 20:59:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>21</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>31</W3>
+					<W2>42</W2>
+					<W1>59</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a8534d6b-ca85-42b8-ae31-ddf80c20c5a3</StageGuid>
+				<Guid>3e3543df-062d-416a-a82a-ef878edbe2dd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

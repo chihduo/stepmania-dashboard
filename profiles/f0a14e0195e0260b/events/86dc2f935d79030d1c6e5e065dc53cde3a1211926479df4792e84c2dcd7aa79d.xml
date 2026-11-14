@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/ToHeartRemix/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>85191998</Score>
+				<PercentDP>0.750000</PercentDP>
+				<SurviveSeconds>117.990021</SurviveSeconds>
+				<MaxCombo>104</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-03 00:08:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>43</W3>
+					<W2>82</W2>
+					<W1>131</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7abb40c7-2a93-4a6f-a0fc-4b225e7ca763</StageGuid>
+				<Guid>3c6349ac-52c0-4083-a389-78df4e164809</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

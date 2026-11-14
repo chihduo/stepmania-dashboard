@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/BOP BOP!/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89431377</Score>
+				<PercentDP>0.804300</PercentDP>
+				<SurviveSeconds>153.387482</SurviveSeconds>
+				<MaxCombo>73</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-01 19:28:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>68</W3>
+					<W2>145</W2>
+					<W1>230</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>4</LetGo>
+					<Held>85</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8fc180c7-0bc9-48e3-a568-fd36d4670996</StageGuid>
+				<Guid>d6d05587-6e7c-4aba-a37e-4bffe929c7eb</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

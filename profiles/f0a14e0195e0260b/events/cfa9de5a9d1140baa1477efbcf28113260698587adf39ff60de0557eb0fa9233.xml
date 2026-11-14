@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Genie/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>159106570</Score>
+				<PercentDP>0.672300</PercentDP>
+				<SurviveSeconds>209.188950</SurviveSeconds>
+				<MaxCombo>77</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-18 19:28:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>10</W4>
+					<W3>99</W3>
+					<W2>107</W2>
+					<W1>118</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>de5582c1-48eb-4120-a80a-721b4b282925</StageGuid>
+				<Guid>c69f0ea6-9028-4b58-af1f-3e134cbb6e02</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 1/Hwi hwi/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>550179</Score>
+				<PercentDP>0.060600</PercentDP>
+				<SurviveSeconds>27.622959</SurviveSeconds>
+				<MaxCombo>27</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-24 18:49:54</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>1</W3>
+					<W2>14</W2>
+					<W1>15</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8c209e25-d2cd-4596-a474-f001ab821650</StageGuid>
+				<Guid>154fece5-287a-4f19-ac8d-e2f34b88ca15</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

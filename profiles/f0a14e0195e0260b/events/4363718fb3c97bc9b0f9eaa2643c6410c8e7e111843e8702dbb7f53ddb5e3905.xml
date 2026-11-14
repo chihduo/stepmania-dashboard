@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/Ah-Ah/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>56965066</Score>
+				<PercentDP>0.598800</PercentDP>
+				<SurviveSeconds>132.116776</SurviveSeconds>
+				<MaxCombo>79</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-05 20:09:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>8</W5>
+					<W4>12</W4>
+					<W3>66</W3>
+					<W2>87</W2>
+					<W1>122</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7500eb4b-db78-42e3-a934-e5a25bf0263d</StageGuid>
+				<Guid>e788d03d-f8af-4e7b-ab32-8da3438ac575</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

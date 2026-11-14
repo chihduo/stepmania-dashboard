@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Sexy Love/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>311470</Score>
+				<PercentDP>0.023400</PercentDP>
+				<SurviveSeconds>19.706104</SurviveSeconds>
+				<MaxCombo>9</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-03 22:37:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>3</W5>
+					<W4>5</W4>
+					<W3>9</W3>
+					<W2>10</W2>
+					<W1>8</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>df0f40f9-f5a0-4faf-afec-755f00493809</StageGuid>
+				<Guid>3d0a7662-8ee2-4fa3-ab58-c4cceeab1acd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

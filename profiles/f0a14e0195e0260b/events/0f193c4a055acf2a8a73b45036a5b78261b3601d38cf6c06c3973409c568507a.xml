@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Wish [SHUFFLE! Memories Asa ED][108]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>94725737</Score>
+				<PercentDP>0.899100</PercentDP>
+				<SurviveSeconds>131.123367</SurviveSeconds>
+				<MaxCombo>282</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-29 17:19:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>18</W3>
+					<W2>62</W2>
+					<W1>166</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>78</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>13dda247-0db1-40d9-a862-980faa9a97c3</StageGuid>
+				<Guid>50e2eacf-3c3f-460d-a1a7-f8ea1c150b46</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

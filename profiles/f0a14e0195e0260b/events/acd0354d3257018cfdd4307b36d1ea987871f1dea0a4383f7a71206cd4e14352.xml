@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/bboom bboom/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87235360</Score>
+				<PercentDP>0.763300</PercentDP>
+				<SurviveSeconds>134.806702</SurviveSeconds>
+				<MaxCombo>80</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-02 23:58:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>7</W4>
+					<W3>45</W3>
+					<W2>72</W2>
+					<W1>109</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>28</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>34bf1b31-c74b-4605-ab95-4022fe35d77f</StageGuid>
+				<Guid>85900d80-80c0-4b5c-a828-14fb0d34ae61</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

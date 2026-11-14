@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Rally Go Round/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86661873</Score>
+				<PercentDP>0.780900</PercentDP>
+				<SurviveSeconds>95.470551</SurviveSeconds>
+				<MaxCombo>59</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-31 12:15:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>1</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>4</W5>
+					<W4>9</W4>
+					<W3>48</W3>
+					<W2>89</W2>
+					<W1>146</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>55</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2975668d-6f01-425f-a7c4-fb368b240775</StageGuid>
+				<Guid>a4db1685-86fa-4ec6-a883-4040f378f630</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

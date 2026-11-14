@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Blossom/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92255910</Score>
+				<PercentDP>0.824900</PercentDP>
+				<SurviveSeconds>112.658974</SurviveSeconds>
+				<MaxCombo>137</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-12-31 20:13:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>12</W3>
+					<W2>49</W2>
+					<W1>74</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9650258c-021f-4e92-ad60-758d1e5ad9b4</StageGuid>
+				<Guid>9327d122-ef5f-49ce-a70d-4f1c87583085</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

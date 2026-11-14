@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Dilemma/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>81232114</Score>
+				<PercentDP>0.745400</PercentDP>
+				<SurviveSeconds>139.817383</SurviveSeconds>
+				<MaxCombo>177</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-09 18:57:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>23</W4>
+					<W3>69</W3>
+					<W2>150</W2>
+					<W1>225</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9daf3aed-4f65-42ff-a8d8-5aeb263d26c1</StageGuid>
+				<Guid>4ebee8d2-846b-42ff-a78d-34d5d59f93da</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

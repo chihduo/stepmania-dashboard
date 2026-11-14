@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/P4U/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85366381</Score>
+				<PercentDP>0.753100</PercentDP>
+				<SurviveSeconds>101.678253</SurviveSeconds>
+				<MaxCombo>86</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-12 17:46:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>3</W5>
+					<W4>8</W4>
+					<W3>43</W3>
+					<W2>103</W2>
+					<W1>155</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ed3f7155-f04b-49dd-a243-1de9bb825839</StageGuid>
+				<Guid>8c50839e-6b5b-422a-a66d-84f6779e5fac</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

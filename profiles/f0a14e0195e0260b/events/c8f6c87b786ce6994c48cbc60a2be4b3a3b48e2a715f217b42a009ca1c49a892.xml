@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Rough/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>79290941</Score>
+				<PercentDP>0.668100</PercentDP>
+				<SurviveSeconds>153.916504</SurviveSeconds>
+				<MaxCombo>58</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-19 17:08:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>6</W5>
+					<W4>23</W4>
+					<W3>125</W3>
+					<W2>119</W2>
+					<W1>124</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>63</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fe6c01d9-d227-4c3a-af2f-3991987f872b</StageGuid>
+				<Guid>7d5472c9-8ca7-47f8-acf8-902068b668f6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/I CAN_T STOP ME/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>81860917</Score>
+				<PercentDP>0.695800</PercentDP>
+				<SurviveSeconds>151.385040</SurviveSeconds>
+				<MaxCombo>41</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-27 19:35:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>18</W5>
+					<W4>15</W4>
+					<W3>63</W3>
+					<W2>132</W2>
+					<W1>158</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>19</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e90371c9-20e2-4e2e-a2e2-77c1d3e8e2cd</StageGuid>
+				<Guid>1cbadd4b-6b94-4d06-a883-3c05dd33e1f3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

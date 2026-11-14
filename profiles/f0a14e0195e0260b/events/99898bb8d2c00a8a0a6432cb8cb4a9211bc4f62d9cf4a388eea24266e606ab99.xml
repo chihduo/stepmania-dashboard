@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/What is Love/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>88092692</Score>
+				<PercentDP>0.809300</PercentDP>
+				<SurviveSeconds>157.608093</SurviveSeconds>
+				<MaxCombo>65</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-07 20:37:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>23</W5>
+					<W4>1</W4>
+					<W3>15</W3>
+					<W2>78</W2>
+					<W1>194</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0d193e76-1e5d-4089-afe7-26ef70daf45f</StageGuid>
+				<Guid>4554bb60-523a-41ec-a469-c1e026c58b7e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

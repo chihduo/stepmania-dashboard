@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Bubble Pop!/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>21865186</Score>
+				<PercentDP>0.245200</PercentDP>
+				<SurviveSeconds>63.702225</SurviveSeconds>
+				<MaxCombo>35</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-02-04 20:15:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>5</W5>
+					<W4>11</W4>
+					<W3>43</W3>
+					<W2>49</W2>
+					<W1>49</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>8</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>08489386-20dd-45a7-a394-bfee65d7c6e8</StageGuid>
+				<Guid>ceaf97bd-bd21-4806-aea6-3b5bc5d22625</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

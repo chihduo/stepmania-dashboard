@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 2/Bubble/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76334848</Score>
+				<PercentDP>0.688500</PercentDP>
+				<SurviveSeconds>125.923302</SurviveSeconds>
+				<MaxCombo>48</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-06-22 16:41:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>13</W5>
+					<W4>7</W4>
+					<W3>60</W3>
+					<W2>80</W2>
+					<W1>116</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>20</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b8e5b095-bf87-4743-a5e0-34654fbc653b</StageGuid>
+				<Guid>a835b5ef-610a-45d5-a02f-579cc043ae18</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

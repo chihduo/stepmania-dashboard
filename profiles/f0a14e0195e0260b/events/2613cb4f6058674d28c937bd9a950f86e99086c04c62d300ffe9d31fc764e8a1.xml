@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJMAX/Din Don Dan DvF Ext Edit_custom/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>165348944</Score>
+				<PercentDP>0.744800</PercentDP>
+				<SurviveSeconds>213.797333</SurviveSeconds>
+				<MaxCombo>60</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-12 19:45:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>10</W5>
+					<W4>21</W4>
+					<W3>93</W3>
+					<W2>144</W2>
+					<W1>249</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>56</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b86d1d99-7e43-4b32-abd4-7508066d5a86</StageGuid>
+				<Guid>3834a9fc-7c55-4b95-aeab-17fd6efce43b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

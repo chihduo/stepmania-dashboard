@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Bonamana/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>86269585</Score>
+				<PercentDP>0.764100</PercentDP>
+				<SurviveSeconds>104.502655</SurviveSeconds>
+				<MaxCombo>100</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-19 15:07:42</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>7</W5>
+					<W4>6</W4>
+					<W3>49</W3>
+					<W2>99</W2>
+					<W1>180</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>12</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>063764ba-2614-4364-a8e4-d8d03dd4e23d</StageGuid>
+				<Guid>a4d20bdb-7d89-4574-a42d-dd7ef2aa290b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

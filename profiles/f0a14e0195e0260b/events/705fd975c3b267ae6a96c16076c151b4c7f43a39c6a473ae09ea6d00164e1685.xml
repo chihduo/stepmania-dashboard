@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJMAX/Cross Time/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>4148693</Score>
+				<PercentDP>0.137600</PercentDP>
+				<SurviveSeconds>44.720234</SurviveSeconds>
+				<MaxCombo>22</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-27 21:54:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>10</W5>
+					<W4>14</W4>
+					<W3>41</W3>
+					<W2>22</W2>
+					<W1>26</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a76f27f3-ee31-4ef2-aaca-5569114554d0</StageGuid>
+				<Guid>ba976aad-18e0-4d77-a55f-ba44d6648675</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

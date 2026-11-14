@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/Humph/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89663308</Score>
+				<PercentDP>0.795700</PercentDP>
+				<SurviveSeconds>122.165184</SurviveSeconds>
+				<MaxCombo>116</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-05 21:22:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>7</W5>
+					<W4>11</W4>
+					<W3>41</W3>
+					<W2>116</W2>
+					<W1>207</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>37</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>19d9d04a-4079-4c7a-a162-54fcf72bd4eb</StageGuid>
+				<Guid>c0bb6534-da11-4262-a06f-4cbeaf844e4c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

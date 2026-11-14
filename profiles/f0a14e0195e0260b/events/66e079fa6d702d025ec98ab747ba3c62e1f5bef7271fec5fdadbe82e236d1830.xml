@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Jin Xing Shi/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>73975942</Score>
+				<PercentDP>0.671800</PercentDP>
+				<SurviveSeconds>123.149948</SurviveSeconds>
+				<MaxCombo>36</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-31 21:58:35</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>9</Miss>
+					<W5>10</W5>
+					<W4>24</W4>
+					<W3>84</W3>
+					<W2>62</W2>
+					<W1>104</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>4</LetGo>
+					<Held>86</Held>
+					<MissedHold>3</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>47f882d0-8ef3-4302-a5a1-5b86e9c78508</StageGuid>
+				<Guid>cc2f3329-43bb-4d46-acf4-8174047cae66</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

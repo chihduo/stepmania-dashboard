@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/BOOMBAYAH/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89230920</Score>
+				<PercentDP>0.803300</PercentDP>
+				<SurviveSeconds>152.536392</SurviveSeconds>
+				<MaxCombo>362</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-12 18:47:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>54</W3>
+					<W2>116</W2>
+					<W1>212</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6673a540-61ee-46ba-a249-e0afc6f3cf7e</StageGuid>
+				<Guid>9a95bca9-6cef-4162-ab32-134a6f31b844</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

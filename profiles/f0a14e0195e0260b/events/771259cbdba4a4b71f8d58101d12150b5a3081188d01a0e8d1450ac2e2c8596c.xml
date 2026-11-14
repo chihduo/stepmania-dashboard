@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/BLACK OUT/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84022757</Score>
+				<PercentDP>0.744600</PercentDP>
+				<SurviveSeconds>91.853256</SurviveSeconds>
+				<MaxCombo>193</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-20 21:42:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>32</W3>
+					<W2>74</W2>
+					<W1>77</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0d8cddb1-69af-40ea-ac92-a2af5ddf95a5</StageGuid>
+				<Guid>ba61223d-f19e-41c5-a33b-d90accbc7bc2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

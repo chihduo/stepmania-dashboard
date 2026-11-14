@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Moon Runes] - Milkshake/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88574304</Score>
+				<PercentDP>0.782100</PercentDP>
+				<SurviveSeconds>106.719925</SurviveSeconds>
+				<MaxCombo>128</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-22 20:46:00</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>0</W5>
+					<W4>8</W4>
+					<W3>61</W3>
+					<W2>62</W2>
+					<W1>148</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>50</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8f407f0e-326a-4d25-aa25-2993fa06bce5</StageGuid>
+				<Guid>99ba908f-1698-432b-aa2d-3fb1b6dcd870</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Face My Fears (Japanese Version)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82302345</Score>
+				<PercentDP>0.767400</PercentDP>
+				<SurviveSeconds>132.377747</SurviveSeconds>
+				<MaxCombo>72</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-19 12:28:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>6</W4>
+					<W3>41</W3>
+					<W2>66</W2>
+					<W1>128</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>20</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>00addf49-a68f-487f-af96-dcde981054ac</StageGuid>
+				<Guid>251f4f98-a756-4571-aba9-a15de1809f89</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

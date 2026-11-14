@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/Billyeoon Goyangi (Do the Dance)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91489693</Score>
+				<PercentDP>0.825300</PercentDP>
+				<SurviveSeconds>117.731758</SurviveSeconds>
+				<MaxCombo>102</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-27 15:05:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>38</W3>
+					<W2>82</W2>
+					<W1>162</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>48</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>912871c3-263a-4497-ab08-9aca6ae09337</StageGuid>
+				<Guid>f9a96c51-71b5-442a-a29e-20dd3ea0d743</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

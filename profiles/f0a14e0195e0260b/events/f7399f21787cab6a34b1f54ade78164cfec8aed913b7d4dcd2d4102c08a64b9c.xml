@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/In the morning/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>71721943</Score>
+				<PercentDP>0.618100</PercentDP>
+				<SurviveSeconds>123.051712</SurviveSeconds>
+				<MaxCombo>48</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-19 17:15:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>12</W5>
+					<W4>20</W4>
+					<W3>59</W3>
+					<W2>81</W2>
+					<W1>98</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>94710b66-8344-4b00-a885-35e67d0547f2</StageGuid>
+				<Guid>50e0448a-de72-4906-a4d6-62c170d9392a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Chewi&apos;s K-POP/Chocolate/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85380703</Score>
+				<PercentDP>0.773800</PercentDP>
+				<SurviveSeconds>104.277496</SurviveSeconds>
+				<MaxCombo>59</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-12 20:23:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>33</W3>
+					<W2>77</W2>
+					<W1>131</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8376091d-321a-4f49-a47e-fc99236b57d8</StageGuid>
+				<Guid>8a318756-4ffb-4a7e-a652-95aee7fa74cb</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

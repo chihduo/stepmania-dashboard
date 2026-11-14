@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/hate/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90539645</Score>
+				<PercentDP>0.789700</PercentDP>
+				<SurviveSeconds>155.583847</SurviveSeconds>
+				<MaxCombo>194</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-05 23:38:44</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>37</W3>
+					<W2>78</W2>
+					<W1>136</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a49a538b-312a-4218-adaa-a1fc916a68d8</StageGuid>
+				<Guid>8d51f531-7770-4455-a7d1-906615cdeaf1</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

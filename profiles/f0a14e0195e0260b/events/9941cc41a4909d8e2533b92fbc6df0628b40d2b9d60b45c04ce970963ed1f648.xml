@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Yuukyu no Tsubasa/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85561509</Score>
+				<PercentDP>0.803200</PercentDP>
+				<SurviveSeconds>143.932709</SurviveSeconds>
+				<MaxCombo>78</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-22 17:39:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>6</W5>
+					<W4>2</W4>
+					<W3>36</W3>
+					<W2>59</W2>
+					<W1>131</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>45</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d0b5e0f1-5d0b-4fea-aa4f-ec26c6a7fecb</StageGuid>
+				<Guid>4348b9b0-aa90-4337-ae21-1ec497cec1d9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

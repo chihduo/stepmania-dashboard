@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/DING DING DONG/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>38776359</Score>
+				<PercentDP>0.442900</PercentDP>
+				<SurviveSeconds>109.002037</SurviveSeconds>
+				<MaxCombo>82</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-06 20:46:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>28</Miss>
+					<W5>16</W5>
+					<W4>30</W4>
+					<W3>83</W3>
+					<W2>84</W2>
+					<W1>105</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3e5ef8d3-ee38-412d-afae-e57063903159</StageGuid>
+				<Guid>28cc7e36-6c97-43b1-a832-b182ddf1c2e3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

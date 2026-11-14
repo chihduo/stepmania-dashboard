@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/JBEAN Originals/Hit And Run/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>96410553</Score>
+				<PercentDP>0.917600</PercentDP>
+				<SurviveSeconds>120.367920</SurviveSeconds>
+				<MaxCombo>181</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-19 21:19:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>6</W3>
+					<W2>47</W2>
+					<W1>183</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>306f4e51-5a65-4042-aa58-75c43e487bbb</StageGuid>
+				<Guid>ce06b750-ec7a-441d-a9ca-23df50de4535</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

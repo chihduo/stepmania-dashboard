@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Shuo Ai Ni/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>5485470</Score>
+				<PercentDP>0.189100</PercentDP>
+				<SurviveSeconds>44.487354</SurviveSeconds>
+				<MaxCombo>55</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-14 17:50:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>11</W3>
+					<W2>30</W2>
+					<W1>31</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>555e1fd5-4632-4445-a23a-8e9fcde98768</StageGuid>
+				<Guid>7c2d66c1-0477-45e7-a591-b881d27395dd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/agony/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>80439230</Score>
+				<PercentDP>0.690500</PercentDP>
+				<SurviveSeconds>109.650726</SurviveSeconds>
+				<MaxCombo>53</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-02-03 13:21:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>3</W5>
+					<W4>9</W4>
+					<W3>46</W3>
+					<W2>58</W2>
+					<W1>91</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>19f975f9-e0f8-4e06-aaf2-fdfad67e161f</StageGuid>
+				<Guid>5ffdea67-82bc-4a9a-a7f7-fab7014781c7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

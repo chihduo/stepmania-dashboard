@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Zimons Originals/Hikayat Cinta/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>80572437</Score>
+				<PercentDP>0.706900</PercentDP>
+				<SurviveSeconds>92.527596</SurviveSeconds>
+				<MaxCombo>66</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-30 16:02:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>3</W5>
+					<W4>5</W4>
+					<W3>55</W3>
+					<W2>78</W2>
+					<W1>115</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>000a247c-5185-4103-a350-eff1a47a0bbc</StageGuid>
+				<Guid>65e2c5b4-045f-42a7-a86f-81de524d1c4c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

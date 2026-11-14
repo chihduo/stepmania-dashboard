@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Silverhawke&apos;s Pack 1/Tino&apos;s White Horse (S.S.D.&apos;s Work)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84201168</Score>
+				<PercentDP>0.727300</PercentDP>
+				<SurviveSeconds>107.652817</SurviveSeconds>
+				<MaxCombo>112</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-02 23:11:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>7</W4>
+					<W3>73</W3>
+					<W2>104</W2>
+					<W1>154</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4a194b43-b954-4e84-aeb2-09947e5f688a</StageGuid>
+				<Guid>1ea65d8f-9bb2-43de-a146-45d4f6f71f0a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

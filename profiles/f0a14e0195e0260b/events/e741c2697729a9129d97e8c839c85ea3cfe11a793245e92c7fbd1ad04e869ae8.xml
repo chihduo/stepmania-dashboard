@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Do You Know Me/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>23518042</Score>
+				<PercentDP>0.326800</PercentDP>
+				<SurviveSeconds>96.312454</SurviveSeconds>
+				<MaxCombo>69</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-12 17:57:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>17</Miss>
+					<W5>6</W5>
+					<W4>33</W4>
+					<W3>124</W3>
+					<W2>53</W2>
+					<W1>29</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>46</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0972a19b-9fa2-472d-ae8b-0d27c0de9342</StageGuid>
+				<Guid>ec46dffc-0492-4b1e-a9e9-89889a3625d6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

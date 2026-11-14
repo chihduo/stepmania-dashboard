@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/JBEAN Originals - 2019/Kill This Love/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93554575</Score>
+				<PercentDP>0.841700</PercentDP>
+				<SurviveSeconds>130.999863</SurviveSeconds>
+				<MaxCombo>213</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-30 20:45:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>25</W3>
+					<W2>54</W2>
+					<W1>122</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b6370f46-000f-4cca-a649-5fba57ecc361</StageGuid>
+				<Guid>aed74b73-f9a3-42fe-a939-8b2bca4c8353</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

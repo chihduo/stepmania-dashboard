@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Gundam Seed - Believe/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>85216875</Score>
+				<PercentDP>0.734300</PercentDP>
+				<SurviveSeconds>96.425766</SurviveSeconds>
+				<MaxCombo>55</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-06-28 19:58:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>10</W5>
+					<W4>5</W4>
+					<W3>34</W3>
+					<W2>92</W2>
+					<W1>119</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>66ccd209-f85c-47ab-a6ee-701d236ef53c</StageGuid>
+				<Guid>d930e2ba-f32e-47b0-a3ba-2928c4cb9edb</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

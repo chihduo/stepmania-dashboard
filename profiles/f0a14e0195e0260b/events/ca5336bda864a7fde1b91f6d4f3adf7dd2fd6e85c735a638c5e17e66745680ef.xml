@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Hatsukoi Limited/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86919812</Score>
+				<PercentDP>0.773400</PercentDP>
+				<SurviveSeconds>113.744110</SurviveSeconds>
+				<MaxCombo>234</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-22 21:25:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>51</W3>
+					<W2>86</W2>
+					<W1>135</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a1490e30-b69e-49e0-a816-cc38b767d132</StageGuid>
+				<Guid>d3268cc5-2263-487c-a6d2-080dada3413d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

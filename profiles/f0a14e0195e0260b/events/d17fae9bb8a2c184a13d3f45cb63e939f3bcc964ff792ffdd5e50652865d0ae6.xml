@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Number 9/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82681329</Score>
+				<PercentDP>0.719500</PercentDP>
+				<SurviveSeconds>129.990799</SurviveSeconds>
+				<MaxCombo>118</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-07 19:25:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>1</W5>
+					<W4>10</W4>
+					<W3>91</W3>
+					<W2>136</W2>
+					<W1>190</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d5e40a44-807d-418e-ac40-ade38f2e0ed9</StageGuid>
+				<Guid>05cfc5a5-1a00-4cb0-abbf-0b34fa37115a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

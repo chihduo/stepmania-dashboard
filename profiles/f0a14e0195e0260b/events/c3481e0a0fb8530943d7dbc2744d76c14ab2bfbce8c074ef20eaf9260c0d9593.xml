@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/DancingPompokolin/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>113862</Score>
+				<PercentDP>0.015800</PercentDP>
+				<SurviveSeconds>15.948018</SurviveSeconds>
+				<MaxCombo>7</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-12 23:22:31</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>9</W3>
+					<W2>2</W2>
+					<W1>0</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e661f329-e64c-45dc-aa78-b3aae0a80372</StageGuid>
+				<Guid>5a09a77f-cd69-4c8b-af82-003b649f22ab</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

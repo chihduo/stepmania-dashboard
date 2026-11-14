@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Love So Sweet/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>73281635</Score>
+				<PercentDP>0.648900</PercentDP>
+				<SurviveSeconds>83.361427</SurviveSeconds>
+				<MaxCombo>34</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-13 21:28:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>14</W4>
+					<W3>65</W3>
+					<W2>54</W2>
+					<W1>73</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>308956e2-d5aa-41de-af79-9e6816774972</StageGuid>
+				<Guid>fc90410a-f1e1-421e-a31b-db5f01eeda72</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

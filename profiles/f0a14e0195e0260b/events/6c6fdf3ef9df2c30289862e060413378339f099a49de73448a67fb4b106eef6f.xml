@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Alcohol-Free/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>77508670</Score>
+				<PercentDP>0.687700</PercentDP>
+				<SurviveSeconds>135.306488</SurviveSeconds>
+				<MaxCombo>46</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-14 20:41:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>3</W5>
+					<W4>23</W4>
+					<W3>73</W3>
+					<W2>108</W2>
+					<W1>138</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4cdb5453-5633-41f7-a028-44b02ce511b1</StageGuid>
+				<Guid>d05529ea-bf87-4ead-a3af-a0e5d3d53ecd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

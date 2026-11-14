@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/JBEAN Originals/Dumhdurum/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93817578</Score>
+				<PercentDP>0.863600</PercentDP>
+				<SurviveSeconds>123.788971</SurviveSeconds>
+				<MaxCombo>190</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-30 20:39:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>16</W3>
+					<W2>49</W2>
+					<W1>119</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cf7d39dd-a4e5-4785-affd-45c97d067447</StageGuid>
+				<Guid>b61d079e-7086-4e57-a6b9-1ac50c541823</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

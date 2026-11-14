@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/Bokutachi no Yukue_Bokutachi no Yukue/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>73133772</Score>
+				<PercentDP>0.672300</PercentDP>
+				<SurviveSeconds>102.333725</SurviveSeconds>
+				<MaxCombo>63</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-05 19:06:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>4</W5>
+					<W4>10</W4>
+					<W3>39</W3>
+					<W2>49</W2>
+					<W1>58</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bd090ec3-b27d-4038-a01a-63db012bf8a2</StageGuid>
+				<Guid>62c75224-d203-4be8-a0c9-226f2703955c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/White Destiny/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>15583575</Score>
+				<PercentDP>0.313500</PercentDP>
+				<SurviveSeconds>64.809135</SurviveSeconds>
+				<MaxCombo>36</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-14 22:54:44</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>4</W5>
+					<W4>8</W4>
+					<W3>24</W3>
+					<W2>39</W2>
+					<W1>56</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>84568796-961f-4c66-a1ab-34819c8ef652</StageGuid>
+				<Guid>2c994ece-84ff-4e6c-aa86-50ec6a83d70f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

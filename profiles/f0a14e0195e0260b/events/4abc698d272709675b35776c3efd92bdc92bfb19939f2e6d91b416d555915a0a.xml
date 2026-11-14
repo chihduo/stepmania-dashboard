@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/Event Horizon/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89142080</Score>
+				<PercentDP>0.782800</PercentDP>
+				<SurviveSeconds>130.372711</SurviveSeconds>
+				<MaxCombo>174</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-25 20:48:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>43</W3>
+					<W2>80</W2>
+					<W1>113</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>26</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>28915ec6-1517-43da-a26e-083f3334ec86</StageGuid>
+				<Guid>f78f0315-bb41-4c93-ad0f-05528ff88d93</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

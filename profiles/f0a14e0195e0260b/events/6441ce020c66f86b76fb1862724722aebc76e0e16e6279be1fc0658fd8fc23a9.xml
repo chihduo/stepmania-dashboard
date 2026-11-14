@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/Amor Fati/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>94530755</Score>
+				<PercentDP>0.872400</PercentDP>
+				<SurviveSeconds>122.834717</SurviveSeconds>
+				<MaxCombo>341</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-13 19:34:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>18</W3>
+					<W2>93</W2>
+					<W1>201</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>67b4dd63-73ce-497f-a5e0-ef07251b1a97</StageGuid>
+				<Guid>7940575b-c3d8-4531-a5a5-64e2f5360105</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

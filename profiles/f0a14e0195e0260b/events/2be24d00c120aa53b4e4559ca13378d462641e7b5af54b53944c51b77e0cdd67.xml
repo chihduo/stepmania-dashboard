@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime/Chocolate_insomnia/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>73765001</Score>
+				<PercentDP>0.645700</PercentDP>
+				<SurviveSeconds>97.921326</SurviveSeconds>
+				<MaxCombo>70</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-25 20:46:52</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>3</W5>
+					<W4>15</W4>
+					<W3>64</W3>
+					<W2>48</W2>
+					<W1>70</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>31</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2810a639-4fc6-44c1-ac85-2dbfe9c8f1b1</StageGuid>
+				<Guid>6aebef9d-dc7b-4287-a388-76f0f44c2a72</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

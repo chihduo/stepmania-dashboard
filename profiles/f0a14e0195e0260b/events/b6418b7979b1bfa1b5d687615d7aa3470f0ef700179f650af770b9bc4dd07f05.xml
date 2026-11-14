@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/Slayers Revolution op - Plenty of Grit/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>83144655</Score>
+				<PercentDP>0.722800</PercentDP>
+				<SurviveSeconds>96.108780</SurviveSeconds>
+				<MaxCombo>51</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-06 17:46:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>6</W5>
+					<W4>16</W4>
+					<W3>45</W3>
+					<W2>66</W2>
+					<W1>123</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>24</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>44104388-ec2a-4b44-a748-6c298240efbe</StageGuid>
+				<Guid>100add84-4812-4431-aa3f-4fdcff2ff821</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

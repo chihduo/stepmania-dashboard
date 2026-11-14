@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/crazy/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89272317</Score>
+				<PercentDP>0.818800</PercentDP>
+				<SurviveSeconds>128.846634</SurviveSeconds>
+				<MaxCombo>158</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-08 22:16:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>26</W3>
+					<W2>70</W2>
+					<W1>122</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>20</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>941f64b0-7af2-461f-a12a-42d676887bda</StageGuid>
+				<Guid>e5d3f1ae-6b00-4fe1-ad08-0d67b3b035b0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

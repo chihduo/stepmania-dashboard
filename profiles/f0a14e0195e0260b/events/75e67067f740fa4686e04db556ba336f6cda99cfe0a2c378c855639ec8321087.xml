@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DanceDanceRevolution Pop/Bom Bom/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82392406</Score>
+				<PercentDP>0.720500</PercentDP>
+				<SurviveSeconds>152.388580</SurviveSeconds>
+				<MaxCombo>102</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-02-17 21:07:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>0</W5>
+					<W4>12</W4>
+					<W3>71</W3>
+					<W2>110</W2>
+					<W1>157</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e1222356-02f3-4e05-a6a0-28eb7902a1db</StageGuid>
+				<Guid>749efd97-bcc1-46aa-a7e5-369f3fc56180</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

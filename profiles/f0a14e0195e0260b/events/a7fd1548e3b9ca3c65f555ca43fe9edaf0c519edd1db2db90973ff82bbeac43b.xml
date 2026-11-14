@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/air/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>74178143</Score>
+				<PercentDP>0.679100</PercentDP>
+				<SurviveSeconds>120.044601</SurviveSeconds>
+				<MaxCombo>43</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-20 20:58:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>22</Miss>
+					<W5>3</W5>
+					<W4>13</W4>
+					<W3>75</W3>
+					<W2>111</W2>
+					<W1>142</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>30</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d4e4fb99-cd9c-4c9e-af98-866b49032c24</StageGuid>
+				<Guid>8967c44c-72da-44db-abb7-86a07643db39</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

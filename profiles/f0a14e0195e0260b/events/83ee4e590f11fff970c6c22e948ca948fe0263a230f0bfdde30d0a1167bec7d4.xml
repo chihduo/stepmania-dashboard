@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Tsukematsukeru/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78674396</Score>
+				<PercentDP>0.727200</PercentDP>
+				<SurviveSeconds>117.305626</SurviveSeconds>
+				<MaxCombo>70</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-02 19:24:44</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>5</W5>
+					<W4>17</W4>
+					<W3>61</W3>
+					<W2>97</W2>
+					<W1>152</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>43</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d7245453-066f-4f69-ac2b-01959c8bddf9</StageGuid>
+				<Guid>33f02a14-d42f-4b24-a774-e5ca6132fa15</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

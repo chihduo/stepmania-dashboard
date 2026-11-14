@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/GOTTA BE YOU/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84181512</Score>
+				<PercentDP>0.744500</PercentDP>
+				<SurviveSeconds>146.475739</SurviveSeconds>
+				<MaxCombo>101</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-21 19:51:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>15</W4>
+					<W3>65</W3>
+					<W2>104</W2>
+					<W1>158</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>309dc143-5264-43cf-a6d5-83a35e9ceca6</StageGuid>
+				<Guid>034a435c-8050-4eea-a0c1-1165786000f7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

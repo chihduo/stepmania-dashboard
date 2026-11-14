@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/U.K.U.G/beginning/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>77198776</Score>
+				<PercentDP>0.663300</PercentDP>
+				<SurviveSeconds>100.659645</SurviveSeconds>
+				<MaxCombo>61</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-18 19:07:16</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>7</W5>
+					<W4>23</W4>
+					<W3>55</W3>
+					<W2>90</W2>
+					<W1>99</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c8b34ccb-d452-4aae-acb6-fac956884929</StageGuid>
+				<Guid>a1c42407-6a76-4b75-a2ff-a90891bc0331</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

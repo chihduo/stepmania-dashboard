@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Cagayake!GIRLS/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84646999</Score>
+				<PercentDP>0.738900</PercentDP>
+				<SurviveSeconds>94.728966</SurviveSeconds>
+				<MaxCombo>140</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-08 18:46:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>7</W4>
+					<W3>59</W3>
+					<W2>101</W2>
+					<W1>137</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0fceeeb5-bed9-4726-af68-8f765370e583</StageGuid>
+				<Guid>200692c4-e448-4b3b-ab17-1876084de3b5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

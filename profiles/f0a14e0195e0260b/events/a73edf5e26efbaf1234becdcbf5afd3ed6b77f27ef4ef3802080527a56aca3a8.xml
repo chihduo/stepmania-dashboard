@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/DDU-DU DDU-DU/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>90731227</Score>
+				<PercentDP>0.839500</PercentDP>
+				<SurviveSeconds>154.703506</SurviveSeconds>
+				<MaxCombo>246</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-27 15:56:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>31</W3>
+					<W2>90</W2>
+					<W1>204</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>490fd6e3-d95d-49f8-af0a-0d7ba2396c76</StageGuid>
+				<Guid>637bea33-1c9b-47ee-a20e-27a58162789e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

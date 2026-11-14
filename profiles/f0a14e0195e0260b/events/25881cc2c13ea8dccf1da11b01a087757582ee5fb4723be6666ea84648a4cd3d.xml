@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/Dream of You/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84862693</Score>
+				<PercentDP>0.733600</PercentDP>
+				<SurviveSeconds>149.289063</SurviveSeconds>
+				<MaxCombo>149</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-28 14:56:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>0</W5>
+					<W4>6</W4>
+					<W3>65</W3>
+					<W2>135</W2>
+					<W1>137</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>25</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c4c16c37-3c68-405a-a8c2-488687657261</StageGuid>
+				<Guid>aa775d9e-3012-49e3-a75e-026119f7b6e7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

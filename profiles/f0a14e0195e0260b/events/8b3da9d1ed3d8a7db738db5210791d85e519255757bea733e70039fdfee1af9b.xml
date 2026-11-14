@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/LOVE &amp; JOY/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86050117</Score>
+				<PercentDP>0.765800</PercentDP>
+				<SurviveSeconds>103.461639</SurviveSeconds>
+				<MaxCombo>93</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-23 17:54:59</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>5</W5>
+					<W4>8</W4>
+					<W3>35</W3>
+					<W2>91</W2>
+					<W1>136</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a02a0beb-83b9-45f2-a884-d6b7fa3db568</StageGuid>
+				<Guid>91b09239-12ab-4a4f-ab7a-aa4ce7cbe126</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

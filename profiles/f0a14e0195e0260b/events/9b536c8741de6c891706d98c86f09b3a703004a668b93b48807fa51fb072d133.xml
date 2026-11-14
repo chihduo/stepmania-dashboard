@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Platinum Disco/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88780644</Score>
+				<PercentDP>0.804400</PercentDP>
+				<SurviveSeconds>97.493736</SurviveSeconds>
+				<MaxCombo>128</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-19 20:37:58</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>4</W4>
+					<W3>39</W3>
+					<W2>81</W2>
+					<W1>160</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>28</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ad3c2d34-c0cb-47ee-a79d-afcb2bba5b7d</StageGuid>
+				<Guid>5488e57e-d362-456e-a7cf-46c0a7019f5b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

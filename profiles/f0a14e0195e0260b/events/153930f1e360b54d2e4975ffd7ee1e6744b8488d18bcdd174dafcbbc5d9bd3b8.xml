@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/BoA - Eat You Up/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>78368936</Score>
+				<PercentDP>0.652000</PercentDP>
+				<SurviveSeconds>90.301270</SurviveSeconds>
+				<MaxCombo>48</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-18 20:38:03</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>7</W4>
+					<W3>63</W3>
+					<W2>55</W2>
+					<W1>43</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>33</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e8887e47-1b1f-42d3-aa74-d8577c5a1756</StageGuid>
+				<Guid>439db5b3-e884-4a6e-a29f-15fe42b5f33b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

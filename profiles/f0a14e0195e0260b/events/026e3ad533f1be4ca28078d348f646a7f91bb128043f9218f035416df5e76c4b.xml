@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/SOUL LADY/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84247364</Score>
+				<PercentDP>0.767900</PercentDP>
+				<SurviveSeconds>154.422714</SurviveSeconds>
+				<MaxCombo>107</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-28 16:41:03</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>6</W4>
+					<W3>57</W3>
+					<W2>101</W2>
+					<W1>177</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3a4e9d77-7fb4-4db7-a770-6587f5e61f9a</StageGuid>
+				<Guid>11b6cdad-8576-4c66-abf7-9f7c3fb85bce</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

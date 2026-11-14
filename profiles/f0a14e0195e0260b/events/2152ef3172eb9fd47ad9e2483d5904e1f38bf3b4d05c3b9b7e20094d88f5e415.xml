@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/City of Solitude/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86498675</Score>
+				<PercentDP>0.754100</PercentDP>
+				<SurviveSeconds>117.687225</SurviveSeconds>
+				<MaxCombo>126</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-22 20:52:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>8</W4>
+					<W3>63</W3>
+					<W2>83</W2>
+					<W1>156</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e9c1dcba-f58a-4f85-af1e-ec22c5eff269</StageGuid>
+				<Guid>91df4965-aa52-4263-a52a-4d39ae608486</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

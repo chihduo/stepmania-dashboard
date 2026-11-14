@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Popeye Kaita 2/同じ空の下で/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>132751170</Score>
+				<PercentDP>0.598400</PercentDP>
+				<SurviveSeconds>150.060547</SurviveSeconds>
+				<MaxCombo>64</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-30 20:36:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>1</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>17</Miss>
+					<W5>4</W5>
+					<W4>11</W4>
+					<W3>69</W3>
+					<W2>55</W2>
+					<W1>68</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>6</LetGo>
+					<Held>31</Held>
+					<MissedHold>3</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>043c6dc2-9ff9-43e4-aa77-e5d90fc02d09</StageGuid>
+				<Guid>1878f2b8-f925-4ab7-a1fc-adc8731021e7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

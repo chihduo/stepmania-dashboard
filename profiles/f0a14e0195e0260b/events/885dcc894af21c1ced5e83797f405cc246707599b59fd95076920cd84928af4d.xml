@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 1/Snapping/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83733877</Score>
+				<PercentDP>0.715200</PercentDP>
+				<SurviveSeconds>88.852501</SurviveSeconds>
+				<MaxCombo>87</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-06 20:58:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>31</W3>
+					<W2>61</W2>
+					<W1>53</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4d73982d-b905-42fb-a2f0-1bbe212f6fe3</StageGuid>
+				<Guid>115b1e98-cc28-4a7c-ad17-0534dc1d6e53</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

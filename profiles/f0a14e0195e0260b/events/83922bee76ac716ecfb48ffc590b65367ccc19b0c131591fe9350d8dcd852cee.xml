@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Floating Darkness/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>176588776</Score>
+				<PercentDP>0.808700</PercentDP>
+				<SurviveSeconds>224.227524</SurviveSeconds>
+				<MaxCombo>168</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-14 21:20:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>4</W5>
+					<W4>7</W4>
+					<W3>85</W3>
+					<W2>177</W2>
+					<W1>322</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>80</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b526c141-ac4b-4e54-a639-0232fdaced49</StageGuid>
+				<Guid>e88fda87-c2d1-4c82-a57e-4f80cf303437</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

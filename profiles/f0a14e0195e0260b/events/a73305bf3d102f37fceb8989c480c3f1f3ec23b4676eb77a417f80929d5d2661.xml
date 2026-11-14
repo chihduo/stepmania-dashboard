@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Kaze wa Fuiteiru/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92525762</Score>
+				<PercentDP>0.848400</PercentDP>
+				<SurviveSeconds>107.316696</SurviveSeconds>
+				<MaxCombo>191</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-07 18:36:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>13</W3>
+					<W2>64</W2>
+					<W1>103</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>409b0f50-db93-4672-ac42-3dcfdc117ed8</StageGuid>
+				<Guid>c1bd4b6c-178e-44a9-ab1d-179c8efdaf46</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

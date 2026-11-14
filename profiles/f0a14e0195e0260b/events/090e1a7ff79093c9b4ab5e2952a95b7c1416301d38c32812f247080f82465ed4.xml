@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/fofres/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84726077</Score>
+				<PercentDP>0.751100</PercentDP>
+				<SurviveSeconds>111.779350</SurviveSeconds>
+				<MaxCombo>86</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-20 21:20:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>8</W4>
+					<W3>55</W3>
+					<W2>81</W2>
+					<W1>123</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b4569740-904c-4f0a-ade3-ff58b8a0bf2b</StageGuid>
+				<Guid>a652e867-18ac-4c98-a4c8-9304ec2af9c8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

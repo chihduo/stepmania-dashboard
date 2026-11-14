@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/Do It/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>81983827</Score>
+				<PercentDP>0.716000</PercentDP>
+				<SurviveSeconds>110.596237</SurviveSeconds>
+				<MaxCombo>88</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-20 21:54:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>3</W5>
+					<W4>4</W4>
+					<W3>62</W3>
+					<W2>90</W2>
+					<W1>130</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3a9037a7-2c5e-4389-ae79-4a2dc99ec5e8</StageGuid>
+				<Guid>b3d117ba-202c-41e5-a053-2dc9364030db</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

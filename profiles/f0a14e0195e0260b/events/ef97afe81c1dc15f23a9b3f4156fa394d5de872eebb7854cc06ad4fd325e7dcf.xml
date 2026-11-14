@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/Zombie/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>81937122</Score>
+				<PercentDP>0.708500</PercentDP>
+				<SurviveSeconds>136.533585</SurviveSeconds>
+				<MaxCombo>51</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-23 20:01:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>5</W5>
+					<W4>16</W4>
+					<W3>66</W3>
+					<W2>81</W2>
+					<W1>134</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>21</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>45939dcd-8db7-4395-a6f3-f767e0940926</StageGuid>
+				<Guid>943c60fd-9913-4d89-a964-22f7a80925b9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

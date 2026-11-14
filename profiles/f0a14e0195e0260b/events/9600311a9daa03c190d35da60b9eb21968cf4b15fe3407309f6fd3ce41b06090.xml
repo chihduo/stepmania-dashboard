@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Te amo/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>77641439</Score>
+				<PercentDP>0.696000</PercentDP>
+				<SurviveSeconds>95.916031</SurviveSeconds>
+				<MaxCombo>48</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-16 18:31:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>6</W4>
+					<W3>40</W3>
+					<W2>44</W2>
+					<W1>68</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1d4bb7cc-68c4-4f86-a35f-ffdd4c3c28fb</StageGuid>
+				<Guid>ebe87e7f-c095-4952-adbd-b47d69abe660</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

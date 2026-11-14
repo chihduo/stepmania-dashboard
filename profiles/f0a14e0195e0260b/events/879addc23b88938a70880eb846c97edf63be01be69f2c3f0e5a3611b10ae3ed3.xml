@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Galaxy/Poker Face/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88574434</Score>
+				<PercentDP>0.800300</PercentDP>
+				<SurviveSeconds>127.386902</SurviveSeconds>
+				<MaxCombo>138</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-27 20:21:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>5</W4>
+					<W3>53</W3>
+					<W2>112</W2>
+					<W1>208</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>73f7a952-38df-4d28-ac4d-2cacf5b54455</StageGuid>
+				<Guid>32de45b8-338d-40d9-a337-c46b272759e5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

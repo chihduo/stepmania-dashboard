@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Asu e no Brilliant Road [Stellvia OP][030]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85571629</Score>
+				<PercentDP>0.747000</PercentDP>
+				<SurviveSeconds>100.379288</SurviveSeconds>
+				<MaxCombo>61</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-12 18:38:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>2</W5>
+					<W4>10</W4>
+					<W3>48</W3>
+					<W2>111</W2>
+					<W1>132</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>35</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>59eba1ff-cfa5-4eb3-abd8-a2896faca006</StageGuid>
+				<Guid>5858a9c7-f4c3-408d-ad76-08544eca0a0c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

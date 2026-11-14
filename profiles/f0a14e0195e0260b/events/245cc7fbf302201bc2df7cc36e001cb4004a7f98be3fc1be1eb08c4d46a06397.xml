@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/Kiss My Lips/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>90758748</Score>
+				<PercentDP>0.847500</PercentDP>
+				<SurviveSeconds>131.147812</SurviveSeconds>
+				<MaxCombo>225</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-15 22:34:41</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>28</W3>
+					<W2>72</W2>
+					<W1>154</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>37</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bbc7e553-f0db-4b5b-a37e-293a6fc9b13b</StageGuid>
+				<Guid>eeacadd0-4c32-4928-abb2-109af834da19</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

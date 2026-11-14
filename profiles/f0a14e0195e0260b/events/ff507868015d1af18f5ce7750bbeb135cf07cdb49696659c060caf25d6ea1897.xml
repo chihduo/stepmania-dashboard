@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Ace Of Arrows Singles/Dearness/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>230022178</Score>
+				<PercentDP>0.697900</PercentDP>
+				<SurviveSeconds>333.830811</SurviveSeconds>
+				<MaxCombo>38</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-31 21:31:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>11</Miss>
+					<W5>13</W5>
+					<W4>52</W4>
+					<W3>144</W3>
+					<W2>125</W2>
+					<W1>139</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>13</LetGo>
+					<Held>265</Held>
+					<MissedHold>5</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5107715b-b294-40c9-a964-c4bc43585132</StageGuid>
+				<Guid>b5acf9ca-1c51-4157-a10d-9c8668a59357</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/Mermaid girl/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92789333</Score>
+				<PercentDP>0.840300</PercentDP>
+				<SurviveSeconds>125.065941</SurviveSeconds>
+				<MaxCombo>187</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-06 21:15:57</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>20</W3>
+					<W2>79</W2>
+					<W1>157</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>79aa661c-9eb9-42c6-ad98-4b3e61b47ca6</StageGuid>
+				<Guid>fdacbc4e-c747-4e6e-a2b2-78eeac1cdda9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rose&apos;s Anime songs/Suzumiya Haruhi no Yuutsu op - Boken Desho Desho/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91223808</Score>
+				<PercentDP>0.795900</PercentDP>
+				<SurviveSeconds>98.645638</SurviveSeconds>
+				<MaxCombo>89</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-24 21:24:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>18</W3>
+					<W2>47</W2>
+					<W1>89</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a1bcd617-c233-4fed-ad0c-970a6ab68570</StageGuid>
+				<Guid>4db6dc7c-de3a-4514-a983-e137b257220b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Koisuru Fortune Cookie/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76428804</Score>
+				<PercentDP>0.666600</PercentDP>
+				<SurviveSeconds>137.797714</SurviveSeconds>
+				<MaxCombo>108</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-07 18:48:05</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>0</W5>
+					<W4>21</W4>
+					<W3>121</W3>
+					<W2>121</W2>
+					<W1>141</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dc05986a-c264-43ed-a84c-5388480f86b4</StageGuid>
+				<Guid>e86ad336-1cff-4455-aa8e-fbc64f54e2cd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

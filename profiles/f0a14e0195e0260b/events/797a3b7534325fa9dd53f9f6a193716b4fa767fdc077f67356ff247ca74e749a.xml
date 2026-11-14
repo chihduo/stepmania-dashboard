@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Tomare!/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>25790918</Score>
+				<PercentDP>0.382100</PercentDP>
+				<SurviveSeconds>53.886311</SurviveSeconds>
+				<MaxCombo>45</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-22 17:50:56</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>22</Miss>
+					<W5>3</W5>
+					<W4>12</W4>
+					<W3>45</W3>
+					<W2>52</W2>
+					<W1>49</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f9cff3c9-5e41-4717-aa6f-47c87e97d4fd</StageGuid>
+				<Guid>c5a7071c-e9f0-4953-a2c0-8fbabdd7ecb6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

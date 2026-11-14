@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Somebody That I Used To Know/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86707927</Score>
+				<PercentDP>0.764700</PercentDP>
+				<SurviveSeconds>99.195847</SurviveSeconds>
+				<MaxCombo>60</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-12 22:10:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>6</W5>
+					<W4>3</W4>
+					<W3>32</W3>
+					<W2>77</W2>
+					<W1>110</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e31e865c-06a6-4ebc-a873-f4ab5f65a5dd</StageGuid>
+				<Guid>dafe997e-6e00-498a-a6da-3ebeed532210</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

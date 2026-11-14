@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/angelchron/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89365215</Score>
+				<PercentDP>0.794200</PercentDP>
+				<SurviveSeconds>119.648476</SurviveSeconds>
+				<MaxCombo>159</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-12 20:30:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>6</W5>
+					<W4>4</W4>
+					<W3>51</W3>
+					<W2>113</W2>
+					<W1>154</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>69</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4167950a-d73e-4b19-a699-fccbf0367b9f</StageGuid>
+				<Guid>c252fe0a-fa29-467f-a272-c0732f66003f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

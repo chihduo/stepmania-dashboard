@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Tsubasa wa Pleasureline/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>27620530</Score>
+				<PercentDP>0.401600</PercentDP>
+				<SurviveSeconds>72.873970</SurviveSeconds>
+				<MaxCombo>63</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-12 17:06:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>5</W5>
+					<W4>20</W4>
+					<W3>65</W3>
+					<W2>58</W2>
+					<W1>70</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2b251db1-d557-4e9e-a0ff-26d18f324ed2</StageGuid>
+				<Guid>02775900-d100-4a79-aceb-942ac7f2d3b6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

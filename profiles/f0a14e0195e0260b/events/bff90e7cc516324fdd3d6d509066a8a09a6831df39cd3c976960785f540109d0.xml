@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/BBI-BBI/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>86107941</Score>
+				<PercentDP>0.778700</PercentDP>
+				<SurviveSeconds>131.910278</SurviveSeconds>
+				<MaxCombo>40</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-07 21:11:13</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>15</W5>
+					<W4>8</W4>
+					<W3>33</W3>
+					<W2>84</W2>
+					<W1>175</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>29</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>74aca31b-5db0-4a97-a5ed-a55b3e802e9c</StageGuid>
+				<Guid>da058fb7-a3b5-47cb-a905-803be3925110</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

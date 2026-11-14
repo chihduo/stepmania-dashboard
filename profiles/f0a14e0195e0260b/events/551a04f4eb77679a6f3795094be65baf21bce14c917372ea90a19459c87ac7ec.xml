@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/ME! (feat. Brendon Urie of Panic! At the Disco)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92531981</Score>
+				<PercentDP>0.846400</PercentDP>
+				<SurviveSeconds>137.877411</SurviveSeconds>
+				<MaxCombo>231</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-03 21:28:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>21</W3>
+					<W2>63</W2>
+					<W1>128</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e8435fcf-0006-4f68-aa93-380167f92e30</StageGuid>
+				<Guid>6e30757a-3086-4a24-ae93-b4dfa2eea580</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

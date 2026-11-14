@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Destrier75 DDR MIX 2/34+35 (Min Remix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>34416641</Score>
+				<PercentDP>0.455600</PercentDP>
+				<SurviveSeconds>99.624939</SurviveSeconds>
+				<MaxCombo>115</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-02 22:35:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>62</W3>
+					<W2>65</W2>
+					<W1>59</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>31</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d940dcee-2cd2-4ff3-aade-e570fb86a7d4</StageGuid>
+				<Guid>6c2f9ab7-ad0e-4a1a-ac8a-2854385dfcd3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

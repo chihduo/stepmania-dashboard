@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Battle Scene/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>79125947</Score>
+				<PercentDP>0.722200</PercentDP>
+				<SurviveSeconds>105.635506</SurviveSeconds>
+				<MaxCombo>45</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-10 17:59:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>8</W5>
+					<W4>17</W4>
+					<W3>45</W3>
+					<W2>93</W2>
+					<W1>122</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>35</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>26eeef1a-1a08-47a6-a4e3-b4d727ceb1bd</StageGuid>
+				<Guid>5245975c-8ab5-4307-ae55-b3a5778d5b58</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

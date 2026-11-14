@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Fandangu los Lobos/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>8441883</Score>
+				<PercentDP>0.223800</PercentDP>
+				<SurviveSeconds>53.924702</SurviveSeconds>
+				<MaxCombo>19</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-05 21:26:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>23</Miss>
+					<W5>5</W5>
+					<W4>13</W4>
+					<W3>30</W3>
+					<W2>40</W2>
+					<W1>71</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5b628723-acce-4155-a272-fd831a1d9402</StageGuid>
+				<Guid>0e09d821-7b4f-4a6d-a393-06625ad03791</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Kunshi Ayauku mo Chikou Yore/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88769749</Score>
+				<PercentDP>0.791500</PercentDP>
+				<SurviveSeconds>98.875977</SurviveSeconds>
+				<MaxCombo>153</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-20 21:43:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>3</W4>
+					<W3>62</W3>
+					<W2>107</W2>
+					<W1>172</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>55</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0120d422-51c0-4e53-ada7-dcafacd4272a</StageGuid>
+				<Guid>1975564a-0dff-4e3e-acfc-9b21305784f0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

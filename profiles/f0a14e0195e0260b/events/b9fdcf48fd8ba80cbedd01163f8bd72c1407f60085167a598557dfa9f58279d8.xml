@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Mirage Lullaby [Shuffle! Game OP][091]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>92630741</Score>
+				<PercentDP>0.829300</PercentDP>
+				<SurviveSeconds>141.977432</SurviveSeconds>
+				<MaxCombo>239</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-07 20:47:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>3</W4>
+					<W3>38</W3>
+					<W2>116</W2>
+					<W1>212</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>43</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bcaf8d8f-8a08-4017-a28e-065cf841c742</StageGuid>
+				<Guid>94e55a51-9fbd-40f9-a7cf-d3914670b81e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

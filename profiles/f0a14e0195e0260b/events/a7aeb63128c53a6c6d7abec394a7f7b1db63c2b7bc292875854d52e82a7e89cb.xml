@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DanceDanceRevolution XL/BOOMBAYAH/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87470915</Score>
+				<PercentDP>0.788100</PercentDP>
+				<SurviveSeconds>152.509537</SurviveSeconds>
+				<MaxCombo>117</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-23 21:03:32</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>60</W3>
+					<W2>116</W2>
+					<W1>204</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>58dbd5c5-6809-4ca7-a00f-e3b08ae13d97</StageGuid>
+				<Guid>8515762f-408d-493e-a863-5b632ede007a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

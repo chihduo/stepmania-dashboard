@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/bod/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86499353</Score>
+				<PercentDP>0.757500</PercentDP>
+				<SurviveSeconds>105.453987</SurviveSeconds>
+				<MaxCombo>61</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-27 21:47:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>5</W5>
+					<W4>8</W4>
+					<W3>43</W3>
+					<W2>66</W2>
+					<W1>110</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>40</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f6925212-4bc9-406b-a9a5-97f8b18d4540</StageGuid>
+				<Guid>644758db-7019-467a-a247-5835fd58cc6c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

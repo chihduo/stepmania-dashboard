@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/PSY - GANGNAM STYLE/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90810519</Score>
+				<PercentDP>0.849400</PercentDP>
+				<SurviveSeconds>141.890106</SurviveSeconds>
+				<MaxCombo>136</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-28 20:50:31</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>31</W3>
+					<W2>83</W2>
+					<W1>183</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>58</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dd96c011-b106-4309-a7d4-74accd4fd93c</StageGuid>
+				<Guid>d2587f2d-1d19-45d3-a775-b67e56543628</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJSuperNOVA/LALALA/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91401145</Score>
+				<PercentDP>0.848400</PercentDP>
+				<SurviveSeconds>141.667114</SurviveSeconds>
+				<MaxCombo>277</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-15 13:12:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>27</W3>
+					<W2>97</W2>
+					<W1>220</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fd764aa5-cc55-4b10-abe9-ab21a946cfa7</StageGuid>
+				<Guid>9e9aa921-3623-43a0-a605-14d15e7b4852</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

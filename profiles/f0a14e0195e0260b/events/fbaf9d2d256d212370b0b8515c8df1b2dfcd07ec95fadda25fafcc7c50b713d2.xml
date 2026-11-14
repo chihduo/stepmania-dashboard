@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Force Your Way/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>183617373</Score>
+				<PercentDP>0.820000</PercentDP>
+				<SurviveSeconds>168.432526</SurviveSeconds>
+				<MaxCombo>160</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-17 22:07:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>41</W3>
+					<W2>93</W2>
+					<W1>191</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2aacc409-de93-41bc-a654-4cc5e69b0804</StageGuid>
+				<Guid>5aaff07f-017c-42d2-ac7f-292c942f2b1c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

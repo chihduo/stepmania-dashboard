@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/Do You Know Me/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86538567</Score>
+				<PercentDP>0.775100</PercentDP>
+				<SurviveSeconds>136.830536</SurviveSeconds>
+				<MaxCombo>106</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-13 21:03:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>4</W5>
+					<W4>9</W4>
+					<W3>73</W3>
+					<W2>119</W2>
+					<W1>193</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>63</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>986908a9-02a2-4df4-a2c1-379f28f45a0e</StageGuid>
+				<Guid>0380cb5a-05b1-423d-a905-956045ae1267</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

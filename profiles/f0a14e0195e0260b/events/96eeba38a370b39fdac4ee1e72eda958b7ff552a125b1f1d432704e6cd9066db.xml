@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/The Complete led_light Collection/Renai Circulation/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>90700884</Score>
+				<PercentDP>0.826600</PercentDP>
+				<SurviveSeconds>95.598419</SurviveSeconds>
+				<MaxCombo>203</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-09 20:11:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>26</W3>
+					<W2>62</W2>
+					<W1>114</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c7cec29b-c673-4a32-a6ec-28b955a7e550</StageGuid>
+				<Guid>e207aaa5-d7c1-4c6d-a3c1-a28aba67b692</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

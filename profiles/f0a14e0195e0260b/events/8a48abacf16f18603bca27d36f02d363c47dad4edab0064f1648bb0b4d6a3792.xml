@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/LIPSTICK/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>96680330</Score>
+				<PercentDP>0.889500</PercentDP>
+				<SurviveSeconds>100.230415</SurviveSeconds>
+				<MaxCombo>201</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-21 17:40:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>3</W3>
+					<W2>51</W2>
+					<W1>111</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cad2ebcf-70bb-478f-abeb-02e36ebd6765</StageGuid>
+				<Guid>11c04773-a140-4a51-a78a-393a0ad8d846</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

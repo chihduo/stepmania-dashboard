@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/Adios/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>1413450</Score>
+				<PercentDP>0.074300</PercentDP>
+				<SurviveSeconds>32.964840</SurviveSeconds>
+				<MaxCombo>6</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-20 21:00:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>3</W5>
+					<W4>7</W4>
+					<W3>14</W3>
+					<W2>8</W2>
+					<W1>5</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d71e6768-184d-4d63-a107-e40989518870</StageGuid>
+				<Guid>cfbdfe5f-9bdb-406d-abf3-79debd000c53</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

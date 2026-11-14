@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[12ths Week] - Run Devil Run/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89256361</Score>
+				<PercentDP>0.805000</PercentDP>
+				<SurviveSeconds>97.347321</SurviveSeconds>
+				<MaxCombo>81</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-01 20:36:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>30</W3>
+					<W2>52</W2>
+					<W1>109</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f4bc2484-d387-4724-a76f-6a209e2cb31e</StageGuid>
+				<Guid>c84a26f0-1ce6-46ff-a3da-4b8067517517</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

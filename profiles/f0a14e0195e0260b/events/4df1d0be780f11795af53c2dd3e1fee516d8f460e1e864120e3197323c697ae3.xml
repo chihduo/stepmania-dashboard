@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/(AG-System)JUSTITIA/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76514732</Score>
+				<PercentDP>0.714700</PercentDP>
+				<SurviveSeconds>97.969048</SurviveSeconds>
+				<MaxCombo>64</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-20 21:05:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>7</W5>
+					<W4>14</W4>
+					<W3>65</W3>
+					<W2>68</W2>
+					<W1>134</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>37</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1519edc3-30be-4224-a96e-3901e3647be8</StageGuid>
+				<Guid>1473a356-e201-43c3-a59a-07ec12945410</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

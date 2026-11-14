@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Beautiful 21C/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>79962210</Score>
+				<PercentDP>0.675700</PercentDP>
+				<SurviveSeconds>105.553429</SurviveSeconds>
+				<MaxCombo>62</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-30 21:25:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>4</W5>
+					<W4>18</W4>
+					<W3>63</W3>
+					<W2>107</W2>
+					<W1>128</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>53d17cfe-1e80-4308-ae02-4d07cb328a94</StageGuid>
+				<Guid>ef9c0d43-0647-4d61-aa92-acbe4249ba68</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

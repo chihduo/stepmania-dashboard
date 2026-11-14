@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/LALISA/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>72481379</Score>
+				<PercentDP>0.634400</PercentDP>
+				<SurviveSeconds>153.101120</SurviveSeconds>
+				<MaxCombo>56</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-13 21:27:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>6</W5>
+					<W4>21</W4>
+					<W3>115</W3>
+					<W2>108</W2>
+					<W1>142</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b3f75fa8-3d3f-4a25-ad54-23f881a67fd1</StageGuid>
+				<Guid>799399b9-6300-4c8a-a6c2-7f913561c57f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

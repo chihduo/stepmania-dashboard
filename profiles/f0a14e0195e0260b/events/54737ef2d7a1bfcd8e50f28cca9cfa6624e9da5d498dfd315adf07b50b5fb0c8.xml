@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/OhMyGoddessIntro/'/>
+			<Steps Difficulty='Challenge' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>956970</Score>
+				<PercentDP>0.065200</PercentDP>
+				<SurviveSeconds>20.724119</SurviveSeconds>
+				<MaxCombo>9</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-30 21:16:56</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>8</W3>
+					<W2>6</W2>
+					<W1>7</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1d93c68c-089c-41b4-a30b-b7fbeab5ca60</StageGuid>
+				<Guid>aa07cfbe-62a2-4d8f-a2c0-9f31ae1a13e7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

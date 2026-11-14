@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/BYE BYE BYE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90619405</Score>
+				<PercentDP>0.810000</PercentDP>
+				<SurviveSeconds>90.970413</SurviveSeconds>
+				<MaxCombo>123</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-26 20:17:37</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>24</W3>
+					<W2>54</W2>
+					<W1>112</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1d8a5033-0c91-44d3-a8ff-cebfb4845e9a</StageGuid>
+				<Guid>18c5bc3a-cc58-4d02-a4cd-c6cbc75f9cd6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

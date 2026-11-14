@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Everytime (Above _ Beyond_s Radio Mix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89981464</Score>
+				<PercentDP>0.840100</PercentDP>
+				<SurviveSeconds>144.205780</SurviveSeconds>
+				<MaxCombo>150</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-13 21:19:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>0</W4>
+					<W3>30</W3>
+					<W2>90</W2>
+					<W1>215</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>78a18d17-6428-42b2-a3bd-de4291a21db2</StageGuid>
+				<Guid>839ae370-994e-4fb3-aca1-6eb46d735bd7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

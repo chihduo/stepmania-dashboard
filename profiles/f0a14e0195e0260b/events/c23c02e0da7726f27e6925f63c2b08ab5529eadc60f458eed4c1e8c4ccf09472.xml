@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/Fancy/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88028061</Score>
+				<PercentDP>0.748900</PercentDP>
+				<SurviveSeconds>134.579529</SurviveSeconds>
+				<MaxCombo>187</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-27 16:04:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>5</W5>
+					<W4>12</W4>
+					<W3>68</W3>
+					<W2>112</W2>
+					<W1>182</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5ccc9b1b-363b-46dc-a489-1f5542a62642</StageGuid>
+				<Guid>ce97d27c-6bb3-4879-af0d-630461ab752d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

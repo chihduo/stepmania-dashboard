@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/U.K.U.G/Leaf ticket/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92514421</Score>
+				<PercentDP>0.839300</PercentDP>
+				<SurviveSeconds>141.071716</SurviveSeconds>
+				<MaxCombo>430</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-15 21:57:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>35</W3>
+					<W2>134</W2>
+					<W1>217</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>53</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4f33b637-3400-4bd8-a59e-171cac9245f3</StageGuid>
+				<Guid>cbdb76e9-73fd-465e-ac1e-88be12fda2fc</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Zimons Originals/My Lecon/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89159315</Score>
+				<PercentDP>0.791800</PercentDP>
+				<SurviveSeconds>135.389603</SurviveSeconds>
+				<MaxCombo>128</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-22 22:33:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>3</W4>
+					<W3>57</W3>
+					<W2>105</W2>
+					<W1>163</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>41</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a1a3cbde-7f74-436b-aed6-2b5f134016e8</StageGuid>
+				<Guid>40b3d2b6-aa27-4887-a532-417d386fe4b0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

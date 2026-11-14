@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Gee/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91033004</Score>
+				<PercentDP>0.838400</PercentDP>
+				<SurviveSeconds>106.120735</SurviveSeconds>
+				<MaxCombo>111</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-29 21:30:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>22</W3>
+					<W2>71</W2>
+					<W1>161</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>be9444ac-d4f8-496c-af74-754cb10e1022</StageGuid>
+				<Guid>19d5aecf-706d-4e1a-a135-76eb1c06ea66</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

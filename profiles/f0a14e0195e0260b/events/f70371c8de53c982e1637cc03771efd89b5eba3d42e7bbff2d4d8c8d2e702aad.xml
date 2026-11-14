@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/LA DI DA/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93247391</Score>
+				<PercentDP>0.873300</PercentDP>
+				<SurviveSeconds>154.971588</SurviveSeconds>
+				<MaxCombo>197</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-12 19:07:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>21</W3>
+					<W2>87</W2>
+					<W1>233</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>26</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>11233b40-8a05-485b-a5e2-0b943a554d9c</StageGuid>
+				<Guid>89a5fc7d-f975-4f71-a55f-71c8084963ee</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

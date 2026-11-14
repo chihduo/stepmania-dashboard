@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Destrier75 DDR MIX 2/LookNumOakRerg/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>94382768</Score>
+				<PercentDP>0.862300</PercentDP>
+				<SurviveSeconds>127.710052</SurviveSeconds>
+				<MaxCombo>309</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-02 23:03:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>19</W3>
+					<W2>83</W2>
+					<W1>190</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d0fbd548-e049-419e-afe5-6bdd7b836260</StageGuid>
+				<Guid>3db47988-c6db-4845-a3ec-0557a7afbf40</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

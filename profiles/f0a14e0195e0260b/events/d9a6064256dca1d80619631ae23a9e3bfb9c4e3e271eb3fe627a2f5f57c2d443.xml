@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Life Could Be Sweet/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83244815</Score>
+				<PercentDP>0.775300</PercentDP>
+				<SurviveSeconds>151.322845</SurviveSeconds>
+				<MaxCombo>117</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-03 22:15:00</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>8</W4>
+					<W3>55</W3>
+					<W2>102</W2>
+					<W1>167</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>69589fde-2e1a-4196-a3c4-3ca879245e52</StageGuid>
+				<Guid>4b8664d8-815d-4ca7-ac7d-2592ee303af9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

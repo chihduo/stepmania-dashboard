@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR DAIKENKAI/bass 2 bass/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>79904123</Score>
+				<PercentDP>0.721100</PercentDP>
+				<SurviveSeconds>98.981163</SurviveSeconds>
+				<MaxCombo>57</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-25 18:48:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>10</W5>
+					<W4>12</W4>
+					<W3>54</W3>
+					<W2>85</W2>
+					<W1>157</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1ccc74ae-438b-495a-a91c-668db06b9e61</StageGuid>
+				<Guid>57d99223-9fbb-4e82-a8c4-ef31f6cae085</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

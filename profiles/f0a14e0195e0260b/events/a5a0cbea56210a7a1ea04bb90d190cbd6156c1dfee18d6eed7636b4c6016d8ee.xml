@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/LADYLIKE/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91670489</Score>
+				<PercentDP>0.849100</PercentDP>
+				<SurviveSeconds>109.554520</SurviveSeconds>
+				<MaxCombo>119</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-07 18:55:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>21</W3>
+					<W2>60</W2>
+					<W1>124</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>26</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7104d0d8-b93a-497f-a27b-65bd1da6a98d</StageGuid>
+				<Guid>7db307ac-6516-4a90-a674-d3950a9bd53c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

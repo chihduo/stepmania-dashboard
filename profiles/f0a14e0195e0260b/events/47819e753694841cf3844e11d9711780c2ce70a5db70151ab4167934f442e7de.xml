@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/FANTASTIC BABY/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90649032</Score>
+				<PercentDP>0.840200</PercentDP>
+				<SurviveSeconds>121.014214</SurviveSeconds>
+				<MaxCombo>109</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-05 23:54:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>5</W4>
+					<W3>14</W3>
+					<W2>86</W2>
+					<W1>152</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>28</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6086473b-94f6-412c-a90c-2aebb7a4798e</StageGuid>
+				<Guid>bed6c676-bbe1-4514-a8c6-2c29bcecd6af</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

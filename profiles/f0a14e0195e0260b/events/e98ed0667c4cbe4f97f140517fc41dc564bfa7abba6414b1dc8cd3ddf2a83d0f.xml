@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/Eternal Recurrence/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>75123442</Score>
+				<PercentDP>0.686400</PercentDP>
+				<SurviveSeconds>124.684410</SurviveSeconds>
+				<MaxCombo>84</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-31 23:26:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>9</Miss>
+					<W5>3</W5>
+					<W4>17</W4>
+					<W3>92</W3>
+					<W2>120</W2>
+					<W1>170</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>60c7de9c-8a72-46e1-af06-0aa8a6881f4f</StageGuid>
+				<Guid>f6c01841-8197-4836-a454-25dfa174a985</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

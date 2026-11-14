@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/PIU Fiesta/Xenesis/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>6920676</Score>
+				<PercentDP>0.199800</PercentDP>
+				<SurviveSeconds>46.090218</SurviveSeconds>
+				<MaxCombo>36</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-20 21:53:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>3</W5>
+					<W4>14</W4>
+					<W3>31</W3>
+					<W2>30</W2>
+					<W1>37</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7cd3fb85-2b27-40b5-aa93-e0dc2cdc777b</StageGuid>
+				<Guid>cc595b7b-860c-4d64-aa4c-6aa6567953c4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

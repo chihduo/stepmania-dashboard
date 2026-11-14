@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Saikio Simfiles/As If It&apos;s Your Last/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83362660</Score>
+				<PercentDP>0.780600</PercentDP>
+				<SurviveSeconds>138.597260</SurviveSeconds>
+				<MaxCombo>169</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-08 20:47:46</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>1</W5>
+					<W4>5</W4>
+					<W3>55</W3>
+					<W2>106</W2>
+					<W1>194</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4e83dabf-2b30-4ecf-a2c3-305a84118cd1</StageGuid>
+				<Guid>2f7709dd-8f54-4345-adda-51d2c26a2769</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

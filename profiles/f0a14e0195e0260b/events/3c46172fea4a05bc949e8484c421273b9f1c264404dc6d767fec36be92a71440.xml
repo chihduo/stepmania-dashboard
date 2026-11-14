@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/Ice Cream/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>77913955</Score>
+				<PercentDP>0.714700</PercentDP>
+				<SurviveSeconds>128.457138</SurviveSeconds>
+				<MaxCombo>176</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-12 22:25:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>8</W5>
+					<W4>12</W4>
+					<W3>90</W3>
+					<W2>137</W2>
+					<W1>165</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>36</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9fd7eedf-3d5e-4dba-a839-177cfbb8868b</StageGuid>
+				<Guid>abab5c56-93ed-4846-aa8c-82645304d345</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

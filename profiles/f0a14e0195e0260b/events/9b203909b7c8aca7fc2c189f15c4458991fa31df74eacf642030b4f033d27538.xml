@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/SMTOWN/ADRENALINE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>28648539</Score>
+				<PercentDP>0.447200</PercentDP>
+				<SurviveSeconds>89.104370</SurviveSeconds>
+				<MaxCombo>55</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-22 18:04:18</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>21</Miss>
+					<W5>11</W5>
+					<W4>13</W4>
+					<W3>34</W3>
+					<W2>62</W2>
+					<W1>119</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>26</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8f256ba7-ba3a-40c2-a7a8-18f9b465ca2f</StageGuid>
+				<Guid>c32dc46a-31ec-41a0-aaa0-8495d52a932f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

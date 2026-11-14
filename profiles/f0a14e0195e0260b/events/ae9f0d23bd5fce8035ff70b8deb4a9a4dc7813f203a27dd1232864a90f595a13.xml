@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/eternal blaze/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>35593924</Score>
+				<PercentDP>0.448500</PercentDP>
+				<SurviveSeconds>87.790237</SurviveSeconds>
+				<MaxCombo>27</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-01 21:04:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>14</Miss>
+					<W5>11</W5>
+					<W4>22</W4>
+					<W3>55</W3>
+					<W2>58</W2>
+					<W1>65</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>35</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>eca3faa1-074b-483c-a12c-2c4241f0ec3d</StageGuid>
+				<Guid>181a3d2e-0ddc-4175-a2e9-092d3b6baba3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round 2 Singles] - KiLLER LADY/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82636184</Score>
+				<PercentDP>0.740600</PercentDP>
+				<SurviveSeconds>123.215080</SurviveSeconds>
+				<MaxCombo>163</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-17 17:38:35</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>4</W5>
+					<W4>8</W4>
+					<W3>91</W3>
+					<W2>107</W2>
+					<W1>164</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>58</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1309aa56-c10a-4e87-a233-abf4a005d755</StageGuid>
+				<Guid>eda3824e-ce2e-4c59-a5c4-e55b94da15ae</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

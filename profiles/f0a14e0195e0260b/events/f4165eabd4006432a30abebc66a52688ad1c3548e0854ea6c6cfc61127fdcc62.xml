@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/wstory/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>1014281</Score>
+				<PercentDP>0.077700</PercentDP>
+				<SurviveSeconds>28.962963</SurviveSeconds>
+				<MaxCombo>22</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-30 18:51:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>19</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>14</W3>
+					<W2>6</W2>
+					<W1>26</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7de2c3b2-4e1e-4033-ab4d-deda22a330ba</StageGuid>
+				<Guid>9c39dc2b-48c3-4bd9-a83d-a9b09c2688b9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/PONPONPON/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>58546709</Score>
+				<PercentDP>0.625000</PercentDP>
+				<SurviveSeconds>104.506401</SurviveSeconds>
+				<MaxCombo>114</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-04-01 20:45:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>7</W5>
+					<W4>9</W4>
+					<W3>56</W3>
+					<W2>83</W2>
+					<W1>130</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8c485f12-0e0b-47a5-a189-63c0494d5c88</StageGuid>
+				<Guid>1f46a752-92df-494d-a7ed-e00482f5cb55</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

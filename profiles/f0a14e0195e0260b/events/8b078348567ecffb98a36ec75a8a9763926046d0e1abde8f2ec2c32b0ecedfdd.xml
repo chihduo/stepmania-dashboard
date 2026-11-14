@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/you/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>77302644</Score>
+				<PercentDP>0.678700</PercentDP>
+				<SurviveSeconds>105.831810</SurviveSeconds>
+				<MaxCombo>91</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-20 21:44:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>15</W4>
+					<W3>77</W3>
+					<W2>78</W2>
+					<W1>110</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9553df78-85c3-42fe-abd6-9a33627a3077</StageGuid>
+				<Guid>c592a803-07da-4b5d-ad90-adb7a37196a2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

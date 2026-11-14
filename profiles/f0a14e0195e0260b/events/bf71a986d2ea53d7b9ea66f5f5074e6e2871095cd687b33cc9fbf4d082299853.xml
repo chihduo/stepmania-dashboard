@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/I&apos;ll believe/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84881647</Score>
+				<PercentDP>0.771500</PercentDP>
+				<SurviveSeconds>135.914536</SurviveSeconds>
+				<MaxCombo>136</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-14 19:34:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>6</W4>
+					<W3>60</W3>
+					<W2>118</W2>
+					<W1>189</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>414f9ee0-9bfa-4789-af19-baddb7fbc4d6</StageGuid>
+				<Guid>ad514955-2ffb-4095-a92a-b4107c0f8e53</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

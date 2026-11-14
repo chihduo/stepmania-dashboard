@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/T-ara - Lovey-Dovey (Club Remix Ver.)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>160776600</Score>
+				<PercentDP>0.722600</PercentDP>
+				<SurviveSeconds>233.955139</SurviveSeconds>
+				<MaxCombo>114</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-02 23:25:52</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>4</W5>
+					<W4>27</W4>
+					<W3>145</W3>
+					<W2>196</W2>
+					<W1>253</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>97</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dceb8830-82c5-4d08-a89b-e18b69316a7a</StageGuid>
+				<Guid>1841492b-418d-4fc0-a227-7d9fbb0ed02e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

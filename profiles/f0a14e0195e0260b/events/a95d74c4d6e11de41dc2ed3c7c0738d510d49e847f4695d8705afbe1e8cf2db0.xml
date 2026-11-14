@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/SMTOWN/Fox/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>75217915</Score>
+				<PercentDP>0.659100</PercentDP>
+				<SurviveSeconds>102.416527</SurviveSeconds>
+				<MaxCombo>29</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-29 21:18:31</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>8</W5>
+					<W4>27</W4>
+					<W3>60</W3>
+					<W2>79</W2>
+					<W1>98</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>35</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>34502302-9538-410d-adec-29a7f0af6182</StageGuid>
+				<Guid>29426c8d-8ca7-4d5d-a817-5e2edc012562</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

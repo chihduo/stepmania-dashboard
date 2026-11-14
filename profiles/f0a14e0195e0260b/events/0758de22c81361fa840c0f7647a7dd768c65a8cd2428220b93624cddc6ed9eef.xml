@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/FEARMIX 2021/Monsters in the Park [Ben Fears]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>178212700</Score>
+				<PercentDP>0.803100</PercentDP>
+				<SurviveSeconds>176.709137</SurviveSeconds>
+				<MaxCombo>111</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-10 23:21:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>4</W4>
+					<W3>49</W3>
+					<W2>132</W2>
+					<W1>187</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>54</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c6de4f24-6b40-4ced-a532-0dfddd096d5c</StageGuid>
+				<Guid>c38b6e34-27d0-4ba1-a73b-bb10a2b62b81</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

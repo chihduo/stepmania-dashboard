@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Ace Of Arrows Singles/Renai Circulation/'/>
+			<Steps Difficulty='Challenge' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>1181984</Score>
+				<PercentDP>0.056600</PercentDP>
+				<SurviveSeconds>35.520027</SurviveSeconds>
+				<MaxCombo>33</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-23 20:28:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>4</W5>
+					<W4>7</W4>
+					<W3>30</W3>
+					<W2>24</W2>
+					<W1>20</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f4b42616-70a0-4c3d-aeb7-ee20f8b90caf</StageGuid>
+				<Guid>e4f757f7-96dd-48d7-a9ee-90d670cf8453</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

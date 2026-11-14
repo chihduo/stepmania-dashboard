@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/CRY FOR ME/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>70139031</Score>
+				<PercentDP>0.619000</PercentDP>
+				<SurviveSeconds>138.983521</SurviveSeconds>
+				<MaxCombo>41</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-06 20:36:41</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>14</Miss>
+					<W5>13</W5>
+					<W4>30</W4>
+					<W3>122</W3>
+					<W2>102</W2>
+					<W1>158</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1cdd4dbf-3861-4e53-aafd-569cb90a8e31</StageGuid>
+				<Guid>a260c683-176f-4257-a577-dc4f8c14eb91</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

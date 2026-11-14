@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/first kiss/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>2531007</Score>
+				<PercentDP>0.136400</PercentDP>
+				<SurviveSeconds>29.564880</SurviveSeconds>
+				<MaxCombo>41</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-22 21:19:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>7</W3>
+					<W2>11</W2>
+					<W1>28</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>24c9244a-89f5-4a91-ad5f-7e9b6b06ea79</StageGuid>
+				<Guid>3251c1ab-e62f-4d7b-a186-cdbf04cc03a6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

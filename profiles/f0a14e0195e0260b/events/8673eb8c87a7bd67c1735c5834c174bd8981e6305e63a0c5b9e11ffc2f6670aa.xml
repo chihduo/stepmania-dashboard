@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Tell Me/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86845862</Score>
+				<PercentDP>0.805400</PercentDP>
+				<SurviveSeconds>108.151993</SurviveSeconds>
+				<MaxCombo>111</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-09 21:40:08</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>31</W3>
+					<W2>69</W2>
+					<W1>124</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>48315169-9088-4d78-a844-91e8abe21b3b</StageGuid>
+				<Guid>15328d67-c50e-4236-a0e4-7fb1a701fee7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

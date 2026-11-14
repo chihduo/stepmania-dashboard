@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/The Complete led_light Collection/I AM THE BEST/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>81952464</Score>
+				<PercentDP>0.745900</PercentDP>
+				<SurviveSeconds>118.858391</SurviveSeconds>
+				<MaxCombo>166</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-09 19:47:27</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>49</W3>
+					<W2>84</W2>
+					<W1>114</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c421a427-2e7e-4a3c-a0b7-1bf36357d378</StageGuid>
+				<Guid>41cc0ff1-b199-4345-af34-f36b9f861a09</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

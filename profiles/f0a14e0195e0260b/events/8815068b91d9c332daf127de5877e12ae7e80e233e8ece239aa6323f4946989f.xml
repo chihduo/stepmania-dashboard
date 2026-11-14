@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Real Emotion (Overhead Champion Mix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90375699</Score>
+				<PercentDP>0.814400</PercentDP>
+				<SurviveSeconds>122.248390</SurviveSeconds>
+				<MaxCombo>137</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-02 18:53:06</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>45</W3>
+					<W2>79</W2>
+					<W1>184</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c91f96a2-574d-4b33-a386-06ff16f32dd6</StageGuid>
+				<Guid>fa1eda12-817b-423a-ac5d-1c3c2a44ee77</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/LOVE DIVE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>79617408</Score>
+				<PercentDP>0.705400</PercentDP>
+				<SurviveSeconds>112.450974</SurviveSeconds>
+				<MaxCombo>26</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-07 20:57:54</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>9</W5>
+					<W4>14</W4>
+					<W3>53</W3>
+					<W2>79</W2>
+					<W1>105</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>37</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cbaafbae-edf1-4c90-ab99-00d5fbd4abfb</StageGuid>
+				<Guid>be7dbb79-3d3b-44db-aa19-13403408e0d9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

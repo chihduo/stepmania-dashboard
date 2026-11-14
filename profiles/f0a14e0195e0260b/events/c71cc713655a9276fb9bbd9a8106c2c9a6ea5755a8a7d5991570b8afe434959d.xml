@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DJSuperNOVA/ALIEN/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88426093</Score>
+				<PercentDP>0.806400</PercentDP>
+				<SurviveSeconds>128.456497</SurviveSeconds>
+				<MaxCombo>92</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-22 19:34:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>6</W5>
+					<W4>9</W4>
+					<W3>50</W3>
+					<W2>96</W2>
+					<W1>220</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>34</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e165b0c9-29f6-48de-a630-7a045231de50</StageGuid>
+				<Guid>e99deda9-0b1b-435a-a6bf-93175ab325b0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

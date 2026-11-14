@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Run Devil Run/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84115763</Score>
+				<PercentDP>0.760200</PercentDP>
+				<SurviveSeconds>98.028709</SurviveSeconds>
+				<MaxCombo>68</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-20 19:09:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>39</W3>
+					<W2>64</W2>
+					<W1>97</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>26</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c8663b53-5cbf-45a5-a9bf-48351ff12853</StageGuid>
+				<Guid>73c59c6d-b4c0-47d8-a7a0-157d50afda55</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

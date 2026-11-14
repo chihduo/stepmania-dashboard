@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 2/Mobius Strip/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86492608</Score>
+				<PercentDP>0.797300</PercentDP>
+				<SurviveSeconds>104.915154</SurviveSeconds>
+				<MaxCombo>180</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-24 19:46:00</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>2</W4>
+					<W3>28</W3>
+					<W2>83</W2>
+					<W1>144</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>26b1d9a3-9da6-4ec7-a730-a76902c3beb2</StageGuid>
+				<Guid>00a4376e-2a46-48f7-ab71-e7f461695bfc</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

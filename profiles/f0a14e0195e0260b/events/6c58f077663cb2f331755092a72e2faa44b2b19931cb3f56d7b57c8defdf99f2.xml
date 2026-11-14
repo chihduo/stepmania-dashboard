@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/J-E-N-O-V-A/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>8338511</Score>
+				<PercentDP>0.246200</PercentDP>
+				<SurviveSeconds>51.599705</SurviveSeconds>
+				<MaxCombo>62</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-03 20:17:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>3</W5>
+					<W4>1</W4>
+					<W3>15</W3>
+					<W2>35</W2>
+					<W1>52</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3efaf783-1bbd-45e3-af89-889dfb87ec19</StageGuid>
+				<Guid>25febc9d-0242-4fcf-a515-96c448ad6453</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

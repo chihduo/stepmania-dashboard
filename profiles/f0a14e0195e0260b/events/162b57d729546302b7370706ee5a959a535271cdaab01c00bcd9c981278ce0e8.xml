@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Rumbling hearts/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>49663</Score>
+				<PercentDP>0.014000</PercentDP>
+				<SurviveSeconds>17.217056</SurviveSeconds>
+				<MaxCombo>10</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-09-23 19:12:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>7</W3>
+					<W2>3</W2>
+					<W1>3</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8d3a526a-41e7-4a9a-aaac-95e1c9097e3c</StageGuid>
+				<Guid>d66c157e-e95a-48d9-a89c-587cf9f590a7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

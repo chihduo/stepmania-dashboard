@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[ROUND C] - GOTTA BE YOU/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>80832379</Score>
+				<PercentDP>0.698200</PercentDP>
+				<SurviveSeconds>146.905289</SurviveSeconds>
+				<MaxCombo>107</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-21 19:48:18</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>4</W5>
+					<W4>15</W4>
+					<W3>85</W3>
+					<W2>118</W2>
+					<W1>130</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>43</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5e0e2056-4e02-4167-a770-7dd9f873d453</StageGuid>
+				<Guid>f50f0cbd-476f-4c16-ac94-c4b1c279e142</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

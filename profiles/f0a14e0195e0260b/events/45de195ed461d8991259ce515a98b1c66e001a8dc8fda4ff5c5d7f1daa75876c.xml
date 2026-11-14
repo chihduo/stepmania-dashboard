@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Bad Apple!!/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>167074483</Score>
+				<PercentDP>0.742200</PercentDP>
+				<SurviveSeconds>222.618134</SurviveSeconds>
+				<MaxCombo>97</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-28 22:28:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>6</W5>
+					<W4>8</W4>
+					<W3>83</W3>
+					<W2>152</W2>
+					<W1>226</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>a3c8d74c-1ee8-47f7-a990-e71754ce9943</StageGuid>
+				<Guid>55d298ce-b617-4729-a4bc-4ff67c0adc71</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

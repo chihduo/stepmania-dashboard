@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese Songs/ZHAO ZI JI/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>31577</Score>
+				<PercentDP>0.005900</PercentDP>
+				<SurviveSeconds>17.956999</SurviveSeconds>
+				<MaxCombo>1</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-30 12:40:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>0</W3>
+					<W2>2</W2>
+					<W1>0</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>34c5ba4b-0b98-4edc-a0bb-3700d449288e</StageGuid>
+				<Guid>3695daa5-fea4-4f7f-acd2-224edb1c4c51</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/MUZIK/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>80376471</Score>
+				<PercentDP>0.728000</PercentDP>
+				<SurviveSeconds>128.772644</SurviveSeconds>
+				<MaxCombo>137</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-16 21:47:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>7</W5>
+					<W4>9</W4>
+					<W3>77</W3>
+					<W2>143</W2>
+					<W1>148</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>55</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d73604dc-cec0-4889-acce-a9c07855e1e0</StageGuid>
+				<Guid>53b61d97-fec3-4d3f-a688-2120218b80ee</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

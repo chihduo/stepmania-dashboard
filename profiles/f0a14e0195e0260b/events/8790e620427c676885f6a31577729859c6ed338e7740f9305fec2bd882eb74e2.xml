@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Gokuraku Jodo/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89897223</Score>
+				<PercentDP>0.838500</PercentDP>
+				<SurviveSeconds>129.604675</SurviveSeconds>
+				<MaxCombo>108</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-19 12:51:27</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>5</W5>
+					<W4>3</W4>
+					<W3>42</W3>
+					<W2>73</W2>
+					<W1>185</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>71</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c9d78a03-6d35-4205-a100-ab008ecbe73f</StageGuid>
+				<Guid>379305a3-c4bd-40c4-a24f-ea29f0db6374</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

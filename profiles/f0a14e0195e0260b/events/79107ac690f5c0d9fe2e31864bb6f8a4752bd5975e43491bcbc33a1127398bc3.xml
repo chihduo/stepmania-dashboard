@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Saikio Simfiles/How You Like That/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>90992223</Score>
+				<PercentDP>0.825500</PercentDP>
+				<SurviveSeconds>121.546539</SurviveSeconds>
+				<MaxCombo>135</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-10 23:47:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>24</W3>
+					<W2>80</W2>
+					<W1>140</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>295406a9-f284-4692-acad-9b641f288743</StageGuid>
+				<Guid>7d3fd0f7-51e1-4763-adf5-f24cb3c32640</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

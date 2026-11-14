@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Din Don Dan DvF Ext Edit/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>172656077</Score>
+				<PercentDP>0.767200</PercentDP>
+				<SurviveSeconds>213.618637</SurviveSeconds>
+				<MaxCombo>100</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-14 19:16:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>5</W5>
+					<W4>14</W4>
+					<W3>92</W3>
+					<W2>146</W2>
+					<W1>260</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>57</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2b12b7ff-8513-4195-a53d-2662b88d16b5</StageGuid>
+				<Guid>158a766c-40b3-4fc5-ab63-94367028b765</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

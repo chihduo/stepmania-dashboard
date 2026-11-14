@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/Secret Garden/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88990533</Score>
+				<PercentDP>0.786500</PercentDP>
+				<SurviveSeconds>152.294250</SurviveSeconds>
+				<MaxCombo>148</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-13 21:34:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>10</W4>
+					<W3>51</W3>
+					<W2>83</W2>
+					<W1>162</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>63</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9a1092d2-4fe7-4764-abd4-b8f33f6489a5</StageGuid>
+				<Guid>3b1be567-d7b6-4e45-a597-e615ab4c9d1d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

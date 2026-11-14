@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Reach for the Moon, Immortal Smoke/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>182852446</Score>
+				<PercentDP>0.834900</PercentDP>
+				<SurviveSeconds>176.105667</SurviveSeconds>
+				<MaxCombo>211</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-28 22:56:35</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>54</W3>
+					<W2>136</W2>
+					<W1>305</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>23</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>da8c432b-0358-48b0-a37f-d0d90827a977</StageGuid>
+				<Guid>9b144aaf-e75d-4aed-a733-df277b108e9d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

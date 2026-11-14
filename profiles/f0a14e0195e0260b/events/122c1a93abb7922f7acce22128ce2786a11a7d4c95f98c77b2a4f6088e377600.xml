@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/MAGO/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85275874</Score>
+				<PercentDP>0.792900</PercentDP>
+				<SurviveSeconds>134.377838</SurviveSeconds>
+				<MaxCombo>130</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-26 17:37:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>6</W5>
+					<W4>13</W4>
+					<W3>35</W3>
+					<W2>82</W2>
+					<W1>172</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>63</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b867809a-64bd-4de4-a896-8dd8ea2a5ec2</StageGuid>
+				<Guid>082c773d-cb97-46de-a308-6ed4b558dee5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

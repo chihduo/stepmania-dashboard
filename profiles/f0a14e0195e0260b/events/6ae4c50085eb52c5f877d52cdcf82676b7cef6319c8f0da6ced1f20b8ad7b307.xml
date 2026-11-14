@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Lupin/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89576247</Score>
+				<PercentDP>0.812500</PercentDP>
+				<SurviveSeconds>139.135544</SurviveSeconds>
+				<MaxCombo>183</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-16 21:42:26</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>3</W4>
+					<W3>45</W3>
+					<W2>135</W2>
+					<W1>250</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>481236ca-16aa-45e8-a95b-b14df7892ffc</StageGuid>
+				<Guid>063106a8-8865-4ee2-a6d2-6120e0f2dda6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

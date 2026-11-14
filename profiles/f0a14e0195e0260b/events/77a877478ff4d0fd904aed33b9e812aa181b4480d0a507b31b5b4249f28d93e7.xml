@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Black Diamond [Telperion]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82564002</Score>
+				<PercentDP>0.736200</PercentDP>
+				<SurviveSeconds>124.033218</SurviveSeconds>
+				<MaxCombo>57</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-10 16:28:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>10</W4>
+					<W3>62</W3>
+					<W2>88</W2>
+					<W1>123</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>34</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d2b7db12-d99f-4f35-a6a8-b4c07df15f4f</StageGuid>
+				<Guid>111f48f6-820f-44d0-aee3-d83158f72823</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

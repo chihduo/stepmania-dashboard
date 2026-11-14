@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Time for the moon night/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>432131</Score>
+				<PercentDP>0.055000</PercentDP>
+				<SurviveSeconds>24.528101</SurviveSeconds>
+				<MaxCombo>24</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-24 20:33:08</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>18</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>2</W3>
+					<W2>11</W2>
+					<W1>12</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>6</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>068df51e-1452-4f5d-a388-fb2d208547f8</StageGuid>
+				<Guid>190f0fc1-a69d-408e-a2a2-5e33ddd508c2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

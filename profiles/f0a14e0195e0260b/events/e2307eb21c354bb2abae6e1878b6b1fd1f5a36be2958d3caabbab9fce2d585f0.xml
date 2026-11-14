@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Door/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>82340880</Score>
+				<PercentDP>0.678400</PercentDP>
+				<SurviveSeconds>104.783386</SurviveSeconds>
+				<MaxCombo>68</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-02-04 19:36:31</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>8</W4>
+					<W3>55</W3>
+					<W2>73</W2>
+					<W1>83</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f904a285-9842-4878-ac35-bd1df509b1df</StageGuid>
+				<Guid>5907495a-c65d-49f2-a509-6b07c2288ca2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

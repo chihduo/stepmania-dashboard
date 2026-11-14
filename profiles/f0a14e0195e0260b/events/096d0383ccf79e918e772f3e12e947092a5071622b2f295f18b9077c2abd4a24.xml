@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/CLOSER/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84632236</Score>
+				<PercentDP>0.764400</PercentDP>
+				<SurviveSeconds>152.474823</SurviveSeconds>
+				<MaxCombo>130</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-05 21:25:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>6</W4>
+					<W3>55</W3>
+					<W2>89</W2>
+					<W1>155</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>3</LetGo>
+					<Held>28</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>809c1ba6-a6f1-4a6a-afb9-ec3d51eaf9f4</StageGuid>
+				<Guid>596f4b74-9b6e-411a-a2d5-16082314d645</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

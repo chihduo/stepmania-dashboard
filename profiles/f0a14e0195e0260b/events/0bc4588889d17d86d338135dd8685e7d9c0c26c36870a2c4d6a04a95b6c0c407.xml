@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/[Itsugo15] Successful Mission [Saber Marionette J Opening]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>5571245</Score>
+				<PercentDP>0.175300</PercentDP>
+				<SurviveSeconds>48.161896</SurviveSeconds>
+				<MaxCombo>38</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-11 22:26:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>2</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>1</W5>
+					<W4>13</W4>
+					<W3>22</W3>
+					<W2>25</W2>
+					<W1>33</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>5</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>845dac65-f708-48c5-a3b2-4795dcc9a342</StageGuid>
+				<Guid>129b857b-2901-4ab6-ad03-fef9735a5b5a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

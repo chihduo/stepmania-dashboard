@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/CAN_T DANCE/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>93500767</Score>
+				<PercentDP>0.874700</PercentDP>
+				<SurviveSeconds>123.430038</SurviveSeconds>
+				<MaxCombo>131</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-17 16:47:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>10</W3>
+					<W2>42</W2>
+					<W1>111</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>20688e69-a7e2-4c39-ae2a-b1aabe00d63b</StageGuid>
+				<Guid>c67c0de2-89a8-46dd-af59-99276c62fd06</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

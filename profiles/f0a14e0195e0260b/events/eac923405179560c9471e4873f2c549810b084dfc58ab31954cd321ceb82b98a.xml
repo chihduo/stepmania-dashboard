@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Kimi no Shiranai Monogatari v2/'/>
+			<Steps Difficulty='Easy' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>85603944</Score>
+				<PercentDP>0.748000</PercentDP>
+				<SurviveSeconds>98.035736</SurviveSeconds>
+				<MaxCombo>92</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-16 21:18:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>3</W5>
+					<W4>4</W4>
+					<W3>35</W3>
+					<W2>52</W2>
+					<W1>90</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>26</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>75b402c6-726b-42f4-a2a6-06d3e1321e44</StageGuid>
+				<Guid>57ab4a83-b638-48fc-add9-907d053a0a65</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

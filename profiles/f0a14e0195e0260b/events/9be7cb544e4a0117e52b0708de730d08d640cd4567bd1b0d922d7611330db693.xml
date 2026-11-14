@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/godknows/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88358783</Score>
+				<PercentDP>0.776700</PercentDP>
+				<SurviveSeconds>106.234070</SurviveSeconds>
+				<MaxCombo>168</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-14 21:35:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>52</W3>
+					<W2>102</W2>
+					<W1>132</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>32</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>339a9783-434e-42bf-ae62-1613c325aafe</StageGuid>
+				<Guid>572ad9f0-a36c-41fb-aed9-4a3be383a0c7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

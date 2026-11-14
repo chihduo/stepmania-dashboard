@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/2NE1 - I Don&apos;t Care/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>17419337</Score>
+				<PercentDP>0.233000</PercentDP>
+				<SurviveSeconds>69.484123</SurviveSeconds>
+				<MaxCombo>40</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-14 20:06:52</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>1</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>34</W3>
+					<W2>55</W2>
+					<W1>79</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0a3ddc93-7831-41c9-a077-9a23e59b315f</StageGuid>
+				<Guid>89f659bb-0644-4a0b-a4de-01f4f17fcbd5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

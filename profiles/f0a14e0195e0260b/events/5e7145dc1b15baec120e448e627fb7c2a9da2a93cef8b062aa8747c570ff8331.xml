@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Summer Days [Summer Days VNOP][136]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90900172</Score>
+				<PercentDP>0.843800</PercentDP>
+				<SurviveSeconds>135.344925</SurviveSeconds>
+				<MaxCombo>155</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-22 20:25:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>32</W3>
+					<W2>63</W2>
+					<W1>145</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>42</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9d1eb2a8-33fb-4df6-a248-64f113caed08</StageGuid>
+				<Guid>517c1a19-2816-442f-a759-d306d3bcb30e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

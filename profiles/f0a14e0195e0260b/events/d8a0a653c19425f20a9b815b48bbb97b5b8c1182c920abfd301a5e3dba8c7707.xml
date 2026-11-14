@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/Wonderland/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82806189</Score>
+				<PercentDP>0.758100</PercentDP>
+				<SurviveSeconds>133.747940</SurviveSeconds>
+				<MaxCombo>69</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-25 18:36:35</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>11</W5>
+					<W4>9</W4>
+					<W3>44</W3>
+					<W2>95</W2>
+					<W1>150</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>29</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>54a53695-ae92-48e5-a298-9ac80563931c</StageGuid>
+				<Guid>3f817aae-5584-48dd-a54d-8f2fa115f79b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/discotheque/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>82016553</Score>
+				<PercentDP>0.726200</PercentDP>
+				<SurviveSeconds>101.631500</SurviveSeconds>
+				<MaxCombo>42</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-08 15:13:18</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>15</W5>
+					<W4>7</W4>
+					<W3>37</W3>
+					<W2>96</W2>
+					<W1>131</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>12</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b0ac274a-aff1-438f-a3b9-2a95487f3be5</StageGuid>
+				<Guid>03e67f72-702f-4eeb-a9be-2917e7abae30</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Saikio Simfiles/Pelo/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83251167</Score>
+				<PercentDP>0.743000</PercentDP>
+				<SurviveSeconds>128.309052</SurviveSeconds>
+				<MaxCombo>151</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-08 20:38:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>2</W5>
+					<W4>13</W4>
+					<W3>69</W3>
+					<W2>104</W2>
+					<W1>171</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>56ff2722-fb42-48cd-af3a-ac06ffdc0b09</StageGuid>
+				<Guid>dd1fa5dc-8a14-4af1-a0a5-4c38c2778113</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

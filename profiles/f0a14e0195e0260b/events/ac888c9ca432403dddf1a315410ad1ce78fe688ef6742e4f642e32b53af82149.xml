@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/B.B.B (Big Baby Baby)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85152331</Score>
+				<PercentDP>0.736100</PercentDP>
+				<SurviveSeconds>150.904037</SurviveSeconds>
+				<MaxCombo>107</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-08 19:22:35</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>8</W5>
+					<W4>13</W4>
+					<W3>75</W3>
+					<W2>133</W2>
+					<W1>204</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cc8fbd2f-861b-49a2-af33-7d1850adddd4</StageGuid>
+				<Guid>e102e7a5-fb0c-4335-a6ce-fb990994554b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

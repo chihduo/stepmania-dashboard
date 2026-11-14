@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/setsunasa/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78164698</Score>
+				<PercentDP>0.707900</PercentDP>
+				<SurviveSeconds>89.201782</SurviveSeconds>
+				<MaxCombo>126</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-11 23:32:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>57</W3>
+					<W2>68</W2>
+					<W1>98</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>9</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bbfff7f0-82ba-4910-ac77-4a17c252a883</StageGuid>
+				<Guid>f77be614-ef92-498a-af33-4543fc9e0349</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

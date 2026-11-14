@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kewing&apos;s Originals/JAPANESE SMILE/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>80846859</Score>
+				<PercentDP>0.710100</PercentDP>
+				<SurviveSeconds>121.747490</SurviveSeconds>
+				<MaxCombo>122</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-08 23:46:19</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>10</W4>
+					<W3>79</W3>
+					<W2>93</W2>
+					<W1>143</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9f61dbc5-1e9c-4696-a36c-4c83f99c7356</StageGuid>
+				<Guid>e7a98620-1972-4d17-a94e-07479b611c43</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

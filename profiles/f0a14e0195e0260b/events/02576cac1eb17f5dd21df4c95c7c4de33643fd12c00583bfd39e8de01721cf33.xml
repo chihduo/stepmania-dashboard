@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/legendpharaoh/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84943882</Score>
+				<PercentDP>0.774700</PercentDP>
+				<SurviveSeconds>123.037193</SurviveSeconds>
+				<MaxCombo>198</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-24 20:05:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>6</W4>
+					<W3>51</W3>
+					<W2>116</W2>
+					<W1>190</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>89af2529-684d-4380-a359-3567d465f178</StageGuid>
+				<Guid>6f24247a-bd90-4ddd-af2e-55e01562ebce</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

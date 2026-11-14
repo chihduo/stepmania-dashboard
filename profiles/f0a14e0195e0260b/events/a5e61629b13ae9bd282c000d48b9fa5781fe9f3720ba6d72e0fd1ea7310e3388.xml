@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/SMTOWN/mamoritai ~White Wishes~/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84182243</Score>
+				<PercentDP>0.790300</PercentDP>
+				<SurviveSeconds>129.973740</SurviveSeconds>
+				<MaxCombo>149</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-15 21:37:57</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>46</W3>
+					<W2>85</W2>
+					<W1>167</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>40</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>edc8212c-1cdb-424c-a1e6-653f40f0fac6</StageGuid>
+				<Guid>7260aeb7-78c3-48e9-ad9c-cadd540c9aad</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

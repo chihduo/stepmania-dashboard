@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/FEARMIX 2021/Spooky [omgukk]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86345421</Score>
+				<PercentDP>0.807100</PercentDP>
+				<SurviveSeconds>140.051041</SurviveSeconds>
+				<MaxCombo>163</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-23 22:25:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>1</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>3</W5>
+					<W4>9</W4>
+					<W3>51</W3>
+					<W2>111</W2>
+					<W1>177</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>108</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>998c75d0-12e3-42f3-a852-42d5de75d549</StageGuid>
+				<Guid>7571e9e7-f75a-4d7e-a80d-09b3e060704b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

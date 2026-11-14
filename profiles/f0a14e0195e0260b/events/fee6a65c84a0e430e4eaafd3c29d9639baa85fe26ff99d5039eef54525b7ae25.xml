@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Fly Me To The Moon (Climax Mix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>256040</Score>
+				<PercentDP>0.039500</PercentDP>
+				<SurviveSeconds>23.107969</SurviveSeconds>
+				<MaxCombo>17</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-11 21:46:00</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>3</W3>
+					<W2>5</W2>
+					<W1>12</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>61985be9-e507-42bc-afa7-1f956c493565</StageGuid>
+				<Guid>566f45df-8376-486f-ae98-33b16af4bf5e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

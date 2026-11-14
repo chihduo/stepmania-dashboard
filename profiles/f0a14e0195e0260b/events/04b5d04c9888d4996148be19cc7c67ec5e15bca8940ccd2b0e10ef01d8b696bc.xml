@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/Love Sick/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86697301</Score>
+				<PercentDP>0.764200</PercentDP>
+				<SurviveSeconds>143.603622</SurviveSeconds>
+				<MaxCombo>190</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-22 21:21:03</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>3</W5>
+					<W4>4</W4>
+					<W3>59</W3>
+					<W2>134</W2>
+					<W1>193</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0819b53f-b766-4783-a4e2-580e44545a7d</StageGuid>
+				<Guid>8448f06c-774b-48ea-ac69-4f779a9a06f8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

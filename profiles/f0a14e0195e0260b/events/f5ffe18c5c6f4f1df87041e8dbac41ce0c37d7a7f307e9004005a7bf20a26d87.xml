@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/Eyes on Me (Almighty Mix)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>45353131</Score>
+				<PercentDP>0.552300</PercentDP>
+				<SurviveSeconds>100.574570</SurviveSeconds>
+				<MaxCombo>106</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-02-11 21:45:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>17</Miss>
+					<W5>4</W5>
+					<W4>9</W4>
+					<W3>52</W3>
+					<W2>67</W2>
+					<W1>122</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d1d015f0-d9e3-4064-ae08-10c5e2cd6002</StageGuid>
+				<Guid>bdfdfb57-3950-41de-adff-0bcd7f7dbb46</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

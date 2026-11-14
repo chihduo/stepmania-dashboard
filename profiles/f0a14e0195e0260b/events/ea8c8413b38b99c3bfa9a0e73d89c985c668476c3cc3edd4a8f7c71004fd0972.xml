@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Eyes on Me (Almighty Mix)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>94039620</Score>
+				<PercentDP>0.902200</PercentDP>
+				<SurviveSeconds>124.266838</SurviveSeconds>
+				<MaxCombo>167</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-29 21:26:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>3</W4>
+					<W3>11</W3>
+					<W2>69</W2>
+					<W1>258</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>37</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fdb6a005-be18-4b2b-a7bd-1b65ec621f38</StageGuid>
+				<Guid>c8864eec-3b0f-4196-ade6-7d0dbad30570</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

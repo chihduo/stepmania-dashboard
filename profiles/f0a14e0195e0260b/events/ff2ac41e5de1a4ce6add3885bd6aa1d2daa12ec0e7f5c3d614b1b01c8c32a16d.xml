@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/Feel Special/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>95392192</Score>
+				<PercentDP>0.874700</PercentDP>
+				<SurviveSeconds>153.402695</SurviveSeconds>
+				<MaxCombo>320</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-27 16:07:18</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>11</W3>
+					<W2>99</W2>
+					<W1>194</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ce7490d1-e08a-455c-a2af-b9b87e9b9c4c</StageGuid>
+				<Guid>027f10cc-c48a-4448-a65f-e722d6b52153</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

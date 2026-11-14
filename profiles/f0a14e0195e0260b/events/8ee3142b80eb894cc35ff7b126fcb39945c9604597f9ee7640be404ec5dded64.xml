@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Ice Cream Cake/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91899540</Score>
+				<PercentDP>0.836500</PercentDP>
+				<SurviveSeconds>92.994781</SurviveSeconds>
+				<MaxCombo>128</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-14 19:36:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>18</W3>
+					<W2>41</W2>
+					<W1>59</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>39</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ee09bd59-550f-4f58-a3f7-75b37f7d44f4</StageGuid>
+				<Guid>e1685ed4-d613-46ad-a563-ed106d009e3a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

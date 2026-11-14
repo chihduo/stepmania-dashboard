@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/ZIv Freestyle Showcase 2020/virtualmind/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87788059</Score>
+				<PercentDP>0.740200</PercentDP>
+				<SurviveSeconds>90.371407</SurviveSeconds>
+				<MaxCombo>159</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-15 22:27:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>6</W4>
+					<W3>41</W3>
+					<W2>60</W2>
+					<W1>82</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>22</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>e53d8973-26ba-45e9-a2f8-c07d0d7e1db9</StageGuid>
+				<Guid>418f9488-f0e8-49d7-a5f7-8754e7b16231</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

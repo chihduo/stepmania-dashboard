@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/STEP/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>94681</Score>
+				<PercentDP>0.015100</PercentDP>
+				<SurviveSeconds>17.218027</SurviveSeconds>
+				<MaxCombo>5</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-17 19:00:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>4</W3>
+					<W2>1</W2>
+					<W1>3</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>325f9baf-76bb-41f0-a699-36c49d01d3fe</StageGuid>
+				<Guid>ea507e2d-9568-4a86-a3fd-d9132905cae1</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

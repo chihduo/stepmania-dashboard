@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Saikio Simfiles/Heart Ereki/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84028745</Score>
+				<PercentDP>0.754600</PercentDP>
+				<SurviveSeconds>140.738068</SurviveSeconds>
+				<MaxCombo>144</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-08 20:24:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>5</W4>
+					<W3>64</W3>
+					<W2>102</W2>
+					<W1>138</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5ef5add5-2569-49ed-ab80-1bc80c267937</StageGuid>
+				<Guid>2d2e6ae2-7417-4b9e-ab5f-47915908fb14</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

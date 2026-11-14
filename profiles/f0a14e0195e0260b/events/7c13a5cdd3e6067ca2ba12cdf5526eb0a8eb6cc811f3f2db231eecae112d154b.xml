@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Hot Summer/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>17785942</Score>
+				<PercentDP>0.345800</PercentDP>
+				<SurviveSeconds>69.751503</SurviveSeconds>
+				<MaxCombo>125</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-16 21:35:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>24</Miss>
+					<W5>5</W5>
+					<W4>8</W4>
+					<W3>32</W3>
+					<W2>55</W2>
+					<W1>87</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1cf17218-25d6-411b-ae6b-e0df0d60d5fe</StageGuid>
+				<Guid>a2f908b9-3bc1-4bc7-a1f9-a8a89c7d23c1</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/Fire/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>34595393</Score>
+				<PercentDP>0.457200</PercentDP>
+				<SurviveSeconds>81.628700</SurviveSeconds>
+				<MaxCombo>42</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-21 19:45:34</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>2</W5>
+					<W4>17</W4>
+					<W3>55</W3>
+					<W2>61</W2>
+					<W1>80</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>32</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8f7342de-1d98-4ecc-a60b-b17214ec6fcb</StageGuid>
+				<Guid>baaeeccd-0e8e-4870-aaca-1310e80a7581</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice complete step/innocent starter/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83819978</Score>
+				<PercentDP>0.777700</PercentDP>
+				<SurviveSeconds>113.163147</SurviveSeconds>
+				<MaxCombo>162</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-31 23:58:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>46</W3>
+					<W2>94</W2>
+					<W1>130</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>37</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7dc00021-2efc-4b2e-a91c-82f1e46d766e</StageGuid>
+				<Guid>e52bf7e8-fd71-4f48-a357-4aa150c0637d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

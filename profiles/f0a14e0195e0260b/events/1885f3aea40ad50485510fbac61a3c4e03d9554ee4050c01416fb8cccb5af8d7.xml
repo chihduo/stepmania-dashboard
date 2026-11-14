@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Kara - STEP/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82581433</Score>
+				<PercentDP>0.732100</PercentDP>
+				<SurviveSeconds>145.011795</SurviveSeconds>
+				<MaxCombo>97</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-09 21:58:48</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>6</Miss>
+					<W5>1</W5>
+					<W4>8</W4>
+					<W3>62</W3>
+					<W2>98</W2>
+					<W1>132</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>28</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>702224f1-4a51-452f-a7b0-754678b2b5ae</StageGuid>
+				<Guid>a6a1e662-ada3-4f90-aa3a-3d7be92a0eb9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

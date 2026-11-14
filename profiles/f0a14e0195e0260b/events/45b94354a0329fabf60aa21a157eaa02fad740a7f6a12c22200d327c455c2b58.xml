@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/Out of Sense/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85243984</Score>
+				<PercentDP>0.738700</PercentDP>
+				<SurviveSeconds>121.097076</SurviveSeconds>
+				<MaxCombo>155</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-29 21:34:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>5</W5>
+					<W4>6</W4>
+					<W3>69</W3>
+					<W2>110</W2>
+					<W1>175</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>91f9ef7e-988e-427e-a353-2bba81de3c76</StageGuid>
+				<Guid>48e7a66d-699f-47ba-a43c-80280ae503d0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

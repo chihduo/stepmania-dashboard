@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Anime Colletion/chains/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>93063843</Score>
+				<PercentDP>0.805700</PercentDP>
+				<SurviveSeconds>122.665283</SurviveSeconds>
+				<MaxCombo>179</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-28 20:03:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>37</W3>
+					<W2>93</W2>
+					<W1>167</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b3322967-8769-4df6-a3fd-fd1a8aeedc7a</StageGuid>
+				<Guid>ed34b17d-74c5-4951-ac1a-54b768f70fb4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

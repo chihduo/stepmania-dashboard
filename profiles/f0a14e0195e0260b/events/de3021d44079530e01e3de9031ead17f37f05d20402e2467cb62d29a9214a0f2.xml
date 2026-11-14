@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Saikio Simfiles/TACTICS/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>74995861</Score>
+				<PercentDP>0.658800</PercentDP>
+				<SurviveSeconds>104.548775</SurviveSeconds>
+				<MaxCombo>40</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-11-23 18:15:14</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>2</W5>
+					<W4>18</W4>
+					<W3>75</W3>
+					<W2>71</W2>
+					<W1>105</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>19</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9e89f7ac-0e38-4257-a133-98da712ae48b</StageGuid>
+				<Guid>80dbaa26-3342-4fad-aa49-d1590d35da62</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

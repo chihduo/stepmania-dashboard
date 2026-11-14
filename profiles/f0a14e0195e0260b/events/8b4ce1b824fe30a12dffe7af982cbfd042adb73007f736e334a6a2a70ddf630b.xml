@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Zenzenzense/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>185220710</Score>
+				<PercentDP>0.845500</PercentDP>
+				<SurviveSeconds>284.306702</SurviveSeconds>
+				<MaxCombo>274</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-20 21:33:59</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>4</W5>
+					<W4>1</W4>
+					<W3>60</W3>
+					<W2>198</W2>
+					<W1>396</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>65</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>175381c2-6dc3-4f58-a6bd-b6ff643e8de4</StageGuid>
+				<Guid>421da100-52c3-4ed1-a3a6-c6796d87a4aa</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

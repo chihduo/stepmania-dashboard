@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[GARNiDELiA] Tougen Renka/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83259301</Score>
+				<PercentDP>0.731000</PercentDP>
+				<SurviveSeconds>115.066536</SurviveSeconds>
+				<MaxCombo>131</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-07 20:51:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>5</W5>
+					<W4>7</W4>
+					<W3>72</W3>
+					<W2>94</W2>
+					<W1>161</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ad535a07-29f7-4117-ae48-19575341112a</StageGuid>
+				<Guid>a66090e7-4412-48e1-a3e9-0bc28c463a8a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

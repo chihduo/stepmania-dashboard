@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Kill This Love/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>4880805</Score>
+				<PercentDP>0.181700</PercentDP>
+				<SurviveSeconds>48.153801</SurviveSeconds>
+				<MaxCombo>27</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-20 19:27:24</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>9</W3>
+					<W2>26</W2>
+					<W1>42</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f130ee56-8d30-4658-af03-6283ae7f9003</StageGuid>
+				<Guid>17963765-e955-4c1e-a8b2-29501f685616</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

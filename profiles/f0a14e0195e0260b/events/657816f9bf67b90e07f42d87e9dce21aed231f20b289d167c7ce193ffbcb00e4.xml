@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Interdimensional Voyage of a Ghostly Passenger Ship/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92684133</Score>
+				<PercentDP>0.855200</PercentDP>
+				<SurviveSeconds>147.063797</SurviveSeconds>
+				<MaxCombo>126</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-28 22:38:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>24</W3>
+					<W2>86</W2>
+					<W1>182</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>52</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f2b649aa-cff9-4cef-ad60-213851df7437</StageGuid>
+				<Guid>1be77cd5-0963-4732-a1aa-644febe23033</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

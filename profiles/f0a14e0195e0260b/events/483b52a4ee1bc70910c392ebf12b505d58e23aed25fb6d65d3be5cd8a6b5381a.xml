@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Ashura Hime [Mai-HiME PS2 OP][087]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>96029318</Score>
+				<PercentDP>0.904000</PercentDP>
+				<SurviveSeconds>153.089340</SurviveSeconds>
+				<MaxCombo>222</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-12 18:36:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>12</W3>
+					<W2>60</W2>
+					<W1>185</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>63</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f5a3bd49-4af7-430b-a538-fb5a277574d0</StageGuid>
+				<Guid>6239cdeb-5601-4f91-a1b3-4c7ddc2d753d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

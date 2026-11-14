@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Wanna/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89053162</Score>
+				<PercentDP>0.795700</PercentDP>
+				<SurviveSeconds>107.819405</SurviveSeconds>
+				<MaxCombo>127</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-09 18:28:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>40</W3>
+					<W2>117</W2>
+					<W1>183</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>fcabeb78-1f54-4eb5-a768-658173a0ab17</StageGuid>
+				<Guid>5f4ea1ad-4726-472c-a966-08c892e2839d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/ZIv Freestyle Showcase 2020/Buzzin&apos;/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90207475</Score>
+				<PercentDP>0.810600</PercentDP>
+				<SurviveSeconds>141.616364</SurviveSeconds>
+				<MaxCombo>188</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-24 23:43:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>39</W3>
+					<W2>92</W2>
+					<W1>157</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>37</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c7209258-6dce-4ebe-a160-9043f71f10ed</StageGuid>
+				<Guid>dfc43ffb-2e20-4267-a52e-451d2fc3f8f0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

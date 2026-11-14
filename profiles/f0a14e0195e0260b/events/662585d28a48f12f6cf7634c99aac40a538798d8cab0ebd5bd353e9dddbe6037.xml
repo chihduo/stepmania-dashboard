@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Ruins Super Express/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76638256</Score>
+				<PercentDP>0.642500</PercentDP>
+				<SurviveSeconds>139.882233</SurviveSeconds>
+				<MaxCombo>66</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-28 22:59:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>13</W5>
+					<W4>27</W4>
+					<W3>99</W3>
+					<W2>129</W2>
+					<W1>148</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2726fc4e-f355-4e79-a68d-6f083ae91b3b</StageGuid>
+				<Guid>a448585a-e710-4bd3-ad21-892ea9a39660</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

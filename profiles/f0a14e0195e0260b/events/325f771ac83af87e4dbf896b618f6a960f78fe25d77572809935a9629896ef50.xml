@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime/Platinum_Disco/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>67425620</Score>
+				<PercentDP>0.557100</PercentDP>
+				<SurviveSeconds>97.690689</SurviveSeconds>
+				<MaxCombo>29</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-25 21:18:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>11</Miss>
+					<W5>3</W5>
+					<W4>21</W4>
+					<W3>102</W3>
+					<W2>71</W2>
+					<W1>51</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4514e0e0-5e40-42a6-a195-3fe2e763d808</StageGuid>
+				<Guid>0053d9a2-1c7d-4c30-abde-2bca711657dd</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

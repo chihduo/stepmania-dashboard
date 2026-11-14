@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Kawaii/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>92189531</Score>
+				<PercentDP>0.858500</PercentDP>
+				<SurviveSeconds>141.823380</SurviveSeconds>
+				<MaxCombo>168</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-03 21:35:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>4</W5>
+					<W4>1</W4>
+					<W3>28</W3>
+					<W2>94</W2>
+					<W1>223</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>45</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d5e6e2cd-90d2-47b3-a7d8-4b19d6fd073d</StageGuid>
+				<Guid>97c11a3c-8a30-4d94-a278-a4b61bccdf59</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

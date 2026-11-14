@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/MAGIC DOOR(Theme of SPACE MACO)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>503226</Score>
+				<PercentDP>0.052900</PercentDP>
+				<SurviveSeconds>23.940031</SurviveSeconds>
+				<MaxCombo>12</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-25 22:03:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>3</W5>
+					<W4>5</W4>
+					<W3>7</W3>
+					<W2>5</W2>
+					<W1>10</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>85f9e70e-2abf-45cd-ac2e-88b29f2c094b</StageGuid>
+				<Guid>bac6b399-ff30-4cfa-a7ba-413269762833</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

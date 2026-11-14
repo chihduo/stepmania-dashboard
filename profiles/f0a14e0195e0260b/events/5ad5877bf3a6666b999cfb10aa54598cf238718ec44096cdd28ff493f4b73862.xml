@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/hoot/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84601348</Score>
+				<PercentDP>0.793400</PercentDP>
+				<SurviveSeconds>121.014206</SurviveSeconds>
+				<MaxCombo>182</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-13 21:15:00</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>7</W4>
+					<W3>44</W3>
+					<W2>97</W2>
+					<W1>164</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>32</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>77ffbbf8-625c-4416-adcf-2a3de83115f3</StageGuid>
+				<Guid>dcf4a433-fb82-46bb-a62f-ee76c74382c9</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

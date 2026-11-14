@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2016/Reflection/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86395986</Score>
+				<PercentDP>0.782600</PercentDP>
+				<SurviveSeconds>81.342735</SurviveSeconds>
+				<MaxCombo>116</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-09 18:19:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>17</W3>
+					<W2>62</W2>
+					<W1>75</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>143c62ea-9ff6-483a-a305-1f2caa252fd6</StageGuid>
+				<Guid>caa6bf9f-89e3-4174-aac7-b135a24649b3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

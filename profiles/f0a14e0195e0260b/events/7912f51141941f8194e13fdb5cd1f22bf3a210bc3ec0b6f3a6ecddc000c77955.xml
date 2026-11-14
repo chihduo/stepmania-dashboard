@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Miniskirt/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>78960991</Score>
+				<PercentDP>0.633900</PercentDP>
+				<SurviveSeconds>139.349045</SurviveSeconds>
+				<MaxCombo>143</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2024-05-25 21:45:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>2</W5>
+					<W4>12</W4>
+					<W3>124</W3>
+					<W2>116</W2>
+					<W1>133</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b2cef69c-2942-48fa-ae1d-2e22f2cb848e</StageGuid>
+				<Guid>021b1a0c-e1b2-45de-a89a-63a651d4a4c8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

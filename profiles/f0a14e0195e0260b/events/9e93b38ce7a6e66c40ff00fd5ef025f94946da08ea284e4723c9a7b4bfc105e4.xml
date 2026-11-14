@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/Error/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88391269</Score>
+				<PercentDP>0.761500</PercentDP>
+				<SurviveSeconds>138.666611</SurviveSeconds>
+				<MaxCombo>291</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-12 21:26:44</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>6</W4>
+					<W3>66</W3>
+					<W2>102</W2>
+					<W1>187</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>06ab7952-16db-430f-a462-bed3b253a0fe</StageGuid>
+				<Guid>f725004a-241b-4a4e-a94f-f4bbda51217b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

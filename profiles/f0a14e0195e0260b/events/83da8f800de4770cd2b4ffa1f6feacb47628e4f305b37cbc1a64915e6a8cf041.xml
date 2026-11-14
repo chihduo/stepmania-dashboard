@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/I Am Your Girl/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85152279</Score>
+				<PercentDP>0.783100</PercentDP>
+				<SurviveSeconds>109.224213</SurviveSeconds>
+				<MaxCombo>169</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-11 23:58:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>41</W3>
+					<W2>78</W2>
+					<W1>108</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>37</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>17300aec-ee41-454e-a2cc-e98f6064a43d</StageGuid>
+				<Guid>e7ace08c-b015-4d89-aca2-5a19e8596c84</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/DUMHDURUM/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>37740</Score>
+				<PercentDP>0.009300</PercentDP>
+				<SurviveSeconds>15.381009</SurviveSeconds>
+				<MaxCombo>5</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-06-01 23:50:27</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>5</W3>
+					<W2>2</W2>
+					<W1>3</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f61f7801-98e8-4a37-af44-5378d358f5d0</StageGuid>
+				<Guid>5817bbda-ebce-4829-a3e7-371efa3a41e0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Alice 4th simple/agony/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85686616</Score>
+				<PercentDP>0.726600</PercentDP>
+				<SurviveSeconds>109.740707</SurviveSeconds>
+				<MaxCombo>168</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-31 22:39:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>5</W4>
+					<W3>65</W3>
+					<W2>95</W2>
+					<W1>126</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c3cfde28-6835-4c16-a4c9-efdafd6be762</StageGuid>
+				<Guid>24b7b5e4-0c39-4ead-a98f-3f38bd670171</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

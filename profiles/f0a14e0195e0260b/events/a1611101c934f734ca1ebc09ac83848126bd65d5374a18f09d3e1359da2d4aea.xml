@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round 3 Singles] - Catallena/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91677754</Score>
+				<PercentDP>0.821700</PercentDP>
+				<SurviveSeconds>99.354645</SurviveSeconds>
+				<MaxCombo>190</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-11 21:36:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>21</W3>
+					<W2>64</W2>
+					<W1>99</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>28</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>aacce56b-97a1-4786-a7e7-f59bade9cdcd</StageGuid>
+				<Guid>6fbfad79-2a1d-46bc-aa87-b0a42404e2db</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

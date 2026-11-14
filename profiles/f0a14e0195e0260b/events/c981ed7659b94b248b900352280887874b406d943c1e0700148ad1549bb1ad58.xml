@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/FEARMIX 2021/Nightmare [RaverAce]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89549657</Score>
+				<PercentDP>0.822000</PercentDP>
+				<SurviveSeconds>142.424957</SurviveSeconds>
+				<MaxCombo>81</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-10 23:15:21</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>6</W5>
+					<W4>6</W4>
+					<W3>45</W3>
+					<W2>104</W2>
+					<W1>224</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>55</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1e3f1cb4-8e03-41c4-ab80-bda729f7fd3f</StageGuid>
+				<Guid>2bfece42-4304-44ec-ad6b-6a47cd9a6474</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

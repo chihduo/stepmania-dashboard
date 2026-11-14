@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/The Ace Of Charts/Ievan Polkka (VSNS Remix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89686327</Score>
+				<PercentDP>0.828800</PercentDP>
+				<SurviveSeconds>139.550735</SurviveSeconds>
+				<MaxCombo>194</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-20 21:14:47</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>41</W3>
+					<W2>104</W2>
+					<W1>211</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>45</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ff870cdf-17d6-4e33-a619-f311cc2aa9b1</StageGuid>
+				<Guid>58ded240-ff50-45e2-a8a1-e25707dca7e5</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

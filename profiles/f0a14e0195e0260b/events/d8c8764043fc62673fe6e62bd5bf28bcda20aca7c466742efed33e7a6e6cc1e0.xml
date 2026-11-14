@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/17 SAI/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88032027</Score>
+				<PercentDP>0.768500</PercentDP>
+				<SurviveSeconds>130.591492</SurviveSeconds>
+				<MaxCombo>84</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-18 19:09:54</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>8</W4>
+					<W3>54</W3>
+					<W2>127</W2>
+					<W1>181</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5debc6a9-f952-4960-a0bf-2d5c971f40aa</StageGuid>
+				<Guid>b85daa51-5aec-408b-a56a-50f9d7889599</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

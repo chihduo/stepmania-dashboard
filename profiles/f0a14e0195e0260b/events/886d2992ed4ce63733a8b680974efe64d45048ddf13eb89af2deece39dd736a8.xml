@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/DICE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>5860054</Score>
+				<PercentDP>0.162600</PercentDP>
+				<SurviveSeconds>37.440884</SurviveSeconds>
+				<MaxCombo>29</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-04 22:11:10</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>21</Miss>
+					<W5>4</W5>
+					<W4>3</W4>
+					<W3>23</W3>
+					<W2>30</W2>
+					<W1>17</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>44638f86-9109-49a4-a56c-dc0f097c8da1</StageGuid>
+				<Guid>c7cbb51a-a1a4-4a1f-abd0-ed94760cd0f3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

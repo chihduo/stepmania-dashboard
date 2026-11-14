@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/IU - Marshmallow/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>1087390</Score>
+				<PercentDP>0.056800</PercentDP>
+				<SurviveSeconds>32.497292</SurviveSeconds>
+				<MaxCombo>20</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-22 18:47:52</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>11</W3>
+					<W2>19</W2>
+					<W1>25</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>3e5b4e4e-1fda-4c93-adbe-3a270b639690</StageGuid>
+				<Guid>a28e3dab-2481-4b94-af3e-50fe2dac95d2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

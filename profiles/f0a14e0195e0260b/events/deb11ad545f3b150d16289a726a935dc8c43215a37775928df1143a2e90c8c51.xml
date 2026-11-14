@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR XL/How You Like That/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>137430</Score>
+				<PercentDP>0.027100</PercentDP>
+				<SurviveSeconds>24.999195</SurviveSeconds>
+				<MaxCombo>4</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-08-15 21:48:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>0</W3>
+					<W2>3</W2>
+					<W1>5</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1bcb2b54-3125-45fa-ab0d-627c195463ee</StageGuid>
+				<Guid>dbc59d10-0c99-47e2-ab10-e782b4fab112</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

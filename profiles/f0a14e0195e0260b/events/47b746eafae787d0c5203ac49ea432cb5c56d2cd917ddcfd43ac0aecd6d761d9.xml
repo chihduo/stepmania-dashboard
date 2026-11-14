@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Nobody/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83195357</Score>
+				<PercentDP>0.750400</PercentDP>
+				<SurviveSeconds>128.754913</SurviveSeconds>
+				<MaxCombo>319</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-23 19:55:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>4</W4>
+					<W3>71</W3>
+					<W2>99</W2>
+					<W1>159</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>56332e87-3f1c-4cf0-afdb-5b7a124d324c</StageGuid>
+				<Guid>1d0a9d13-aa07-4cee-adaf-7c8012e3bf28</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

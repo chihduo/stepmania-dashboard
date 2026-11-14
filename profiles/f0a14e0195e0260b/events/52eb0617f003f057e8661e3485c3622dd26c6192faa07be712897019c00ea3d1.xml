@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/little monster/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>85607567</Score>
+				<PercentDP>0.776400</PercentDP>
+				<SurviveSeconds>149.095459</SurviveSeconds>
+				<MaxCombo>158</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-02-03 21:53:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>7</W5>
+					<W4>3</W4>
+					<W3>74</W3>
+					<W2>148</W2>
+					<W1>227</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>48</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>84a9b380-fa1c-4251-a59f-8a1d0b003be0</StageGuid>
+				<Guid>d57f36a4-54e5-40cf-a58e-455e63b1d306</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/Gee/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>76234223</Score>
+				<PercentDP>0.692300</PercentDP>
+				<SurviveSeconds>128.075378</SurviveSeconds>
+				<MaxCombo>32</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-29 19:49:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>10</W5>
+					<W4>22</W4>
+					<W3>82</W3>
+					<W2>112</W2>
+					<W1>164</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>5</LetGo>
+					<Held>49</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8470d9ab-bb44-4341-ab9f-1fee13bf4abf</StageGuid>
+				<Guid>be1feb34-c833-4473-a7ff-a29e7768aec8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Confused/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84695461</Score>
+				<PercentDP>0.739600</PercentDP>
+				<SurviveSeconds>126.539238</SurviveSeconds>
+				<MaxCombo>102</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-03 23:09:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>6</W4>
+					<W3>57</W3>
+					<W2>98</W2>
+					<W1>142</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ae9808f4-8ec1-4a52-ac39-9fe8a5cf52bf</StageGuid>
+				<Guid>206ca3a3-36d9-4865-a7b7-483cf5e1263d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Wrland Season 1/MATADOR/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>3772307</Score>
+				<PercentDP>0.176700</PercentDP>
+				<SurviveSeconds>57.610332</SurviveSeconds>
+				<MaxCombo>105</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-22 18:49:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>4</W3>
+					<W2>23</W2>
+					<W1>68</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>5b6cd693-f5b5-470e-a41f-ad64c1b9ea5f</StageGuid>
+				<Guid>2720e2bb-ecf8-42c8-ac41-e912e09ef3e6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

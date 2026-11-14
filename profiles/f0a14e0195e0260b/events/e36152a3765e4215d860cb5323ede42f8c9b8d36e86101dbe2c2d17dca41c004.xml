@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Yes/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82859144</Score>
+				<PercentDP>0.803600</PercentDP>
+				<SurviveSeconds>128.940399</SurviveSeconds>
+				<MaxCombo>238</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-22 20:08:28</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>10</W5>
+					<W4>4</W4>
+					<W3>41</W3>
+					<W2>114</W2>
+					<W1>234</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>42</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4b9779c2-4284-4070-a97e-63875badf45a</StageGuid>
+				<Guid>180415fd-d51b-45e6-a58a-e6ddf63a0613</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

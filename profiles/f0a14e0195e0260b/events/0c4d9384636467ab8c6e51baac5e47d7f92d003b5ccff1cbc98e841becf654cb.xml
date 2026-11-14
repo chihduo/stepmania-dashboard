@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Cruel Angel&apos;s Thesis (Evangelion S^2 works instrumental)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>966107</Score>
+				<PercentDP>0.079600</PercentDP>
+				<SurviveSeconds>27.671234</SurviveSeconds>
+				<MaxCombo>14</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-28 21:43:12</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>3</W3>
+					<W2>7</W2>
+					<W1>9</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>60b827af-0870-481a-a6ad-b09450db17ab</StageGuid>
+				<Guid>f116d260-25bb-4007-ac49-2d9b2d07fd21</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/SMTOWN/Lady Galaxy/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>80495544</Score>
+				<PercentDP>0.742800</PercentDP>
+				<SurviveSeconds>108.236992</SurviveSeconds>
+				<MaxCombo>44</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-13 17:13:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>10</W5>
+					<W4>16</W4>
+					<W3>41</W3>
+					<W2>68</W2>
+					<W1>139</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>36</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0f826e76-3c7c-45b8-a3b0-e6eac004a0c8</StageGuid>
+				<Guid>9acbdcd9-ae59-4022-a285-74661b1c0ef4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DanceDanceRevolution Pop/I AM THE BEST/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>82803203</Score>
+				<PercentDP>0.707200</PercentDP>
+				<SurviveSeconds>152.373093</SurviveSeconds>
+				<MaxCombo>115</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-26 15:14:08</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>76</W3>
+					<W2>117</W2>
+					<W1>123</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>12</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>77f04858-ef9b-4f40-a910-447a6cc67d88</StageGuid>
+				<Guid>9ab4e77a-0b4f-4dd0-a158-6d5e011899e3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

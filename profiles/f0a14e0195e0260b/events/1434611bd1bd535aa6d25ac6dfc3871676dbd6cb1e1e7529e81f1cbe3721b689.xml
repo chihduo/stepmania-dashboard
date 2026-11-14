@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round I] - Sugar Free/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>81347757</Score>
+				<PercentDP>0.721500</PercentDP>
+				<SurviveSeconds>130.407211</SurviveSeconds>
+				<MaxCombo>52</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-01 22:19:03</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>6</W5>
+					<W4>20</W4>
+					<W3>70</W3>
+					<W2>121</W2>
+					<W1>179</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>28</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2c1e3a4f-eb9e-4bbc-aa9b-a1d3e78a801a</StageGuid>
+				<Guid>4622ee3c-b908-4234-a7c1-3c6f4192622d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

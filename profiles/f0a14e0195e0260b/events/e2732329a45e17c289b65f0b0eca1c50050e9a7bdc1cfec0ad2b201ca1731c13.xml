@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Chinese/Leaving... (Chinese)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90164820</Score>
+				<PercentDP>0.816600</PercentDP>
+				<SurviveSeconds>110.693558</SurviveSeconds>
+				<MaxCombo>167</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-04 19:35:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>22</W3>
+					<W2>84</W2>
+					<W1>130</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f2580d34-487c-482d-a464-651ab1b6770e</StageGuid>
+				<Guid>88debf00-24a0-4fbf-a103-1c0196721345</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

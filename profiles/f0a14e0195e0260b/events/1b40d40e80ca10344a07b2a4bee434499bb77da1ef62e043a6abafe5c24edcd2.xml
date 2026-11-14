@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/Like A Cat/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>2733758</Score>
+				<PercentDP>0.117600</PercentDP>
+				<SurviveSeconds>39.559780</SurviveSeconds>
+				<MaxCombo>25</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-03 23:00:15</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>4</W5>
+					<W4>10</W4>
+					<W3>18</W3>
+					<W2>22</W2>
+					<W1>23</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>8</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c08da500-a98c-4ec8-a037-7bdb6732861a</StageGuid>
+				<Guid>e64c9842-74c1-4380-af58-61cd64570378</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Week 6] - Wanna/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84097652</Score>
+				<PercentDP>0.755000</PercentDP>
+				<SurviveSeconds>105.556221</SurviveSeconds>
+				<MaxCombo>135</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-09 21:56:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>62</W3>
+					<W2>102</W2>
+					<W1>135</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>27</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0603e3c1-f042-4e9c-a1ed-ebd8f40f1fd8</StageGuid>
+				<Guid>d363980b-a05e-4529-a801-62ada6db03ab</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/SMTOWN/Sweet Impact/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>62239622</Score>
+				<PercentDP>0.580300</PercentDP>
+				<SurviveSeconds>124.517799</SurviveSeconds>
+				<MaxCombo>60</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-07-13 17:24:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>24</Miss>
+					<W5>14</W5>
+					<W4>46</W4>
+					<W3>115</W3>
+					<W2>112</W2>
+					<W1>102</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>74</Held>
+					<MissedHold>10</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b456c7ab-4bd8-462c-a8aa-4fa69a62d5e4</StageGuid>
+				<Guid>22543030-c92e-4c5a-abdd-80b1648f9179</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

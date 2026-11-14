@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/CAN&apos;T TAKE MY EYES OFF YOU (70&apos;s Remix)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>377521</Score>
+				<PercentDP>0.054100</PercentDP>
+				<SurviveSeconds>21.672150</SurviveSeconds>
+				<MaxCombo>20</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-06 19:26:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>4</W3>
+					<W2>3</W2>
+					<W1>14</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b5c759d9-551c-4ec0-a40f-e7fd41c844d6</StageGuid>
+				<Guid>eda26f20-bc55-4482-a5ca-a38ca9ff5c5b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

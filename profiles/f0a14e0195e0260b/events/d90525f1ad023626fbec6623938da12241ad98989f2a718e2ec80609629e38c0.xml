@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR X3 VS 2ndMIX (AC) (Japan)/Let&apos;s Get Away/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87984663</Score>
+				<PercentDP>0.786100</PercentDP>
+				<SurviveSeconds>116.719879</SurviveSeconds>
+				<MaxCombo>161</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-03-25 21:25:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>48</W3>
+					<W2>93</W2>
+					<W1>161</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>11</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>7d465e8b-20bc-43a7-a143-bc8cfb35f72c</StageGuid>
+				<Guid>fbe70754-49f3-4ef0-a099-25e8af832513</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

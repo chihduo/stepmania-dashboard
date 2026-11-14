@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/archer1122 Misc/Bon Bon Chocolat/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>87158447</Score>
+				<PercentDP>0.781500</PercentDP>
+				<SurviveSeconds>149.907745</SurviveSeconds>
+				<MaxCombo>285</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-20 21:09:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>63</W3>
+					<W2>130</W2>
+					<W1>202</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>be139a5f-e918-49a1-a838-168b85f2a115</StageGuid>
+				<Guid>fd248a72-b994-4682-a839-52a574165b88</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

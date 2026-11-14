@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/VIRTUAL FANTASY/Freedom/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>91733355</Score>
+				<PercentDP>0.838500</PercentDP>
+				<SurviveSeconds>126.303108</SurviveSeconds>
+				<MaxCombo>248</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-30 19:55:50</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>0</W4>
+					<W3>37</W3>
+					<W2>87</W2>
+					<W1>198</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>26</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f20c85bc-ad32-435d-ab04-265a38f3f73b</StageGuid>
+				<Guid>0b211a83-632a-4e78-a562-913dda4e89fc</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

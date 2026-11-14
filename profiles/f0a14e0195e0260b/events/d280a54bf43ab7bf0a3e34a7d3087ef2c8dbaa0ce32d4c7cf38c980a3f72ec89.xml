@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop/Gee (Noc.V Remix)/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>5406628</Score>
+				<PercentDP>0.183300</PercentDP>
+				<SurviveSeconds>61.266296</SurviveSeconds>
+				<MaxCombo>47</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-04-22 21:32:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>16</Miss>
+					<W5>6</W5>
+					<W4>6</W4>
+					<W3>43</W3>
+					<W2>44</W2>
+					<W1>77</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>93468faf-c3ad-4a24-a508-39a868174193</StageGuid>
+				<Guid>e177d316-2ef7-4eb9-a616-418ee3da4576</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

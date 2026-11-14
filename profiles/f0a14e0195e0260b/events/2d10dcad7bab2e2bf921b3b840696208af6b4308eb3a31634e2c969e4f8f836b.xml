@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Rolly Polly in Copagabana/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>80806973</Score>
+				<PercentDP>0.685200</PercentDP>
+				<SurviveSeconds>138.741013</SurviveSeconds>
+				<MaxCombo>116</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2023-01-19 18:10:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>12</Miss>
+					<W5>3</W5>
+					<W4>16</W4>
+					<W3>100</W3>
+					<W2>130</W2>
+					<W1>183</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>591d4954-54ff-4fc4-a7ec-fdb8513de3df</StageGuid>
+				<Guid>a2fa4827-00ec-4704-a799-10c55f286c16</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/BBoom BBoom/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>81269289</Score>
+				<PercentDP>0.687500</PercentDP>
+				<SurviveSeconds>105.273026</SurviveSeconds>
+				<MaxCombo>74</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-07-08 21:43:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>3</W5>
+					<W4>14</W4>
+					<W3>75</W3>
+					<W2>96</W2>
+					<W1>117</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>28157f70-1004-45ed-ade3-e6eca302f4dc</StageGuid>
+				<Guid>ab7af607-0af9-43ff-a5d6-9876b2db1490</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

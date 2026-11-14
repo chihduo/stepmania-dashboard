@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 1/Go Away/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>84791004</Score>
+				<PercentDP>0.785800</PercentDP>
+				<SurviveSeconds>136.352341</SurviveSeconds>
+				<MaxCombo>195</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-24 21:17:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>7</W4>
+					<W3>52</W3>
+					<W2>105</W2>
+					<W1>198</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>7</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>be0cf8d3-8db6-4076-a94c-facf4f27ab0a</StageGuid>
+				<Guid>99e1e19d-f41d-4823-a1f2-b7c5992ebf7d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

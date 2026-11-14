@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Mintmania/tmas/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>86294754</Score>
+				<PercentDP>0.719800</PercentDP>
+				<SurviveSeconds>112.426071</SurviveSeconds>
+				<MaxCombo>129</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-01-13 21:48:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>4</W5>
+					<W4>4</W4>
+					<W3>53</W3>
+					<W2>83</W2>
+					<W1>108</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>4</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>12e0ad52-3260-4de4-a6e1-66855e40fdde</StageGuid>
+				<Guid>46ccd22a-fa08-405a-ab93-955cafdeab96</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

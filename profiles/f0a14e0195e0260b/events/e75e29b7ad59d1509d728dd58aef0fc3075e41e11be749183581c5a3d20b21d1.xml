@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP Pack/rough/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>8654532</Score>
+				<PercentDP>0.192000</PercentDP>
+				<SurviveSeconds>74.540131</SurviveSeconds>
+				<MaxCombo>23</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-10-31 18:05:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>13</Miss>
+					<W5>7</W5>
+					<W4>25</W4>
+					<W3>57</W3>
+					<W2>49</W2>
+					<W1>41</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>79b30793-07d8-4aee-af70-3f9278b0d6f4</StageGuid>
+				<Guid>693bdecf-92c9-4838-a306-787e9b3dafbf</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

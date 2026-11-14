@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Ace Of Arrows Singles/Ai no Melody/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>255784957</Score>
+				<PercentDP>0.789400</PercentDP>
+				<SurviveSeconds>340.559113</SurviveSeconds>
+				<MaxCombo>184</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-05-31 21:24:51</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>19</Miss>
+					<W5>2</W5>
+					<W4>5</W4>
+					<W3>149</W3>
+					<W2>217</W2>
+					<W1>309</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>5</LetGo>
+					<Held>279</Held>
+					<MissedHold>6</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>66c07f6d-fd94-4a85-ae8d-450783311ef3</StageGuid>
+				<Guid>7673bf73-aced-4118-a96e-be21ad3ab033</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

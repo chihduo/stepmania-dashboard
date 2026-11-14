@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/Heart Shaker/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>89207536</Score>
+				<PercentDP>0.790000</PercentDP>
+				<SurviveSeconds>139.656097</SurviveSeconds>
+				<MaxCombo>195</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-05 21:19:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>4</Miss>
+					<W5>5</W5>
+					<W4>5</W4>
+					<W3>57</W3>
+					<W2>115</W2>
+					<W1>228</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>20</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2ac0b232-3366-4c70-a014-df50431d9635</StageGuid>
+				<Guid>aef0c410-1ffb-47e5-a503-3c4b9c104379</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

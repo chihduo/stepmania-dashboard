@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Extravaganza/Ishukan Communication/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>91024643</Score>
+				<PercentDP>0.825900</PercentDP>
+				<SurviveSeconds>99.014854</SurviveSeconds>
+				<MaxCombo>154</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-05 21:01:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>5</W4>
+					<W3>29</W3>
+					<W2>86</W2>
+					<W1>164</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ae36f0fc-ad13-4421-ab31-93a3f08ca474</StageGuid>
+				<Guid>459a9b94-3277-41f8-a5ae-6db6e54bce22</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

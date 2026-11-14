@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/NYOTERS Rhythm 2/I AM/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83783771</Score>
+				<PercentDP>0.760800</PercentDP>
+				<SurviveSeconds>123.253433</SurviveSeconds>
+				<MaxCombo>198</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-02 21:56:19</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>52</W3>
+					<W2>78</W2>
+					<W1>120</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>26</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>59084f25-4a6e-4dc5-ac31-9578c16f295f</StageGuid>
+				<Guid>79de1b02-4eab-4058-ab80-5a3ab26e0b6a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

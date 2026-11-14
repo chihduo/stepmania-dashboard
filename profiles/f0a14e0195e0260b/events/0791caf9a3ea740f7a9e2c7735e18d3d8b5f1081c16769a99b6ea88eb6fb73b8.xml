@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Touhou Pad Pack/Freezing On Me/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83713084</Score>
+				<PercentDP>0.766800</PercentDP>
+				<SurviveSeconds>118.976723</SurviveSeconds>
+				<MaxCombo>214</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-23 19:46:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>5</W4>
+					<W3>63</W3>
+					<W2>91</W2>
+					<W1>161</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>36407fe0-4948-42a4-ae39-a966e7193f4e</StageGuid>
+				<Guid>cc868508-4a3f-4aea-a1de-d68cd35bce86</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

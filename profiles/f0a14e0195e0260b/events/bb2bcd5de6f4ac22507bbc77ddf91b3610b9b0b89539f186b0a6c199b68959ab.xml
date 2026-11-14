@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/KPOP SHANERED/Dun Dun Dun - EVERGLOW/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>83957572</Score>
+				<PercentDP>0.775300</PercentDP>
+				<SurviveSeconds>135.981247</SurviveSeconds>
+				<MaxCombo>79</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-04-12 21:23:08</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>10</Miss>
+					<W5>12</W5>
+					<W4>9</W4>
+					<W3>57</W3>
+					<W2>113</W2>
+					<W1>160</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>131</Held>
+					<MissedHold>5</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b2dfe34b-e2e6-4d93-aa50-856d3458a78a</StageGuid>
+				<Guid>54ec4d80-47ea-4028-a12f-5a41eff37086</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

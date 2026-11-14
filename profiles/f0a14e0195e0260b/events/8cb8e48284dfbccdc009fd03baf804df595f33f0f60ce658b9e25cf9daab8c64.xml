@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Galaxy/Bad Guy/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88018130</Score>
+				<PercentDP>0.818100</PercentDP>
+				<SurviveSeconds>155.720978</SurviveSeconds>
+				<MaxCombo>152</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-11 19:59:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>1</W5>
+					<W4>6</W4>
+					<W3>35</W3>
+					<W2>109</W2>
+					<W1>235</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>21</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>de4895fe-5519-4c93-a8bc-1f06184cc196</StageGuid>
+				<Guid>70afeddd-cf95-4c16-a656-7865ab180b30</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

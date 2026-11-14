@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/PIU Fiesta/G32a Doin - Tepris/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>254622</Score>
+				<PercentDP>0.038900</PercentDP>
+				<SurviveSeconds>23.497185</SurviveSeconds>
+				<MaxCombo>19</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-07-17 23:19:09</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>5</W3>
+					<W2>6</W2>
+					<W1>8</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c7f6053e-479d-490d-a404-75dcec12bdf6</StageGuid>
+				<Guid>49e9a788-f69c-4e54-ad6c-4a0647d4b05d</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

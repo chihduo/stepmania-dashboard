@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Rajeious Epic Pack/Nonstop/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>277641</Score>
+				<PercentDP>0.041100</PercentDP>
+				<SurviveSeconds>31.735006</SurviveSeconds>
+				<MaxCombo>23</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2025-08-05 21:26:36</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>4</W5>
+					<W4>6</W4>
+					<W3>8</W3>
+					<W2>11</W2>
+					<W1>9</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>2</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>db7c20f1-2014-40ed-a68b-dac764631258</StageGuid>
+				<Guid>a240391b-1714-447e-a52e-42528199ae04</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

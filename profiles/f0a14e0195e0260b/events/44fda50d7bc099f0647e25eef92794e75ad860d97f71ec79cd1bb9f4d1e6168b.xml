@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Ace Of Arrows Singles/Kaede no Michi, Guitar no Kanaderu Oka De/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>246006266</Score>
+				<PercentDP>0.769600</PercentDP>
+				<SurviveSeconds>313.936584</SurviveSeconds>
+				<MaxCombo>90</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2022-12-22 18:17:33</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>15</Miss>
+					<W5>10</W5>
+					<W4>43</W4>
+					<W3>137</W3>
+					<W2>196</W2>
+					<W1>306</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>7</LetGo>
+					<Held>315</Held>
+					<MissedHold>7</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>77b8f6ae-07c0-4632-abf2-0fc0caad366c</StageGuid>
+				<Guid>9574a2f9-8219-472e-a0e0-c0f6a7c59f9f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

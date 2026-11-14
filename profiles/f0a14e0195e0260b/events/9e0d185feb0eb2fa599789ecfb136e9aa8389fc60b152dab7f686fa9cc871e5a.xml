@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/After School/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88100970</Score>
+				<PercentDP>0.783900</PercentDP>
+				<SurviveSeconds>143.111679</SurviveSeconds>
+				<MaxCombo>240</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-28 21:42:19</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>7</W5>
+					<W4>2</W4>
+					<W3>43</W3>
+					<W2>126</W2>
+					<W1>184</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>bdb0ce93-87e9-4e48-ab00-f7717708e5e3</StageGuid>
+				<Guid>c7d9db2f-0f04-40c1-a3b2-f8a12d35334a</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

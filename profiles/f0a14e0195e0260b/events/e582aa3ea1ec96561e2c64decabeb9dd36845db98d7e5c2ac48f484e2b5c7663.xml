@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/Lovesick Girls/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>90353957</Score>
+				<PercentDP>0.836900</PercentDP>
+				<SurviveSeconds>134.697159</SurviveSeconds>
+				<MaxCombo>215</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-26 19:55:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>36</W3>
+					<W2>109</W2>
+					<W1>241</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>20</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ae2324f7-4bb5-441a-a376-54b0d7628528</StageGuid>
+				<Guid>03ae50fc-606a-4a05-aecb-2267325f6212</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

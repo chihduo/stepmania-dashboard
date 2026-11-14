@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/Blue Sky [Canvas 2 PS2&amp;DVD OP][054]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>95219567</Score>
+				<PercentDP>0.886300</PercentDP>
+				<SurviveSeconds>104.896019</SurviveSeconds>
+				<MaxCombo>186</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-23 20:16:01</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>10</W3>
+					<W2>40</W2>
+					<W1>112</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>14</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d2d2adcd-5230-4a88-a8cd-a36de55bea08</StageGuid>
+				<Guid>61bea2b1-2e3b-47d6-adad-16fa0b3a8579</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

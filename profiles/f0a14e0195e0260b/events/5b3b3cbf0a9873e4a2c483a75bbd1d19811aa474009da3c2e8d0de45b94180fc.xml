@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Jubo Classics/BRAVE PHOENIX [Mahou Shoujo Lyrical Nanoha A&apos;s Ep12 INS][094]/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier03</Grade>
+				<Score>289059940</Score>
+				<PercentDP>0.919100</PercentDP>
+				<SurviveSeconds>329.994904</SurviveSeconds>
+				<MaxCombo>434</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-05-23 20:23:37</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>14</W3>
+					<W2>101</W2>
+					<W1>272</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>145</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ae0894ef-3e6d-494f-af14-cfc44f421de7</StageGuid>
+				<Guid>8be01334-254d-4696-a574-55f4ff07d346</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

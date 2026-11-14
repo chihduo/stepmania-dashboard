@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Kpop 2024/4 Walls/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>88009198</Score>
+				<PercentDP>0.814300</PercentDP>
+				<SurviveSeconds>130.276627</SurviveSeconds>
+				<MaxCombo>232</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-06-28 21:37:22</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>28</W3>
+					<W2>74</W2>
+					<W1>131</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d0fd3722-254f-4ff7-a94a-6656e3abafce</StageGuid>
+				<Guid>c960ae5f-ddf3-4eae-af35-1a2be40d3819</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
