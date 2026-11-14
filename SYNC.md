@@ -94,6 +94,12 @@ matches the selected profile; older records with empty PlayerGuid are also
 excluded. Check `skipped_other_profiles` in `Save/Dashboard/pending.json` and the
 PlayerGuid field in an older local upload XML. Retain the originals. Restoring
 files alone will not resolve a player-ID mismatch, and switching to the machine
-profile would fail the published dashboard's profile-identity check. Legacy
-ownership needs to be resolved deliberately before those records are included.
-The existing dashboard remains online when validation fails.
+profile would fail the published dashboard's profile-identity check.
+
+For an owner-confirmed migration from machine to named profile, a backed-up
+repair can assign blank PlayerGuid fields in the old logs to the named profile's
+GeneralData/Guid. The separate HighScore/Guid identifies the individual play and
+must stay unique and unchanged, along with StageGuid, dates, and scores. This
+works with the existing exporter and strict importer without a new preference.
+Merge the repaired files into Save/Upload and use Upload/Retry. The existing
+dashboard remains online until the repaired export passes preservation checks.

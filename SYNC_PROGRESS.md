@@ -8,7 +8,7 @@
 - [x] Pass nine importer tests and workflow YAML parsing locally.
 - [x] Verify the engine-generated export against this importer.
 - [x] Publish workflows, run hosted checks, and bootstrap the current live site.
-- [ ] Verify the first upload of the user's actual Windows profile (requires its local history and credential).
+- [ ] Complete the first successful Windows publication after the user installs the repaired logs and selects Upload/Retry.
 
 Hosted importer tests pass (run 43249599943), and the native C++ export passes through the Python importer. The live data matches the retained gh-pages snapshot byte-for-byte (SHA-256 b8a95cf6889675a436b622dddaeedace6106b95040dd2e97b15c45f8a9a98bed; 7,131 lifetime plays). Added main to the Pages environment and switched publishing to Actions. Bootstrap run 43251375360 succeeded. All 1,356 website assets, including 1,353 banners, match the previous snapshot exactly; four live banner URLs and the live data.json also match. The obsolete .nojekyll marker is unnecessary with the Actions deployment.
 The existing public site was republished unchanged; no new personal play records or raw Save files were uploaded. The native engine export has also been imported end to end with a real generated PNG banner, song metadata, profile/event records, ampersands and Unicode text.
@@ -35,7 +35,7 @@ Investigate the native song lookup separately, without a Windows build.
 - [x] Publish checkpoint a48c704; all 15 hosted importer tests pass in run
   43477814383. Live data remains byte-for-byte identical to the migration
   baseline (SHA-256 b8a95cf6889675a436b622dddaeedace6106b95040dd2e97b15c45f8a9a98bed).
-- [ ] Resolve the omitted legacy logs before publishing the user's new data.
+- [x] Resolve the omitted legacy logs using the owner-confirmed archive repair below.
 
 Older retained scores in the uploaded profile have no PlayerGuid. The native
 local-profile exporter excludes logs whose PlayerGuid does not match, including
@@ -52,3 +52,19 @@ IDs are both counted as skipped for a local profile. No Windows build was run.
 No publication retry was dispatched with the known-incomplete export; the user's
 older source logs and pending.json counter are needed to resolve the remaining
 history gap. The first actual Windows upload remains unverified for publication.
+
+## Verified direct log migration (2026-11-14)
+
+The owner confirmed a sole-player machine-to-named-profile migration and 5,203
+skipped records, then supplied the original archive for direct repair. Only blank
+PlayerGuid fields were changed in 5,203 song logs and 160 course logs. The 6,190
+unique event IDs and every other byte are preserved; the original archive is
+unchanged. A replacement ZIP contains all 6,309 active XML files and a hash report.
+No new game preference was added and no Windows build was run.
+
+The existing native exporter now emits 6,030 unique song events with zero skipped
+records. All 827 events already on dashboard-data are byte-identical. A full local
+import against the live baseline passes every preservation check, with 7,249
+lifetime plays and 6,030 song events (the baseline has 7,131 and 5,918). The output
+retains history back to April 2022. No real upload/publication was started; the
+owner will replace the local logs and choose Upload/Retry in the current game.
