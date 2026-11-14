@@ -8,7 +8,7 @@
 - [x] Pass nine importer tests and workflow YAML parsing locally.
 - [x] Verify the engine-generated export against this importer.
 - [x] Publish workflows, run hosted checks, and bootstrap the current live site.
-- [ ] Complete the first successful Windows publication after the user installs the repaired logs and selects Upload/Retry.
+- [x] Complete the first successful Windows publication after installing repaired logs: run 43550339204, data revision 7879e2d02bdab5b0873bbd5cb08b4f7ef283ef78.
 
 Hosted importer tests pass (run 43249599943), and the native C++ export passes through the Python importer. The live data matches the retained gh-pages snapshot byte-for-byte (SHA-256 b8a95cf6889675a436b622dddaeedace6106b95040dd2e97b15c45f8a9a98bed; 7,131 lifetime plays). Added main to the Pages environment and switched publishing to Actions. Bootstrap run 43251375360 succeeded. All 1,356 website assets, including 1,353 banners, match the previous snapshot exactly; four live banner URLs and the live data.json also match. The obsolete .nojekyll marker is unnecessary with the Actions deployment.
 The existing public site was republished unchanged; no new personal play records or raw Save files were uploaded. The native engine export has also been imported end to end with a real generated PNG banner, song metadata, profile/event records, ampersands and Unicode text.
@@ -68,3 +68,23 @@ import against the live baseline passes every preservation check, with 7,249
 lifetime plays and 6,030 song events (the baseline has 7,131 and 5,918). The output
 retains history back to April 2022. No real upload/publication was started; the
 owner will replace the local logs and choose Upload/Retry in the current game.
+
+## Missing-banner audit and backfill (2026-11-14)
+
+The first repaired upload succeeded, preserving 6,030 song events. Its export
+contains no song metadata/banner envelopes, so the live site uses the retained
+1,353 images. Audited the supplied Windows game folder: 1,110 songs lack images,
+including 29 recent rows (25 distinct songs). Corrected the manual builder's
+native cache discovery to Cache/Banner, with compatibility for staged
+Cache/Banners and explicit overrides. All 20 importer/cache tests pass.
+
+Prepared a local outbox patch with 354 recovered images from exact song matches,
+including 313 from Songs 2 and two video stills; nine backgrounds and four jackets
+replace unavailable dedicated banners. All recent rows have images after import.
+The remaining 756 records lack exact folders or usable artwork in this copy.
+The existing native exporter retains the patch, and a full local import passes
+all published-history checks. All 6,030 original event files, score lists, totals,
+and existing images are unchanged. The patch and detailed reports remain outside
+Git; no live data was uploaded or published. StepMania checkpoint a8e1474992 fixes
+the native cache lookup with a passing cached-image regression test. Windows
+builds remain deferred.

@@ -103,3 +103,19 @@ must stay unique and unchanged, along with StageGuid, dates, and scores. This
 works with the existing exporter and strict importer without a new preference.
 Merge the repaired files into Save/Upload and use Upload/Retry. The existing
 dashboard remains online until the repaired export passes preservation checks.
+
+## Missing song banners
+
+A successful statistics upload can still lack new artwork when its export has no
+song metadata. Previously published images remain available through the baseline
+fallback. The native game's cache is `Cache/Banner`; the manual builder detects
+that directory and also supports older bundles staged under `Cache/Banners`.
+An explicit `SM_BANNERS` setting still takes priority.
+
+Artwork from removed or archived songs can be recovered into a verified outbox
+patch using exact song-directory matches. Merge that patch into the active game's
+`Save/Dashboard/outbox` and choose Upload/Retry. The existing uploader retains
+metadata and image envelopes there, so a backfill does not require rewriting play
+logs. A video's still frame or the song's own jacket/background can supply an
+image where a dedicated banner is unavailable. Missing/renamed folders must be
+resolved from the corresponding song pack; do not associate images by title alone.

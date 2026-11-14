@@ -1096,13 +1096,14 @@ def resolve_cache_dir():
 
 
 def resolve_banners_dir(cache_songs_dir):
-    """Cache/Banners lives next to Cache/Songs."""
+    """Use the native Cache/Banner directory or an older staged Cache/Banners."""
     if os.environ.get("SM_BANNERS"):
         return os.environ["SM_BANNERS"]
     if cache_songs_dir:
-        cand = os.path.join(os.path.dirname(cache_songs_dir), "Banners")
-        if os.path.isdir(cand):
-            return cand
+        for name in ("Banner", "Banners"):
+            cand = os.path.join(os.path.dirname(cache_songs_dir), name)
+            if os.path.isdir(cand):
+                return cand
     return ""
 
 
