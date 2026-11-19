@@ -1,44 +1,44 @@
 
 <Stats>
 	<GeneralData>
-		<DisplayName/>
+		<DisplayName>ericpony</DisplayName>
 		<IsMachine>0</IsMachine>
 		<Guid>f0a14e0195e0260b</Guid>
 		<TotalSessions>1191</TotalSessions>
-		<TotalSessionSeconds>5543567</TotalSessionSeconds>
-		<TotalGameplaySeconds>833561</TotalGameplaySeconds>
-		<TotalCaloriesBurned>135510.937500</TotalCaloriesBurned>
-		<LastPlayedDate>2026-11-13</LastPlayedDate>
-		<TotalDancePoints>4931921</TotalDancePoints>
-		<TotalTapsAndHolds>1950997</TotalTapsAndHolds>
-		<TotalJumps>148928</TotalJumps>
-		<TotalHolds>161395</TotalHolds>
-		<TotalRolls>1304</TotalRolls>
-		<TotalMines>3644</TotalMines>
+		<TotalSessionSeconds>5546365</TotalSessionSeconds>
+		<TotalGameplaySeconds>835575</TotalGameplaySeconds>
+		<TotalCaloriesBurned>135834.218750</TotalCaloriesBurned>
+		<LastPlayedDate>2026-11-19</LastPlayedDate>
+		<TotalDancePoints>4944985</TotalDancePoints>
+		<TotalTapsAndHolds>1955812</TotalTapsAndHolds>
+		<TotalJumps>149371</TotalJumps>
+		<TotalHolds>162065</TotalHolds>
+		<TotalRolls>1308</TotalRolls>
+		<TotalMines>3707</TotalMines>
 		<TotalHands>66</TotalHands>
 		<TotalLifts>0</TotalLifts>
 		<NumSongsPlayedByStyle>
-			<Style Game='dance' Style='single'>7246</Style>
+			<Style Game='dance' Style='single'>7263</Style>
 			<Style Game='dance' Style='solo'>1</Style>
 			<Style Game='dance' Style='threepanel'>1</Style>
 			<Style Game='pump' Style='single'>1</Style>
 		</NumSongsPlayedByStyle>
 		<NumSongsPlayedByDifficulty>
 			<Easy>44</Easy>
-			<Medium>4428</Medium>
-			<Hard>2697</Hard>
+			<Medium>4437</Medium>
+			<Hard>2705</Hard>
 			<Challenge>68</Challenge>
 			<Edit>12</Edit>
 		</NumSongsPlayedByDifficulty>
-		<NumTotalSongsPlayed>7249</NumTotalSongsPlayed>
+		<NumTotalSongsPlayed>7266</NumTotalSongsPlayed>
 		<NumStagesPassedByGrade>
 			<Tier03>977</Tier03>
 			<Tier04>3048</Tier04>
-			<Tier05>1090</Tier05>
-			<Tier06>270</Tier06>
-			<Tier07>195</Tier07>
-			<Tier08>85</Tier08>
-			<Tier09>58</Tier09>
+			<Tier05>1091</Tier05>
+			<Tier06>274</Tier06>
+			<Tier07>204</Tier07>
+			<Tier08>86</Tier08>
+			<Tier09>60</Tier09>
 			<Tier10>35</Tier10>
 			<Tier11>18</Tier11>
 			<Tier12>6</Tier12>
@@ -6770,8 +6770,8 @@
 		<Song Dir='Songs/Anime Extravaganza/Brave Shine/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>3</NumTimesPlayed>
-					<LastPlayed>2026-09-21</LastPlayed>
+					<NumTimesPlayed>4</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>92684335</Score>
@@ -6826,14 +6826,41 @@
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
+					<HighScore>
+						<Grade>Tier06</Grade>
+						<Score>87612177</Score>
+						<PercentDP>0.807000</PercentDP>
+						<SurviveSeconds>96.101120</SurviveSeconds>
+						<MaxCombo>150</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 21:52:08</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>2</W5>
+							<W4>2</W4>
+							<W3>39</W3>
+							<W2>75</W2>
+							<W1>103</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>64</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 				</HighScoreList>
 			</Steps>
 		</Song>
 		<Song Dir='Songs/Anime Extravaganza/Click/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2026-09-21</LastPlayed>
+					<NumTimesPlayed>3</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>95542492</Score>
@@ -6888,14 +6915,68 @@
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
+					<HighScore>
+						<Grade>Tier06</Grade>
+						<Score>89995462</Score>
+						<PercentDP>0.794300</PercentDP>
+						<SurviveSeconds>94.462418</SurviveSeconds>
+						<MaxCombo>115</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 21:54:00</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>2</W4>
+							<W3>33</W3>
+							<W2>81</W2>
+							<W1>104</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>28</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 				</HighScoreList>
 			</Steps>
 		</Song>
 		<Song Dir='Songs/Anime Extravaganza/Connect/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>3</NumTimesPlayed>
-					<LastPlayed>2026-01-31</LastPlayed>
+					<NumTimesPlayed>4</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
+					<HighScore>
+						<Grade>Tier05</Grade>
+						<Score>94022376</Score>
+						<PercentDP>0.835900</PercentDP>
+						<SurviveSeconds>96.427307</SurviveSeconds>
+						<MaxCombo>249</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 21:55:53</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>1</W4>
+							<W3>24</W3>
+							<W2>75</W2>
+							<W1>142</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>14</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>92624639</Score>
@@ -6950,41 +7031,14 @@
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>85492763</Score>
-						<PercentDP>0.740800</PercentDP>
-						<SurviveSeconds>95.441010</SurviveSeconds>
-						<MaxCombo>80</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2026-01-19 21:00:19</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>0</Miss>
-							<W5>2</W5>
-							<W4>6</W4>
-							<W3>47</W3>
-							<W2>81</W2>
-							<W1>106</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>14</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
 				</HighScoreList>
 			</Steps>
 		</Song>
 		<Song Dir='Songs/Anime Extravaganza/DAYS of DASH/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2026-09-21</LastPlayed>
+					<NumTimesPlayed>3</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier07</Grade>
 						<Score>91548192</Score>
@@ -7004,6 +7058,33 @@
 							<W3>31</W3>
 							<W2>70</W2>
 							<W1>140</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>24</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
+						<Grade>Tier07</Grade>
+						<Score>88665895</Score>
+						<PercentDP>0.798200</PercentDP>
+						<SurviveSeconds>90.557686</SurviveSeconds>
+						<MaxCombo>96</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 21:58:06</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>2</W5>
+							<W4>3</W4>
+							<W3>42</W3>
+							<W2>65</W2>
+							<W1>135</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -7036,6 +7117,84 @@
 						<HoldNoteScores>
 							<LetGo>0</LetGo>
 							<Held>24</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+				</HighScoreList>
+			</Steps>
+		</Song>
+		<Song Dir='Songs/Anime Extravaganza/Daisy/'>
+			<Steps Difficulty='Hard' StepsType='dance-single'>
+				<HighScoreList>
+					<NumTimesPlayed>1</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
+				</HighScoreList>
+			</Steps>
+		</Song>
+		<Song Dir='Songs/Anime Extravaganza/Duvet/'>
+			<Steps Difficulty='Hard' StepsType='dance-single'>
+				<HighScoreList>
+					<NumTimesPlayed>1</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
+					<HighScore>
+						<Grade>Tier06</Grade>
+						<Score>88267926</Score>
+						<PercentDP>0.770800</PercentDP>
+						<SurviveSeconds>110.646851</SurviveSeconds>
+						<MaxCombo>213</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 22:00:15</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>1</W5>
+							<W4>3</W4>
+							<W3>57</W3>
+							<W2>118</W2>
+							<W1>135</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>41</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+				</HighScoreList>
+			</Steps>
+		</Song>
+		<Song Dir='Songs/Anime Extravaganza/EXiSTENCE/'>
+			<Steps Difficulty='Hard' StepsType='dance-single'>
+				<HighScoreList>
+					<NumTimesPlayed>1</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
+					<HighScore>
+						<Grade>Tier08</Grade>
+						<Score>82707183</Score>
+						<PercentDP>0.740600</PercentDP>
+						<SurviveSeconds>99.414879</SurviveSeconds>
+						<MaxCombo>85</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 22:02:15</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>1</Miss>
+							<W5>1</W5>
+							<W4>23</W4>
+							<W3>62</W3>
+							<W2>92</W2>
+							<W1>158</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>37</Held>
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
@@ -135872,8 +136031,8 @@
 		<Song Dir='Songs/Touhou Pad Pack/Alice Dere/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-09-14</LastPlayed>
+					<NumTimesPlayed>6</NumTimesPlayed>
+					<LastPlayed>2026-11-16</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>93574434</Score>
@@ -136431,8 +136590,8 @@
 		<Song Dir='Songs/Touhou Pad Pack/Doll Judgement/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-09-05</LastPlayed>
+					<NumTimesPlayed>8</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>93867327</Score>
@@ -136652,8 +136811,8 @@
 		<Song Dir='Songs/Touhou Pad Pack/Fires of Hokkai/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>1</NumTimesPlayed>
-					<LastPlayed>2026-08-22</LastPlayed>
+					<NumTimesPlayed>2</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>93863582</Score>
@@ -136673,6 +136832,33 @@
 							<W3>13</W3>
 							<W2>44</W2>
 							<W1>119</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>13</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
+						<Grade>Tier07</Grade>
+						<Score>86804126</Score>
+						<PercentDP>0.756400</PercentDP>
+						<SurviveSeconds>106.442383</SurviveSeconds>
+						<MaxCombo>112</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 21:32:35</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>1</W5>
+							<W4>2</W4>
+							<W3>38</W3>
+							<W2>56</W2>
+							<W1>83</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -137041,6 +137227,41 @@
 				</HighScoreList>
 			</Steps>
 		</Song>
+		<Song Dir='Songs/Touhou Pad Pack/JULIANA&apos;S SHANGHAI [CondorTalon]/'>
+			<Steps Difficulty='Medium' StepsType='dance-single'>
+				<HighScoreList>
+					<NumTimesPlayed>1</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
+					<HighScore>
+						<Grade>Tier07</Grade>
+						<Score>90252426</Score>
+						<PercentDP>0.793700</PercentDP>
+						<SurviveSeconds>134.874130</SurviveSeconds>
+						<MaxCombo>239</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 21:35:28</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>1</W5>
+							<W4>1</W4>
+							<W3>50</W3>
+							<W2>97</W2>
+							<W1>164</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>15</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+				</HighScoreList>
+			</Steps>
+		</Song>
 		<Song Dir='Songs/Touhou Pad Pack/Love-Coloured Master Spark/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
@@ -137180,8 +137401,8 @@
 		<Song Dir='Songs/Touhou Pad Pack/Marisa Stole the Precious Thing/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-09-14</LastPlayed>
+					<NumTimesPlayed>5</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>94809691</Score>
@@ -137302,8 +137523,35 @@
 		<Song Dir='Songs/Touhou Pad Pack/Miracle Hinacle/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2022-07-28</LastPlayed>
+					<NumTimesPlayed>3</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
+					<HighScore>
+						<Grade>Tier06</Grade>
+						<Score>93376619</Score>
+						<PercentDP>0.835200</PercentDP>
+						<SurviveSeconds>143.992722</SurviveSeconds>
+						<MaxCombo>170</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-19 21:40:47</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>1</Miss>
+							<W5>0</W5>
+							<W4>4</W4>
+							<W3>31</W3>
+							<W2>95</W2>
+							<W1>188</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>1</LetGo>
+							<Held>34</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>88283132</Score>
@@ -137432,8 +137680,8 @@
 		<Song Dir='Songs/Touhou Pad Pack/Mystic Oriental Dream ~ Ancient Temple/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-09-14</LastPlayed>
+					<NumTimesPlayed>6</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier06</Grade>
 						<Score>90023412</Score>
@@ -138167,8 +138415,8 @@
 		<Song Dir='Songs/Touhou Pad Pack/UN Owen Was Her/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-09-14</LastPlayed>
+					<NumTimesPlayed>10</NumTimesPlayed>
+					<LastPlayed>2026-11-19</LastPlayed>
 					<HighScore>
 						<Grade>Tier08</Grade>
 						<Score>89687157</Score>
@@ -159956,5 +160204,7 @@
 		<CaloriesBurned Date='2026-11-11'>484.671661</CaloriesBurned>
 		<CaloriesBurned Date='2026-11-12'>540.357971</CaloriesBurned>
 		<CaloriesBurned Date='2026-11-13'>384.373108</CaloriesBurned>
+		<CaloriesBurned Date='2026-11-16'>78.007812</CaloriesBurned>
+		<CaloriesBurned Date='2026-11-19'>245.262604</CaloriesBurned>
 	</CalorieData>
 </Stats>
