@@ -8,7 +8,7 @@
 - [x] Pass nine importer tests and workflow YAML parsing locally.
 - [x] Verify the engine-generated export against this importer.
 - [x] Publish workflows, run hosted checks, and bootstrap the current live site.
-- [x] Complete the first successful Windows publication after installing repaired logs: run 43550339204, data revision 7879e2d02bdab5b0873bbd5cb08b4f7ef283ef78.
+- [x] Confirm successful publication in run 43550339204, data revision 7879e2d02bdab5b0873bbd5cb08b4f7ef283ef78. The owner later clarified that the separate log-repair ZIP had not been installed.
 
 Hosted importer tests pass (run 43249599943), and the native C++ export passes through the Python importer. The live data matches the retained gh-pages snapshot byte-for-byte (SHA-256 b8a95cf6889675a436b622dddaeedace6106b95040dd2e97b15c45f8a9a98bed; 7,131 lifetime plays). Added main to the Pages environment and switched publishing to Actions. Bootstrap run 43251375360 succeeded. All 1,356 website assets, including 1,353 banners, match the previous snapshot exactly; four live banner URLs and the live data.json also match. The obsolete .nojekyll marker is unnecessary with the Actions deployment.
 The existing public site was republished unchanged; no new personal play records or raw Save files were uploaded. The native engine export has also been imported end to end with a real generated PNG banner, song metadata, profile/event records, ampersands and Unicode text.
@@ -35,7 +35,7 @@ Investigate the native song lookup separately, without a Windows build.
 - [x] Publish checkpoint a48c704; all 15 hosted importer tests pass in run
   43477814383. Live data remains byte-for-byte identical to the migration
   baseline (SHA-256 b8a95cf6889675a436b622dddaeedace6106b95040dd2e97b15c45f8a9a98bed).
-- [x] Resolve the omitted legacy logs using the owner-confirmed archive repair below.
+- [x] Prepare and locally verify the owner-confirmed legacy-log repair below; installation was not confirmed.
 
 Older retained scores in the uploaded profile have no PlayerGuid. The native
 local-profile exporter excludes logs whose PlayerGuid does not match, including
@@ -71,7 +71,7 @@ owner will replace the local logs and choose Upload/Retry in the current game.
 
 ## Missing-banner audit and backfill (2026-11-14)
 
-The first repaired upload succeeded, preserving 6,030 song events. Its export
+Upload run 43550339204 succeeded, preserving 6,030 song events; it does not confirm installation of the separate log-repair ZIP. Its export
 contains no song metadata/banner envelopes, so the live site uses the retained
 1,353 images. Audited the supplied Windows game folder: 1,110 songs lack images,
 including 29 recent rows (25 distinct songs). Corrected the manual builder's
@@ -88,3 +88,14 @@ and existing images are unchanged. The patch and detailed reports remain outside
 Git; no live data was uploaded or published. StepMania checkpoint a8e1474992 fixes
 the native cache lookup with a passing cached-image regression test. Windows
 builds remain deferred.
+
+
+## Temporary Pages download failure (2026-11-20)
+
+Run `44749866449` accepted data revision `79e288e44c21776e5beeba4c8d02bd7cf8deffe5`, then failed while fetching a retained banner from the live Pages baseline with HTTP 503. The builder/history-validation and deployment steps never ran. The previous site remains online at revision `94b9eb657ce0d140481ea5ba31ef105be85eaa02`, with 7,266 lifetime plays and 6,047 recorded song events. Its data.json SHA-256 is `a73222d12172d1b5549c6fe5d8c527f54d340a0d7f64c63f7dcf7d07dceb64c0`.
+
+Plan: retry temporary HTTP/network errors with a bounded delay and clear asset diagnostics, keep permanent/oversized failures and all history checks strict, add focused fault-injection tests, and validate the exact accepted export against the live baseline. Commit/publish the reviewed server-side fix, then rebuild the existing accepted upload and verify the live revision and preserved history. No Windows build or local Save changes. Evidence stays outside Git under `/tmp/stepmania-dashboard-run-44749866449/`.
+
+Implemented five-attempt baseline downloads with bounded exponential delay, capped Retry-After support and diagnostics identifying the failing URL. Permanent HTTP errors and size limits remain strict; exhausted banner downloads still fail the baseline step. All 30 tests pass, including ten new download tests covering 503 recovery, temporary/permanent status handling, network and response-read interruptions, retry limits, Retry-After seconds/dates, size limits and failure without a partial banner. Full accepted-upload validation completed below.
+
+The exact accepted revision passes the importer and all history checks against the current live data.json: 7,281 lifetime plays and 6,062 recorded song events, each 15 higher than the published site. Git confirms all 15 new events are dated November 20 and no older event, song metadata or banner changed. All 2,467 song-to-banner references remain unchanged. Local verification fetched 312 historical images directly, matched them byte-for-byte to the retained cache, and reused the remaining 1,041 cached images; all 1,353 retained output images match. The production workflow still fetches its required images from Pages. The tested server-side change is ready for publication and a rebuild of the already accepted upload.

@@ -80,6 +80,22 @@ The game keeps its export under `Save/Dashboard/outbox/`. To troubleshoot a reje
 upload, open the workflow log. Repair the missing data locally and select the game
 menu option again. A workflow failure never means the local scores were deleted.
 
+## Temporary publication failures
+
+An upload may already be accepted on `dashboard-data` when the publication job
+fails to download the current Pages history or a retained song banner. The
+baseline downloader retries temporary HTTP errors (408, 429, 500, 502, 503 and
+504), timeouts and interrupted connections up to five attempts. Delays increase
+between attempts; a server's Retry-After value is used up to a 30-second limit.
+Retry messages identify the affected URL.
+
+Missing/forbidden files and oversized responses still fail immediately. If all
+attempts fail, the workflow stops before building or deploying; it does not omit
+the missing banner or bypass history validation. The current dashboard stays
+online. Select **Upload / Retry** after the temporary service problem clears to
+retry publication without duplicating plays. This server-side recovery requires
+no Windows executable update or changes to local profile/log files.
+
 ## Legacy saves and rejected uploads
 
 Cumulative profiles can contain calibration scores under
