@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Butterfly/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>94541218</Score>
+				<PercentDP>0.861400</PercentDP>
+				<SurviveSeconds>114.510513</SurviveSeconds>
+				<MaxCombo>323</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-20 21:51:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>17</W3>
+					<W2>79</W2>
+					<W1>144</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>38</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>197c8c29-587a-4048-ac39-18005dd409d3</StageGuid>
+				<Guid>7dc79b92-9a16-43bc-ad2e-d7126cf00dec</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

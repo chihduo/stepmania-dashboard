@@ -5,42 +5,42 @@
 		<IsMachine>0</IsMachine>
 		<Guid>f0a14e0195e0260b</Guid>
 		<TotalSessions>1191</TotalSessions>
-		<TotalSessionSeconds>5546365</TotalSessionSeconds>
-		<TotalGameplaySeconds>835575</TotalGameplaySeconds>
-		<TotalCaloriesBurned>135834.218750</TotalCaloriesBurned>
-		<LastPlayedDate>2026-11-19</LastPlayedDate>
-		<TotalDancePoints>4944985</TotalDancePoints>
-		<TotalTapsAndHolds>1955812</TotalTapsAndHolds>
-		<TotalJumps>149371</TotalJumps>
-		<TotalHolds>162065</TotalHolds>
+		<TotalSessionSeconds>5548911</TotalSessionSeconds>
+		<TotalGameplaySeconds>837260</TotalGameplaySeconds>
+		<TotalCaloriesBurned>136061.750000</TotalCaloriesBurned>
+		<LastPlayedDate>2026-11-20</LastPlayedDate>
+		<TotalDancePoints>4954483</TotalDancePoints>
+		<TotalTapsAndHolds>1959473</TotalTapsAndHolds>
+		<TotalJumps>149822</TotalJumps>
+		<TotalHolds>162396</TotalHolds>
 		<TotalRolls>1308</TotalRolls>
 		<TotalMines>3707</TotalMines>
 		<TotalHands>66</TotalHands>
 		<TotalLifts>0</TotalLifts>
 		<NumSongsPlayedByStyle>
-			<Style Game='dance' Style='single'>7263</Style>
+			<Style Game='dance' Style='single'>7278</Style>
 			<Style Game='dance' Style='solo'>1</Style>
 			<Style Game='dance' Style='threepanel'>1</Style>
 			<Style Game='pump' Style='single'>1</Style>
 		</NumSongsPlayedByStyle>
 		<NumSongsPlayedByDifficulty>
 			<Easy>44</Easy>
-			<Medium>4437</Medium>
-			<Hard>2705</Hard>
+			<Medium>4450</Medium>
+			<Hard>2707</Hard>
 			<Challenge>68</Challenge>
 			<Edit>12</Edit>
 		</NumSongsPlayedByDifficulty>
-		<NumTotalSongsPlayed>7266</NumTotalSongsPlayed>
+		<NumTotalSongsPlayed>7281</NumTotalSongsPlayed>
 		<NumStagesPassedByGrade>
-			<Tier03>977</Tier03>
-			<Tier04>3048</Tier04>
-			<Tier05>1091</Tier05>
-			<Tier06>274</Tier06>
-			<Tier07>204</Tier07>
-			<Tier08>86</Tier08>
-			<Tier09>60</Tier09>
+			<Tier03>978</Tier03>
+			<Tier04>3051</Tier04>
+			<Tier05>1093</Tier05>
+			<Tier06>276</Tier06>
+			<Tier07>205</Tier07>
+			<Tier08>89</Tier08>
+			<Tier09>61</Tier09>
 			<Tier10>35</Tier10>
-			<Tier11>18</Tier11>
+			<Tier11>19</Tier11>
 			<Tier12>6</Tier12>
 			<Tier13>6</Tier13>
 			<Tier14>1</Tier14>
@@ -36333,8 +36333,8 @@
 		<Song Dir='Songs/DDR POP/APT/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2026-05-28</LastPlayed>
+					<NumTimesPlayed>4</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>92373668</Score>
@@ -36359,6 +36359,33 @@
 						<HoldNoteScores>
 							<LetGo>0</LetGo>
 							<Held>32</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
+						<Grade>Tier06</Grade>
+						<Score>90636703</Score>
+						<PercentDP>0.820700</PercentDP>
+						<SurviveSeconds>149.009933</SurviveSeconds>
+						<MaxCombo>176</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:25:09</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>2</W5>
+							<W4>1</W4>
+							<W3>36</W3>
+							<W2>119</W2>
+							<W1>193</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>2</LetGo>
+							<Held>30</Held>
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
@@ -36523,8 +36550,8 @@
 		<Song Dir='Songs/DDR POP/Adios/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>11</NumTimesPlayed>
-					<LastPlayed>2026-10-06</LastPlayed>
+					<NumTimesPlayed>12</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>94812771</Score>
@@ -36553,6 +36580,33 @@
 						</HoldNoteScores>
 					</HighScore>
 					<HighScore>
+						<Grade>Tier05</Grade>
+						<Score>92436829</Score>
+						<PercentDP>0.831900</PercentDP>
+						<SurviveSeconds>112.577789</SurviveSeconds>
+						<MaxCombo>203</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:21:55</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>3</W4>
+							<W3>22</W3>
+							<W2>69</W2>
+							<W1>136</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>12</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>92064643</Score>
 						<PercentDP>0.825000</PercentDP>
@@ -36571,33 +36625,6 @@
 							<W3>24</W3>
 							<W2>76</W2>
 							<W1>129</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>12</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>88534505</Score>
-						<PercentDP>0.779600</PercentDP>
-						<SurviveSeconds>111.643089</SurviveSeconds>
-						<MaxCombo>146</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2022-07-29 18:24:12</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>0</Miss>
-							<W5>0</W5>
-							<W4>1</W4>
-							<W3>43</W3>
-							<W2>71</W2>
-							<W1>115</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -36767,8 +36794,8 @@
 		<Song Dir='Songs/DDR POP/As If It_s Your Last/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>7</NumTimesPlayed>
-					<LastPlayed>2026-05-28</LastPlayed>
+					<NumTimesPlayed>10</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>84871885</Score>
@@ -36824,105 +36851,24 @@
 						</HoldNoteScores>
 					</HighScore>
 					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>81702102</Score>
-						<PercentDP>0.739700</PercentDP>
-						<SurviveSeconds>143.719772</SurviveSeconds>
-						<MaxCombo>87</MaxCombo>
+						<Grade>Tier08</Grade>
+						<Score>83472663</Score>
+						<PercentDP>0.733500</PercentDP>
+						<SurviveSeconds>144.870361</SurviveSeconds>
+						<MaxCombo>85</MaxCombo>
 						<Modifiers>Overhead</Modifiers>
-						<DateTime>2023-02-12 17:26:39</DateTime>
-						<PlayerGuid/>
+						<DateTime>2026-11-20 21:27:55</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
 						<TapNoteScores>
 							<HitMine>0</HitMine>
 							<AvoidMine>0</AvoidMine>
 							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>3</Miss>
+							<Miss>0</Miss>
 							<W5>3</W5>
-							<W4>10</W4>
-							<W3>68</W3>
-							<W2>105</W2>
-							<W1>165</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>1</LetGo>
-							<Held>19</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier05</Grade>
-						<Score>79284424</Score>
-						<PercentDP>0.721900</PercentDP>
-						<SurviveSeconds>143.717560</SurviveSeconds>
-						<MaxCombo>106</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2024-02-03 20:21:49</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>6</Miss>
-							<W5>4</W5>
-							<W4>12</W4>
-							<W3>65</W3>
-							<W2>113</W2>
-							<W1>154</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>1</LetGo>
-							<Held>19</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>78733567</Score>
-						<PercentDP>0.722800</PercentDP>
-						<SurviveSeconds>143.720154</SurviveSeconds>
-						<MaxCombo>142</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2024-02-03 20:19:13</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>1</Miss>
-							<W5>5</W5>
-							<W4>12</W4>
-							<W3>75</W3>
-							<W2>101</W2>
-							<W1>160</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>2</LetGo>
-							<Held>18</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier05</Grade>
-						<Score>78464610</Score>
-						<PercentDP>0.663900</PercentDP>
-						<SurviveSeconds>143.718048</SurviveSeconds>
-						<MaxCombo>65</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2024-02-03 20:16:18</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>8</Miss>
-							<W5>5</W5>
-							<W4>16</W4>
-							<W3>92</W3>
-							<W2>106</W2>
-							<W1>127</W1>
+							<W4>7</W4>
+							<W3>80</W3>
+							<W2>109</W2>
+							<W1>155</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -36931,41 +36877,41 @@
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
-					<HighScore>
-						<Grade>Tier06</Grade>
-						<Score>69436132</Score>
-						<PercentDP>0.623800</PercentDP>
-						<SurviveSeconds>143.722244</SurviveSeconds>
-						<MaxCombo>36</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2024-05-12 22:01:43</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>14</Miss>
-							<W5>22</W5>
-							<W4>23</W4>
-							<W3>71</W3>
-							<W2>97</W2>
-							<W1>127</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>1</LetGo>
-							<Held>18</Held>
-							<MissedHold>1</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
 				</HighScoreList>
 			</Steps>
 		</Song>
 		<Song Dir='Songs/DDR POP/Astrogation/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>5</NumTimesPlayed>
-					<LastPlayed>2026-10-06</LastPlayed>
+					<NumTimesPlayed>6</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
+					<HighScore>
+						<Grade>Tier04</Grade>
+						<Score>93937307</Score>
+						<PercentDP>0.869700</PercentDP>
+						<SurviveSeconds>124.860863</SurviveSeconds>
+						<MaxCombo>176</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:36:19</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>1</Miss>
+							<W5>0</W5>
+							<W4>0</W4>
+							<W3>18</W3>
+							<W2>86</W2>
+							<W1>167</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>48</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 					<HighScore>
 						<Grade>Tier06</Grade>
 						<Score>92759346</Score>
@@ -37017,33 +36963,6 @@
 						<HoldNoteScores>
 							<LetGo>2</LetGo>
 							<Held>46</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier03</Grade>
-						<Score>89423321</Score>
-						<PercentDP>0.814500</PercentDP>
-						<SurviveSeconds>123.967171</SurviveSeconds>
-						<MaxCombo>227</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2022-07-29 18:29:34</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>0</Miss>
-							<W5>0</W5>
-							<W4>1</W4>
-							<W3>39</W3>
-							<W2>97</W2>
-							<W1>135</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>48</Held>
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
@@ -37216,8 +37135,35 @@
 		<Song Dir='Songs/DDR POP/BBoom BBoom/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2022-06-25</LastPlayed>
+					<NumTimesPlayed>3</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
+					<HighScore>
+						<Grade>Tier03</Grade>
+						<Score>95539854</Score>
+						<PercentDP>0.887500</PercentDP>
+						<SurviveSeconds>137.160080</SurviveSeconds>
+						<MaxCombo>244</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:42:27</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>0</W4>
+							<W3>7</W3>
+							<W2>69</W2>
+							<W1>167</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>3</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>91656625</Score>
@@ -37249,8 +37195,35 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2025-08-10</LastPlayed>
+					<NumTimesPlayed>5</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
+					<HighScore>
+						<Grade>Failed</Grade>
+						<Score>281309</Score>
+						<PercentDP>0.040600</PercentDP>
+						<SurviveSeconds>20.416061</SurviveSeconds>
+						<MaxCombo>16</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:43:02</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>8</Miss>
+							<W5>1</W5>
+							<W4>1</W4>
+							<W3>8</W3>
+							<W2>8</W2>
+							<W1>12</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>1</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 				</HighScoreList>
 			</Steps>
 		</Song>
@@ -37443,8 +37416,8 @@
 		<Song Dir='Songs/DDR POP/BYE BYE BABY BALLOON/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>43</NumTimesPlayed>
-					<LastPlayed>2026-10-06</LastPlayed>
+					<NumTimesPlayed>44</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>92437595</Score>
@@ -37625,8 +37598,8 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-10-06</LastPlayed>
+					<NumTimesPlayed>6</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>92436315</Score>
@@ -37749,8 +37722,8 @@
 		<Song Dir='Songs/DDR POP/Baby I_m Yours/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>11</NumTimesPlayed>
-					<LastPlayed>2025-08-10</LastPlayed>
+					<NumTimesPlayed>14</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>87612961</Score>
@@ -37797,6 +37770,33 @@
 							<W3>62</W3>
 							<W2>103</W2>
 							<W1>121</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>64</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
+						<Grade>Tier08</Grade>
+						<Score>84021379</Score>
+						<PercentDP>0.735900</PercentDP>
+						<SurviveSeconds>113.201576</SurviveSeconds>
+						<MaxCombo>96</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:39:41</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>1</Miss>
+							<W5>1</W5>
+							<W4>5</W4>
+							<W3>90</W3>
+							<W2>85</W2>
+							<W1>115</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -38712,8 +38712,8 @@
 		<Song Dir='Songs/DDR POP/Bubble Pop!/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>19</NumTimesPlayed>
-					<LastPlayed>2026-06-08</LastPlayed>
+					<NumTimesPlayed>22</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>177210886</Score>
@@ -39058,8 +39058,35 @@
 		<Song Dir='Songs/DDR POP/Butterflies/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2023-03-19</LastPlayed>
+					<NumTimesPlayed>3</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
+					<HighScore>
+						<Grade>Tier04</Grade>
+						<Score>96004986</Score>
+						<PercentDP>0.884100</PercentDP>
+						<SurviveSeconds>143.386536</SurviveSeconds>
+						<MaxCombo>253</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:49:00</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>0</W4>
+							<W3>14</W3>
+							<W2>61</W2>
+							<W1>167</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>14</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>90968513</Score>
@@ -39120,8 +39147,35 @@
 		<Song Dir='Songs/DDR POP/Butterfly/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>5</NumTimesPlayed>
-					<LastPlayed>2025-06-21</LastPlayed>
+					<NumTimesPlayed>6</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
+					<HighScore>
+						<Grade>Tier04</Grade>
+						<Score>94541218</Score>
+						<PercentDP>0.861400</PercentDP>
+						<SurviveSeconds>114.510513</SurviveSeconds>
+						<MaxCombo>323</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:51:11</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>1</W5>
+							<W4>0</W4>
+							<W3>17</W3>
+							<W2>79</W2>
+							<W1>144</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>38</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>91835385</Score>
@@ -40333,8 +40387,8 @@
 		<Song Dir='Songs/DDR POP/Cruel Angel_s Thesis (Evangelion S^2 works instrumental)/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>3</NumTimesPlayed>
-					<LastPlayed>2026-10-06</LastPlayed>
+					<NumTimesPlayed>4</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>91576172</Score>
@@ -40387,6 +40441,33 @@
 							<LetGo>1</LetGo>
 							<Held>47</Held>
 							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
+						<Grade>Tier08</Grade>
+						<Score>83479184</Score>
+						<PercentDP>0.778100</PercentDP>
+						<SurviveSeconds>98.156960</SurviveSeconds>
+						<MaxCombo>133</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 22:00:19</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>1</Miss>
+							<W5>1</W5>
+							<W4>4</W4>
+							<W3>47</W3>
+							<W2>60</W2>
+							<W1>111</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>2</LetGo>
+							<Held>45</Held>
+							<MissedHold>1</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
 				</HighScoreList>
@@ -40606,8 +40687,8 @@
 		<Song Dir='Songs/DDR POP/DAM DARIRAM/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>6</NumTimesPlayed>
-					<LastPlayed>2026-10-06</LastPlayed>
+					<NumTimesPlayed>7</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>94092980</Score>
@@ -40636,6 +40717,33 @@
 						</HoldNoteScores>
 					</HighScore>
 					<HighScore>
+						<Grade>Tier05</Grade>
+						<Score>93278847</Score>
+						<PercentDP>0.847700</PercentDP>
+						<SurviveSeconds>97.965111</SurviveSeconds>
+						<MaxCombo>216</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 22:02:20</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>1</W4>
+							<W3>19</W3>
+							<W2>59</W2>
+							<W1>140</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>0</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>92697798</Score>
 						<PercentDP>0.843200</PercentDP>
@@ -40654,33 +40762,6 @@
 							<W3>17</W3>
 							<W2>66</W2>
 							<W1>135</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>0</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>84427982</Score>
-						<PercentDP>0.742700</PercentDP>
-						<SurviveSeconds>96.985703</SurviveSeconds>
-						<MaxCombo>104</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2022-05-03 19:26:09</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>0</Miss>
-							<W5>0</W5>
-							<W4>4</W4>
-							<W3>44</W3>
-							<W2>69</W2>
-							<W1>102</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -57170,8 +57251,8 @@
 		<Song Dir='Songs/DDR POP/[Last Burning] - Abing Abing/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>3</NumTimesPlayed>
-					<LastPlayed>2024-02-03</LastPlayed>
+					<NumTimesPlayed>4</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>90652718</Score>
@@ -57200,6 +57281,33 @@
 						</HoldNoteScores>
 					</HighScore>
 					<HighScore>
+						<Grade>Tier07</Grade>
+						<Score>86787330</Score>
+						<PercentDP>0.764600</PercentDP>
+						<SurviveSeconds>105.895164</SurviveSeconds>
+						<MaxCombo>139</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-20 21:19:43</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>1</Miss>
+							<W5>0</W5>
+							<W4>1</W4>
+							<W3>44</W3>
+							<W2>67</W2>
+							<W1>94</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>21</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>83173981</Score>
 						<PercentDP>0.719200</PercentDP>
@@ -57218,33 +57326,6 @@
 							<W3>58</W3>
 							<W2>67</W2>
 							<W1>79</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>21</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>77777410</Score>
-						<PercentDP>0.681200</PercentDP>
-						<SurviveSeconds>104.186058</SurviveSeconds>
-						<MaxCombo>123</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2024-02-03 20:09:01</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>0</Miss>
-							<W5>1</W5>
-							<W4>5</W4>
-							<W3>73</W3>
-							<W2>54</W2>
-							<W1>74</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -58811,8 +58892,8 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>6</NumTimesPlayed>
-					<LastPlayed>2026-10-06</LastPlayed>
+					<NumTimesPlayed>7</NumTimesPlayed>
+					<LastPlayed>2026-11-20</LastPlayed>
 					<HighScore>
 						<Grade>Tier06</Grade>
 						<Score>87887139</Score>
@@ -160206,5 +160287,6 @@
 		<CaloriesBurned Date='2026-11-13'>384.373108</CaloriesBurned>
 		<CaloriesBurned Date='2026-11-16'>78.007812</CaloriesBurned>
 		<CaloriesBurned Date='2026-11-19'>245.262604</CaloriesBurned>
+		<CaloriesBurned Date='2026-11-20'>227.516266</CaloriesBurned>
 	</CalorieData>
 </Stats>

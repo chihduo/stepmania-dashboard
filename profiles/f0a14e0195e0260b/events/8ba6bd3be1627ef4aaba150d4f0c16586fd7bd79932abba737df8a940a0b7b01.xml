@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Astrogation/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>93937307</Score>
+				<PercentDP>0.869700</PercentDP>
+				<SurviveSeconds>124.860863</SurviveSeconds>
+				<MaxCombo>176</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-20 21:36:19</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>18</W3>
+					<W2>86</W2>
+					<W1>167</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>48</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d48896c6-a6b8-4714-a706-1e425e577ba8</StageGuid>
+				<Guid>3e487d71-1fd6-4bce-a8b3-b744ed36892f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

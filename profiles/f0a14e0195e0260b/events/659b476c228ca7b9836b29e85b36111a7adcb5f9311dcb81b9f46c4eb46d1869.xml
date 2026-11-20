@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Baby I_m Yours/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>84021379</Score>
+				<PercentDP>0.735900</PercentDP>
+				<SurviveSeconds>113.201576</SurviveSeconds>
+				<MaxCombo>96</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-20 21:39:41</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>5</W4>
+					<W3>90</W3>
+					<W2>85</W2>
+					<W1>115</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>64</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>467524d6-e108-4574-a17f-4865b715e2f5</StageGuid>
+				<Guid>6e99b55d-2cfb-45dc-a775-5c7b1f38d3c4</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

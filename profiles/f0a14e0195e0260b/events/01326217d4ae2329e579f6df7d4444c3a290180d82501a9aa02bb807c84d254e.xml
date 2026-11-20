@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/BBoom BBoom/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>281309</Score>
+				<PercentDP>0.040600</PercentDP>
+				<SurviveSeconds>20.416061</SurviveSeconds>
+				<MaxCombo>16</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-20 21:43:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>8</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>8</W3>
+					<W2>8</W2>
+					<W1>12</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dc221f79-9584-49aa-a5bb-9271f31f9f52</StageGuid>
+				<Guid>c55dccef-6cf3-4267-ae42-fd381e263f5f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

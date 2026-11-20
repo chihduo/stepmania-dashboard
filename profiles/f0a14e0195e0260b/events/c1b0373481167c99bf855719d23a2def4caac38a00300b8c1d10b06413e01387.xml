@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/As If It_s Your Last/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>83472663</Score>
+				<PercentDP>0.733500</PercentDP>
+				<SurviveSeconds>144.870361</SurviveSeconds>
+				<MaxCombo>85</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-20 21:27:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>3</W5>
+					<W4>7</W4>
+					<W3>80</W3>
+					<W2>109</W2>
+					<W1>155</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>20</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dd5d448e-59d6-446e-ad5d-996a67fccdc8</StageGuid>
+				<Guid>d92da191-9037-4491-a2c4-ac22bbcfbecc</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

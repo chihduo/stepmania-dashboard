@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Last Burning] - Abing Abing/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>86787330</Score>
+				<PercentDP>0.764600</PercentDP>
+				<SurviveSeconds>105.895164</SurviveSeconds>
+				<MaxCombo>139</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-20 21:19:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>44</W3>
+					<W2>67</W2>
+					<W1>94</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>21</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>b46f9c65-66e1-42fa-a9c7-5ffb949b0868</StageGuid>
+				<Guid>b5452db5-5036-4f4d-a369-8ec469eabf2e</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
