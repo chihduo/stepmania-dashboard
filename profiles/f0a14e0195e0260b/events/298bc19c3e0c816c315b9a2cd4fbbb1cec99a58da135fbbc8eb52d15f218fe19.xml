@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Discotheque 2/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>90519977</Score>
+				<PercentDP>0.864700</PercentDP>
+				<SurviveSeconds>102.677856</SurviveSeconds>
+				<MaxCombo>81</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-21 22:08:35</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>27</W3>
+					<W2>58</W2>
+					<W1>110</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>113</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f5087837-d70c-41bf-a9c2-f4bd7137c2f1</StageGuid>
+				<Guid>66dcf2a2-c830-4205-a1dc-764cf449dd0f</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

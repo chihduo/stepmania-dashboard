@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Din Don Dan/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>92956644</Score>
+				<PercentDP>0.838900</PercentDP>
+				<SurviveSeconds>108.497009</SurviveSeconds>
+				<MaxCombo>199</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-21 22:06:19</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>0</W4>
+					<W3>16</W3>
+					<W2>80</W2>
+					<W1>135</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>6</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>2f3fc34e-62fe-4f5b-abde-c85d8489a213</StageGuid>
+				<Guid>1b946ac0-f7fe-4431-ade3-bd831527c13c</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

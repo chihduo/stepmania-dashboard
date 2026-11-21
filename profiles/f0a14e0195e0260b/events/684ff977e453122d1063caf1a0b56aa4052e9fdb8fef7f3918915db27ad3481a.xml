@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Do You Wanna Come Over/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>94107420</Score>
+				<PercentDP>0.869400</PercentDP>
+				<SurviveSeconds>95.503029</SurviveSeconds>
+				<MaxCombo>87</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-21 22:15:07</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>9</W3>
+					<W2>35</W2>
+					<W1>82</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>16</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ca44a608-8e13-4c48-a6c1-ff96e10563a8</StageGuid>
+				<Guid>a29ed24b-f0ec-4b2f-ab27-4ac354c4529b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

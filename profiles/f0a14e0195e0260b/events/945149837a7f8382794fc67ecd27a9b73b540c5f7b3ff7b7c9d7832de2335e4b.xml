@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Qualifier Singles] - Galaxy Supernova/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>84383313</Score>
+				<PercentDP>0.756100</PercentDP>
+				<SurviveSeconds>127.604462</SurviveSeconds>
+				<MaxCombo>239</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-21 22:22:49</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>55</W3>
+					<W2>78</W2>
+					<W1>103</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>21</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c19dd1dc-ae84-4a24-af1e-899c111620a9</StageGuid>
+				<Guid>549bea89-11e3-41aa-a708-d13f85fba0e3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

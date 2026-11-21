@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/DANCE INTO FANTASY/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>91942749</Score>
+				<PercentDP>0.824400</PercentDP>
+				<SurviveSeconds>116.895821</SurviveSeconds>
+				<MaxCombo>237</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-21 21:59:02</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>22</W3>
+					<W2>71</W2>
+					<W1>127</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>3</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>087454cc-7000-4049-a89d-eabf074fb6e8</StageGuid>
+				<Guid>89b39b9e-7781-40f5-a06f-cc4eff7ebf06</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
