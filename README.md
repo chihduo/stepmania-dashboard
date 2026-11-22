@@ -381,11 +381,12 @@ Details, env-var overrides, and the WSL2 cron caveats are in
   the modal can still open) and `grade_hidden()` for the recent feed.
 - **Song details and lifetime counts:** opening a recent play selects that
   play's difficulty. Select another difficulty tab to see its records. The
-  highlighted tab and heading identify the selected chart. Each tab's lifetime
-  count comes from the profile's `NumTimesPlayed`; detailed records combine the
-  retained high scores in `Stats.xml` with distinct plays from `Save/Upload`.
-  StepMania caps its retained high scores, so missing older upload logs can leave
-  fewer detailed records than lifetime plays. The window shows both counts and
+  highlighted tab and heading identify the selected chart. Lifetime counts use
+  the profile's `NumTimesPlayed` and preserve higher counts already published.
+  Detailed records combine retained high scores in `Stats.xml`, distinct plays
+  from `Save/Upload`, and records preserved from earlier dashboard publications.
+  StepMania counts started attempts and caps its retained high scores, so there
+  can be fewer detailed records than lifetime plays. The window shows both counts and
   explicitly reports any gap. Its progression, judgments and hold reliability
   use the available records; missing details cannot be reconstructed from a count.
 - **`charts` array per song in `data.json`:** each song carries a `charts`

@@ -132,3 +132,40 @@ succeeded using the same accepted upload. The live HTML matches the reviewed
 page byte-for-byte, and all data fields except generation time remain identical
 to the previous site (7,290 lifetime plays and 6,071 logged plays). Live data.json
 SHA-256: `927b75b2c1f8211b8216c95600d2d9886ac283c2ab8fd1c52bdf9b72a3c825e8`.
+
+## Counter rollback and retained score history (2026-11-22)
+
+Runs `45024038241` and `45024379465` both reject accepted revision
+`67c1aa995bfacc6b12f85e892d6c296009d895f9` at the per-song history check.
+`Songs/DDR POP/Gokuraku Jodo/` falls from 17 to 15 plays (Medium 16 to 14).
+The newer supplied archive independently contains 16 in the earlier outbox and
+machine profile but 14 in the saved local profile. All previous event files are
+byte-identical; 28 new events bring the upload from 6,071 to 6,099 logs and
+7,290 to 7,318 lifetime plays. This is distinct from the November 20 HTTP 503.
+The same rebuild would also drop three previously published profile-only high
+scores after the local retained lists changed (Lupin Medium and Holiday Hard).
+
+Plan: preserve known published chart counters and score records across normal
+profile reloads/list trimming; check profile identity, cumulative totals, daily
+log history and known event IDs before merging; keep missing songs/charts and
+ambiguous chart recovery strict. Add regression tests for retry idempotence,
+legacy/GUID score matching, rollback, pruning and real missing events. Validate
+the complete accepted revision, commit, publish and verify all old scores and
+28 new events. No Windows build or user Save changes. Evidence stays under
+`/tmp/stepmania-dashboard-failure-45024379465/`.
+
+Implemented recovery from the published baseline for uniquely identified chart
+counters and score records. Profile-wide and dated-log checks remain strict;
+known published event IDs are additionally checked against the actual uploaded
+event files before recovery. Missing songs/charts and ambiguous custom-chart
+recovery still fail. Recomputed pack/artist totals use the preserved song counts.
+Workflow logs and sync status identify recovered counters and records.
+
+All 44 tests pass, including 14 new regression cases. The full accepted revision
+now builds with 7,318 lifetime plays and 6,099 upload events. It preserves all
+6,422 previously published chart records and adds exactly 28, for 6,450 chart
+records. Gokuraku Jodo remains at 17 plays; the three pruned profile-only scores
+are retained. Every existing banner is byte-identical. A second full rebuild
+produces identical data except its generation timestamp. Only songs and their
+pack/artist aggregates differ from the rejected candidate; all activity series,
+recent plays, profile totals and raw upload files are unchanged. Ready to publish.

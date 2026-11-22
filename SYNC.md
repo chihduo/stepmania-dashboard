@@ -54,14 +54,31 @@ one event.
 
 ## History preservation
 
-Every rebuild reads the current live `data.json` and compares profile identity,
-lifetime totals, per-song play counts, and daily/monthly play-log counts. A decrease
-fails the job and leaves the live site intact. The first upload therefore needs
-the complete matching profile and `Save/Upload` history. A different or reset
-profile must be migrated deliberately; the upload workflow does not replace it
-silently. If the original data is unavailable, keep the existing site and restore
-the matching Save backup before retrying. Missing song metadata/thumbnails can
-fall back to the published site. Static HTML cannot reconstruct missing play logs.
+Every rebuild reads the current live `data.json` and checks profile identity,
+profile-wide lifetime totals, and daily/monthly play-log counts. Wrong profiles,
+decreased overall totals, missing songs/charts, and incomplete logs fail the job
+and leave the live site intact. Event IDs already present in published score
+records must still exist in the upload with the same song, chart and score; new
+plays on the same day cannot conceal the removal of those events. The first
+upload therefore needs the complete matching profile and `Save/Upload` history.
+
+Per-chart attempt counters and retained high-score lists need different handling.
+StepMania increments a chart's counter when a song starts, and a live export can
+contain attempts not yet persisted in the local profile. It also trims retained
+high-score lists. After checking the uploaded history, the importer keeps the
+highest published chart counts and unions the previously published score records
+with the current records. Known event IDs stay distinct; matching legacy scores
+are paired once, so retries do not duplicate them. Pack and artist counts use the
+same preserved song totals. The workflow log and `sync-status.json` report which
+counters and scores were retained. This does not edit the game's local profile or
+create fabricated play-log events.
+
+A different or reset profile must still be migrated deliberately. Missing song
+metadata/thumbnails can fall back to the published site. Details that were never
+saved or published cannot be reconstructed from a play counter. If several custom
+charts share an indistinguishable identity and their history needs recovery, the
+importer rejects the ambiguous merge instead of assigning scores to a guessed
+chart.
 
 The old local/server scripts continue to work. Once Actions owns publication, avoid
 running `refresh-demo.sh` against the live site: it uses the older branch deployment

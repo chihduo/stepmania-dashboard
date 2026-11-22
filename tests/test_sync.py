@@ -167,4 +167,111 @@ class SyncTests(unittest.TestCase):
         parsed=builder.parse_uploads(str(self.profile/'events'),lambda d:{'title':'','artist':''})
         self.assertEqual(parsed['recordedPlays'],1)
 
+    def test_live_attempt_counter_rollback_keeps_published_count(self):
+        root = ET.fromstring(self.stats)
+        root.find('.//NumTimesPlayed').text = '3'
+        root.find('.//LastPlayed').text = '2026-11-13'
+        ET.ElementTree(root).write(self.profile/'Stats.xml')
+        first = self.build()
+        (self.profile/'Stats.xml').write_text(self.stats)
+        current = self.build('restored', self.root/'site')
+        self.assertEqual(current['recordedPlays'], 1)
+        song = current['songs'][0]
+        self.assertEqual(song['plays'], 3)
+        self.assertEqual(song['diffs'], {'Hard': 3})
+        self.assertEqual(song['charts'][0]['plays'], 3)
+        self.assertEqual(song['last'], '2026-11-13')
+        self.assertEqual(len(song['charts'][0]['scores']), 1)
+        self.assertEqual(current['packs'][0]['plays'], 3)
+        self.assertEqual(current['artists'][0]['plays'], 3)
+        status = json.loads((self.root/'restored/sync-status.json').read_text())
+        self.assertEqual(status['history_retention']['chart_counters'][0]['uploaded'], 1)
+        self.assertEqual(status['history_retention']['chart_counters'][0]['retained'], 3)
+        self.assertEqual((self.profile/'Stats.xml').read_text(), self.stats)
+
+    def test_trimmed_profile_score_survives_repeated_publications(self):
+        root = ET.fromstring(self.stats)
+        root.find('GeneralData/NumTotalSongsPlayed').text = '2'
+        root.find('.//NumTimesPlayed').text = '2'
+        score = copy.deepcopy(root.find('.//HighScore'))
+        score.find('DateTime').text = '2026-11-11 12:00:00'
+        score.find('PercentDP').text = '0.5'
+        root.find('.//HighScoreList').append(score)
+        ET.ElementTree(root).write(self.profile/'Stats.xml')
+        first = self.build()
+        root.find('.//HighScoreList').remove(score)
+        ET.ElementTree(root).write(self.profile/'Stats.xml')
+        second = self.build('restored', self.root/'site')
+        third = self.build('retry', self.root/'restored')
+        self.assertEqual(first['songs'], second['songs'])
+        self.assertEqual(second['songs'], third['songs'])
+        self.assertEqual(second['recordedPlays'], 1)
+        status = json.loads((self.root/'restored/sync-status.json').read_text())
+        self.assertEqual(status['history_retention']['score_records'], 1)
+        # Each fresh build restores the one absent input record; output stays identical.
+        self.assertEqual(json.loads((self.root/'retry/sync-status.json').read_text())['history_retention']['score_records'], 1)
+
+    def test_same_day_replacement_cannot_hide_missing_known_event(self):
+        old = self.event('older-event')
+        tree = ET.parse(old)
+        tree.find('.//DateTime').text = '2026-11-12 13:00:00'
+        tree.write(old)
+        self.build()
+        old.unlink()
+        new = self.event('replacement-event')
+        tree = ET.parse(new)
+        tree.find('.//DateTime').text = '2026-11-12 14:00:00'
+        tree.write(new)
+        with self.assertRaisesRegex(ValueError, 'Historical play event is missing: older-event'):
+            self.build('replacement', self.root/'site')
+        self.assertFalse((self.root/'replacement/sync-status.json').exists())
+
+    def test_altered_known_event_is_rejected(self):
+        old = self.event('older-event')
+        tree = ET.parse(old)
+        tree.find('.//DateTime').text = '2026-11-12 13:00:00'
+        tree.write(old)
+        self.build()
+        tree.find('.//Score').text = '99'
+        tree.write(old)
+        with self.assertRaisesRegex(ValueError, 'Historical play event changed: older-event'):
+            self.build('changed', self.root/'site')
+
+    def test_retention_cannot_recreate_a_missing_chart(self):
+        root = ET.fromstring(self.stats)
+        extra = copy.deepcopy(root.find('.//Steps'))
+        extra.set('Difficulty', 'Medium')
+        root.find('.//Song').append(extra)
+        ET.ElementTree(root).write(self.profile/'Stats.xml')
+        self.build()
+        (self.profile/'Stats.xml').write_text(self.stats)
+        with self.assertRaisesRegex(ValueError, 'Historical chart is missing.*Medium'):
+            self.build('missing-chart', self.root/'site')
+
+    def test_retention_cannot_recreate_a_missing_song(self):
+        self.build()
+        root = ET.fromstring(self.stats)
+        root.find('SongScores').remove(root.find('SongScores/Song'))
+        ET.ElementTree(root).write(self.profile/'Stats.xml')
+        with self.assertRaisesRegex(ValueError, 'Historical song is missing'):
+            self.build('missing-song', self.root/'site')
+
+    def test_intact_duplicate_edit_charts_do_not_need_recovery(self):
+        root = ET.fromstring(self.stats)
+        song = root.find('.//Song')
+        for count in (1, 2, 2):
+            extra = copy.deepcopy(root.find('.//Steps'))
+            extra.set('Difficulty', 'Edit')
+            extra.find('HighScoreList/NumTimesPlayed').text = str(count)
+            extra.find('HighScoreList').remove(extra.find('HighScoreList/HighScore'))
+            song.append(extra)
+        ET.ElementTree(root).write(self.profile/'Stats.xml')
+        first = self.build()
+        current = self.build('retry', self.root/'site')
+        self.assertEqual(first['songs'], current['songs'])
+        root.findall('.//Steps')[-1].find('HighScoreList/NumTimesPlayed').text = '1'
+        ET.ElementTree(root).write(self.profile/'Stats.xml')
+        with self.assertRaisesRegex(ValueError, 'ambiguous historical charts'):
+            self.build('ambiguous', self.root/'site')
+
 if __name__ == '__main__': unittest.main()

@@ -6,6 +6,8 @@ metadata JSON and PNG files are read. No liveDir deployment is used here.
 """
 import argparse
 import base64
+import collections
+import copy
 import io
 import hashlib
 import json
@@ -98,8 +100,8 @@ def event_identity(node):
     return hashlib.sha256(guid.encode()).hexdigest()
 
 
-def verify_history(previous, current):
-    """Reject a reset/wrong profile or a lossy replacement of a published site."""
+def verify_log_history(previous, current):
+    """Reject a wrong/reset profile or incomplete per-play history."""
     if previous.get("profile", {}).get("guid") != current["profile"]["guid"]:
         raise ValueError("Profile differs from published history; select the matching local profile")
     for key in ("songsPlayed", "tapsAndHolds", "jumps", "holds", "rolls", "mines", "hands", "lifts", "dancePoints", "gameplaySeconds", "sessions"):
@@ -122,11 +124,140 @@ def verify_history(previous, current):
             if counts.get(day, 0) < n:
                 raise ValueError(f"Historical play logs are incomplete for {day}: "
                                  f"{counts.get(day, 0)} uploaded, {n} already published. {advice}")
+
+
+def verify_history(previous, current):
+    """Reject a reset/wrong profile or a lossy replacement of a published site."""
+    verify_log_history(previous, current)
     songs = {s["dir"]: s for s in current["songs"]}
     for old in previous.get("songs", []):
         new = songs.get(old["dir"])
         if not new or new["plays"] < old["plays"]:
-            raise ValueError("Historical song plays are missing; restore the complete profile and Save/Upload")
+            count = new["plays"] if new else "missing"
+            raise ValueError(f"Historical song plays are missing for {old['dir']}: "
+                             f"{count} uploaded, {old['plays']} published; "
+                             "restore the complete profile and Save/Upload")
+
+
+def verify_published_events(previous, events):
+    """A retained dashboard score must not hide a missing or altered upload event."""
+    for song in previous.get("songs", []):
+        for chart in song.get("charts", []):
+            key = (song["dir"], chart["stepstype"], chart["diff"])
+            for score in chart.get("scores", []):
+                guid = score.get("id")
+                if not guid:
+                    continue
+                event = events.get(guid)
+                if event is None:
+                    raise ValueError(f"Historical play event is missing: {guid} ({song['dir']}); "
+                                     "restore the complete Save/Upload history")
+                if event[:3] != key or builder.score_fingerprint(event[3]) != builder.score_fingerprint(score):
+                    raise ValueError(f"Historical play event changed: {guid} ({song['dir']})")
+
+
+def merge_preserved_scores(scores, published):
+    """Union score histories, matching legacy records once and keeping distinct IDs."""
+    ids = {s["id"]: i for i, s in enumerate(scores) if s.get("id")}
+    all_scores = collections.defaultdict(collections.deque)
+    legacy_scores = collections.defaultdict(collections.deque)
+    for i, score in enumerate(scores):
+        key = builder.score_fingerprint(score)
+        all_scores[key].append(i)
+        if not score.get("id"):
+            legacy_scores[key].append(i)
+    matched = set()
+    added = 0
+    # Reserve exact event identities before matching indistinguishable legacy
+    # scores, so a legacy score cannot consume another play's known ID.
+    for score in sorted(published, key=lambda score: not bool(score.get("id"))):
+        guid = score.get("id")
+        key = builder.score_fingerprint(score)
+        if guid and guid in ids:
+            i = ids[guid]
+            if builder.score_fingerprint(scores[i]) != key:
+                raise ValueError(f"Historical score changed for event {guid}")
+            matched.add(i)
+            continue
+        candidates = (legacy_scores if guid else all_scores)[key]
+        while candidates and candidates[0] in matched:
+            candidates.popleft()
+        if candidates:
+            i = candidates.popleft()
+            matched.add(i)
+            if guid:
+                scores[i]["id"] = guid
+                ids[guid] = i
+            continue
+        scores.append(copy.deepcopy(score))
+        if guid:
+            ids[guid] = len(scores) - 1
+        added += 1
+    scores.sort(key=lambda score: score.get("dt", ""), reverse=True)
+    return added
+
+
+def preserve_published_history(previous, current):
+    """Keep known counters and profile-only scores after validating the new logs.
+
+    A live export can include started attempts that the saved local profile later
+    forgets. Stats.xml also trims its retained high scores. Neither should erase
+    history already published; missing uploads and reset profiles still fail.
+    """
+    verify_log_history(previous, current)
+    songs = {song["dir"]: song for song in current["songs"]}
+    report = {"chart_counters": [], "score_records": 0}
+    for old in previous.get("songs", []):
+        song = songs.get(old["dir"])
+        if song is None:
+            raise ValueError(f"Historical song is missing from the profile: {old['dir']}")
+        old_groups = collections.defaultdict(list)
+        new_groups = collections.defaultdict(list)
+        for chart in old.get("charts", []):
+            old_groups[(chart["stepstype"], chart["diff"])].append(chart)
+        for chart in song.get("charts", []):
+            new_groups[(chart["stepstype"], chart["diff"])].append(chart)
+        for key, old_charts in old_groups.items():
+            charts = new_groups.get(key, [])
+            if not charts:
+                raise ValueError(f"Historical chart is missing from the profile: {old['dir']} {key}")
+            if len(charts) != 1 or len(old_charts) != 1:
+                # Older JSON does not distinguish multiple Edit charts. Accept
+                # intact histories, but do not guess which chart needs recovery.
+                before = collections.Counter(builder.score_fingerprint(s) for c in old_charts for s in c["scores"])
+                after = collections.Counter(builder.score_fingerprint(s) for c in charts for s in c["scores"])
+                if (len(charts) < len(old_charts) or before - after or
+                        sum(c["plays"] for c in charts) < sum(c["plays"] for c in old_charts)):
+                    raise ValueError(f"Cannot safely recover ambiguous historical charts: {old['dir']} {key}")
+                continue
+            old_chart, chart = old_charts[0], charts[0]
+            report["score_records"] += merge_preserved_scores(chart["scores"], old_chart["scores"])
+            count = max(chart["plays"], old_chart["plays"], len(chart["scores"]))
+            if count > chart["plays"]:
+                report["chart_counters"].append({"dir": song["dir"], "stepstype": key[0],
+                                                 "diff": key[1], "uploaded": chart["plays"], "retained": count})
+            chart["plays"] = count
+            chart["lastPlayed"] = max(chart.get("lastPlayed") or "", old_chart.get("lastPlayed") or "",
+                                      max((score.get("dt", "")[:10] for score in chart["scores"]), default=""))
+        song["plays"] = max(song["plays"], old["plays"], sum(c["plays"] for c in song["charts"]))
+        song["last"] = max(song.get("last") or "", old.get("last") or "",
+                           max((c.get("lastPlayed") or "" for c in song["charts"]), default=""))
+        song["diffs"] = {}
+        for chart in song["charts"]:
+            song["diffs"][chart["diff"]] = song["diffs"].get(chart["diff"], 0) + chart["plays"]
+        best = max((s for c in song["charts"] for s in c["scores"]), key=lambda s: s["pct"], default=None)
+        if best and (song.get("bestPct") is None or best["pct"] > song["bestPct"]):
+            song["bestPct"], song["bestGrade"] = best["pct"], best["grade"]
+    current["songs"].sort(key=lambda song: (-song["plays"], song["song"].lower()))
+    # Rankings and breakdown totals must use the same retained song counts.
+    packs = {}
+    for song in current["songs"]:
+        pack = packs.setdefault(song["pack"], {"pack": song["pack"], "plays": 0, "songs": 0})
+        pack["plays"] += song["plays"]
+        pack["songs"] += 1
+    current["packs"] = sorted(packs.values(), key=lambda pack: -pack["plays"])
+    current["artists"] = builder.aggregate_artists(current["songs"], current.get("theme", {}).get("artistAliases", {}))
+    return report
 
 
 def build(data_dir, profile, output, baseline=None, revision="local"):
@@ -218,6 +349,7 @@ def build(data_dir, profile, output, baseline=None, revision="local"):
         uploads.mkdir()
         shutil.copyfile(pdir/"Stats.xml", save/"MachineProfile"/"Stats.xml")
         seen = set()
+        event_scores = {}
         for path in sorted((pdir/"events").glob("*.xml")):
             root = xml(path, 128*1024)
             records = root.findall("RecentSongScores/HighScoreForASongAndSteps")
@@ -235,17 +367,33 @@ def build(data_dir, profile, output, baseline=None, revision="local"):
             if identity in seen:
                 raise ValueError("Duplicate event ID")
             seen.add(identity)
+            song_node, steps_node = node.find("Song"), node.find("Steps")
+            if song_node is None or steps_node is None:
+                raise ValueError("Play is missing its song/chart")
+            event_scores[builder.txt(hs, "Guid")] = (song_node.get("Dir", ""),
+                steps_node.get("StepsType", ""), steps_node.get("Difficulty", "?"), builder.score_dict(hs))
             shutil.copyfile(path, uploads/path.name)
         if manifest.get("event_count", 0) > len(seen):
             raise ValueError("Export is missing play files")
+        if previous:
+            verify_published_events(previous, event_scores)
         builder.main(save_dir=str(save), out_dir=str(output), meta_override=meta,
                      banner_override=banner, sync=True)
     current = read_json(output/"data.json", 64*1024*1024)
+    retention = {"chart_counters": [], "score_records": 0}
     if previous:
+        retention = preserve_published_history(previous, current)
         verify_history(previous, current)
+        (output/"data.json").write_text(json.dumps(current, ensure_ascii=False, separators=(",", ":")))
+        print(f"Retained published history: {len(retention['chart_counters'])} chart counters, "
+              f"{retention['score_records']} score records")
+        for counter in retention["chart_counters"]:
+            print(f"  {counter['dir']} {counter['diff']}: {counter['uploaded']} uploaded, "
+                  f"{counter['retained']} retained")
     (output/"sync-status.json").write_text(json.dumps({
         "version": 1, "data_revision": revision, "profile_guid": profile,
         "generated": current["generated"], "recorded_plays": current["recordedPlays"],
+        "history_retention": retention,
     }) + "\n")
     (output/".nojekyll").touch()
     return current
