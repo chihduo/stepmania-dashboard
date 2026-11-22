@@ -185,11 +185,16 @@
        border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;
        display:inline-flex;gap:8px;align-items:center;font-family:inherit}
   .modal .tab:hover{color:var(--text)}
-  .modal .tab.active{background:var(--panel2);border-color:var(--line);color:var(--text)}
+  .modal .tab.active{background:var(--panel2);border-color:var(--accent2);color:var(--text);
+       box-shadow:inset 0 -2px var(--accent2)}
   .modal .tab .mt{font-size:11px;background:var(--panel);border:1px solid var(--line);
        border-radius:10px;padding:1px 7px;font-variant-numeric:tabular-nums}
   .modal .tab .n{font-size:11.5px;color:var(--muted)}
   .modal .body{padding:18px 22px 22px}
+  .chart-history{margin-bottom:18px}
+  .chart-history h3{margin:0 0 5px;font-size:16px}
+  .chart-history p{margin:5px 0 0;color:var(--muted);font-size:13.5px}
+  .chart-history .history-gap{color:var(--warn)}
   .modal .empty{color:var(--muted);font-size:13.5px;padding:20px;text-align:center}
   .modal .panels{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .modal .panel{background:var(--panel);border:1px solid var(--line);
@@ -1111,7 +1116,7 @@ function renderSongModal(song, chartIdx){
   const bestPct = song.bestPct!=null ? (song.bestPct*100).toFixed(2)+"%" : "—";
   const tabs = charts.map((c,i)=>{
     const mt = c.meter ? `<span class="mt">${c.meter}</span>` : "";
-    return `<button class="tab ${i===chartIdx?'active':''}" data-i="${i}">${esc(c.diff)} ${mt} <span class="n">${fmt(c.plays)} plays</span></button>`;
+    return `<button class="tab ${i===chartIdx?'active':''}" data-i="${i}" aria-pressed="${i===chartIdx}">${esc(c.diff)} ${mt} <span class="n">${fmt(c.plays)} lifetime play${c.plays===1?'':'s'}</span></button>`;
   }).join("");
   modalContent.innerHTML = `
     <div class="head">
@@ -1120,8 +1125,8 @@ function renderSongModal(song, chartIdx){
         <h2 id="modalTitle">${esc(song.song)}</h2>
         <div class="who">${song.artist?esc(song.artist)+' · ':''}${esc(song.pack)}</div>
         <div class="stats">
-          <b>${fmt(song.plays)}</b> total plays · best <b>${bestPct}</b> ${gp}
-          ${first ? `<br>first played <b>${first}</b> · last <b>${last}</b>` : ''}
+          <b>${fmt(song.plays)}</b> lifetime plays · best recorded <b>${bestPct}</b> ${gp}
+          ${first ? `<br>first recorded <b>${first}</b> · last <b>${last}</b>` : ''}
         </div>
       </div>
     </div>
@@ -1136,10 +1141,16 @@ function renderSongModal(song, chartIdx){
 function renderChartPanels(host, chart){
   if(!chart){ host.innerHTML = '<div class="empty">No chart selected.</div>'; return; }
   const scores = chart.scores || [];
+  const missing = Math.max(0, chart.plays - scores.length);
+  const history = `<div class="chart-history">
+    <h3>${esc(chart.diff)}${chart.stepstype ? ' · '+esc(chart.stepstype.replace(/-/g,' ')) : ''}</h3>
+    <p>${fmt(chart.plays)} lifetime play${chart.plays===1?'':'s'} ·
+       ${fmt(scores.length)} detailed record${scores.length===1?'':'s'} available</p>
+    ${missing ? `<p class="history-gap">${fmt(missing)} play${missing===1?' has':'s have'} no detailed record in the imported data.
+       Charts and judgments use the available records.</p>` : ''}
+  </div>`;
   if(!scores.length){
-    host.innerHTML =
-      `<div class="empty">${fmt(chart.plays)} plays recorded on this chart, `+
-      `but StepMania didn't keep detailed score records for it.</div>`+
+    host.innerHTML = history + '<div class="empty">No detailed scores to display.</div>' +
       chartRadarPanelHtml(chart);
     return;
   }
@@ -1163,11 +1174,11 @@ function renderChartPanels(host, chart){
   const bestGrade = best.grade ? displayGrade(best.grade, best.pct) : "";
   const bestGP = bestGrade ? `<span class="pill g-${gcls(bestGrade)}">${bestGrade}</span>` : '';
 
-  host.innerHTML = `
+  host.innerHTML = history + `
     <div class="panels">
       ${renderProgressionPanel(scores)}
       <div class="panel pl-best">
-        <h4>Best play</h4>
+        <h4>Best recorded play</h4>
         <div class="v">${(best.pct*100).toFixed(2)}% ${bestGP}</div>
         <div class="when">${best.dt} · max combo <b>${fmt(best.co)}</b></div>
         <div class="badges">${fcBadge}</div>
@@ -1181,7 +1192,7 @@ function renderChartPanels(host, chart){
         </div>
       </div>
       <div class="panel pl-judg">
-        <h4>Lifetime judgments on this chart</h4>
+        <h4>Judgments in available records</h4>
         ${renderJudgBars(jSum, jTot)}
       </div>
       <div class="panel pl-hold">
@@ -1191,7 +1202,7 @@ function renderChartPanels(host, chart){
       ${chartRadarPanelHtml(chart, true)}
     </div>
     <div class="all-plays">
-      <h4>All ${scores.length} recorded score${scores.length===1?'':'s'} (newest first)</h4>
+      <h4>${esc(chart.diff)}: all ${fmt(scores.length)} available score record${scores.length===1?'':'s'} (newest first)</h4>
       <div class="tbl-wrap"><table>
         <thead><tr>
           <th>When</th><th class="num">%</th><th>Grade</th>
@@ -1375,7 +1386,7 @@ function renderProgressionPanel(scores){
   </svg>`;
   setTimeout(()=>wireBars(modalContent), 0);  // bind tooltips on newly-rendered dots/bars
   return `<div class="panel pl-prog span2">
-    <h4>Accuracy, W1% &amp; combo over time (${pts.length} plays)</h4>
+    <h4>Accuracy, W1% &amp; combo over time (${pts.length} recorded plays)</h4>
     ${svg}
   </div>`;
 }

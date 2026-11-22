@@ -14,7 +14,7 @@ and offline.
 
 Click any row in **Recent plays** or the **Song ranking** to open a per-song
 detail modal: chart difficulty tabs, accuracy + W1% progression with max-combo
-bars, lifetime judgment breakdown, hold-note reliability, the song's chart-difficulty profile
+bars, judgment breakdown across available records, hold-note reliability, the song's chart-difficulty profile
 (stream/voltage/air/freeze/chaos from the cache), and a table of every recorded
 score on that chart. Esc / click outside to close. Use **← / →** (or the
 chevrons in the header, or a horizontal swipe on touch) to step to the next /
@@ -379,11 +379,18 @@ Details, env-var overrides, and the WSL2 cron caveats are in
   breakdown charts still reflect all plays. The test is letter-based (so it
   works in either grade mode): `gradeHidden()` for the ranking (client-side, so
   the modal can still open) and `grade_hidden()` for the recent feed.
+- **Song details and lifetime counts:** opening a recent play selects that
+  play's difficulty. Select another difficulty tab to see its records. The
+  highlighted tab and heading identify the selected chart. Each tab's lifetime
+  count comes from the profile's `NumTimesPlayed`; detailed records combine the
+  retained high scores in `Stats.xml` with distinct plays from `Save/Upload`.
+  StepMania caps its retained high scores, so missing older upload logs can leave
+  fewer detailed records than lifetime plays. The window shows both counts and
+  explicitly reports any gap. Its progression, judgments and hold reliability
+  use the available records; missing details cannot be reconstructed from a count.
 - **`charts` array per song in `data.json`:** each song carries a `charts`
-  list with per-difficulty meter, radar profile, and the full HighScore
-  records that StepMania kept (typically up to ~10-20 per chart, the best
-  ones). The modal renders from these; the ranking table only needs the
-  song-level aggregates.
+  list with per-difficulty meter, radar profile, lifetime count and merged score
+  records. The modal renders from these; the ranking table uses song aggregates.
 - **Banner cache is not actually PNG/JPG** despite the `.png` extension — it's
   a 32-byte StepMania `SurfaceHeader` (8 LE uint32s: w/h/pitch/RGBA-masks/bpp)
   followed by raw pixels. The current build handles 16-bit ARGB1555 (the only

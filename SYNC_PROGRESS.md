@@ -101,3 +101,27 @@ Implemented five-attempt baseline downloads with bounded exponential delay, capp
 The exact accepted revision passes the importer and all history checks against the current live data.json: 7,281 lifetime plays and 6,062 recorded song events, each 15 higher than the published site. Git confirms all 15 new events are dated November 20 and no older event, song metadata or banner changed. All 2,467 song-to-banner references remain unchanged. Local verification fetched 312 historical images directly, matched them byte-for-byte to the retained cache, and reused the remaining 1,041 cached images; all 1,353 retained output images match. The production workflow still fetches its required images from Pages. The tested server-side change was then published and the accepted upload rebuilt successfully, as verified below.
 
 Fix `f2e959f` is published on main. All 30 hosted tests pass in run `44752917681`, and replacement publication [44752978898](https://github.com/chihduo/stepmania-dashboard/actions/runs/44752978898) succeeded using the same accepted data revision. The live dashboard now reports 7,281 lifetime plays and 6,062 recorded song events, including all 15 new November 20 events. Every live data field matches the locally validated output except its generation timestamp; three sampled live banner files also match byte-for-byte. Live data.json SHA-256: `cbe4d519cc07cc27d59402f6e5385c4423121ff26191bd5a4dd96d15402d3cf6`. No Windows build was run and no local profile or play-log files were changed.
+
+## Song detail counts and selected difficulty (2026-11-22)
+
+Plan: audit DISCOTHEQUE against the accepted export, earlier site and original
+Save archive; make the selected chart and lifetime-versus-detail counts explicit;
+check the recent-play/tab flow in a browser; publish and verify unchanged data.
+
+Accepted revision `84b081092fec6be5d3c69bd5ddecbbce16b0450e` has 10 lifetime Hard
+plays for `Songs/DDR POP/DISCOTHEQUE/` and six detailed Hard records (one clear,
+five failures). The recent entry selects Medium, which has two plays and two
+records. The same four-record Hard gap exists in the October 6 site and the
+original supplied Save archive; it was not introduced by automatic uploading.
+The window now labels lifetime and detailed counts separately, highlights the
+selected difficulty, explains missing details, and labels judgments as based on
+available records. Source counts and event data remain unchanged.
+
+All 30 existing importer tests pass. A real-browser check reproduces two Medium
+rows and six Hard rows before and after the change, verifies the selected-tab
+state and gap message, and checks the empty-detail case and the modal at 1280 px
+and 390 px widths. A full rebuild passes history validation and produces identical
+data fields except the generation timestamp: 7,290 lifetime plays and 6,071 logged
+plays. All 1,705 referenced banner files are byte-identical. Evidence and browser
+captures are in `/tmp/stepmania-dashboard-song-history-20261122/`. Ready to publish
+the reviewed display fix; no game executable or local Save changes are needed.
