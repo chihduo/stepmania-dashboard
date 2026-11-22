@@ -123,5 +123,12 @@ state and gap message, and checks the empty-detail case and the modal at 1280 px
 and 390 px widths. A full rebuild passes history validation and produces identical
 data fields except the generation timestamp: 7,290 lifetime plays and 6,071 logged
 plays. All 1,705 referenced banner files are byte-identical. Evidence and browser
-captures are in `/tmp/stepmania-dashboard-song-history-20261122/`. Ready to publish
-the reviewed display fix; no game executable or local Save changes are needed.
+captures are in `/tmp/stepmania-dashboard-song-history-20261122/`. No game
+executable or local Save changes were needed.
+
+Fix `aff55d3` is published on main. Hosted tests passed in run `44987541394`;
+publication [44987563035](https://github.com/chihduo/stepmania-dashboard/actions/runs/44987563035)
+succeeded using the same accepted upload. The live HTML matches the reviewed
+page byte-for-byte, and all data fields except generation time remain identical
+to the previous site (7,290 lifetime plays and 6,071 logged plays). Live data.json
+SHA-256: `927b75b2c1f8211b8216c95600d2d9886ac283c2ab8fd1c52bdf9b72a3c825e8`.
