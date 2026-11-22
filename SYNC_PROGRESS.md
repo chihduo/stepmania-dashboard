@@ -168,4 +168,12 @@ records. Gokuraku Jodo remains at 17 plays; the three pruned profile-only scores
 are retained. Every existing banner is byte-identical. A second full rebuild
 produces identical data except its generation timestamp. Only songs and their
 pack/artist aggregates differ from the rejected candidate; all activity series,
-recent plays, profile totals and raw upload files are unchanged. Ready to publish.
+recent plays, profile totals and raw upload files are unchanged.
+
+Fix `faae095` is pushed to main. Hosted tests passed in run `45026876788` and
+replacement publication [45026906865](https://github.com/chihduo/stepmania-dashboard/actions/runs/45026906865)
+succeeded. The live data matches the validated build in every field except the
+generation timestamp: 7,318 lifetime plays, 6,099 uploaded play records, all 28 new
+events, Gokuraku Jodo at 17 plays, and the three retained profile-only scores.
+Live data.json SHA-256: `b78c673f661a809da6a3f8ca8617e59c0b07b3aa4d567758d6a2d81781e3f1cd`.
+No Windows build, local Save repair, or data-branch rewrite was performed.
