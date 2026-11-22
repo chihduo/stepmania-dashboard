@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Kyoumei No True Force/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>87353888</Score>
+				<PercentDP>0.787800</PercentDP>
+				<SurviveSeconds>136.699585</SurviveSeconds>
+				<MaxCombo>230</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 20:01:39</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>5</W5>
+					<W4>6</W4>
+					<W3>50</W3>
+					<W2>115</W2>
+					<W1>203</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>18</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>9bd2f581-7543-47c4-ab54-ba8add1d7cfe</StageGuid>
+				<Guid>4118f374-af50-40b2-a0a4-b07919c839c8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

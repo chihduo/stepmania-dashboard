@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/IMMORAL/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>89094571</Score>
+				<PercentDP>0.821000</PercentDP>
+				<SurviveSeconds>114.507210</SurviveSeconds>
+				<MaxCombo>123</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 19:51:32</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>3</W4>
+					<W3>37</W3>
+					<W2>96</W2>
+					<W1>177</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>25</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c7359cec-b557-4ee2-aa71-1c29f5e1d6ad</StageGuid>
+				<Guid>39b27191-56c2-4b7a-a84b-d92482488e74</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

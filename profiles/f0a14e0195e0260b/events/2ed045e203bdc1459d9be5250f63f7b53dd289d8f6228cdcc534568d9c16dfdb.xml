@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Hey QT/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>93598303</Score>
+				<PercentDP>0.827100</PercentDP>
+				<SurviveSeconds>108.103241</SurviveSeconds>
+				<MaxCombo>155</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 19:37:43</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>1</W4>
+					<W3>26</W3>
+					<W2>64</W2>
+					<W1>115</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>33</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>6cf5786f-03ce-433f-a6c9-876c1e3dd1ed</StageGuid>
+				<Guid>58b8cc09-785c-4edd-aa82-24552e0031f0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

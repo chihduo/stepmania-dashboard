@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Lupin/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier07</Grade>
+				<Score>86735090</Score>
+				<PercentDP>0.743100</PercentDP>
+				<SurviveSeconds>130.052917</SurviveSeconds>
+				<MaxCombo>124</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 20:13:55</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>4</W4>
+					<W3>54</W3>
+					<W2>119</W2>
+					<W1>129</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>10</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>eeb330b8-baf5-474f-ae20-1b1bc69f500c</StageGuid>
+				<Guid>30f75ad7-5993-46e3-a115-e80f510f6de3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

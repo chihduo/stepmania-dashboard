@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Real Emotion/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier10</Grade>
+				<Score>80196991</Score>
+				<PercentDP>0.715300</PercentDP>
+				<SurviveSeconds>128.386749</SurviveSeconds>
+				<MaxCombo>53</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 20:33:29</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>4</W5>
+					<W4>15</W4>
+					<W3>95</W3>
+					<W2>98</W2>
+					<W1>155</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>47</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>0f007b73-97dc-42e7-a534-fb74c8b26b3d</StageGuid>
+				<Guid>85769432-2a01-4d1d-ae7a-3c9767ff91ba</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Heart Ereki/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>85797368</Score>
+				<PercentDP>0.780000</PercentDP>
+				<SurviveSeconds>141.642792</SurviveSeconds>
+				<MaxCombo>119</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 19:35:38</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>3</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>62</W3>
+					<W2>86</W2>
+					<W1>158</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>30</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>d7e4b1c1-d114-4635-a789-bfdf54a6057b</StageGuid>
+				<Guid>038861d5-002d-42d4-ac3d-7f739c709e00</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Perfect World/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>91196845</Score>
+				<PercentDP>0.824100</PercentDP>
+				<SurviveSeconds>127.086479</SurviveSeconds>
+				<MaxCombo>164</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 20:28:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>41</W3>
+					<W2>116</W2>
+					<W1>198</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>39</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>4ee21bea-a5bc-475a-a5f6-67ca2ab9f445</StageGuid>
+				<Guid>ab31f0ce-21a9-4ec6-acc3-596eb6c613b7</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

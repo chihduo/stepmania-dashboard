@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/[Round 2 Singles] - I Am the Best/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>82715083</Score>
+				<PercentDP>0.730400</PercentDP>
+				<SurviveSeconds>103.244476</SurviveSeconds>
+				<MaxCombo>122</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-22 19:45:40</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>63</W3>
+					<W2>84</W2>
+					<W1>106</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>23</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>ced597d1-e580-4b09-adcd-e80232dd2af6</StageGuid>
+				<Guid>732eafea-4ead-41c4-a964-e095cef400a0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
