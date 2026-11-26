@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/jumpin/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>89020949</Score>
+				<PercentDP>0.814300</PercentDP>
+				<SurviveSeconds>136.513535</SurviveSeconds>
+				<MaxCombo>261</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-26 21:59:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>32</W3>
+					<W2>101</W2>
+					<W1>141</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>31</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>034491d7-1067-4ad4-a4d1-d1f6d0b2265d</StageGuid>
+				<Guid>ca29db83-4eb6-4cd4-a9d5-7d6788492e6b</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Travelling/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>93368812</Score>
+				<PercentDP>0.848800</PercentDP>
+				<SurviveSeconds>107.344002</SurviveSeconds>
+				<MaxCombo>81</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-26 21:50:30</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>1</W5>
+					<W4>1</W4>
+					<W3>15</W3>
+					<W2>70</W2>
+					<W1>145</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>2</LetGo>
+					<Held>13</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>cf5a35ae-761d-47f9-a308-cbdaa2278c2b</StageGuid>
+				<Guid>5eb2f05b-2eea-4ba3-a4f9-232d928b63e6</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

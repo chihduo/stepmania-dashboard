@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/Tokaikko Junjou/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>89303922</Score>
+				<PercentDP>0.825700</PercentDP>
+				<SurviveSeconds>142.529190</SurviveSeconds>
+				<MaxCombo>203</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-26 21:43:59</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>37</W3>
+					<W2>97</W2>
+					<W1>197</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>15</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>663efa28-b6a4-46fb-ad6f-b215edc134d5</StageGuid>
+				<Guid>2e02e009-0067-4756-ac1c-025e3c3144f0</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

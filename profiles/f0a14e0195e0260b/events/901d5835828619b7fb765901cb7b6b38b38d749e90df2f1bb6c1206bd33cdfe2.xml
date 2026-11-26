@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR POP/SKY HIGH/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier11</Grade>
+				<Score>84916365</Score>
+				<PercentDP>0.724000</PercentDP>
+				<SurviveSeconds>86.794815</SurviveSeconds>
+				<MaxCombo>65</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-26 21:25:23</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>2</Miss>
+					<W5>3</W5>
+					<W4>8</W4>
+					<W3>49</W3>
+					<W2>65</W2>
+					<W1>117</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c5908c6c-ba1e-46f2-a3c7-e1faeac9e50c</StageGuid>
+				<Guid>b3a7db16-26f3-4132-a346-7c5c040c47b8</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
