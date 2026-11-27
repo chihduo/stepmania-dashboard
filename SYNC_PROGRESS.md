@@ -177,3 +177,18 @@ generation timestamp: 7,318 lifetime plays, 6,099 uploaded play records, all 28 
 events, Gokuraku Jodo at 17 plays, and the three retained profile-only scores.
 Live data.json SHA-256: `b78c673f661a809da6a3f8ca8617e59c0b07b3aa4d567758d6a2d81781e3f1cd`.
 No Windows build, local Save repair, or data-branch rewrite was performed.
+
+## Shared pack artwork
+
+The November 27 upload had 20 new songs and no metadata for any of them. The
+importer now accepts optional pack images scoped to the exact song-library
+directory. Existing song images take priority. A newly supplied song image
+replaces shared artwork in both the ranking and recent plays. The importer also
+supports StepMania's AdditionalSongs library. The uploader supplies the images
+during its next manual upload.
+
+The native synthetic export imported successfully with direct movie, jacket,
+background and pack artwork. A local rebuild of public revision `112aa5b`
+matched all 2,487 song rows, 6,146 recorded plays, recent plays, aggregates and
+1,705 referenced image files. No deployment or upload of player records was
+needed for this compatibility check.

@@ -152,6 +152,70 @@ class SyncTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Historical song plays'):
             sync.verify_history(previous, current)
 
+    def make_banner(self, color):
+        image = io.BytesIO()
+        builder.Image.new("RGB", (80, 20), color).save(image, format="PNG")
+        raw = image.getvalue()
+        digest = hashlib.sha256(raw).hexdigest()
+        (self.data/"banners").mkdir(exist_ok=True)
+        (self.data/"banners"/(digest + ".json")).write_text(json.dumps({"png_base64": base64.b64encode(raw).decode()}))
+        return "banners/" + digest + ".png"
+
+    def save_pack(self, directory, banner):
+        target = self.profile/"packs"/(hashlib.sha256(directory.encode()).hexdigest() + ".json")
+        target.parent.mkdir(exist_ok=True)
+        target.write_text(json.dumps({"dir": directory, "banner": banner}))
+        return target
+
+    def test_pack_fills_missing_history_and_song_art_takes_priority(self):
+        song_art = self.make_banner("red")
+        pack_art = self.make_banner("blue")
+        pack = "Songs/Pop/"
+        self.save_pack(pack, pack_art)
+        # Old clients may never have uploaded any metadata for this song.
+        next((self.profile/"songs").glob("*.json")).unlink()
+        data = self.build()
+        for row in (data["songs"][0], data["recent"][0]):
+            self.assertEqual((row["banner"], row["bannerSource"]), (pack_art, "pack"))
+        self.assertTrue((self.root/"site"/pack_art).is_file())
+        self.assertEqual(json.loads((self.root/"site/data.json").read_text())["songs"][0]["bannerSource"], "pack")
+        changed = self.make_banner("green")
+        self.save_pack(pack, changed)
+        self.assertEqual(self.build("new_pack", self.root/"site")["songs"][0]["banner"], changed)
+        self.meta["banner"] = song_art
+        self.save_meta()
+        row = self.build("new_song", self.root/"new_pack")["songs"][0]
+        self.assertEqual(row["banner"], song_art)
+        self.assertNotIn("bannerSource", row)
+        self.meta["banner"] = ""
+        self.save_meta()
+        row = self.build("archived", self.root/"new_song")["songs"][0]
+        self.assertEqual(row["banner"], song_art)
+        self.assertTrue((self.root/"archived"/song_art).is_file())
+
+    def test_additional_library_pack_is_distinct(self):
+        other = SONG.replace("Songs/", "AdditionalSongs/")
+        (self.profile/"Stats.xml").write_text(self.stats.replace(SONG, other))
+        event = next((self.profile/"events").glob("*"))
+        event.write_text(event.read_text().replace(SONG, other))
+        self.save_pack("Songs/Pop/", self.make_banner("red"))
+        expected = self.make_banner("blue")
+        self.save_pack("AdditionalSongs/Pop/", expected)
+        data = self.build()
+        self.assertEqual((data["songs"][0]["pack"], data["songs"][0]["banner"]), ("Pop", expected))
+        self.assertEqual(data["recent"][0]["banner"], expected)
+
+    def test_pack_record_is_bound_to_exact_directory(self):
+        name = self.make_banner("red")
+        record = self.save_pack("Songs/Pop/", name)
+        for directory in ("Songs/Elsewhere/", "Songs/Pop/Other/", "Songs/../"):
+            record.write_text(json.dumps({"dir": directory, "banner": name}))
+            with self.assertRaisesRegex(ValueError, "directory"):
+                self.build()
+        self.save_pack("Songs/Pop/", "../other.png")
+        with self.assertRaisesRegex(ValueError, "banner name"):
+            self.build()
+
     def test_banner_envelope_and_historical_retention(self):
         raw = io.BytesIO();builder.Image.new('RGB',(80,20),'pink').save(raw,'PNG');png=raw.getvalue()
         digest = hashlib.sha256(png).hexdigest()

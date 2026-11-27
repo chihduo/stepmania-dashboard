@@ -227,7 +227,7 @@ def song_parts(d):
     parts = [x for x in p.split("/") if x]
     if not parts:
         return ("(unknown)", "(unknown)")
-    if parts[0].lower() == "songs":
+    if parts[0].lower() in ("songs", "additionalsongs"):
         parts = parts[1:]
     if len(parts) >= 2:
         return (parts[0], parts[-1])
@@ -604,7 +604,7 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
         for s in ss.findall("Song"):
             d = s.get("Dir", "")
             # Skip theme-internal placeholders / empty dirs (not real songs)
-            if not d.startswith("Songs/"):
+            if not d.startswith(("Songs/", "AdditionalSongs/")):
                 continue
             pack, name = song_parts(d)
             m = meta(d)

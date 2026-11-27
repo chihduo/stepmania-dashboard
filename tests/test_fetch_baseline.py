@@ -93,6 +93,25 @@ class BaselineFetchTests(unittest.TestCase):
         self.assertEqual(self.open.call_count, 1)
         self.sleep.assert_not_called()
 
+    def test_shared_pack_still_fetches_historical_song_art(self):
+        old = 'banners/abc123.png'
+        site = {'songs': [{'dir': 'Songs/Test/Song/', 'banner': old}],
+                'recent': [{'dir': 'Songs/Test/Shared/', 'banner': 'banners/5678.png', 'bannerSource': 'pack'}]}
+        self.open.side_effect = [io.BytesIO(json.dumps(site).encode()), io.BytesIO(b'old song art')]
+        with tempfile.TemporaryDirectory() as temp:
+            previous = Path.cwd()
+            try:
+                os.chdir(temp)
+                packs = Path('upload-data/profiles/0123456789abcdef/packs')
+                packs.mkdir(parents=True)
+                (packs/'fixture.json').write_text(json.dumps({'dir': 'Songs/Test/', 'banner': 'banners/9012.png'}))
+                with patch.dict(os.environ, {'PAGES_URL': 'https://example.github.io/dashboard', 'UPLOAD_PROFILE': '0123456789abcdef'}):
+                    baseline.main()
+                self.assertEqual((Path('baseline')/old).read_bytes(), b'old song art')
+                self.assertEqual(self.open.call_count, 2)
+            finally:
+                os.chdir(previous)
+
     def test_failed_banner_keeps_baseline_step_failed_without_partial_file(self):
         data = json.dumps({'songs': [{'dir': 'Songs/Test/Example/', 'banner': 'banners/abc123.png'}]}).encode()
         self.open.side_effect = [io.BytesIO(data)] + [http_error(503) for _ in range(5)]

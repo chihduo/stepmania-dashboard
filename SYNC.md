@@ -27,6 +27,7 @@ Paths on the data branch:
 - `profiles/<guid>/Stats.xml`: allowlisted cumulative profile statistics.
 - `profiles/<guid>/events/<sha256(play-guid)>.xml`: one immutable play per file.
 - `profiles/<guid>/songs/<sha256(song-dir)>.json`: title, artist, chart data and banner reference.
+- `profiles/<guid>/packs/<sha256(pack-dir)>.json` optionally supplies a shared image for the exact pack directory. Its fields are `dir` and `banner`.
 - `banners/<sha256(png)>.json`: a `png_base64` envelope containing a small PNG.
 
 Banner envelopes allow many images to share one Git tree API request instead of
@@ -139,16 +140,20 @@ dashboard remains online until the repaired export passes preservation checks.
 
 ## Missing song banners
 
-A successful statistics upload can still lack new artwork when its export has no
-song metadata. Previously published images remain available through the baseline
-fallback. The native game's cache is `Cache/Banner`; the manual builder detects
-that directory and also supports older bundles staged under `Cache/Banners`.
-An explicit `SM_BANNERS` setting still takes priority.
+Use a current StepMania 6 executable, keep the affected song packs installed,
+and choose **Upload Statistics**. For every installed song in the selected
+profile's history, the game checks the dedicated banner, then a jacket or still
+background. For a movie banner it can export a single PNG frame. The game and
+dashboard support the `Songs` and `AdditionalSongs` libraries.
 
-Artwork from removed or archived songs can be recovered into a verified outbox
-patch using exact song-directory matches. Merge that patch into the active game's
-`Save/Dashboard/outbox` and choose Upload/Retry. The existing uploader retains
-metadata and image envelopes there, so a backfill does not require rewriting play
-logs. A video's still frame or the song's own jacket/background can supply an
-image where a dedicated banner is unavailable. Missing/renamed folders must be
-resolved from the corresponding song pack; do not associate images by title alone.
+If no song artwork is available, the importer can share one pack banner across
+songs and recent plays with the same pack directory. A previously published
+song image has priority over a pack image. A later upload can replace a shared
+pack image with the song's own artwork. Older uploads without pack records
+continue to use the existing song images and baseline.
+
+In the game, the status distinguishes missing artwork from unavailable song
+folders and reports the number of new image files accepted. For individual
+songs see `Save/Dashboard/artwork-report.json` on the uploading PC. Preserve
+`Save/Dashboard/outbox` when updating. The manual builder also reads the native
+`Cache/Banner` directory and older bundles staged under `Cache/Banners`.

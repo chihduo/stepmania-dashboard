@@ -10,6 +10,7 @@ import collections
 import copy
 import io
 import hashlib
+from functools import lru_cache
 import json
 from pathlib import Path
 import re
@@ -81,7 +82,7 @@ def validate_song_dir(d, *, allow_theme=False):
     parts = (d[:-1] if d.endswith("/") else d).split("/")
     if any(p in ("", ".", "..") for p in parts):
         raise ValueError("Invalid relative song directory")
-    if parts[0] == "Songs" and len(parts) > 1:
+    if parts[0] in ("Songs", "AdditionalSongs") and len(parts) > 1:
         return
     # Calibration songs live in Themes/<theme>/Other/ and can remain in old
     # cumulative profiles. The builder already excludes them from song lists.
@@ -304,42 +305,72 @@ def build(data_dir, profile, output, baseline=None, revision="local"):
         return {"title": old.get("song", ""), "artist": old.get("artist", ""),
                 "charts": {(c["stepstype"],c["diff"]): c for c in old.get("charts", [])}}
 
+    # Pack images have their own exact virtual directory, independent of a
+    # song's metadata. Older uploaders simply supply no pack records.
+    packs = {}
+    for path in sorted((pdir / "packs").glob("*.json")):
+        record = read_json(path)
+        if not isinstance(record, dict) or set(record) != {"dir", "banner"}:
+            raise ValueError("Invalid pack artwork record")
+        directory = record["dir"]
+        validate_song_dir(directory)
+        if directory.count("/") != 2 or not directory.endswith("/") or path.stem != hashlib.sha256(directory.encode()).hexdigest():
+            raise ValueError("Pack artwork directory does not match its filename")
+        if not isinstance(record["banner"], str) or not re.fullmatch(r"banners/[0-9a-f]{64}\.png", record["banner"]):
+            raise ValueError("Invalid pack banner name")
+        packs[directory] = record["banner"]
+
     output.mkdir(parents=True, exist_ok=True)
-    (output / "banners").mkdir(exist_ok=True)
+    pack_art_used = set()
+    old_art = {s["dir"]: s for s in (previous or {}).get("recent", []) if s.get("dir") and s.get("banner")}
+    old_art.update(previous_songs)
+
+    @lru_cache(maxsize=None)
+    def copy_uploaded(name):
+        if not re.fullmatch(r"banners/[0-9a-f]{64}\.png", name):
+            raise ValueError("Invalid banner name")
+        src = data_dir / name
+        if src.is_file():
+            raw = read_bytes(src, 256*1024)
+        else:
+            envelope = read_json(src.with_suffix(".json"), 400*1024)
+            if set(envelope) != {"png_base64"}:
+                raise ValueError("Invalid banner envelope")
+            raw = base64.b64decode(envelope["png_base64"], validate=True)
+            if len(raw) > 256*1024:
+                raise ValueError("Banner too large")
+        if hashlib.sha256(raw).hexdigest() != src.stem:
+            raise ValueError("Banner hash mismatch")
+        if builder.Image is None:
+            raise ValueError("Pillow is required to validate banners")
+        with builder.Image.open(io.BytesIO(raw)) as im:
+            if im.format != "PNG" or max(im.size) > 320 or min(im.size) < 1:
+                raise ValueError("Invalid banner image")
+            im.verify()
+        (output/"banners").mkdir(exist_ok=True)
+        (output/name).write_bytes(raw)
+        return name
+
+    @lru_cache(maxsize=None)
     def banner(d):
-        name = metadata.get(d, {}).get("banner", "")
+        name = metadata.get(d, {}).get("banner")
         if name:
-            if not re.fullmatch(r"banners/[0-9a-f]{64}\.png", name):
-                raise ValueError("Invalid banner name")
-            src = data_dir / name
-            if src.is_file():
-                raw = read_bytes(src, 256*1024)
-            else:
-                envelope = read_json(src.with_suffix(".json"), 400*1024)
-                if set(envelope) != {"png_base64"}:
-                    raise ValueError("Invalid banner envelope")
-                raw = base64.b64decode(envelope["png_base64"], validate=True)
-                if len(raw) > 256*1024:
-                    raise ValueError("Banner too large")
-            if hashlib.sha256(raw).hexdigest() != src.stem:
-                raise ValueError("Banner hash mismatch")
-            if builder.Image is None:
-                raise ValueError("Pillow is required to validate banners")
-            with builder.Image.open(io.BytesIO(raw)) as im:
-                if im.format != "PNG" or max(im.size) > 320 or min(im.size) < 1:
-                    raise ValueError("Invalid banner image")
-                im.verify()
+            return copy_uploaded(name)
+        old = old_art.get(d, {})
+        old_name = old.get("banner", "")
+        historical = (Path(baseline)/old_name if baseline and
+                      re.fullmatch(r"banners/[0-9a-f]+\.png", old_name) else None)
+        # A pack can change its image, but cannot replace a known song image.
+        pack_name = packs.get("/".join(d.split("/")[:2]) + "/")
+        if pack_name and (old.get("bannerSource") == "pack" or not historical or not historical.is_file()):
+            pack_art_used.add(d)
+            return copy_uploaded(pack_name)
+        if historical and historical.is_file() and not historical.is_symlink():
             (output/"banners").mkdir(exist_ok=True)
-            (output/name).write_bytes(raw)
-            return name
-        # Keep historical thumbnails when songs have been removed locally.
-        old_name = previous_songs.get(d, {}).get("banner", "")
-        if baseline and re.fullmatch(r"banners/[0-9a-f]+\.png", old_name):
-            src = Path(baseline)/old_name
-            if src.is_file() and not src.is_symlink():
-                (output/"banners").mkdir(exist_ok=True)
-                shutil.copyfile(src, output/old_name)
-                return old_name
+            shutil.copyfile(historical, output/old_name)
+            if old.get("bannerSource") == "pack":
+                pack_art_used.add(d)
+            return old_name
         return ""
 
     with tempfile.TemporaryDirectory() as temp:
@@ -381,15 +412,20 @@ def build(data_dir, profile, output, baseline=None, revision="local"):
                      banner_override=banner, sync=True)
     current = read_json(output/"data.json", 64*1024*1024)
     retention = {"chart_counters": [], "score_records": 0}
+    if pack_art_used:
+        for row in current["songs"] + current["recent"]:
+            if row.get("dir") in pack_art_used:
+                row["bannerSource"] = "pack"
     if previous:
         retention = preserve_published_history(previous, current)
         verify_history(previous, current)
-        (output/"data.json").write_text(json.dumps(current, ensure_ascii=False, separators=(",", ":")))
         print(f"Retained published history: {len(retention['chart_counters'])} chart counters, "
               f"{retention['score_records']} score records")
         for counter in retention["chart_counters"]:
             print(f"  {counter['dir']} {counter['diff']}: {counter['uploaded']} uploaded, "
                   f"{counter['retained']} retained")
+    if previous or pack_art_used:
+        (output/"data.json").write_text(json.dumps(current, ensure_ascii=False, separators=(",", ":")))
     (output/"sync-status.json").write_text(json.dumps({
         "version": 1, "data_revision": revision, "profile_guid": profile,
         "generated": current["generated"], "recorded_plays": current["recordedPlays"],

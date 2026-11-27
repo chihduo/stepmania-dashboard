@@ -64,17 +64,23 @@ def main():
     raw = fetch(base+'/data.json',64*1024*1024)
     data = json.loads(raw)
     (root/'data.json').write_bytes(raw)
-    # Fetch only missing banner sources, not every historical image on each upload.
-    profile = os.environ['UPLOAD_PROFILE']
-    mapping={}
-    for p in (Path('upload-data')/'profiles'/profile/'songs').glob('*.json'):
-        m=json.loads(p.read_text());mapping[m.get('dir')]=m.get('banner')
-    for song in data.get('songs',[]):
-        name=song.get('banner','')
-        if mapping.get(song.get('dir')) or not re.fullmatch(r'banners/[0-9a-f]+\.png',name):
+    # Only fetch artwork that the importer may have to recover from Pages.
+    profile = Path('upload-data')/'profiles'/os.environ['UPLOAD_PROFILE']
+    songs = {}
+    for path in (profile/'songs').glob('*.json'):
+        record = json.loads(path.read_text())
+        songs[record.get('dir')] = record.get('banner')
+    packs = {json.loads(path.read_text()).get('dir') for path in (profile/'packs').glob('*.json')}
+    for song in data.get('songs', []) + data.get('recent', []):
+        directory = song.get('dir', '')
+        name = song.get('banner', '')
+        if songs.get(directory) or not re.fullmatch(r'banners/[0-9a-f]+\.png', name):
             continue
-        dest=root/name
-        if not dest.exists(): dest.write_bytes(fetch(base+'/'+name,256*1024))
+        if song.get('bannerSource') == 'pack' and '/'.join(directory.split('/')[:2]) + '/' in packs:
+            continue
+        dest = root/name
+        if not dest.exists():
+            dest.write_bytes(fetch(base+'/'+name, 256*1024))
 
 if __name__ == '__main__':
     main()
