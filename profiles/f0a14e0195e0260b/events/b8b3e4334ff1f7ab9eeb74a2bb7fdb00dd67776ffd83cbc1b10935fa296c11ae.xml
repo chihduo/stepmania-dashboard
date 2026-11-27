@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Toshokan/Final Fantasy VIII - Eyes On Me [Almighty Mix]/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier09</Grade>
+				<Score>78541290</Score>
+				<PercentDP>0.661300</PercentDP>
+				<SurviveSeconds>109.540184</SurviveSeconds>
+				<MaxCombo>121</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-27 19:10:17</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>70</W3>
+					<W2>105</W2>
+					<W1>74</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>0</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>af83ffe7-a4c2-47f7-a704-410d21963e8f</StageGuid>
+				<Guid>e5b20352-d344-4573-a953-bdc56c4e8157</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

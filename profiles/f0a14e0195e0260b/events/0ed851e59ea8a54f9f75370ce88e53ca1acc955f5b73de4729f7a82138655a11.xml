@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Toshokan/Bubble bobble/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier09</Grade>
+				<Score>86173074</Score>
+				<PercentDP>0.756800</PercentDP>
+				<SurviveSeconds>103.287682</SurviveSeconds>
+				<MaxCombo>109</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-27 18:58:20</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>0</W5>
+					<W4>4</W4>
+					<W3>43</W3>
+					<W2>55</W2>
+					<W1>113</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>85e66d40-945a-4bb6-ac3f-bffcf0520e38</StageGuid>
+				<Guid>79ed7e46-6d6d-4d72-a608-e95ab13b9382</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

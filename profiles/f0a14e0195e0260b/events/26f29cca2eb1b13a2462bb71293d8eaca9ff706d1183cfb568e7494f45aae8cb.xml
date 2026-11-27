@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Ram/Hula Hoop/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Failed</Grade>
+				<Score>223151</Score>
+				<PercentDP>0.031000</PercentDP>
+				<SurviveSeconds>25.650146</SurviveSeconds>
+				<MaxCombo>8</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-27 21:16:11</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>7</Miss>
+					<W5>1</W5>
+					<W4>2</W4>
+					<W3>6</W3>
+					<W2>5</W2>
+					<W1>4</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>1</Held>
+					<MissedHold>2</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8cec17d6-1bdf-409d-ac54-991cec701db2</StageGuid>
+				<Guid>49ff8882-f133-4bee-a171-a8f790f98f90</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

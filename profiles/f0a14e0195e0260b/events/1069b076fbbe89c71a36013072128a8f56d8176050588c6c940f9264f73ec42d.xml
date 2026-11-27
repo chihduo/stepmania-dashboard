@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/DDR Ram/Crazy V2/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier04</Grade>
+				<Score>185474799</Score>
+				<PercentDP>0.841000</PercentDP>
+				<SurviveSeconds>161.984360</SurviveSeconds>
+				<MaxCombo>286</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-27 21:12:59</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>0</W4>
+					<W3>23</W3>
+					<W2>78</W2>
+					<W1>142</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>17</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>1990dd42-3ca2-4832-ade7-a2194f2b8219</StageGuid>
+				<Guid>0bfb7b93-a18b-4c7f-a5f6-7c2ae9efc1f3</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

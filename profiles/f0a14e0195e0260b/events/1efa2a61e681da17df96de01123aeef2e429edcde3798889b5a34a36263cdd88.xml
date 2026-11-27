@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Toshokan/Thousand Arms - Depend On You (Remix)/'/>
+			<Steps Difficulty='Medium' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>91851476</Score>
+				<PercentDP>0.846700</PercentDP>
+				<SurviveSeconds>98.878006</SurviveSeconds>
+				<MaxCombo>79</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-27 20:57:41</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>1</Miss>
+					<W5>2</W5>
+					<W4>2</W4>
+					<W3>13</W3>
+					<W2>56</W2>
+					<W1>89</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>48</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>dc5f9244-aeb3-4860-a32f-e2f1627167f2</StageGuid>
+				<Guid>e9f69e6e-bf54-44c6-a182-4d9a96502c09</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

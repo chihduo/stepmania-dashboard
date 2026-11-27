@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Anime Toshokan/Tokimeki Memorial/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier09</Grade>
+				<Score>87472164</Score>
+				<PercentDP>0.764500</PercentDP>
+				<SurviveSeconds>95.618484</SurviveSeconds>
+				<MaxCombo>75</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-27 21:00:04</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>2</W5>
+					<W4>3</W4>
+					<W3>53</W3>
+					<W2>90</W2>
+					<W1>143</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>24</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>f89b1bc3-2671-40ae-a2cd-a878e2926c79</StageGuid>
+				<Guid>991a4f15-d0b1-4ef2-aff4-6a315b765bf2</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
