@@ -192,3 +192,23 @@ background and pack artwork. A local rebuild of public revision `112aa5b`
 matched all 2,487 song rows, 6,146 recorded plays, recent plays, aggregates and
 1,705 referenced image files. No deployment or upload of player records was
 needed for this compatibility check.
+
+## Out-of-range chart rating (2026-11-28)
+
+The November 28 upload reached the data branch at `aefa756`. One of 4,212
+exported charts exceeded the dashboard's meter range. The Hard chart for
+BoA's “Eat You Up” reported 144,821,752, the same value as its earlier
+published entry. The importer stopped before deploying the new banners.
+[Failed run](https://github.com/chihduo/stepmania-dashboard/actions/runs/46095766212)
+
+Fix `2d0d889` handles an out-of-range integer as an unknown rating and retains
+a valid published rating when it can identify the same chart uniquely. All 52
+tests passed. Rebuilding the accepted revision preserved every song's counts
+and scores, including the three Hard scores for “Eat You Up”.
+
+The live data matched the verified rebuild apart from the generation time.
+It contains 6,146 logged plays across a library of 2,487 played songs. Another
+45 songs gained artwork, bringing banner coverage to 1,752 songs and all 150
+recent plays. The live homepage and two sample banners, including “Love Alone”,
+also matched the local build.
+[Successful publication](https://github.com/chihduo/stepmania-dashboard/actions/runs/46098713382)
