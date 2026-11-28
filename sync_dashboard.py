@@ -232,6 +232,8 @@ def preserve_published_history(previous, current):
                     raise ValueError(f"Cannot safely recover ambiguous historical charts: {old['dir']} {key}")
                 continue
             old_chart, chart = old_charts[0], charts[0]
+            if chart.get("meter") is None:
+                chart["meter"] = builder.chart_meter(old_chart.get("meter"))
             report["score_records"] += merge_preserved_scores(chart["scores"], old_chart["scores"])
             count = max(chart["plays"], old_chart["plays"], len(chart["scores"]))
             if count > chart["plays"]:
@@ -289,8 +291,11 @@ def build(data_dir, profile, output, baseline=None, revision="local"):
             raise ValueError("Invalid song text")
         charts = {}
         for c in m.get("charts", []):
-            if set(c) - {"stepstype", "diff", "meter", "radar"} or not isinstance(c.get("meter"), int) or not 0 <= c["meter"] <= 1000:
-                raise ValueError("Invalid chart metadata")
+            if not isinstance(c, dict) or set(c) - {"stepstype", "diff", "meter", "radar"}:
+                raise ValueError(f"Invalid chart metadata for {m['dir']!r}")
+            if type(c.get("meter")) is not int:
+                raise ValueError(f"Expected an integer chart meter for {m['dir']!r} "
+                                 f"({c.get('stepstype')!r}, {c.get('diff')!r})")
             if not isinstance(c.get("radar", {}), dict) or any(not isinstance(v, (int,float)) or not 0 <= v <= 10000000 for v in c.get("radar", {}).values()):
                 raise ValueError("Invalid chart radar")
             charts[(c["stepstype"], c["diff"])] = {"meter": c["meter"], "radar": c.get("radar", {})}

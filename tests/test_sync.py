@@ -56,6 +56,49 @@ class SyncTests(unittest.TestCase):
             self.assertEqual(obj['recordedPlays'],1)
             self.assertEqual(len(obj['songs'][0]['charts'][0]['scores']),1)
             self.assertEqual(obj['songs'][0]['song'],'Example あ')
+
+    def test_out_of_range_chart_meter_keeps_history_and_banner(self):
+        self.meta['charts'][0]['meter'] = 144821752
+        self.meta['banner'] = self.make_banner('red')
+        self.save_meta()
+        data = self.build()
+        song = data['songs'][0]
+        hard = song['charts'][0]
+        self.assertIsNone(hard['meter'])
+        self.assertEqual((hard['diff'], hard['radar']), ('Hard', {'taps': 100}))
+        self.assertEqual((data['recordedPlays'], hard['plays']), (1, 1))
+        self.assertEqual([(s['dt'], s['sc'], s['pct']) for s in hard['scores']],
+                         [('2026-11-12 12:00:00', 100, 0.99)])
+        self.assertEqual(song['banner'], self.meta['banner'])
+        self.assertTrue((self.root/'site'/song['banner']).is_file())
+
+    def test_out_of_range_chart_meter_uses_valid_published_rating(self):
+        self.meta['charts'][0]['meter'] = 1000
+        self.save_meta()
+        self.build()
+        for value in (1001, -1):
+            with self.subTest(value=value):
+                self.meta['charts'][0]['meter'] = value
+                self.save_meta()
+                current = self.build('retry', self.root/'site')
+                self.assertEqual(current['songs'][0]['charts'][0]['meter'], 1000)
+
+    def test_out_of_range_legacy_meter_is_not_restored(self):
+        published = self.build()
+        published['songs'][0]['charts'][0]['meter'] = 144821752
+        (self.root/'site'/'data.json').write_text(json.dumps(published))
+        next((self.profile/'songs').glob('*.json')).unlink()
+        current = self.build('retry', self.root/'site')
+        self.assertIsNone(current['songs'][0]['charts'][0]['meter'])
+
+    def test_invalid_meter_type_still_rejects_the_export(self):
+        for value in ('9', False, 9.5, None):
+            with self.subTest(value=value):
+                self.meta['charts'][0]['meter'] = value
+                self.save_meta()
+                with self.assertRaisesRegex(ValueError, 'integer chart meter.*Example'):
+                    self.build()
+
     def test_distinct_guids_same_timestamp_are_separate(self):
         self.event('play-2')
         data = self.build()

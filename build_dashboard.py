@@ -253,6 +253,11 @@ def cache_filename(d):
     return "".join("_" if c in _INVALID_CACHE else c for c in s)
 
 
+def chart_meter(value):
+    """Return the dashboard rating, or None for an unusable song-cache value."""
+    return value if type(value) is int and 0 <= value <= 1000 else None
+
+
 def _parse_chart_blocks(text):
     """Parse #NOTEDATA blocks from an SSC cache file.
 
@@ -635,10 +640,14 @@ def parse_stats(stats_path, meta, banner=lambda d: ""):
                     chart_scores.append(score_dict(hs))
                 chart_scores.sort(key=lambda x: x["dt"], reverse=True)
                 cm = m["charts"].get((stepstype, diff), {})
+                raw_meter = cm.get("meter")
+                meter = chart_meter(raw_meter)
+                if raw_meter is not None and meter is None:
+                    print(f"Ignoring out-of-range chart meter {raw_meter!r} for {d!r} ({stepstype!r}, {diff!r})")
                 charts.append({
                     "diff": diff,
                     "stepstype": stepstype,
-                    "meter": cm.get("meter"),
+                    "meter": meter,
                     "radar": cm.get("radar") or {},
                     "plays": n,
                     "lastPlayed": lp,

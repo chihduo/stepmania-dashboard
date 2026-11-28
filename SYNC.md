@@ -30,6 +30,12 @@ Paths on the data branch:
 - `profiles/<guid>/packs/<sha256(pack-dir)>.json` optionally supplies a shared image for the exact pack directory. Its fields are `dir` and `banner`.
 - `banners/<sha256(png)>.json`: a `png_base64` envelope containing a small PNG.
 
+The numeric difficulty rating (chart meter) is separate from a chart's difficulty
+label and play history. The dashboard accepts ratings from 0 through 1000. If an
+integer falls outside that range, the builder keeps a previously published
+rating for the same chart when it can match it uniquely. Otherwise the rating
+is left blank. The chart, its scores, and its artwork still publish.
+
 Banner envelopes allow many images to share one Git tree API request instead of
 requiring one GitHub write request per image. Actions verifies and decodes them
 into ordinary `public/banners/<hash>.png` files. Existing PNG files with the same
