@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/BILLIONAIRE/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier06</Grade>
+				<Score>88933757</Score>
+				<PercentDP>0.798500</PercentDP>
+				<SurviveSeconds>122.971565</SurviveSeconds>
+				<MaxCombo>172</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-28 20:55:54</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>1</W4>
+					<W3>47</W3>
+					<W2>88</W2>
+					<W1>133</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>1</LetGo>
+					<Held>41</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>c0d7847b-3f6b-48e7-a24a-f9a187959e44</StageGuid>
+				<Guid>e0f49270-2382-4339-af72-a7c2300122ca</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

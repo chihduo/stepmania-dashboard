@@ -5,42 +5,42 @@
 		<IsMachine>0</IsMachine>
 		<Guid>f0a14e0195e0260b</Guid>
 		<TotalSessions>1191</TotalSessions>
-		<TotalSessionSeconds>5568001</TotalSessionSeconds>
-		<TotalGameplaySeconds>847576</TotalGameplaySeconds>
-		<TotalCaloriesBurned>137439.296875</TotalCaloriesBurned>
-		<LastPlayedDate>2026-11-27</LastPlayedDate>
-		<TotalDancePoints>5014823</TotalDancePoints>
-		<TotalTapsAndHolds>1982412</TotalTapsAndHolds>
-		<TotalJumps>151872</TotalJumps>
-		<TotalHolds>164597</TotalHolds>
-		<TotalRolls>1328</TotalRolls>
+		<TotalSessionSeconds>5570461</TotalSessionSeconds>
+		<TotalGameplaySeconds>849212</TotalGameplaySeconds>
+		<TotalCaloriesBurned>137704.281250</TotalCaloriesBurned>
+		<LastPlayedDate>2026-11-28</LastPlayedDate>
+		<TotalDancePoints>5026650</TotalDancePoints>
+		<TotalTapsAndHolds>1986800</TotalTapsAndHolds>
+		<TotalJumps>152074</TotalJumps>
+		<TotalHolds>165169</TotalHolds>
+		<TotalRolls>1329</TotalRolls>
 		<TotalMines>3730</TotalMines>
 		<TotalHands>66</TotalHands>
 		<TotalLifts>0</TotalLifts>
 		<NumSongsPlayedByStyle>
-			<Style Game='dance' Style='single'>7362</Style>
+			<Style Game='dance' Style='single'>7376</Style>
 			<Style Game='dance' Style='solo'>1</Style>
 			<Style Game='dance' Style='threepanel'>1</Style>
 			<Style Game='pump' Style='single'>1</Style>
 		</NumSongsPlayedByStyle>
 		<NumSongsPlayedByDifficulty>
 			<Easy>44</Easy>
-			<Medium>4505</Medium>
-			<Hard>2736</Hard>
+			<Medium>4509</Medium>
+			<Hard>2746</Hard>
 			<Challenge>68</Challenge>
 			<Edit>12</Edit>
 		</NumSongsPlayedByDifficulty>
-		<NumTotalSongsPlayed>7365</NumTotalSongsPlayed>
+		<NumTotalSongsPlayed>7379</NumTotalSongsPlayed>
 		<NumStagesPassedByGrade>
 			<Tier03>981</Tier03>
 			<Tier04>3058</Tier04>
-			<Tier05>1106</Tier05>
-			<Tier06>295</Tier06>
-			<Tier07>220</Tier07>
-			<Tier08>103</Tier08>
+			<Tier05>1108</Tier05>
+			<Tier06>297</Tier06>
+			<Tier07>222</Tier07>
+			<Tier08>108</Tier08>
 			<Tier09>67</Tier09>
 			<Tier10>39</Tier10>
-			<Tier11>21</Tier11>
+			<Tier11>22</Tier11>
 			<Tier12>6</Tier12>
 			<Tier13>6</Tier13>
 			<Tier14>1</Tier14>
@@ -81393,8 +81393,8 @@
 		<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/BILLIONAIRE/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-11-27</LastPlayed>
+					<NumTimesPlayed>5</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>93250684</Score>
@@ -81637,8 +81637,8 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>24</NumTimesPlayed>
-					<LastPlayed>2026-09-09</LastPlayed>
+					<NumTimesPlayed>25</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier06</Grade>
 						<Score>89743555</Score>
@@ -82102,8 +82102,8 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>6</NumTimesPlayed>
-					<LastPlayed>2026-09-09</LastPlayed>
+					<NumTimesPlayed>8</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>93372156</Score>
@@ -82275,8 +82275,8 @@
 		<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Cupid/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>4</NumTimesPlayed>
-					<LastPlayed>2026-09-29</LastPlayed>
+					<NumTimesPlayed>5</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier06</Grade>
 						<Score>92543770</Score>
@@ -82305,6 +82305,33 @@
 						</HoldNoteScores>
 					</HighScore>
 					<HighScore>
+						<Grade>Tier06</Grade>
+						<Score>89035914</Score>
+						<PercentDP>0.778300</PercentDP>
+						<SurviveSeconds>129.450500</SurviveSeconds>
+						<MaxCombo>166</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-28 21:04:18</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>5</W4>
+							<W3>71</W3>
+							<W2>109</W2>
+							<W1>125</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>90</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
 						<Grade>Tier03</Grade>
 						<Score>88796065</Score>
 						<PercentDP>0.822500</PercentDP>
@@ -82323,33 +82350,6 @@
 							<W3>39</W3>
 							<W2>93</W2>
 							<W1>164</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>90</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>85792530</Score>
-						<PercentDP>0.790000</PercentDP>
-						<SurviveSeconds>128.604553</SurviveSeconds>
-						<MaxCombo>196</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2026-04-24 20:38:31</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>0</Miss>
-							<W5>3</W5>
-							<W4>10</W4>
-							<W3>58</W3>
-							<W2>97</W2>
-							<W1>142</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -82840,8 +82840,8 @@
 		<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Magnetic/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>5</NumTimesPlayed>
-					<LastPlayed>2026-09-29</LastPlayed>
+					<NumTimesPlayed>6</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>94584616</Score>
@@ -83022,8 +83022,8 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>5</NumTimesPlayed>
-					<LastPlayed>2026-09-09</LastPlayed>
+					<NumTimesPlayed>6</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier09</Grade>
 						<Score>172824346</Score>
@@ -84152,8 +84152,8 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2026-02-15</LastPlayed>
+					<NumTimesPlayed>3</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>80341560</Score>
@@ -84263,8 +84263,8 @@
 		<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Yes/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>1</NumTimesPlayed>
-					<LastPlayed>2026-06-22</LastPlayed>
+					<NumTimesPlayed>2</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>82859144</Score>
@@ -84290,6 +84290,33 @@
 							<LetGo>0</LetGo>
 							<Held>42</Held>
 							<MissedHold>2</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
+						<Grade>Tier08</Grade>
+						<Score>82775126</Score>
+						<PercentDP>0.785300</PercentDP>
+						<SurviveSeconds>129.982376</SurviveSeconds>
+						<MaxCombo>136</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-28 21:18:35</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>2</Miss>
+							<W5>4</W5>
+							<W4>13</W4>
+							<W3>61</W3>
+							<W2>111</W2>
+							<W1>220</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>1</LetGo>
+							<Held>43</Held>
+							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
 				</HighScoreList>
@@ -84366,8 +84393,8 @@
 		<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/eight/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>2</NumTimesPlayed>
-					<LastPlayed>2026-09-09</LastPlayed>
+					<NumTimesPlayed>3</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>94501703</Score>
@@ -84422,6 +84449,33 @@
 							<MissedHold>0</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
+					<HighScore>
+						<Grade>Tier05</Grade>
+						<Score>90571038</Score>
+						<PercentDP>0.806800</PercentDP>
+						<SurviveSeconds>155.398819</SurviveSeconds>
+						<MaxCombo>418</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-28 21:07:11</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>0</Miss>
+							<W5>0</W5>
+							<W4>0</W4>
+							<W3>47</W3>
+							<W2>147</W2>
+							<W1>205</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>17</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
 				</HighScoreList>
 			</Steps>
 			<Steps Difficulty='Challenge' StepsType='dance-single'>
@@ -84434,8 +84488,8 @@
 		<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/little monster/'>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>6</NumTimesPlayed>
-					<LastPlayed>2026-10-26</LastPlayed>
+					<NumTimesPlayed>7</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>92909119</Score>
@@ -113527,8 +113581,8 @@
 			</Steps>
 			<Steps Difficulty='Hard' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>13</NumTimesPlayed>
-					<LastPlayed>2026-08-08</LastPlayed>
+					<NumTimesPlayed>15</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>79501691</Score>
@@ -113920,8 +113974,8 @@
 		<Song Dir='Songs/Mintmania/fofres/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>34</NumTimesPlayed>
-					<LastPlayed>2022-11-25</LastPlayed>
+					<NumTimesPlayed>41</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier04</Grade>
 						<Score>90223392</Score>
@@ -113941,6 +113995,33 @@
 							<W3>41</W3>
 							<W2>87</W2>
 							<W1>134</W1>
+							<CheckpointHit>0</CheckpointHit>
+						</TapNoteScores>
+						<HoldNoteScores>
+							<LetGo>0</LetGo>
+							<Held>27</Held>
+							<MissedHold>0</MissedHold>
+						</HoldNoteScores>
+					</HighScore>
+					<HighScore>
+						<Grade>Tier07</Grade>
+						<Score>90200641</Score>
+						<PercentDP>0.829900</PercentDP>
+						<SurviveSeconds>112.657982</SurviveSeconds>
+						<MaxCombo>155</MaxCombo>
+						<Modifiers>Overhead</Modifiers>
+						<DateTime>2026-11-28 22:08:37</DateTime>
+						<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+						<TapNoteScores>
+							<HitMine>0</HitMine>
+							<AvoidMine>0</AvoidMine>
+							<CheckpointMiss>0</CheckpointMiss>
+							<Miss>2</Miss>
+							<W5>2</W5>
+							<W4>2</W4>
+							<W3>29</W3>
+							<W2>75</W2>
+							<W1>159</W1>
 							<CheckpointHit>0</CheckpointHit>
 						</TapNoteScores>
 						<HoldNoteScores>
@@ -113974,114 +114055,6 @@
 							<LetGo>0</LetGo>
 							<Held>27</Held>
 							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>87336862</Score>
-						<PercentDP>0.774700</PercentDP>
-						<SurviveSeconds>111.779419</SurviveSeconds>
-						<MaxCombo>143</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2022-05-19 21:24:17</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>1</Miss>
-							<W5>0</W5>
-							<W4>2</W4>
-							<W3>55</W3>
-							<W2>81</W2>
-							<W1>130</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>27</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier05</Grade>
-						<Score>85057671</Score>
-						<PercentDP>0.757800</PercentDP>
-						<SurviveSeconds>111.796295</SurviveSeconds>
-						<MaxCombo>106</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2022-05-20 21:23:14</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>9</Miss>
-							<W5>2</W5>
-							<W4>2</W4>
-							<W3>43</W3>
-							<W2>84</W2>
-							<W1>129</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>25</Held>
-							<MissedHold>2</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>84726077</Score>
-						<PercentDP>0.751100</PercentDP>
-						<SurviveSeconds>111.779350</SurviveSeconds>
-						<MaxCombo>86</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2022-05-20 21:20:36</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>2</Miss>
-							<W5>0</W5>
-							<W4>8</W4>
-							<W3>55</W3>
-							<W2>81</W2>
-							<W1>123</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>0</LetGo>
-							<Held>27</Held>
-							<MissedHold>0</MissedHold>
-						</HoldNoteScores>
-					</HighScore>
-					<HighScore>
-						<Grade>Tier04</Grade>
-						<Score>84009813</Score>
-						<PercentDP>0.752200</PercentDP>
-						<SurviveSeconds>111.760651</SurviveSeconds>
-						<MaxCombo>85</MaxCombo>
-						<Modifiers>Overhead</Modifiers>
-						<DateTime>2022-06-02 21:08:43</DateTime>
-						<PlayerGuid/>
-						<TapNoteScores>
-							<HitMine>0</HitMine>
-							<AvoidMine>0</AvoidMine>
-							<CheckpointMiss>0</CheckpointMiss>
-							<Miss>5</Miss>
-							<W5>1</W5>
-							<W4>10</W4>
-							<W3>50</W3>
-							<W2>66</W2>
-							<W1>137</W1>
-							<CheckpointHit>0</CheckpointHit>
-						</TapNoteScores>
-						<HoldNoteScores>
-							<LetGo>1</LetGo>
-							<Held>25</Held>
-							<MissedHold>1</MissedHold>
 						</HoldNoteScores>
 					</HighScore>
 				</HighScoreList>
@@ -114374,8 +114347,8 @@
 		<Song Dir='Songs/Mintmania/godknows/'>
 			<Steps Difficulty='Medium' StepsType='dance-single'>
 				<HighScoreList>
-					<NumTimesPlayed>31</NumTimesPlayed>
-					<LastPlayed>2026-09-03</LastPlayed>
+					<NumTimesPlayed>32</NumTimesPlayed>
+					<LastPlayed>2026-11-28</LastPlayed>
 					<HighScore>
 						<Grade>Tier05</Grade>
 						<Score>93875701</Score>
@@ -160644,5 +160617,6 @@
 		<CaloriesBurned Date='2026-11-22'>483.425781</CaloriesBurned>
 		<CaloriesBurned Date='2026-11-26'>254.650925</CaloriesBurned>
 		<CaloriesBurned Date='2026-11-27'>507.861450</CaloriesBurned>
+		<CaloriesBurned Date='2026-11-28'>264.946472</CaloriesBurned>
 	</CalorieData>
 </Stats>

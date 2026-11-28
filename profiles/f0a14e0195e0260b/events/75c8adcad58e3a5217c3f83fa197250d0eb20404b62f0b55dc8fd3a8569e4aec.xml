@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Bubble/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier08</Grade>
+				<Score>87074094</Score>
+				<PercentDP>0.798200</PercentDP>
+				<SurviveSeconds>127.542694</SurviveSeconds>
+				<MaxCombo>112</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-28 21:01:45</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>5</Miss>
+					<W5>3</W5>
+					<W4>6</W4>
+					<W3>64</W3>
+					<W2>132</W2>
+					<W1>220</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>73</Held>
+					<MissedHold>1</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>8e289920-6615-4d07-ab89-197509e27c14</StageGuid>
+				<Guid>51a3153c-ef72-40a0-a7a3-ec01ec057086</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>

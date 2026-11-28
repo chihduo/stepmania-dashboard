@@ -1,0 +1,38 @@
+
+<Stats>
+	<RecentSongScores>
+		<HighScoreForASongAndSteps>
+			<Song Dir='Songs/Highflyer&apos;s Tech Trails - Korean Air/Magnetic/'/>
+			<Steps Difficulty='Hard' StepsType='dance-single'/>
+			<HighScore>
+				<Grade>Tier05</Grade>
+				<Score>90635182</Score>
+				<PercentDP>0.828400</PercentDP>
+				<SurviveSeconds>131.840027</SurviveSeconds>
+				<MaxCombo>242</MaxCombo>
+				<Modifiers>Overhead</Modifiers>
+				<DateTime>2026-11-28 21:12:53</DateTime>
+				<PlayerGuid>f0a14e0195e0260b</PlayerGuid>
+				<TapNoteScores>
+					<HitMine>0</HitMine>
+					<AvoidMine>0</AvoidMine>
+					<CheckpointMiss>0</CheckpointMiss>
+					<Miss>0</Miss>
+					<W5>0</W5>
+					<W4>2</W4>
+					<W3>50</W3>
+					<W2>106</W2>
+					<W1>192</W1>
+					<CheckpointHit>0</CheckpointHit>
+				</TapNoteScores>
+				<HoldNoteScores>
+					<LetGo>0</LetGo>
+					<Held>62</Held>
+					<MissedHold>0</MissedHold>
+				</HoldNoteScores>
+				<StageGuid>53c6d6ba-315b-4c7d-a683-8e164c0a5ced</StageGuid>
+				<Guid>02f00eb1-6224-43a6-a0b7-044590796742</Guid>
+			</HighScore>
+		</HighScoreForASongAndSteps>
+	</RecentSongScores>
+</Stats>
